@@ -1,0 +1,27 @@
+event: mem_inst_retired.stlb_miss_stores:u
+cpu: 4
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu4/perf.tmp -e mem_inst_retired.stlb_miss_stores:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:06:32 2026
+
+10001;;mem_inst_retired.stlb_miss_stores:u;3130193969;100.00;;
+
+parsed count: 10001
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu4/perf.tmp -e mem_inst_retired.stlb_miss_stores:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:06:35 2026
+
+10004;;mem_inst_retired.stlb_miss_stores:u;3128787930;100.00;;
+
+parsed count: 10004
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

@@ -1,0 +1,57 @@
+event: lsd.cycles_ok:u
+cpu: 18
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu18/perf.tmp -e lsd.cycles_ok:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:07:42 2026
+
+0;;lsd.cycles_ok:u;3126093919;100.00;;
+
+parsed count: 0
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu18/perf.tmp -e lsd.cycles_ok:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:07:45 2026
+
+0;;lsd.cycles_ok:u;3127285994;100.00;;
+
+parsed count: 0
+exit: 0
+
+--- round 3 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu18/perf.tmp -e lsd.cycles_ok:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:07:48 2026
+
+0;;lsd.cycles_ok:u;3130301686;100.00;;
+
+parsed count: 0
+exit: 0
+
+--- round 4 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu18/perf.tmp -e lsd.cycles_ok:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:07:51 2026
+
+0;;lsd.cycles_ok:u;3129929653;100.00;;
+
+parsed count: 0
+exit: 0
+
+--- round 5 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu18/perf.tmp -e lsd.cycles_ok:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:07:54 2026
+
+0;;lsd.cycles_ok:u;3124288836;100.00;;
+
+parsed count: 0
+exit: 0
+
+result: Zero-only
+rounds attempted: 5
+all rounds returned zero; inconclusive

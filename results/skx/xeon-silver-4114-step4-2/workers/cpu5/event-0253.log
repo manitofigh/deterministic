@@ -1,0 +1,27 @@
+event: uops_executed.cycles_ge_1_uop_exec:u
+cpu: 5
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu5/perf.tmp -e uops_executed.cycles_ge_1_uop_exec:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:07:55 2026
+
+6381387917;;uops_executed.cycles_ge_1_uop_exec:u;3128504003;100.00;;
+
+parsed count: 6381387917
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu5/perf.tmp -e uops_executed.cycles_ge_1_uop_exec:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:07:58 2026
+
+6381371041;;uops_executed.cycles_ge_1_uop_exec:u;3132178709;100.00;;
+
+parsed count: 6381371041
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

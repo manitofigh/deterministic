@@ -1,0 +1,27 @@
+event: core_power.lvl0_turbo_license:u
+cpu: 5
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu5/perf.tmp -e core_power.lvl0_turbo_license:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:07:23 2026
+
+7638833255;;core_power.lvl0_turbo_license:u;3129430432;100.00;;
+
+parsed count: 7638833255
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu5/perf.tmp -e core_power.lvl0_turbo_license:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:07:27 2026
+
+7631067643;;core_power.lvl0_turbo_license:u;3126772443;100.00;;
+
+parsed count: 7631067643
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

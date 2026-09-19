@@ -1,0 +1,57 @@
+event: core_power.lvl1_turbo_license:u
+cpu: 6
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu6/perf.tmp -e core_power.lvl1_turbo_license:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:02:13 2026
+
+0;;core_power.lvl1_turbo_license:u;3128794845;100.00;;
+
+parsed count: 0
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu6/perf.tmp -e core_power.lvl1_turbo_license:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:02:16 2026
+
+0;;core_power.lvl1_turbo_license:u;3134377416;100.00;;
+
+parsed count: 0
+exit: 0
+
+--- round 3 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu6/perf.tmp -e core_power.lvl1_turbo_license:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:02:19 2026
+
+0;;core_power.lvl1_turbo_license:u;3149315444;100.00;;
+
+parsed count: 0
+exit: 0
+
+--- round 4 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu6/perf.tmp -e core_power.lvl1_turbo_license:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:02:23 2026
+
+0;;core_power.lvl1_turbo_license:u;3126499664;100.00;;
+
+parsed count: 0
+exit: 0
+
+--- round 5 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu6/perf.tmp -e core_power.lvl1_turbo_license:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:02:26 2026
+
+0;;core_power.lvl1_turbo_license:u;3145444961;100.00;;
+
+parsed count: 0
+exit: 0
+
+result: Zero-only
+rounds attempted: 5
+all rounds returned zero; inconclusive

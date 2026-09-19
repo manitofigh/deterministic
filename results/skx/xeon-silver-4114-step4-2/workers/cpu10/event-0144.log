@@ -1,0 +1,57 @@
+event: rtm_retired.commit:u
+cpu: 10
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu10/perf.tmp -e rtm_retired.commit:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:07:17 2026
+
+0;;rtm_retired.commit:u;3122986084;100.00;;
+
+parsed count: 0
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu10/perf.tmp -e rtm_retired.commit:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:07:20 2026
+
+0;;rtm_retired.commit:u;3122744739;100.00;;
+
+parsed count: 0
+exit: 0
+
+--- round 3 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu10/perf.tmp -e rtm_retired.commit:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:07:23 2026
+
+0;;rtm_retired.commit:u;3123683727;100.00;;
+
+parsed count: 0
+exit: 0
+
+--- round 4 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu10/perf.tmp -e rtm_retired.commit:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:07:26 2026
+
+0;;rtm_retired.commit:u;3122342799;100.00;;
+
+parsed count: 0
+exit: 0
+
+--- round 5 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu10/perf.tmp -e rtm_retired.commit:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:07:29 2026
+
+0;;rtm_retired.commit:u;3122383866;100.00;;
+
+parsed count: 0
+exit: 0
+
+result: Zero-only
+rounds attempted: 5
+all rounds returned zero; inconclusive

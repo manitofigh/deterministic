@@ -1,0 +1,27 @@
+event: sw_prefetch_access.t0:u
+cpu: 5
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu5/perf.tmp -e sw_prefetch_access.t0:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:01:38 2026
+
+100002;;sw_prefetch_access.t0:u;3134921140;100.00;;
+
+parsed count: 100002
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu5/perf.tmp -e sw_prefetch_access.t0:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:01:41 2026
+
+100001;;sw_prefetch_access.t0:u;3128793013;100.00;;
+
+parsed count: 100001
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

@@ -1,0 +1,27 @@
+event: icache_16b.ifdata_stall:u
+cpu: 5
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu5/perf.tmp -e icache_16b.ifdata_stall:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:06:55 2026
+
+93172;;icache_16b.ifdata_stall:u;3128970619;100.00;;
+
+parsed count: 93172
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu5/perf.tmp -e icache_16b.ifdata_stall:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:06:58 2026
+
+79485;;icache_16b.ifdata_stall:u;3131815170;100.00;;
+
+parsed count: 79485
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

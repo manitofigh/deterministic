@@ -1,0 +1,57 @@
+event: br_inst_retired.near_taken:u
+cpu: 8
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu8/perf.tmp -e br_inst_retired.near_taken:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:07:39 2026
+
+6819984;;br_inst_retired.near_taken:u;3123561291;100.00;;
+
+parsed count: 6819984
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu8/perf.tmp -e br_inst_retired.near_taken:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:07:42 2026
+
+6819984;;br_inst_retired.near_taken:u;3123412742;100.00;;
+
+parsed count: 6819984
+exit: 0
+
+--- round 3 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu8/perf.tmp -e br_inst_retired.near_taken:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:07:45 2026
+
+6819984;;br_inst_retired.near_taken:u;3125971243;100.00;;
+
+parsed count: 6819984
+exit: 0
+
+--- round 4 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu8/perf.tmp -e br_inst_retired.near_taken:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:07:48 2026
+
+6819984;;br_inst_retired.near_taken:u;3128393046;100.00;;
+
+parsed count: 6819984
+exit: 0
+
+--- round 5 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu8/perf.tmp -e br_inst_retired.near_taken:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:07:51 2026
+
+6819984;;br_inst_retired.near_taken:u;3124594161;100.00;;
+
+parsed count: 6819984
+exit: 0
+
+result: Potentially deterministic
+rounds attempted: 5
+

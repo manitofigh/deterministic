@@ -1,0 +1,57 @@
+event: fp_arith_inst_retired.8_flops:u
+cpu: 14
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu14/perf.tmp -e fp_arith_inst_retired.8_flops:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:06:38 2026
+
+2900000;;fp_arith_inst_retired.8_flops:u;3131481710;100.00;;
+
+parsed count: 2900000
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu14/perf.tmp -e fp_arith_inst_retired.8_flops:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:06:41 2026
+
+2900000;;fp_arith_inst_retired.8_flops:u;3128455080;100.00;;
+
+parsed count: 2900000
+exit: 0
+
+--- round 3 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu14/perf.tmp -e fp_arith_inst_retired.8_flops:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:06:45 2026
+
+2900000;;fp_arith_inst_retired.8_flops:u;3134102932;100.00;;
+
+parsed count: 2900000
+exit: 0
+
+--- round 4 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu14/perf.tmp -e fp_arith_inst_retired.8_flops:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:06:48 2026
+
+2900000;;fp_arith_inst_retired.8_flops:u;3136184694;100.00;;
+
+parsed count: 2900000
+exit: 0
+
+--- round 5 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu14/perf.tmp -e fp_arith_inst_retired.8_flops:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:06:51 2026
+
+2900000;;fp_arith_inst_retired.8_flops:u;3128273403;100.00;;
+
+parsed count: 2900000
+exit: 0
+
+result: Potentially deterministic
+rounds attempted: 5
+

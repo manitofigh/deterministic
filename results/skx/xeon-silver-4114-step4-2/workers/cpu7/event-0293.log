@@ -1,0 +1,27 @@
+event: L1-dcache-load-misses:u
+cpu: 7
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu7/perf.tmp -e L1-dcache-load-misses:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:08:55 2026
+
+2441933;;L1-dcache-load-misses;3122183972;100.00;;
+
+parsed count: 2441933
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu7/perf.tmp -e L1-dcache-load-misses:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:08:58 2026
+
+2474078;;L1-dcache-load-misses;3119892081;100.00;;
+
+parsed count: 2474078
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

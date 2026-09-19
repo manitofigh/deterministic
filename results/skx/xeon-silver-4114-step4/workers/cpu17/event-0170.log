@@ -1,0 +1,27 @@
+event: idi_misc.wb_upgrade:u
+cpu: 17
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu17/perf.tmp -e idi_misc.wb_upgrade:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:02:22 2026
+
+249;;idi_misc.wb_upgrade:u;3132770715;100.00;;
+
+parsed count: 249
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu17/perf.tmp -e idi_misc.wb_upgrade:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:02:25 2026
+
+266;;idi_misc.wb_upgrade:u;3125915155;100.00;;
+
+parsed count: 266
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

@@ -1,0 +1,27 @@
+event: int_misc.recovery_cycles:u
+cpu: 10
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu10/perf.tmp -e int_misc.recovery_cycles:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:07:52 2026
+
+10899929;;int_misc.recovery_cycles:u;3123318905;100.00;;
+
+parsed count: 10899929
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu10/perf.tmp -e int_misc.recovery_cycles:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:07:55 2026
+
+10870736;;int_misc.recovery_cycles:u;3122815149;100.00;;
+
+parsed count: 10870736
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

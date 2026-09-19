@@ -1,0 +1,27 @@
+event: inst_retired.any:u
+cpu: 5
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu5/perf.tmp -e inst_retired.any:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:02:32 2026
+
+227003394;;inst_retired.any:u;3127151766;100.00;;
+
+parsed count: 227003394
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu5/perf.tmp -e inst_retired.any:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:02:35 2026
+
+227003384;;inst_retired.any:u;3127540086;100.00;;
+
+parsed count: 227003384
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

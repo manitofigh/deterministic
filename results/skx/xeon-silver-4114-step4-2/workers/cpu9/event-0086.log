@@ -1,0 +1,57 @@
+event: fp_arith_inst_retired.256b_packed_double:u
+cpu: 9
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu9/perf.tmp -e fp_arith_inst_retired.256b_packed_double:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:06:39 2026
+
+0;;fp_arith_inst_retired.256b_packed_double:u;3131982222;100.00;;
+
+parsed count: 0
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu9/perf.tmp -e fp_arith_inst_retired.256b_packed_double:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:06:42 2026
+
+0;;fp_arith_inst_retired.256b_packed_double:u;3140825915;100.00;;
+
+parsed count: 0
+exit: 0
+
+--- round 3 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu9/perf.tmp -e fp_arith_inst_retired.256b_packed_double:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:06:45 2026
+
+0;;fp_arith_inst_retired.256b_packed_double:u;3132597403;100.00;;
+
+parsed count: 0
+exit: 0
+
+--- round 4 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu9/perf.tmp -e fp_arith_inst_retired.256b_packed_double:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:06:48 2026
+
+0;;fp_arith_inst_retired.256b_packed_double:u;3140360838;100.00;;
+
+parsed count: 0
+exit: 0
+
+--- round 5 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu9/perf.tmp -e fp_arith_inst_retired.256b_packed_double:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:06:51 2026
+
+0;;fp_arith_inst_retired.256b_packed_double:u;3130940569;100.00;;
+
+parsed count: 0
+exit: 0
+
+result: Zero-only
+rounds attempted: 5
+all rounds returned zero; inconclusive

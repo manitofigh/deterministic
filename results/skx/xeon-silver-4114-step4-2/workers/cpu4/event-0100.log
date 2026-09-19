@@ -1,0 +1,27 @@
+event: dsb2mite_switches.penalty_cycles:u
+cpu: 4
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu4/perf.tmp -e dsb2mite_switches.penalty_cycles:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:06:54 2026
+
+24020716;;dsb2mite_switches.penalty_cycles:u;3127694838;100.00;;
+
+parsed count: 24020716
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu4/perf.tmp -e dsb2mite_switches.penalty_cycles:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:06:57 2026
+
+11821494;;dsb2mite_switches.penalty_cycles:u;3127622278;100.00;;
+
+parsed count: 11821494
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

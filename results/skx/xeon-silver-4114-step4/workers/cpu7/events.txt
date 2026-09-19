@@ -1,0 +1,16 @@
+cycles-t
+l1d.replacement
+l2_rqsts.miss
+mem_load_l3_hit_retired.xsnp_miss
+fp_arith_inst_retired.128b_packed_double
+icache_64b.iftag_miss
+idq_uops_not_delivered.cycles_0_uops_deliv.core
+rtm_retired.aborted_memtype
+core_power.lvl2_turbo_license
+br_inst_retired.near_return
+cpu_clk_unhalted.thread_p
+inst_retired.nop
+rob_misc_events.pause_inst
+uops_executed.cycles_ge_3_uops_exec
+dtlb_load_misses.walk_completed_4k
+L1-dcache-load-misses

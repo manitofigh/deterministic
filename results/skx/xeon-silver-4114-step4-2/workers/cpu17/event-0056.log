@@ -1,0 +1,57 @@
+event: mem_inst_retired.all_stores:u
+cpu: 17
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu17/perf.tmp -e mem_inst_retired.all_stores:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:06:16 2026
+
+24160000;;mem_inst_retired.all_stores:u;3134467065;100.00;;
+
+parsed count: 24160000
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu17/perf.tmp -e mem_inst_retired.all_stores:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:06:19 2026
+
+24160000;;mem_inst_retired.all_stores:u;3128127469;100.00;;
+
+parsed count: 24160000
+exit: 0
+
+--- round 3 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu17/perf.tmp -e mem_inst_retired.all_stores:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:06:22 2026
+
+24160000;;mem_inst_retired.all_stores:u;3137259592;100.00;;
+
+parsed count: 24160000
+exit: 0
+
+--- round 4 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu17/perf.tmp -e mem_inst_retired.all_stores:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:06:26 2026
+
+24160000;;mem_inst_retired.all_stores:u;3132317150;100.00;;
+
+parsed count: 24160000
+exit: 0
+
+--- round 5 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu17/perf.tmp -e mem_inst_retired.all_stores:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:06:29 2026
+
+24160000;;mem_inst_retired.all_stores:u;3134857149;100.00;;
+
+parsed count: 24160000
+exit: 0
+
+result: Potentially deterministic
+rounds attempted: 5
+

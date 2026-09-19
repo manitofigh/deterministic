@@ -1,0 +1,27 @@
+event: l2_lines_out.useless_hwpf:u
+cpu: 15
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu15/perf.tmp -e l2_lines_out.useless_hwpf:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:06:09 2026
+
+263;;l2_lines_out.useless_hwpf:u;3139789911;100.00;;
+
+parsed count: 263
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu15/perf.tmp -e l2_lines_out.useless_hwpf:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:06:13 2026
+
+229;;l2_lines_out.useless_hwpf:u;3138278393;100.00;;
+
+parsed count: 229
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

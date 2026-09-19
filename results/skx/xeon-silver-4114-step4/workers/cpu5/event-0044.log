@@ -1,0 +1,27 @@
+event: l2_rqsts.demand_data_rd_hit:u
+cpu: 5
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu5/perf.tmp -e l2_rqsts.demand_data_rd_hit:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:01:15 2026
+
+755760;;l2_rqsts.demand_data_rd_hit:u;3150057762;100.00;;
+
+parsed count: 755760
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu5/perf.tmp -e l2_rqsts.demand_data_rd_hit:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:01:18 2026
+
+708943;;l2_rqsts.demand_data_rd_hit:u;3141091899;100.00;;
+
+parsed count: 708943
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

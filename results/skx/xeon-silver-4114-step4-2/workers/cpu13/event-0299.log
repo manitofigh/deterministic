@@ -1,0 +1,37 @@
+event: dTLB-store-misses:u
+cpu: 13
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu13/perf.tmp -e dTLB-store-misses:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:08:16 2026
+
+30028;;dTLB-store-misses;3126127430;100.00;;
+
+parsed count: 30028
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu13/perf.tmp -e dTLB-store-misses:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:08:20 2026
+
+30028;;dTLB-store-misses;3125205728;100.00;;
+
+parsed count: 30028
+exit: 0
+
+--- round 3 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu13/perf.tmp -e dTLB-store-misses:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:08:23 2026
+
+30030;;dTLB-store-misses;3124735220;100.00;;
+
+parsed count: 30030
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 3
+

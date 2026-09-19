@@ -1,0 +1,27 @@
+event: memory_disambiguation.history_reset:u
+cpu: 18
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu18/perf.tmp -e memory_disambiguation.history_reset:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:02:12 2026
+
+278037;;memory_disambiguation.history_reset:u;3135738713;100.00;;
+
+parsed count: 278037
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu18/perf.tmp -e memory_disambiguation.history_reset:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:02:15 2026
+
+263237;;memory_disambiguation.history_reset:u;3124095075;100.00;;
+
+parsed count: 263237
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

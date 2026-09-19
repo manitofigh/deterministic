@@ -1,0 +1,27 @@
+event: topdown-fetch-bubbles:u
+cpu: 16
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu16/perf.tmp -e topdown-fetch-bubbles:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:00:53 2026
+
+14485937588;;topdown-fetch-bubbles:u;3129302039;100.00;;
+
+parsed count: 14485937588
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu16/perf.tmp -e topdown-fetch-bubbles:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:00:56 2026
+
+14485941594;;topdown-fetch-bubbles:u;3121485033;100.00;;
+
+parsed count: 14485941594
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

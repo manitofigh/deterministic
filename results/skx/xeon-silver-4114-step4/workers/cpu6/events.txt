@@ -1,0 +1,16 @@
+cycles-ct
+tx-start
+l2_rqsts.demand_data_rd_miss
+mem_load_l3_hit_retired.xsnp_hitm
+sw_prefetch_access.t1_t2
+icache_64b.iftag_hit
+idq_uops_not_delivered.core
+rtm_retired.aborted_mem
+core_power.lvl1_turbo_license
+br_inst_retired.near_call
+cpu_clk_unhalted.thread_any
+inst_retired.any_p
+resource_stalls.sb
+uops_executed.cycles_ge_2_uops_exec
+dtlb_load_misses.walk_completed_2m_4m
+L1-dcache-loads

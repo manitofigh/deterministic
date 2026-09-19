@@ -1,0 +1,27 @@
+event: cycle_activity.stalls_l1d_miss:u
+cpu: 12
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu12/perf.tmp -e cycle_activity.stalls_l1d_miss:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:02:35 2026
+
+173622247;;cycle_activity.stalls_l1d_miss:u;3128506799;100.00;;
+
+parsed count: 173622247
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu12/perf.tmp -e cycle_activity.stalls_l1d_miss:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:02:38 2026
+
+170929290;;cycle_activity.stalls_l1d_miss:u;3122346055;100.00;;
+
+parsed count: 170929290
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

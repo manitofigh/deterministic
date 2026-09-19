@@ -1,0 +1,16 @@
+bus-cycles
+tx-abort
+l2_rqsts.all_rfo
+mem_inst_retired.split_stores
+sq_misc.split_lock
+decode.lcp
+idq.ms_dsb_cycles
+hle_retired.start
+tx_mem.abort_hle_elision_buffer_unsupported_alignment
+br_inst_retired.cond
+cpu_clk_unhalted.ref_tsc
+exe_activity.exe_bound_0_ports
+machine_clears.smc
+uops_executed.core_cycles_ge_3
+dtlb_load_misses.stlb_hit
+itlb_misses.walk_completed_1g

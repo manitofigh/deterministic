@@ -1,0 +1,27 @@
+event: arith.divider_active:u
+cpu: 0
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu0/perf.tmp -e arith.divider_active:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:07:39 2026
+
+38203010;;arith.divider_active:u;3128003188;100.00;;
+
+parsed count: 38203010
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu0/perf.tmp -e arith.divider_active:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:07:42 2026
+
+38075264;;arith.divider_active:u;3125046298;100.00;;
+
+parsed count: 38075264
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

@@ -1,0 +1,57 @@
+event: br_inst_retired.near_call:u
+cpu: 6
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu6/perf.tmp -e br_inst_retired.near_call:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:07:38 2026
+
+200000;;br_inst_retired.near_call:u;3122613686;100.00;;
+
+parsed count: 200000
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu6/perf.tmp -e br_inst_retired.near_call:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:07:42 2026
+
+200000;;br_inst_retired.near_call:u;3122189390;100.00;;
+
+parsed count: 200000
+exit: 0
+
+--- round 3 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu6/perf.tmp -e br_inst_retired.near_call:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:07:45 2026
+
+200000;;br_inst_retired.near_call:u;3123935807;100.00;;
+
+parsed count: 200000
+exit: 0
+
+--- round 4 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu6/perf.tmp -e br_inst_retired.near_call:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:07:48 2026
+
+200000;;br_inst_retired.near_call:u;3123537514;100.00;;
+
+parsed count: 200000
+exit: 0
+
+--- round 5 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu6/perf.tmp -e br_inst_retired.near_call:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:07:51 2026
+
+200000;;br_inst_retired.near_call:u;3122610268;100.00;;
+
+parsed count: 200000
+exit: 0
+
+result: Potentially deterministic
+rounds attempted: 5
+

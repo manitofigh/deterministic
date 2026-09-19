@@ -1,0 +1,27 @@
+event: machine_clears.smc:u
+cpu: 2
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu2/perf.tmp -e machine_clears.smc:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:08:18 2026
+
+2521;;machine_clears.smc:u;3130896431;100.00;;
+
+parsed count: 2521
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu2/perf.tmp -e machine_clears.smc:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:08:21 2026
+
+2504;;machine_clears.smc:u;3121813059;100.00;;
+
+parsed count: 2504
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

@@ -1,0 +1,17 @@
+event: branch-load-misses:u
+cpu: 17
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu17/perf.tmp -e branch-load-misses:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:03:16 2026
+
+85;;branch-load-misses;3129384052;100.00;;
+
+parsed count: None
+exit: 0
+
+result: Error
+rounds attempted: 1
+expected exactly one counter result

@@ -1,0 +1,27 @@
+event: baclears.any:u
+cpu: 1
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu1/perf.tmp -e baclears.any:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:06:45 2026
+
+233;;baclears.any:u;3138255237;100.00;;
+
+parsed count: 233
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu1/perf.tmp -e baclears.any:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:06:48 2026
+
+195;;baclears.any:u;3132135411;100.00;;
+
+parsed count: 195
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

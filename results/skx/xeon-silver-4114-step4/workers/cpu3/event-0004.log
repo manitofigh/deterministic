@@ -1,0 +1,27 @@
+event: cache-misses:u
+cpu: 3
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu3/perf.tmp -e cache-misses:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:00:53 2026
+
+600052;;cache-misses:u;3135573896;100.00;;
+
+parsed count: 600052
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu3/perf.tmp -e cache-misses:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:00:56 2026
+
+600072;;cache-misses:u;3137769332;100.00;;
+
+parsed count: 600072
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

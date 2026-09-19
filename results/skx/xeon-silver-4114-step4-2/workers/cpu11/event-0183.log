@@ -1,0 +1,27 @@
+event: br_misp_exec.indirect:u
+cpu: 11
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu11/perf.tmp -e br_misp_exec.indirect:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:07:38 2026
+
+4;;br_misp_exec.indirect:u;3132550897;100.00;;
+
+parsed count: 4
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu11/perf.tmp -e br_misp_exec.indirect:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:07:42 2026
+
+2;;br_misp_exec.indirect:u;3126918259;100.00;;
+
+parsed count: 2
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

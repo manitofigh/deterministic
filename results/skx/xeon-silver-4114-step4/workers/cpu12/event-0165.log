@@ -1,0 +1,27 @@
+event: core_snoop_response.rsp_ihiti:u
+cpu: 12
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu12/perf.tmp -e core_snoop_response.rsp_ihiti:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:02:22 2026
+
+248158;;core_snoop_response.rsp_ihiti:u;3134333776;100.00;;
+
+parsed count: 248158
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu12/perf.tmp -e core_snoop_response.rsp_ihiti:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:02:25 2026
+
+271702;;core_snoop_response.rsp_ihiti:u;3121584110;100.00;;
+
+parsed count: 271702
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

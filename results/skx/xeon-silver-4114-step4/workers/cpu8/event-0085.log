@@ -1,0 +1,57 @@
+event: fp_arith_inst_retired.128b_packed_single:u
+cpu: 8
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu8/perf.tmp -e fp_arith_inst_retired.128b_packed_single:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:01:28 2026
+
+2900000;;fp_arith_inst_retired.128b_packed_single:u;3136103881;100.00;;
+
+parsed count: 2900000
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu8/perf.tmp -e fp_arith_inst_retired.128b_packed_single:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:01:31 2026
+
+2900000;;fp_arith_inst_retired.128b_packed_single:u;3138201470;100.00;;
+
+parsed count: 2900000
+exit: 0
+
+--- round 3 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu8/perf.tmp -e fp_arith_inst_retired.128b_packed_single:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:01:35 2026
+
+2900000;;fp_arith_inst_retired.128b_packed_single:u;3139671517;100.00;;
+
+parsed count: 2900000
+exit: 0
+
+--- round 4 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu8/perf.tmp -e fp_arith_inst_retired.128b_packed_single:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:01:38 2026
+
+2900000;;fp_arith_inst_retired.128b_packed_single:u;3140454592;100.00;;
+
+parsed count: 2900000
+exit: 0
+
+--- round 5 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu8/perf.tmp -e fp_arith_inst_retired.128b_packed_single:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:01:41 2026
+
+2900000;;fp_arith_inst_retired.128b_packed_single:u;3133681597;100.00;;
+
+parsed count: 2900000
+exit: 0
+
+result: Potentially deterministic
+rounds attempted: 5
+

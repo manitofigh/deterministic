@@ -1,0 +1,27 @@
+event: idq.all_mite_cycles_any_uops:u
+cpu: 13
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu13/perf.tmp -e idq.all_mite_cycles_any_uops:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:01:44 2026
+
+5565306887;;idq.all_mite_cycles_any_uops:u;3138411057;100.00;;
+
+parsed count: 5565306887
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu13/perf.tmp -e idq.all_mite_cycles_any_uops:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:01:47 2026
+
+5565397049;;idq.all_mite_cycles_any_uops:u;3135395826;100.00;;
+
+parsed count: 5565397049
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

@@ -1,0 +1,27 @@
+event: iTLB-loads:u
+cpu: 14
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu14/perf.tmp -e iTLB-loads:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:08:26 2026
+
+3;;iTLB-loads;3128949852;100.00;;
+
+parsed count: 3
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu14/perf.tmp -e iTLB-loads:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:08:29 2026
+
+1;;iTLB-loads;3126039346;100.00;;
+
+parsed count: 1
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

@@ -1,0 +1,27 @@
+event: topdown-slots-issued:u
+cpu: 18
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu18/perf.tmp -e topdown-slots-issued:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:00:53 2026
+
+13195533754;;topdown-slots-issued:u;3146724861;100.00;;
+
+parsed count: 13195533754
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu18/perf.tmp -e topdown-slots-issued:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:00:56 2026
+
+13193895711;;topdown-slots-issued:u;3138181242;100.00;;
+
+parsed count: 13193895711
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

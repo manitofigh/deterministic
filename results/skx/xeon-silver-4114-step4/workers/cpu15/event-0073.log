@@ -1,0 +1,27 @@
+event: mem_load_retired.l1_hit:u
+cpu: 15
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu15/perf.tmp -e mem_load_retired.l1_hit:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:01:12 2026
+
+71513578;;mem_load_retired.l1_hit:u;3120058813;100.00;;
+
+parsed count: 71513578
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu15/perf.tmp -e mem_load_retired.l1_hit:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:01:15 2026
+
+71524462;;mem_load_retired.l1_hit:u;3136274067;100.00;;
+
+parsed count: 71524462
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

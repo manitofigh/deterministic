@@ -1,0 +1,47 @@
+event: br_misp_retired.near_call:u
+cpu: 14
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu14/perf.tmp -e br_misp_retired.near_call:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:02:28 2026
+
+3;;br_misp_retired.near_call:u;3125344788;100.00;;
+
+parsed count: 3
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu14/perf.tmp -e br_misp_retired.near_call:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:02:31 2026
+
+3;;br_misp_retired.near_call:u;3127613319;100.00;;
+
+parsed count: 3
+exit: 0
+
+--- round 3 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu14/perf.tmp -e br_misp_retired.near_call:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:02:34 2026
+
+3;;br_misp_retired.near_call:u;3126744712;100.00;;
+
+parsed count: 3
+exit: 0
+
+--- round 4 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu14/perf.tmp -e br_misp_retired.near_call:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:02:37 2026
+
+2;;br_misp_retired.near_call:u;3124029166;100.00;;
+
+parsed count: 2
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 4
+

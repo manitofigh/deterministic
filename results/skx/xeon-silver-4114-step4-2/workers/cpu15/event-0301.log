@@ -1,0 +1,47 @@
+event: iTLB-load-misses:u
+cpu: 15
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu15/perf.tmp -e iTLB-load-misses:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:08:20 2026
+
+5;;iTLB-load-misses;3126279586;100.00;;
+
+parsed count: 5
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu15/perf.tmp -e iTLB-load-misses:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:08:23 2026
+
+5;;iTLB-load-misses;3123326841;100.00;;
+
+parsed count: 5
+exit: 0
+
+--- round 3 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu15/perf.tmp -e iTLB-load-misses:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:08:26 2026
+
+5;;iTLB-load-misses;3125733028;100.00;;
+
+parsed count: 5
+exit: 0
+
+--- round 4 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu15/perf.tmp -e iTLB-load-misses:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:08:30 2026
+
+6;;iTLB-load-misses;3118502279;100.00;;
+
+parsed count: 6
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 4
+

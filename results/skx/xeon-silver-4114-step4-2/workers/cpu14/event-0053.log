@@ -1,0 +1,27 @@
+event: longest_lat_cache.miss:u
+cpu: 14
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu14/perf.tmp -e longest_lat_cache.miss:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:06:26 2026
+
+600027;;longest_lat_cache.miss:u;3134447102;100.00;;
+
+parsed count: 600027
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu14/perf.tmp -e longest_lat_cache.miss:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:06:29 2026
+
+599872;;longest_lat_cache.miss:u;3127770793;100.00;;
+
+parsed count: 599872
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

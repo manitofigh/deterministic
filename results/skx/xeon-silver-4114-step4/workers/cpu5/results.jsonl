@@ -1,0 +1,16 @@
+{"index": 6, "event": "cpu-cycles:u", "cpu": 5, "runs": 2, "status": "Non-deterministic", "counts": [7659750783, 7670887386], "note": "", "log": "workers/cpu5/event-0006.log"}
+{"index": 25, "event": "tx-conflict:u", "cpu": 5, "runs": 5, "status": "Zero-only", "counts": [0, 0, 0, 0, 0], "note": "all rounds returned zero; inconclusive", "log": "workers/cpu5/event-0025.log"}
+{"index": 44, "event": "l2_rqsts.demand_data_rd_hit:u", "cpu": 5, "runs": 2, "status": "Non-deterministic", "counts": [755760, 708943], "note": "", "log": "workers/cpu5/event-0044.log"}
+{"index": 63, "event": "mem_load_l3_hit_retired.xsnp_hit:u", "cpu": 5, "runs": 5, "status": "Zero-only", "counts": [0, 0, 0, 0, 0], "note": "all rounds returned zero; inconclusive", "log": "workers/cpu5/event-0063.log"}
+{"index": 82, "event": "sw_prefetch_access.t0:u", "cpu": 5, "runs": 2, "status": "Non-deterministic", "counts": [100002, 100001], "note": "", "log": "workers/cpu5/event-0082.log"}
+{"index": 101, "event": "icache_16b.ifdata_stall:u", "cpu": 5, "runs": 2, "status": "Non-deterministic", "counts": [83236, 80598], "note": "", "log": "workers/cpu5/event-0101.log"}
+{"index": 120, "event": "idq.ms_uops:u", "cpu": 5, "runs": 2, "status": "Non-deterministic", "counts": [12872847951, 12872949125], "note": "", "log": "workers/cpu5/event-0120.log"}
+{"index": 139, "event": "rtm_retired.aborted_events:u", "cpu": 5, "runs": 5, "status": "Zero-only", "counts": [0, 0, 0, 0, 0], "note": "all rounds returned zero; inconclusive", "log": "workers/cpu5/event-0139.log"}
+{"index": 158, "event": "core_power.lvl0_turbo_license:u", "cpu": 5, "runs": 2, "status": "Non-deterministic", "counts": [7634821725, 7650596747], "note": "", "log": "workers/cpu5/event-0158.log"}
+{"index": 177, "event": "br_inst_retired.far_branch:u", "cpu": 5, "runs": 2, "status": "Non-deterministic", "counts": [33448, 33491], "note": "", "log": "workers/cpu5/event-0177.log"}
+{"index": 196, "event": "cpu_clk_unhalted.thread:u", "cpu": 5, "runs": 2, "status": "Non-deterministic", "counts": [7639029000, 7693394504], "note": "", "log": "workers/cpu5/event-0196.log"}
+{"index": 215, "event": "inst_retired.any:u", "cpu": 5, "runs": 2, "status": "Non-deterministic", "counts": [227003394, 227003384], "note": "", "log": "workers/cpu5/event-0215.log"}
+{"index": 234, "event": "resource_stalls.any:u", "cpu": 5, "runs": 2, "status": "Non-deterministic", "counts": [427158811, 426155833], "note": "", "log": "workers/cpu5/event-0234.log"}
+{"index": 253, "event": "uops_executed.cycles_ge_1_uop_exec:u", "cpu": 5, "runs": 2, "status": "Non-deterministic", "counts": [6380934915, 6381160201], "note": "", "log": "workers/cpu5/event-0253.log"}
+{"index": 272, "event": "dtlb_load_misses.walk_completed_1g:u", "cpu": 5, "runs": 5, "status": "Zero-only", "counts": [0, 0, 0, 0, 0], "note": "all rounds returned zero; inconclusive", "log": "workers/cpu5/event-0272.log"}
+{"index": 291, "event": "itlb_misses.walk_pending:u", "cpu": 5, "runs": 2, "status": "Non-deterministic", "counts": [339969, 339921], "note": "", "log": "workers/cpu5/event-0291.log"}

@@ -1,0 +1,16 @@
+el-abort
+l1d_pend_miss.fb_full
+l2_rqsts.pf_hit
+mem_load_l3_hit_retired.xsnp_none
+fp_arith_inst_retired.128b_packed_single
+icache_64b.iftag_stall
+idq_uops_not_delivered.cycles_fe_was_ok
+rtm_retired.aborted_timer
+core_power.throttle
+br_inst_retired.near_taken
+cpu_clk_unhalted.thread_p_any
+int_misc.clear_resteer_cycles
+rs_events.empty_cycles
+uops_executed.cycles_ge_4_uops_exec
+dtlb_load_misses.walk_pending
+L1-dcache-stores

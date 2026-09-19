@@ -1,0 +1,27 @@
+event: exe_activity.exe_bound_0_ports:u
+cpu: 2
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu2/perf.tmp -e exe_activity.exe_bound_0_ports:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:08:11 2026
+
+87461125;;exe_activity.exe_bound_0_ports:u;3127064496;100.00;;
+
+parsed count: 87461125
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu2/perf.tmp -e exe_activity.exe_bound_0_ports:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:08:14 2026
+
+87370765;;exe_activity.exe_bound_0_ports:u;3132642991;100.00;;
+
+parsed count: 87370765
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

@@ -1,0 +1,16 @@
+{"index": 2, "event": "branch-misses:u", "cpu": 1, "runs": 2, "status": "Non-deterministic", "counts": [132, 116], "note": "", "log": "workers/cpu1/event-0002.log"}
+{"index": 21, "event": "topdown-total-slots:u", "cpu": 1, "runs": 2, "status": "Non-deterministic", "counts": [30702559848, 30645139492], "note": "", "log": "workers/cpu1/event-0021.log"}
+{"index": 40, "event": "l2_rqsts.all_pf:u", "cpu": 1, "runs": 2, "status": "Non-deterministic", "counts": [1569554, 1537011], "note": "", "log": "workers/cpu1/event-0040.log"}
+{"index": 59, "event": "mem_inst_retired.split_loads:u", "cpu": 1, "runs": 5, "status": "Potentially deterministic", "counts": [100000, 100000, 100000, 100000, 100000], "note": "", "log": "workers/cpu1/event-0059.log"}
+{"index": 78, "event": "mem_load_retired.l3_miss:u", "cpu": 1, "runs": 2, "status": "Non-deterministic", "counts": [292854, 306841], "note": "", "log": "workers/cpu1/event-0078.log"}
+{"index": 97, "event": "baclears.any:u", "cpu": 1, "runs": 2, "status": "Non-deterministic", "counts": [160, 197], "note": "", "log": "workers/cpu1/event-0097.log"}
+{"index": 116, "event": "idq.ms_cycles:u", "cpu": 1, "runs": 2, "status": "Non-deterministic", "counts": [5502566805, 5502956250], "note": "", "log": "workers/cpu1/event-0116.log"}
+{"index": 135, "event": "hle_retired.commit:u", "cpu": 1, "runs": 5, "status": "Zero-only", "counts": [0, 0, 0, 0, 0], "note": "all rounds returned zero; inconclusive", "log": "workers/cpu1/event-0135.log"}
+{"index": 154, "event": "tx_mem.abort_hle_elision_buffer_not_empty:u", "cpu": 1, "runs": 5, "status": "Zero-only", "counts": [0, 0, 0, 0, 0], "note": "all rounds returned zero; inconclusive", "log": "workers/cpu1/event-0154.log"}
+{"index": 173, "event": "br_inst_retired.all_branches:u", "cpu": 1, "runs": 3, "status": "Non-deterministic", "counts": [9253185, 9253185, 9253193], "note": "", "log": "workers/cpu1/event-0173.log"}
+{"index": 192, "event": "cpu_clk_unhalted.one_thread_active:u", "cpu": 1, "runs": 2, "status": "Non-deterministic", "counts": [76365412, 76418083], "note": "", "log": "workers/cpu1/event-0192.log"}
+{"index": 211, "event": "exe_activity.bound_on_stores:u", "cpu": 1, "runs": 2, "status": "Non-deterministic", "counts": [6590505, 6588302], "note": "", "log": "workers/cpu1/event-0211.log"}
+{"index": 230, "event": "machine_clears.count:u", "cpu": 1, "runs": 2, "status": "Non-deterministic", "counts": [126034, 126070], "note": "", "log": "workers/cpu1/event-0230.log"}
+{"index": 249, "event": "uops_executed.core_cycles_ge_2:u", "cpu": 1, "runs": 2, "status": "Non-deterministic", "counts": [3298822608, 3300523129], "note": "", "log": "workers/cpu1/event-0249.log"}
+{"index": 268, "event": "dtlb_load_misses.miss_causes_a_walk:u", "cpu": 1, "runs": 2, "status": "Non-deterministic", "counts": [400145, 400135], "note": "", "log": "workers/cpu1/event-0268.log"}
+{"index": 287, "event": "itlb_misses.walk_completed:u", "cpu": 1, "runs": 2, "status": "Non-deterministic", "counts": [19, 7], "note": "", "log": "workers/cpu1/event-0287.log"}

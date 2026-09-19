@@ -1,0 +1,57 @@
+event: fp_arith_inst_retired.scalar_single:u
+cpu: 17
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu17/perf.tmp -e fp_arith_inst_retired.scalar_single:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:01:28 2026
+
+2300000;;fp_arith_inst_retired.scalar_single:u;3130370693;100.00;;
+
+parsed count: 2300000
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu17/perf.tmp -e fp_arith_inst_retired.scalar_single:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:01:31 2026
+
+2300000;;fp_arith_inst_retired.scalar_single:u;3132418846;100.00;;
+
+parsed count: 2300000
+exit: 0
+
+--- round 3 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu17/perf.tmp -e fp_arith_inst_retired.scalar_single:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:01:34 2026
+
+2300000;;fp_arith_inst_retired.scalar_single:u;3134946878;100.00;;
+
+parsed count: 2300000
+exit: 0
+
+--- round 4 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu17/perf.tmp -e fp_arith_inst_retired.scalar_single:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:01:37 2026
+
+2300000;;fp_arith_inst_retired.scalar_single:u;3134998351;100.00;;
+
+parsed count: 2300000
+exit: 0
+
+--- round 5 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu17/perf.tmp -e fp_arith_inst_retired.scalar_single:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:01:40 2026
+
+2300000;;fp_arith_inst_retired.scalar_single:u;3129396503;100.00;;
+
+parsed count: 2300000
+exit: 0
+
+result: Potentially deterministic
+rounds attempted: 5
+

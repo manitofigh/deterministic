@@ -1,0 +1,27 @@
+event: idq.dsb_uops:u
+cpu: 17
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu17/perf.tmp -e idq.dsb_uops:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:01:44 2026
+
+180373930;;idq.dsb_uops:u;3131909897;100.00;;
+
+parsed count: 180373930
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu17/perf.tmp -e idq.dsb_uops:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:01:47 2026
+
+180784927;;idq.dsb_uops:u;3135040909;100.00;;
+
+parsed count: 180784927
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

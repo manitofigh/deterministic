@@ -1,0 +1,27 @@
+event: ld_blocks.store_forward:u
+cpu: 13
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu13/perf.tmp -e ld_blocks.store_forward:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:07:42 2026
+
+5602959;;ld_blocks.store_forward:u;3129342542;100.00;;
+
+parsed count: 5602959
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu13/perf.tmp -e ld_blocks.store_forward:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:07:45 2026
+
+5685733;;ld_blocks.store_forward:u;3126554728;100.00;;
+
+parsed count: 5685733
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

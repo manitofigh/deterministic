@@ -1,0 +1,27 @@
+event: resource_stalls.any:u
+cpu: 5
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu5/perf.tmp -e resource_stalls.any:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:02:39 2026
+
+427158811;;resource_stalls.any:u;3130267312;100.00;;
+
+parsed count: 427158811
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu5/perf.tmp -e resource_stalls.any:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:02:42 2026
+
+426155833;;resource_stalls.any:u;3131782205;100.00;;
+
+parsed count: 426155833
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

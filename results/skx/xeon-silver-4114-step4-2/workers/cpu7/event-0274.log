@@ -1,0 +1,27 @@
+event: dtlb_load_misses.walk_completed_4k:u
+cpu: 7
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu7/perf.tmp -e dtlb_load_misses.walk_completed_4k:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:08:49 2026
+
+400027;;dtlb_load_misses.walk_completed_4k:u;3119726007;100.00;;
+
+parsed count: 400027
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu7/perf.tmp -e dtlb_load_misses.walk_completed_4k:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:08:52 2026
+
+400032;;dtlb_load_misses.walk_completed_4k:u;3128161933;100.00;;
+
+parsed count: 400032
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

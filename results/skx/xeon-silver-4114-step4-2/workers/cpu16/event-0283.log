@@ -1,0 +1,27 @@
+event: dtlb_store_misses.walk_pending:u
+cpu: 16
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu16/perf.tmp -e dtlb_store_misses.walk_pending:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:08:20 2026
+
+1210086;;dtlb_store_misses.walk_pending:u;3113123437;100.00;;
+
+parsed count: 1210086
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu16/perf.tmp -e dtlb_store_misses.walk_pending:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:08:23 2026
+
+1212153;;dtlb_store_misses.walk_pending:u;3116054929;100.00;;
+
+parsed count: 1212153
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

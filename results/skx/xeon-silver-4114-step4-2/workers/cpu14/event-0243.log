@@ -1,0 +1,27 @@
+event: uops_dispatched_port.port_4:u
+cpu: 14
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu14/perf.tmp -e uops_dispatched_port.port_4:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:07:58 2026
+
+129667867;;uops_dispatched_port.port_4:u;3128151005;100.00;;
+
+parsed count: 129667867
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu14/perf.tmp -e uops_dispatched_port.port_4:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:08:01 2026
+
+129942721;;uops_dispatched_port.port_4:u;3126926937;100.00;;
+
+parsed count: 129942721
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

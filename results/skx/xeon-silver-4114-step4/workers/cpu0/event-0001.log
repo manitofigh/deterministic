@@ -1,0 +1,27 @@
+event: branch-instructions:u
+cpu: 0
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu0/perf.tmp -e branch-instructions:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:00:53 2026
+
+9253210;;branch-instructions:u;3152923230;100.00;;
+
+parsed count: 9253210
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu0/perf.tmp -e branch-instructions:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:00:56 2026
+
+9253202;;branch-instructions:u;3147867683;100.00;;
+
+parsed count: 9253202
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

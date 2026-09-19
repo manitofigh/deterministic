@@ -1,0 +1,57 @@
+event: fp_arith_inst_retired.scalar:u
+cpu: 15
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu15/perf.tmp -e fp_arith_inst_retired.scalar:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:01:18 2026
+
+4200000;;fp_arith_inst_retired.scalar:u;3125589416;100.00;;
+
+parsed count: 4200000
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu15/perf.tmp -e fp_arith_inst_retired.scalar:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:01:22 2026
+
+4200000;;fp_arith_inst_retired.scalar:u;3136152218;100.00;;
+
+parsed count: 4200000
+exit: 0
+
+--- round 3 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu15/perf.tmp -e fp_arith_inst_retired.scalar:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:01:25 2026
+
+4200000;;fp_arith_inst_retired.scalar:u;3136767891;100.00;;
+
+parsed count: 4200000
+exit: 0
+
+--- round 4 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu15/perf.tmp -e fp_arith_inst_retired.scalar:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:01:28 2026
+
+4200000;;fp_arith_inst_retired.scalar:u;3133539368;100.00;;
+
+parsed count: 4200000
+exit: 0
+
+--- round 5 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu15/perf.tmp -e fp_arith_inst_retired.scalar:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:01:31 2026
+
+4200000;;fp_arith_inst_retired.scalar:u;3128667332;100.00;;
+
+parsed count: 4200000
+exit: 0
+
+result: Potentially deterministic
+rounds attempted: 5
+

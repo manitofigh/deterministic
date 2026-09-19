@@ -1,0 +1,27 @@
+event: ld_blocks_partial.address_alias:u
+cpu: 14
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu14/perf.tmp -e ld_blocks_partial.address_alias:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:02:47 2026
+
+355100;;ld_blocks_partial.address_alias:u;3124914184;100.00;;
+
+parsed count: 355100
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu14/perf.tmp -e ld_blocks_partial.address_alias:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:02:50 2026
+
+356984;;ld_blocks_partial.address_alias:u;3124835453;100.00;;
+
+parsed count: 356984
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

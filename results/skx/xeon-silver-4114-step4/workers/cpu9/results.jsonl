@@ -1,0 +1,16 @@
+{"index": 10, "event": "el-capacity:u", "cpu": 9, "runs": 5, "status": "Zero-only", "counts": [0, 0, 0, 0, 0], "note": "all rounds returned zero; inconclusive", "log": "workers/cpu9/event-0010.log"}
+{"index": 29, "event": "l1d_pend_miss.pending:u", "cpu": 9, "runs": 2, "status": "Non-deterministic", "counts": [206196355, 218503533], "note": "", "log": "workers/cpu9/event-0029.log"}
+{"index": 48, "event": "l2_rqsts.pf_miss:u", "cpu": 9, "runs": 2, "status": "Non-deterministic", "counts": [1881, 695], "note": "", "log": "workers/cpu9/event-0048.log"}
+{"index": 67, "event": "mem_load_l3_miss_retired.local_dram:u", "cpu": 9, "runs": 2, "status": "Non-deterministic", "counts": [317807, 311759], "note": "", "log": "workers/cpu9/event-0067.log"}
+{"index": 86, "event": "fp_arith_inst_retired.256b_packed_double:u", "cpu": 9, "runs": 5, "status": "Zero-only", "counts": [0, 0, 0, 0, 0], "note": "all rounds returned zero; inconclusive", "log": "workers/cpu9/event-0086.log"}
+{"index": 105, "event": "icache_tag.stalls:u", "cpu": 9, "runs": 2, "status": "Non-deterministic", "counts": [21728, 3668], "note": "", "log": "workers/cpu9/event-0105.log"}
+{"index": 124, "event": "idq_uops_not_delivered.cycles_le_1_uop_deliv.core:u", "cpu": 9, "runs": 2, "status": "Non-deterministic", "counts": [3134064889, 3134157295], "note": "", "log": "workers/cpu9/event-0124.log"}
+{"index": 143, "event": "rtm_retired.aborted_unfriendly:u", "cpu": 9, "runs": 5, "status": "Zero-only", "counts": [0, 0, 0, 0, 0], "note": "all rounds returned zero; inconclusive", "log": "workers/cpu9/event-0143.log"}
+{"index": 162, "event": "core_snoop_response.rsp_ifwdfe:u", "cpu": 9, "runs": 2, "status": "Non-deterministic", "counts": [4743, 4634], "note": "", "log": "workers/cpu9/event-0162.log"}
+{"index": 181, "event": "br_inst_retired.not_taken:u", "cpu": 9, "runs": 5, "status": "Potentially deterministic", "counts": [2400016, 2400016, 2400016, 2400016, 2400016], "note": "", "log": "workers/cpu9/event-0181.log"}
+{"index": 200, "event": "cycle_activity.cycles_l1d_miss:u", "cpu": 9, "runs": 2, "status": "Non-deterministic", "counts": [191853936, 184477028], "note": "", "log": "workers/cpu9/event-0200.log"}
+{"index": 219, "event": "int_misc.clears_count:u", "cpu": 9, "runs": 2, "status": "Non-deterministic", "counts": [1901856, 1901946], "note": "", "log": "workers/cpu9/event-0219.log"}
+{"index": 238, "event": "rs_events.empty_end:u", "cpu": 9, "runs": 2, "status": "Non-deterministic", "counts": [9429792, 9431328], "note": "", "log": "workers/cpu9/event-0238.log"}
+{"index": 257, "event": "uops_executed.stall_cycles:u", "cpu": 9, "runs": 2, "status": "Non-deterministic", "counts": [1254761538, 1249651620], "note": "", "log": "workers/cpu9/event-0257.log"}
+{"index": 276, "event": "dtlb_store_misses.miss_causes_a_walk:u", "cpu": 9, "runs": 2, "status": "Non-deterministic", "counts": [31394, 31638], "note": "", "log": "workers/cpu9/event-0276.log"}
+{"index": 295, "event": "L1-icache-load-misses:u", "cpu": 9, "runs": 1, "status": "Error", "counts": [], "note": "expected exactly one counter result", "log": "workers/cpu9/event-0295.log"}

@@ -1,0 +1,27 @@
+event: icache_64b.iftag_miss:u
+cpu: 7
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu7/perf.tmp -e icache_64b.iftag_miss:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:01:53 2026
+
+14498;;icache_64b.iftag_miss:u;3133562471;100.00;;
+
+parsed count: 14498
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu7/perf.tmp -e icache_64b.iftag_miss:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:01:56 2026
+
+14504;;icache_64b.iftag_miss:u;3124257820;100.00;;
+
+parsed count: 14504
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

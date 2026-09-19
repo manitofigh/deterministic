@@ -1,0 +1,57 @@
+event: inst_retired.nop:u
+cpu: 7
+round limit: 5
+
+--- round 1 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu7/perf.tmp -e inst_retired.nop:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:03:00 2026
+
+1580000;;inst_retired.nop:u;3126906979;100.00;;
+
+parsed count: 1580000
+exit: 0
+
+--- round 2 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu7/perf.tmp -e inst_retired.nop:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:03:03 2026
+
+1580000;;inst_retired.nop:u;3123659351;100.00;;
+
+parsed count: 1580000
+exit: 0
+
+--- round 3 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu7/perf.tmp -e inst_retired.nop:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:03:06 2026
+
+1580000;;inst_retired.nop:u;3133672210;100.00;;
+
+parsed count: 1580000
+exit: 0
+
+--- round 4 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu7/perf.tmp -e inst_retired.nop:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:03:09 2026
+
+1580000;;inst_retired.nop:u;3122850924;100.00;;
+
+parsed count: 1580000
+exit: 0
+
+--- round 5 ---
+$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu7/perf.tmp -e inst_retired.nop:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
+
+# started on Sat Sep 19 18:03:13 2026
+
+1580000;;inst_retired.nop:u;3125567238;100.00;;
+
+parsed count: 1580000
+exit: 0
+
+result: Potentially deterministic
+rounds attempted: 5
+
