@@ -2,6 +2,7 @@
 """check whether each event returns the same count across repeated runs"""
 
 from collections import Counter
+from datetime import datetime
 import fcntl
 import json
 import multiprocessing
@@ -12,6 +13,7 @@ import shutil
 import signal
 import subprocess
 import sys
+import tempfile
 import time
 
 # avoid root-owned bytecode files when running with sudo
@@ -24,6 +26,7 @@ import skid
 from worker import defer_interrupts, interrupt, run_worker, signal_group
 
 BASE = Path(__file__).resolve().parents[1]
+MONTHS = ('jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec')
 
 
 def arguments():
@@ -34,7 +37,9 @@ def arguments():
         default='count',
         help='count determinism or overflow skid (default: count)',
     )
-    parser.add_argument('--cores', type=int, help='worker cores (default: all minus one)')
+    parser.add_argument(
+        '--cores', type=int, help='worker cores (default: all minus one; one with --event)'
+    )
     parser.add_argument(
         '--start-core', type=int, help='first worker CPU number (default: lowest available)'
     )
@@ -55,7 +60,7 @@ def arguments():
         type=int,
         help='skid overflow threshold (default: select from a preliminary count)',
     )
-    parser.add_argument('--output', type=Path, help='custom output directory; never overwritten')
+    parser.add_argument('--output', type=Path, help='save a dated run under this directory')
     parser.add_argument(
         '--benchmark',
         type=Path,
@@ -92,23 +97,35 @@ def arguments():
 
 
 def find_count_results(info):
-    directory = BASE / 'results' / info['microarch']
     name = f'{info["slug"]}-step{info["stepping"]}'
+    directory = BASE / 'results/counts' / info['microarch'] / name
+
+    return latest_count_results(directory)
+
+
+def latest_count_results(directory):
     matches = []
 
-    for path in directory.glob(f'{name}*'):
-        match = re.fullmatch(re.escape(name) + r'(?:-([2-9]|[1-9][0-9]+))?', path.name)
+    if directory.is_dir():
+        for path in directory.iterdir():
+            try:
+                month, rest = path.name.split('-', 1)
+                date = datetime.strptime(rest, '%d-%Y-%H:%M:%S')
+                date = date.replace(month=MONTHS.index(month) + 1)
+            except ValueError:
+                continue
 
-        if match and path.is_dir() and any(path.glob('workers/cpu*/results.jsonl')):
-            matches.append((int(match.group(1) or 1), path))
+            if path.is_dir():
+                matches.append((date, path))
 
-    if not matches:
-        raise ValueError(
-            f'no count results found for {name} in {directory}; '
-            'pass --from-results PATH, --events PATH, or --event NAME'
-        )
+    for date, path in sorted(matches, reverse=True):
+        if skid.has_count_results(path):
+            return path
 
-    return max(matches)[1]
+    raise ValueError(
+        f'no dated count runs found in {directory}; '
+        'pass --from-results PATH, --events PATH, or --event NAME'
+    )
 
 
 def read_events(path):
@@ -139,24 +156,23 @@ def output_directory(requested):
 
         parents.append(parent)
 
-    with user_owned_outputs(parents):
-        requested.parent.mkdir(parents=True, exist_ok=True)
+    if not requested.exists():
+        parents.append(requested)
 
-    candidate = requested
-    suffix = 1
+    with user_owned_outputs(parents):
+        requested.mkdir(parents=True, exist_ok=True)
 
     while True:
+        now = datetime.now()
+        stamp = f'{MONTHS[now.month - 1]}-{now:%d-%Y-%H:%M:%S}'
+        candidate = requested / stamp
+
         try:
             candidate.mkdir()
-            break
+            return candidate
         except FileExistsError:
-            suffix += 1
-            candidate = requested.with_name(f'{requested.name}-{suffix}')
-
-    if suffix > 1:
-        message('~', f'output exists; using {candidate}')
-
-    return candidate
+            message('~', f'run already exists at {candidate}; waiting for the next second')
+            time.sleep(1)
 
 
 def atomic_write(path, text):
@@ -234,15 +250,14 @@ def report(output, total, started, state, mode='count'):
 
 
 def experiment(args, info, events, cpus, reserve):
-    results_root = BASE / 'results'
-
-    if args.mode == 'skid':
-        results_root /= 'skid'
+    category = 'skid' if args.mode == 'skid' else 'counts'
+    results_root = BASE / 'results' / category
 
     requested = args.output or (
         results_root / info['microarch'] / f'{info["slug"]}-step{info["stepping"]}'
     )
     output = output_directory(requested)
+    started_at = datetime.now().astimezone().isoformat(timespec='seconds')
 
     with user_owned_outputs([output]):
         (output / 'events.txt').write_text('\n'.join(events) + '\n')
@@ -253,6 +268,7 @@ def experiment(args, info, events, cpus, reserve):
 
         profile = (
             f'# Processor profile\n\n'
+            f'- Started: {started_at}\n'
             f'- Processor: {info["model"]}\n'
             f'- Microarchitecture/event family: `{info["microarch"]}`\n'
             f'- CPU family/model: {info["family"]}/0x{info["model_id"]:02x}\n'
@@ -299,7 +315,7 @@ def experiment(args, info, events, cpus, reserve):
 
                 if args.mode == 'skid':
                     target = skid.run_worker
-                    worker_args += (helper, configs, args.overflow_threshold)
+                    worker_args += (helper, configs, args.overflow_threshold, bool(args.event))
 
                 worker = multiprocessing.get_context('fork').Process(
                     target=target, args=worker_args
@@ -361,6 +377,43 @@ def experiment(args, info, events, cpus, reserve):
     return int(failed)
 
 
+def console_experiment(args, cpu):
+    with tempfile.TemporaryDirectory(prefix='deterministic-skid-') as temporary:
+        helper, configs = skid.prepare([args.event], Path(temporary), save=False)
+        worker = multiprocessing.get_context('fork').Process(
+            target=skid.run_console,
+            args=(
+                cpu,
+                args.event,
+                args.benchmark,
+                args.rounds,
+                args.timeout,
+                helper,
+                configs[args.event],
+                args.overflow_threshold,
+            ),
+        )
+
+        try:
+            with defer_interrupts():
+                worker.start()
+
+            while worker.is_alive():
+                worker.join(timeout=1)
+
+            return int(worker.exitcode != 0)
+        finally:
+            if worker.pid is not None:
+                if worker.is_alive():
+                    worker.terminate()
+
+                worker.join(timeout=10)
+
+                if worker.is_alive():
+                    worker.kill()
+                    worker.join()
+
+
 def main():
     args = arguments()
 
@@ -383,6 +436,10 @@ def main():
 
     if args.from_results:
         args.from_results = args.from_results.resolve()
+
+        if not (args.from_results / 'workers').is_dir():
+            args.from_results = latest_count_results(args.from_results)
+            message('~', f'using count results: {args.from_results}')
     elif not args.event:
         args.events = (
             args.events or BASE / 'events/intel' / info['microarch'] / 'events.txt'
@@ -422,10 +479,18 @@ def main():
             events = read_events(args.events)
 
         with smt_disabled():
-            cpus, reserve = select_cores(allowed, args.cores, args.start_core)
+            core_count = args.cores
+
+            if args.event and core_count is None:
+                core_count = 1
+
+            cpus, reserve = select_cores(allowed, core_count, args.start_core)
 
             try:
                 os.sched_setaffinity(0, {reserve})
+
+                if args.mode == 'skid' and args.event and args.output is None:
+                    return console_experiment(args, cpus[0])
 
                 return experiment(args, info, events, cpus, reserve)
             finally:
@@ -436,7 +501,7 @@ if __name__ == '__main__':
     try:
         sys.exit(main())
     except KeyboardInterrupt:
-        message('~', 'interrupted; partial results retained')
+        message('~', 'interrupted')
         sys.exit(130)
     except (OSError, ValueError, RuntimeError, subprocess.SubprocessError) as error:
         message('-', str(error))

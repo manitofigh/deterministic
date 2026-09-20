@@ -77,24 +77,37 @@ def signal_group(pid, signum):
 
 
 def measure(command, raw_path, log, timeout):
-    raw_path.unlink(missing_ok=True)
+    if raw_path is not None:
+        raw_path.unlink(missing_ok=True)
+
     process = None
-    pid_path = raw_path.with_suffix('.pid')
+    pid_path = raw_path.with_suffix('.pid') if raw_path is not None else None
+    raw = ''
+    stderr = ''
 
     try:
         # save the PID before handling a stop request so we can still kill perf
         with defer_interrupts():
             process = subprocess.Popen(
                 command,
-                stdout=subprocess.DEVNULL,
-                stderr=log,
+                stdout=subprocess.DEVNULL if raw_path is not None else subprocess.PIPE,
+                stderr=log if log is not None else subprocess.PIPE,
                 env={**os.environ, 'LC_ALL': 'C'},
                 start_new_session=True,
+                text=True,
+                errors='replace',
             )
-            pid_path.write_text(str(process.pid))
 
-        returncode = process.wait(timeout=timeout)
+            if pid_path is not None:
+                pid_path.write_text(str(process.pid))
+
+        stdout, stderr = process.communicate(timeout=timeout)
+        returncode = process.returncode
+        raw = stdout or ''
         error = None
+
+        if returncode and stderr:
+            error = stderr.strip()
     except subprocess.TimeoutExpired:
         returncode, error = None, f'timeout after {timeout:g} seconds'
     finally:
@@ -111,8 +124,11 @@ def measure(command, raw_path, log, timeout):
         if process is not None:
             signal_group(process.pid, signal.SIGKILL)
 
-        pid_path.unlink(missing_ok=True)
-        raw = raw_path.read_text(errors='replace') if raw_path.exists() else ''
+        if pid_path is not None:
+            pid_path.unlink(missing_ok=True)
+
+        if raw_path is not None:
+            raw = raw_path.read_text(errors='replace') if raw_path.exists() else ''
 
     return returncode, raw, error
 

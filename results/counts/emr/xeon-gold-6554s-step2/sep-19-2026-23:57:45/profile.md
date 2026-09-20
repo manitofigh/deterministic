@@ -14,3 +14,5 @@
 - Input: `/home/mani/dev/Laplace/deterministic/events/intel/emr/events.txt`
 
 Results describe this run, not all processors with the same name.
+
+Migration: original folder `results/emr/xeon-gold-6554s-step2`. The dated folder uses the previous `profile.md` modification time (2026-09-19T23:57:45-04:00); the original experiment start time was not recorded.

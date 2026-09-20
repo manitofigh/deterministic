@@ -1,0 +1,57 @@
+event: br_inst_retired.cond:u
+cpu: 0
+round limit: 10
+overflow threshold: 520008
+
+--- round 1 ---
+count at stop: 520033
+skid: 25
+instruction pointer: 0x400b48
+
+--- round 2 ---
+count at stop: 520033
+skid: 25
+instruction pointer: 0x400b48
+
+--- round 3 ---
+count at stop: 520033
+skid: 25
+instruction pointer: 0x400b44
+
+--- round 4 ---
+count at stop: 520033
+skid: 25
+instruction pointer: 0x400b40
+
+--- round 5 ---
+count at stop: 520033
+skid: 25
+instruction pointer: 0x400b44
+
+--- round 6 ---
+count at stop: 520033
+skid: 25
+instruction pointer: 0x400b48
+
+--- round 7 ---
+count at stop: 520033
+skid: 25
+instruction pointer: 0x400b48
+
+--- round 8 ---
+count at stop: 520033
+skid: 25
+instruction pointer: 0x400b44
+
+--- round 9 ---
+count at stop: 520033
+skid: 25
+instruction pointer: 0x400b44
+
+--- round 10 ---
+count at stop: 520033
+skid: 25
+instruction pointer: 0x400b48
+
+result: Potentially deterministic
+successful rounds: 10/10

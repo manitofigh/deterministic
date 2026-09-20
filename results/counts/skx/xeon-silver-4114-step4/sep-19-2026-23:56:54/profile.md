@@ -4,18 +4,15 @@
 - Microarchitecture/event family: `skx`
 - CPU family/model: 6/0x55
 - Stepping: 4
-- Mode: skid
 - Worker CPUs: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
 - Reserved coordinator CPU: 19
 - SMT: verified disabled or not supported
-- Rounds: 20
-- Events: 18
+- Maximum rounds: 1000
+- Events: 303
 - Per-round timeout: 120 seconds
 - Benchmark: `/users/moneytea/dev/Laplace/deterministic/static/binaries/retired_instr.all.x86_64`
-- Input: `/users/moneytea/dev/Laplace/deterministic/results/skx/xeon-silver-4114-step4-3`
+- Input: `/users/moneytea/dev/Laplace/deterministic/events/intel/skx/events.txt`
 
 Results describe this run, not all processors with the same name.
 
-Skid is measured from counter enable at the exec stop to the overflow signal-delivery stop, before a user signal handler runs. Only benchmark user-space events are counted. This includes the Linux delivery path; it is not hardware interrupt latency alone.
-
-Period: half the preliminary count, capped at 1000000. The selected period and counter encoding are saved for each event.
+Migration: original folder `results/skx/xeon-silver-4114-step4-2`. The dated folder uses the previous `profile.md` modification time (2026-09-19T23:56:54-04:00); the original experiment start time was not recorded.

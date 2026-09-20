@@ -1,5 +1,7 @@
 """measure event-count overshoot at a process's overflow signal stop"""
 
+from contextlib import nullcontext
+import io
 import json
 import os
 from pathlib import Path
@@ -9,6 +11,7 @@ import subprocess
 import traceback
 
 from worker import interrupt, measure
+from messages import message
 
 HARDWARE_EVENTS = {
     'cycles': 0,
@@ -35,6 +38,27 @@ CACHE_EVENTS = {
 }
 
 
+def has_count_results(directory):
+    for path in directory.glob('workers/cpu*/results.jsonl'):
+        with path.open() as file:
+            for line in file:
+                if line.endswith('\n'):
+                    try:
+                        row = json.loads(line)
+                    except ValueError as error:
+                        raise ValueError(f'invalid result in {path}: {error}') from error
+
+                    if (
+                        isinstance(row, dict)
+                        and 'skids' not in row
+                        and 'status' in row
+                        and 'event' in row
+                    ):
+                        return True
+
+    return False
+
+
 def candidates(directory):
     selected = set()
     paths = sorted(directory.glob('workers/cpu*/results.jsonl'))
@@ -43,7 +67,11 @@ def candidates(directory):
         raise ValueError(f'no worker results found in {directory}')
 
     for path in paths:
-        for line in path.read_text().splitlines():
+        for line in path.read_text().splitlines(keepends=True):
+            if not line.endswith('\n'):
+                message('~', f'ignoring incomplete final result in {path}')
+                continue
+
             row = json.loads(line)
 
             if 'skids' in row:
@@ -128,7 +156,7 @@ def encode_event(event, records):
     )
 
 
-def prepare(events, output):
+def prepare(events, output, save=True):
     compiler = shutil.which('cc')
 
     if compiler is None:
@@ -148,10 +176,11 @@ def prepare(events, output):
         str(helper),
     ]
     result = subprocess.run(command, capture_output=True, text=True)
-    (output / 'build.log').write_text(result.stdout + result.stderr)
+    if save:
+        (output / 'build.log').write_text(result.stdout + result.stderr)
 
     if result.returncode:
-        raise ValueError(f'could not build skid helper; see {output / "build.log"}')
+        raise ValueError(f'could not build skid helper: {result.stderr.strip()}')
 
     result = subprocess.run(
         ['perf', 'list', '--json'],
@@ -160,8 +189,9 @@ def prepare(events, output):
         env={**os.environ, 'LC_ALL': 'C', 'PERF_PAGER': 'cat'},
         timeout=60,
     )
-    (output / 'perf-list.json').write_text(result.stdout)
-    (output / 'perf-list.stderr').write_text(result.stderr)
+    if save:
+        (output / 'perf-list.json').write_text(result.stdout)
+        (output / 'perf-list.stderr').write_text(result.stderr)
 
     if result.returncode:
         raise ValueError('could not read counter encodings from perf list --json')
@@ -175,22 +205,25 @@ def prepare(events, output):
         except ValueError as error:
             configs[event] = {'error': str(error)}
 
-    (output / 'encodings.json').write_text(json.dumps(configs, indent=2) + '\n')
+    if save:
+        (output / 'encodings.json').write_text(json.dumps(configs, indent=2) + '\n')
 
     return helper, configs
 
 
 def trial(helper, encoding, overflow_threshold, benchmark, folder, log, timeout):
-    raw_path = folder / 'perf.tmp'
+    raw_path = folder / 'perf.tmp' if folder is not None else None
     command = [
         str(helper),
         *map(str, encoding),
         str(overflow_threshold),
-        str(raw_path),
+        str(raw_path) if raw_path is not None else '-',
         str(benchmark),
     ]
-    code, raw, error = measure(command, raw_path, log, timeout)
-    raw_path.unlink(missing_ok=True)
+    code, raw, error = measure(command, raw_path, log if folder is not None else None, timeout)
+
+    if raw_path is not None:
+        raw_path.unlink(missing_ok=True)
 
     if error:
         return {'error': error}
@@ -218,15 +251,23 @@ def test_event(
     helper,
     config,
     requested_threshold,
+    live=False,
 ):
-    log_path = folder / f'event-{index:04d}.log'
+    console = folder is None
+    live = live or console
+    log_path = folder / f'event-{index:04d}.log' if not console else None
     skids, measurements = [], []
     overflow_threshold = requested_threshold
     error = config.get('error')
     note = ''
     baseline = None
 
-    with log_path.open('w', buffering=1) as log:
+    log_context = log_path.open('w', buffering=1) if log_path else nullcontext(io.StringIO())
+
+    if live:
+        print(f'{event}:u on CPU {cpu}; {rounds} rounds', flush=True)
+
+    with log_context as log:
         log.write(f'event: {event}:u\ncpu: {cpu}\nround limit: {rounds}\n')
 
         if not error and overflow_threshold is None:
@@ -237,6 +278,9 @@ def test_event(
             if not error:
                 total = baseline['count']
                 log.write(f'count: {total}\n')
+
+                if live:
+                    print(f'Preliminary count: {total}', flush=True)
 
                 if total < 4:
                     note = (
@@ -251,10 +295,19 @@ def test_event(
             f'{overflow_threshold if overflow_threshold is not None else "not selected"}\n'
         )
 
+        if live and overflow_threshold is not None:
+            print(f'Overflow threshold: {overflow_threshold}', flush=True)
+
         if error:
             log.write(f'error: {error}\n')
+
+            if live:
+                message('-', error)
         elif note:
             log.write(f'note: {note}\n')
+
+            if live:
+                message('~', note)
         else:
             for number in range(1, rounds + 1):
                 log.write(f'\n--- round {number} ---\n')
@@ -266,6 +319,9 @@ def test_event(
 
                 if result.get('error'):
                     log.write(f'error: {result["error"]}\n')
+
+                    if live:
+                        message('-', f'Round {number}/{rounds}: {result["error"]}')
                 else:
                     skids.append(result['skid'])
                     log.write(
@@ -274,12 +330,20 @@ def test_event(
                         f'instruction pointer: {result["ip"]}\n'
                     )
 
-                counts_file.write(
-                    f'{event}:u\t{number}\t{overflow_threshold}\t'
-                    f'{result.get("count", "INVALID")}\t'
-                    f'{result.get("skid", "INVALID")}\t'
-                    f'{result.get("ip", "")}\t{result.get("error", "")}\n'
-                )
+                    if live:
+                        print(
+                            f'Round {number}/{rounds}: count={result["count"]}; '
+                            f'skid={result["skid"]}',
+                            flush=True,
+                        )
+
+                if counts_file is not None:
+                    counts_file.write(
+                        f'{event}:u\t{number}\t{overflow_threshold}\t'
+                        f'{result.get("count", "INVALID")}\t'
+                        f'{result.get("skid", "INVALID")}\t'
+                        f'{result.get("ip", "")}\t{result.get("error", "")}\n'
+                    )
 
         failures = sum('error' in row for row in measurements)
 
@@ -304,12 +368,65 @@ def test_event(
         baseline=baseline,
         errors=failures + bool(error),
         note=error or note,
-        log=f'workers/cpu{cpu}/{log_path.name}',
+        log=f'workers/cpu{cpu}/{log_path.name}' if log_path else None,
     )
 
 
+def run_console(cpu, event, benchmark, rounds, timeout, helper, config, overflow_threshold):
+    signal.signal(signal.SIGINT, signal.SIG_IGN)
+    signal.signal(signal.SIGTERM, interrupt)
+
+    try:
+        os.sched_setaffinity(0, {cpu})
+        result = test_event(
+            1,
+            event,
+            cpu,
+            None,
+            benchmark,
+            rounds,
+            timeout,
+            None,
+            helper,
+            config,
+            overflow_threshold,
+        )
+        skids = result['skids']
+
+        if skids:
+            print(
+                f'Skid: min={min(skids)}; max={max(skids)}; '
+                f'average={sum(skids) / len(skids):.2f}',
+                flush=True,
+            )
+
+        marker = '+'
+
+        if result['errors']:
+            marker = '-'
+        elif result['status'] == 'Inconclusive':
+            marker = '~'
+
+        message(marker, f'{result["status"]}; successful rounds: {len(skids)}/{rounds}')
+        raise SystemExit(int(bool(result['errors'])))
+    except KeyboardInterrupt:
+        raise SystemExit(130)
+    except (OSError, ValueError) as error:
+        message('-', str(error))
+        raise SystemExit(1)
+
+
 def run_worker(
-    cpu, assigned, folder, benchmark, rounds, timeout, helper, configs, overflow_threshold
+    cpu,
+    assigned,
+    folder,
+    benchmark,
+    rounds,
+    timeout,
+    helper,
+    configs,
+    overflow_threshold,
+    live=False,
 ):
     signal.signal(signal.SIGINT, signal.SIG_IGN)
     signal.signal(signal.SIGTERM, interrupt)
@@ -334,6 +451,7 @@ def run_worker(
                         helper,
                         configs[event],
                         overflow_threshold,
+                        live=live,
                     )
                     results.write(json.dumps(result) + '\n')
     except KeyboardInterrupt:

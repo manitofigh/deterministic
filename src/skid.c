@@ -54,6 +54,14 @@ static int start_child(pid_t *child, const char *benchmark)
         return -1;
 
     if (*child == 0) {
+        int output_fd = open("/dev/null", O_WRONLY);
+
+        if (output_fd < 0 || dup2(output_fd, STDOUT_FILENO) < 0)
+            _exit(126);
+
+        if (output_fd != STDOUT_FILENO)
+            close(output_fd);
+
         /* a killed controller must not leave the benchmark running */
         if (prctl(PR_SET_PDEATHSIG, SIGKILL) || getppid() != parent)
             _exit(126);
@@ -194,8 +202,13 @@ int main(int argc, char **argv)
     uint64_t numbers[5], ip = 0;
     const char *error = NULL;
     pid_t child = -1;
+    pid_t parent = getppid();
     int fd = -1, status, signo = SIGRTMIN + 4;
     FILE *output;
+
+    /* console workers have no PID file for the coordinator to clean up */
+    if (prctl(PR_SET_PDEATHSIG, SIGKILL) || getppid() != parent)
+        return 1;
 
     if (argc != 8) {
         fprintf(
@@ -284,7 +297,7 @@ out:
         }
     }
 
-    output = fopen(argv[6], "w");
+    output = strcmp(argv[6], "-") == 0 ? stdout : fopen(argv[6], "w");
 
     if (!output) {
         perror("could not write measurement");
