@@ -1,0 +1,5 @@
+{"index": 6, "event": "cpu-cycles:u", "cpu": 5, "runs": 2, "status": "Non-deterministic", "counts": [3746350249, 3727649913], "note": "", "log": "workers/cpu5/event-0006.log"}
+{"index": 77, "event": "mem_load_retired.l2_hit:u", "cpu": 5, "runs": 2, "status": "Non-deterministic", "counts": [1431, 1475], "note": "", "log": "workers/cpu5/event-0077.log"}
+{"index": 148, "event": "rtm_retired.aborted_memtype:u", "cpu": 5, "runs": 5, "status": "Zero-only", "counts": [0, 0, 0, 0, 0], "note": "all rounds returned zero; inconclusive", "log": "workers/cpu5/event-0148.log"}
+{"index": 219, "event": "int_vec_retired.128bit:u", "cpu": 5, "runs": 5, "status": "Potentially deterministic", "counts": [4000000, 4000000, 4000000, 4000000, 4000000], "note": "", "log": "workers/cpu5/event-0219.log"}
+{"index": 290, "event": "itlb_misses.walk_completed_4k:u", "cpu": 5, "runs": 2, "status": "Non-deterministic", "counts": [979, 970], "note": "", "log": "workers/cpu5/event-0290.log"}

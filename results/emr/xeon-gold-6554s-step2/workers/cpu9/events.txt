@@ -1,0 +1,4 @@
+L1-dcache-load-misses
+mem_store_retired.l2_hit
+tx_mem.abort_capacity_read
+int_vec_retired.mul_256

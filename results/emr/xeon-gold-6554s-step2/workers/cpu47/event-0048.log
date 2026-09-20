@@ -1,0 +1,15 @@
+event: l2_rqsts.references:u
+cpu: 47
+round limit: 5
+
+--- round 1 ---
+parsed count: 784707
+exit: 0
+
+--- round 2 ---
+parsed count: 786518
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

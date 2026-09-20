@@ -1,0 +1,4 @@
+{"index": 37, "event": "l2_rqsts.all_demand_data_rd:u", "cpu": 36, "runs": 2, "status": "Non-deterministic", "counts": [516842, 512744], "note": "", "log": "workers/cpu36/event-0037.log"}
+{"index": 108, "event": "fp_arith_inst_retired.scalar_single:u", "cpu": 36, "runs": 5, "status": "Potentially deterministic", "counts": [2300000, 2300000, 2300000, 2300000, 2300000], "note": "", "log": "workers/cpu36/event-0108.log"}
+{"index": 179, "event": "br_misp_retired.near_taken:u", "cpu": 36, "runs": 2, "status": "Non-deterministic", "counts": [4050, 4102], "note": "", "log": "workers/cpu36/event-0179.log"}
+{"index": 250, "event": "uops_dispatched.port_4_9:u", "cpu": 36, "runs": 2, "status": "Non-deterministic", "counts": [162061762, 157166502], "note": "", "log": "workers/cpu36/event-0250.log"}

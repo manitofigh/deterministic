@@ -1,0 +1,5 @@
+{"index": 4, "event": "cache-misses:u", "cpu": 3, "runs": 2, "status": "Non-deterministic", "counts": [597039, 598281], "note": "", "log": "workers/cpu3/event-0004.log"}
+{"index": 75, "event": "mem_load_retired.l1_hit:u", "cpu": 3, "runs": 2, "status": "Non-deterministic", "counts": [77204456, 77203238], "note": "", "log": "workers/cpu3/event-0075.log"}
+{"index": 146, "event": "rtm_retired.aborted_events:u", "cpu": 3, "runs": 5, "status": "Zero-only", "counts": [0, 0, 0, 0, 0], "note": "all rounds returned zero; inconclusive", "log": "workers/cpu3/event-0146.log"}
+{"index": 217, "event": "int_misc.recovery_cycles:u", "cpu": 3, "runs": 2, "status": "Non-deterministic", "counts": [33282522, 33191875], "note": "", "log": "workers/cpu3/event-0217.log"}
+{"index": 288, "event": "itlb_misses.walk_completed:u", "cpu": 3, "runs": 2, "status": "Non-deterministic", "counts": [1102, 1080], "note": "", "log": "workers/cpu3/event-0288.log"}

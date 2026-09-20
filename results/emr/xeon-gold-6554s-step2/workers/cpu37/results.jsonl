@@ -1,0 +1,4 @@
+{"index": 38, "event": "l2_rqsts.all_demand_miss:u", "cpu": 37, "runs": 2, "status": "Non-deterministic", "counts": [598060, 599439], "note": "", "log": "workers/cpu37/event-0038.log"}
+{"index": 109, "event": "fp_arith_inst_retired.vector:u", "cpu": 37, "runs": 5, "status": "Potentially deterministic", "counts": [6000000, 6000000, 6000000, 6000000, 6000000], "note": "", "log": "workers/cpu37/event-0109.log"}
+{"index": 180, "event": "br_misp_retired.ret:u", "cpu": 37, "runs": 5, "status": "Zero-only", "counts": [0, 0, 0, 0, 0], "note": "all rounds returned zero; inconclusive", "log": "workers/cpu37/event-0180.log"}
+{"index": 251, "event": "uops_dispatched.port_5_11:u", "cpu": 37, "runs": 2, "status": "Non-deterministic", "counts": [2267112114, 2268740204], "note": "", "log": "workers/cpu37/event-0251.log"}

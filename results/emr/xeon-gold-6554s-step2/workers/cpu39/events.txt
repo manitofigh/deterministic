@@ -1,0 +1,4 @@
+l2_rqsts.all_hwpf
+fp_arith_inst_retired2.256b_packed_half
+cpu_clk_unhalted.c02
+uops_dispatched.port_7_8

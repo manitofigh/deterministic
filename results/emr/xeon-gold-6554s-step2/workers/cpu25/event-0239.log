@@ -1,0 +1,15 @@
+event: resource_stalls.scoreboard:u
+cpu: 25
+round limit: 5
+
+--- round 1 ---
+parsed count: 316565523
+exit: 0
+
+--- round 2 ---
+parsed count: 322904026
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

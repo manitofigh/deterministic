@@ -1,0 +1,4 @@
+mem-stores
+fp_arith_dispatched.port_0
+assists.any
+machine_clears.count

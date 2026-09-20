@@ -1,0 +1,4 @@
+l2_rqsts.all_code_rd
+fp_arith_inst_retired.scalar_double
+br_misp_retired.indirect_call
+uops_dispatched.port_2_3_10

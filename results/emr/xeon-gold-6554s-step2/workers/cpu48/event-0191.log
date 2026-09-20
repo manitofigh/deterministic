@@ -1,0 +1,15 @@
+event: cpu_clk_unhalted.thread:u
+cpu: 48
+round limit: 5
+
+--- round 1 ---
+parsed count: 3740274545
+exit: 0
+
+--- round 2 ---
+parsed count: 3790849981
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

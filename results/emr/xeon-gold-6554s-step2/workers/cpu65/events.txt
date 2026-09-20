@@ -1,0 +1,4 @@
+mem_load_l3_hit_retired.xsnp_miss
+idq_uops_not_delivered.cycles_0_uops_deliv.core
+inst_retired.any
+dtlb_store_misses.stlb_hit

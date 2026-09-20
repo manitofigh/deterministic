@@ -1,0 +1,15 @@
+event: l2_trans.l2_wb:u
+cpu: 52
+round limit: 5
+
+--- round 1 ---
+parsed count: 456
+exit: 0
+
+--- round 2 ---
+parsed count: 397
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

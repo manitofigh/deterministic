@@ -1,0 +1,4 @@
+l2_rqsts.demand_data_rd_hit
+fp_arith_inst_retired2.scalar_half
+cpu_clk_unhalted.pause
+uops_executed.core_cycles_ge_3

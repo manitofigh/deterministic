@@ -1,0 +1,4 @@
+{"index": 51, "event": "l2_rqsts.swpf_hit:u", "cpu": 50, "runs": 2, "status": "Non-deterministic", "counts": [701, 678], "note": "", "log": "workers/cpu50/event-0051.log"}
+{"index": 122, "event": "icache_data.stalls:u", "cpu": 50, "runs": 2, "status": "Non-deterministic", "counts": [148216, 157497], "note": "", "log": "workers/cpu50/event-0122.log"}
+{"index": 193, "event": "cycle_activity.cycles_l1d_miss:u", "cpu": 50, "runs": 2, "status": "Non-deterministic", "counts": [293007315, 289791137], "note": "", "log": "workers/cpu50/event-0193.log"}
+{"index": 264, "event": "uops_executed.thread:u", "cpu": 50, "runs": 2, "status": "Non-deterministic", "counts": [7838740968, 7840423724], "note": "", "log": "workers/cpu50/event-0264.log"}

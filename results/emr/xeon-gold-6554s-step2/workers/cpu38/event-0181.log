@@ -1,0 +1,27 @@
+event: cpu_clk_unhalted.c01:u
+cpu: 38
+round limit: 5
+
+--- round 1 ---
+parsed count: 0
+exit: 0
+
+--- round 2 ---
+parsed count: 0
+exit: 0
+
+--- round 3 ---
+parsed count: 0
+exit: 0
+
+--- round 4 ---
+parsed count: 0
+exit: 0
+
+--- round 5 ---
+parsed count: 0
+exit: 0
+
+result: Zero-only
+rounds attempted: 5
+all rounds returned zero; inconclusive

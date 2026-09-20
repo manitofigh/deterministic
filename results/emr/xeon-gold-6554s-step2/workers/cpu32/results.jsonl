@@ -1,0 +1,4 @@
+{"index": 33, "event": "l2_lines_out.useless_hwpf:u", "cpu": 32, "runs": 2, "status": "Non-deterministic", "counts": [10, 2], "note": "", "log": "workers/cpu32/event-0033.log"}
+{"index": 104, "event": "fp_arith_inst_retired.512b_packed_single:u", "cpu": 32, "runs": 5, "status": "Zero-only", "counts": [0, 0, 0, 0, 0], "note": "all rounds returned zero; inconclusive", "log": "workers/cpu32/event-0104.log"}
+{"index": 175, "event": "br_misp_retired.cond_ntaken:u", "cpu": 32, "runs": 2, "status": "Non-deterministic", "counts": [30, 33], "note": "", "log": "workers/cpu32/event-0175.log"}
+{"index": 246, "event": "uops_decoded.dec0_uops:u", "cpu": 32, "runs": 2, "status": "Non-deterministic", "counts": [156554580, 155028210], "note": "", "log": "workers/cpu32/event-0246.log"}

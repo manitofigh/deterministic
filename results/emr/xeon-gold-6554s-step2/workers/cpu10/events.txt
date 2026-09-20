@@ -1,0 +1,4 @@
+L1-dcache-stores
+mem_uop_retired.any
+tx_mem.abort_capacity_write
+int_vec_retired.shuffles

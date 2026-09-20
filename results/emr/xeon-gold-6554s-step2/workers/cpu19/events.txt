@@ -1,0 +1,4 @@
+mem-loads-aux
+assists.sse_avx_mix
+arith.idiv_active
+lsd.uops

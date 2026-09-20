@@ -1,0 +1,4 @@
+{"index": 56, "event": "mem_inst_retired.all_loads:u", "cpu": 55, "runs": 2, "status": "Non-deterministic", "counts": [79501401, 79501290], "note": "", "log": "workers/cpu55/event-0056.log"}
+{"index": 127, "event": "idq.mite_cycles_any:u", "cpu": 55, "runs": 2, "status": "Non-deterministic", "counts": [73116489, 73005485], "note": "", "log": "workers/cpu55/event-0127.log"}
+{"index": 198, "event": "cycle_activity.stalls_total:u", "cpu": 55, "runs": 2, "status": "Non-deterministic", "counts": [1018607360, 1079660182], "note": "", "log": "workers/cpu55/event-0198.log"}
+{"index": 269, "event": "uops_retired.heavy:u", "cpu": 55, "runs": 2, "status": "Non-deterministic", "counts": [7104550742, 7104527384], "note": "", "log": "workers/cpu55/event-0269.log"}

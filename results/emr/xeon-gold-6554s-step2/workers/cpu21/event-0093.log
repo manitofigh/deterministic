@@ -1,0 +1,15 @@
+event: fp_arith_dispatched.port_1:u
+cpu: 21
+round limit: 5
+
+--- round 1 ---
+parsed count: 17088243
+exit: 0
+
+--- round 2 ---
+parsed count: 15816303
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

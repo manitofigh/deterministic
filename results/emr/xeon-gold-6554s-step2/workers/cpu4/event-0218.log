@@ -1,0 +1,15 @@
+event: int_misc.uop_dropping:u
+cpu: 4
+round limit: 5
+
+--- round 1 ---
+parsed count: 12865009
+exit: 0
+
+--- round 2 ---
+parsed count: 12868494
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

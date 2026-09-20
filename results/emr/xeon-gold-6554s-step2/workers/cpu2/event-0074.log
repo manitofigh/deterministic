@@ -1,0 +1,15 @@
+event: mem_load_retired.fb_hit:u
+cpu: 2
+round limit: 5
+
+--- round 1 ---
+parsed count: 1805186
+exit: 0
+
+--- round 2 ---
+parsed count: 1803555
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

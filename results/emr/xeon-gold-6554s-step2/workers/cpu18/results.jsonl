@@ -1,0 +1,4 @@
+{"index": 19, "event": "branch-load-misses:u", "cpu": 18, "runs": 2, "status": "Non-deterministic", "counts": [6725, 3626], "note": "", "log": "workers/cpu18/event-0019.log"}
+{"index": 90, "event": "assists.fp:u", "cpu": 18, "runs": 5, "status": "Zero-only", "counts": [0, 0, 0, 0, 0], "note": "all rounds returned zero; inconclusive", "log": "workers/cpu18/event-0090.log"}
+{"index": 161, "event": "arith.div_active:u", "cpu": 18, "runs": 2, "status": "Non-deterministic", "counts": [39738533, 39735363], "note": "", "log": "workers/cpu18/event-0161.log"}
+{"index": 232, "event": "lsd.cycles_ok:u", "cpu": 18, "runs": 5, "status": "Zero-only", "counts": [0, 0, 0, 0, 0], "note": "all rounds returned zero; inconclusive", "log": "workers/cpu18/event-0232.log"}

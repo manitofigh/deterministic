@@ -1,0 +1,4 @@
+{"index": 12, "event": "L1-icache-load-misses:u", "cpu": 11, "runs": 2, "status": "Non-deterministic", "counts": [114639, 107473], "note": "", "log": "workers/cpu11/event-0012.log"}
+{"index": 83, "event": "sq_misc.bus_lock:u", "cpu": 11, "runs": 5, "status": "Zero-only", "counts": [0, 0, 0, 0, 0], "note": "all rounds returned zero; inconclusive", "log": "workers/cpu11/event-0083.log"}
+{"index": 154, "event": "tx_mem.abort_conflict:u", "cpu": 11, "runs": 5, "status": "Zero-only", "counts": [0, 0, 0, 0, 0], "note": "all rounds returned zero; inconclusive", "log": "workers/cpu11/event-0154.log"}
+{"index": 225, "event": "int_vec_retired.vnni_128:u", "cpu": 11, "runs": 5, "status": "Zero-only", "counts": [0, 0, 0, 0, 0], "note": "all rounds returned zero; inconclusive", "log": "workers/cpu11/event-0225.log"}

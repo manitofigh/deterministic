@@ -1,0 +1,15 @@
+event: slots:u
+cpu: 21
+round limit: 5
+
+--- round 1 ---
+parsed count: 22340502024
+exit: 0
+
+--- round 2 ---
+parsed count: 22423304802
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

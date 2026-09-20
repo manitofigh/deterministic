@@ -1,0 +1,15 @@
+event: topdown.bad_spec_slots:u
+cpu: 27
+round limit: 5
+
+--- round 1 ---
+parsed count: 808357522
+exit: 0
+
+--- round 2 ---
+parsed count: 805808335
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

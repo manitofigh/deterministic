@@ -1,0 +1,27 @@
+event: cpu_clk_unhalted.pause:u
+cpu: 43
+round limit: 5
+
+--- round 1 ---
+parsed count: 3300000
+exit: 0
+
+--- round 2 ---
+parsed count: 3300000
+exit: 0
+
+--- round 3 ---
+parsed count: 3300000
+exit: 0
+
+--- round 4 ---
+parsed count: 3300000
+exit: 0
+
+--- round 5 ---
+parsed count: 3300000
+exit: 0
+
+result: Potentially deterministic
+rounds attempted: 5
+

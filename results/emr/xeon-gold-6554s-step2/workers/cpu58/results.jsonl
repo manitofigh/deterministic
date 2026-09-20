@@ -1,0 +1,4 @@
+{"index": 59, "event": "mem_inst_retired.lock_loads:u", "cpu": 58, "runs": 5, "status": "Potentially deterministic", "counts": [1800000, 1800000, 1800000, 1800000, 1800000], "note": "", "log": "workers/cpu58/event-0059.log"}
+{"index": 130, "event": "idq.ms_cycles_any:u", "cpu": 58, "runs": 2, "status": "Non-deterministic", "counts": [2531403743, 2531377816], "note": "", "log": "workers/cpu58/event-0130.log"}
+{"index": 201, "event": "exe_activity.2_ports_util:u", "cpu": 58, "runs": 2, "status": "Non-deterministic", "counts": [736876765, 737512248], "note": "", "log": "workers/cpu58/event-0201.log"}
+{"index": 272, "event": "dtlb_load_misses.stlb_hit:u", "cpu": 58, "runs": 2, "status": "Non-deterministic", "counts": [446, 457], "note": "", "log": "workers/cpu58/event-0272.log"}

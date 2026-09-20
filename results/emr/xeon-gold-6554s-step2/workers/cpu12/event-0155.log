@@ -1,0 +1,27 @@
+event: assists.page_fault:u
+cpu: 12
+round limit: 5
+
+--- round 1 ---
+parsed count: 10021
+exit: 0
+
+--- round 2 ---
+parsed count: 10021
+exit: 0
+
+--- round 3 ---
+parsed count: 10021
+exit: 0
+
+--- round 4 ---
+parsed count: 10021
+exit: 0
+
+--- round 5 ---
+parsed count: 10021
+exit: 0
+
+result: Potentially deterministic
+rounds attempted: 5
+

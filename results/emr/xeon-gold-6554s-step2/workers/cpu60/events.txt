@@ -1,0 +1,4 @@
+mem_inst_retired.split_stores
+idq.ms_uops
+exe_activity.4_ports_util
+dtlb_load_misses.walk_completed

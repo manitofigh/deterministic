@@ -1,0 +1,4 @@
+{"index": 40, "event": "l2_rqsts.all_hwpf:u", "cpu": 39, "runs": 2, "status": "Non-deterministic", "counts": [25525, 34654], "note": "", "log": "workers/cpu39/event-0040.log"}
+{"index": 111, "event": "fp_arith_inst_retired2.256b_packed_half:u", "cpu": 39, "runs": 5, "status": "Zero-only", "counts": [0, 0, 0, 0, 0], "note": "all rounds returned zero; inconclusive", "log": "workers/cpu39/event-0111.log"}
+{"index": 182, "event": "cpu_clk_unhalted.c02:u", "cpu": 39, "runs": 5, "status": "Zero-only", "counts": [0, 0, 0, 0, 0], "note": "all rounds returned zero; inconclusive", "log": "workers/cpu39/event-0182.log"}
+{"index": 253, "event": "uops_dispatched.port_7_8:u", "cpu": 39, "runs": 2, "status": "Non-deterministic", "counts": [106917069, 106736923], "note": "", "log": "workers/cpu39/event-0253.log"}

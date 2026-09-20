@@ -1,0 +1,4 @@
+l1d_pend_miss.pending
+fp_arith_inst_retired.128b_packed_single
+br_inst_retired.near_call
+topdown.bad_spec_slots

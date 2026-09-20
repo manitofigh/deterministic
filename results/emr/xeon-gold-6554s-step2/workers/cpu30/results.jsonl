@@ -1,0 +1,4 @@
+{"index": 31, "event": "l2_lines_out.non_silent:u", "cpu": 30, "runs": 2, "status": "Non-deterministic", "counts": [453, 250], "note": "", "log": "workers/cpu30/event-0031.log"}
+{"index": 102, "event": "fp_arith_inst_retired.4_flops:u", "cpu": 30, "runs": 5, "status": "Potentially deterministic", "counts": [2900000, 2900000, 2900000, 2900000, 2900000], "note": "", "log": "workers/cpu30/event-0102.log"}
+{"index": 173, "event": "br_misp_retired.all_branches:u", "cpu": 30, "runs": 2, "status": "Non-deterministic", "counts": [560, 7312], "note": "", "log": "workers/cpu30/event-0173.log"}
+{"index": 244, "event": "topdown.slots:u", "cpu": 30, "runs": 2, "status": "Non-deterministic", "counts": [22736579844, 22657918914], "note": "", "log": "workers/cpu30/event-0244.log"}

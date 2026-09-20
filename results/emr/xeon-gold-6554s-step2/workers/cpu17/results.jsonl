@@ -1,0 +1,4 @@
+{"index": 18, "event": "branch-loads:u", "cpu": 17, "runs": 2, "status": "Non-deterministic", "counts": [9251292, 9251289], "note": "", "log": "workers/cpu17/event-0018.log"}
+{"index": 89, "event": "arith.fpdiv_active:u", "cpu": 17, "runs": 2, "status": "Non-deterministic", "counts": [29746012, 29739816], "note": "", "log": "workers/cpu17/event-0089.log"}
+{"index": 160, "event": "xq.full_cycles:u", "cpu": 17, "runs": 2, "status": "Non-deterministic", "counts": [59164, 80638], "note": "", "log": "workers/cpu17/event-0160.log"}
+{"index": 231, "event": "lsd.cycles_active:u", "cpu": 17, "runs": 5, "status": "Zero-only", "counts": [0, 0, 0, 0, 0], "note": "all rounds returned zero; inconclusive", "log": "workers/cpu17/event-0231.log"}

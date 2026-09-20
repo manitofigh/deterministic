@@ -1,0 +1,4 @@
+l2_rqsts.references
+decode.ms_busy
+cpu_clk_unhalted.ref_tsc_p
+uops_executed.cycles_ge_3

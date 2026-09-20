@@ -1,0 +1,4 @@
+l2_rqsts.rfo_hit
+dsb2mite_switches.penalty_cycles
+cpu_clk_unhalted.thread
+uops_executed.cycles_ge_4

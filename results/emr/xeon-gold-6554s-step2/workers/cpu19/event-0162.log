@@ -1,0 +1,15 @@
+event: arith.idiv_active:u
+cpu: 19
+round limit: 5
+
+--- round 1 ---
+parsed count: 10000080
+exit: 0
+
+--- round 2 ---
+parsed count: 10000082
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

@@ -1,0 +1,15 @@
+event: idq.ms_cycles_any:u
+cpu: 58
+round limit: 5
+
+--- round 1 ---
+parsed count: 2531403743
+exit: 0
+
+--- round 2 ---
+parsed count: 2531377816
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

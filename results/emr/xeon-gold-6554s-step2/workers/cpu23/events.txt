@@ -1,0 +1,4 @@
+l1d.replacement
+fp_arith_dispatched.v0
+br_inst_retired.cond_ntaken
+misc_retired.lbr_inserts

@@ -1,0 +1,4 @@
+mem_inst_retired.all_loads
+idq.mite_cycles_any
+cycle_activity.stalls_total
+uops_retired.heavy

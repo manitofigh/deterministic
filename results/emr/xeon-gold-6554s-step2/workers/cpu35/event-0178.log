@@ -1,0 +1,15 @@
+event: br_misp_retired.indirect_call:u
+cpu: 35
+round limit: 5
+
+--- round 1 ---
+parsed count: 433
+exit: 0
+
+--- round 2 ---
+parsed count: 7555
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

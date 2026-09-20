@@ -1,0 +1,15 @@
+event: xq.full_cycles:u
+cpu: 17
+round limit: 5
+
+--- round 1 ---
+parsed count: 59164
+exit: 0
+
+--- round 2 ---
+parsed count: 80638
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

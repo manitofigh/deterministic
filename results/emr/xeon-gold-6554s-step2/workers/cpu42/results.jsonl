@@ -1,0 +1,4 @@
+{"index": 43, "event": "l2_rqsts.code_rd_miss:u", "cpu": 42, "runs": 2, "status": "Non-deterministic", "counts": [292, 344], "note": "", "log": "workers/cpu42/event-0043.log"}
+{"index": 114, "event": "fp_arith_inst_retired2.scalar:u", "cpu": 42, "runs": 5, "status": "Zero-only", "counts": [0, 0, 0, 0, 0], "note": "all rounds returned zero; inconclusive", "log": "workers/cpu42/event-0114.log"}
+{"index": 185, "event": "cpu_clk_unhalted.one_thread_active:u", "cpu": 42, "runs": 2, "status": "Non-deterministic", "counts": [31409314, 29018551], "note": "", "log": "workers/cpu42/event-0185.log"}
+{"index": 256, "event": "uops_executed.core_cycles_ge_2:u", "cpu": 42, "runs": 2, "status": "Non-deterministic", "counts": [2528551748, 2528766445], "note": "", "log": "workers/cpu42/event-0256.log"}

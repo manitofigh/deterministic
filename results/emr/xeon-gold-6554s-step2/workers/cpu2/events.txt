@@ -1,0 +1,5 @@
+bus-cycles
+mem_load_retired.fb_hit
+rtm_retired.aborted
+int_misc.mba_stalls
+itlb_misses.walk_active
