@@ -19,16 +19,15 @@ The core asm tests are from [Vince Weaver's original deterministic repo](https:/
 sudo python3 src/run.py
 ```
 
-Run on a Linux machine. Also, python 3.9+ and `perf` are needed: install them using your distribution package manager if missing. 
+Run on a Linux machine. Also, python 3.9+ and `perf` are needed; install them using your distribution package manager if missing. 
 
 build the benchmark with `make -C static binaries/retired_instr.all.x86_64`. that needs `make` and the GNU assembler/linker. 
 If you place the binary elsewhere, you can provide its path using `--benchmark static/binaries/retired_instr.all.x86_64`.
 
 Here are some other useful options:
 ```bash
-sudo python3 src/run.py --cores 8 --rounds 10   # see 1. for explanation below
-sudo python3 src/run.py --output results/my-run # see 2. for explanation below
-sudo python3 src/run.py --events events/intel/skx/events.txt  # see 3. for explanation below
+sudo python3 src/run.py --cores 8 --rounds 10
+sudo python3 src/run.py --output results/my-run
 ```
 
 | option | what it does |
