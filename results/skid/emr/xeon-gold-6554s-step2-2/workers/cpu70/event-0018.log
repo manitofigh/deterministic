@@ -1,0 +1,60 @@
+event: inst_retired.nop:u
+cpu: 70
+round limit: 10
+
+--- preliminary count ---
+count: 1580000
+period: 790000
+
+--- round 1 ---
+count at stop: 790062
+skid: 62
+instruction pointer: 0x400a53
+
+--- round 2 ---
+count at stop: 790062
+skid: 62
+instruction pointer: 0x400a55
+
+--- round 3 ---
+count at stop: 790069
+skid: 69
+instruction pointer: 0x400a29
+
+--- round 4 ---
+count at stop: 790062
+skid: 62
+instruction pointer: 0x400a62
+
+--- round 5 ---
+count at stop: 790067
+skid: 67
+instruction pointer: 0x400a1c
+
+--- round 6 ---
+count at stop: 790057
+skid: 57
+instruction pointer: 0x400a48
+
+--- round 7 ---
+count at stop: 790058
+skid: 58
+instruction pointer: 0x400a49
+
+--- round 8 ---
+count at stop: 790065
+skid: 65
+instruction pointer: 0x400a13
+
+--- round 9 ---
+count at stop: 790068
+skid: 68
+instruction pointer: 0x400a22
+
+--- round 10 ---
+count at stop: 790062
+skid: 62
+instruction pointer: 0x400a5c
+
+result: Non-deterministic
+successful rounds: 10/10

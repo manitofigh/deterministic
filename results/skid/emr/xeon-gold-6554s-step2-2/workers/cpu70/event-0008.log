@@ -1,0 +1,60 @@
+event: cpu_clk_unhalted.c0_wait:u
+cpu: 70
+round limit: 10
+
+--- preliminary count ---
+count: 3300000
+period: 1000000
+
+--- round 1 ---
+count at stop: 1000032
+skid: 32
+instruction pointer: 0x40311d
+
+--- round 2 ---
+count at stop: 1000032
+skid: 32
+instruction pointer: 0x40311d
+
+--- round 3 ---
+count at stop: 1000032
+skid: 32
+instruction pointer: 0x40311d
+
+--- round 4 ---
+count at stop: 1000032
+skid: 32
+instruction pointer: 0x40311d
+
+--- round 5 ---
+count at stop: 1000032
+skid: 32
+instruction pointer: 0x40311d
+
+--- round 6 ---
+count at stop: 1000032
+skid: 32
+instruction pointer: 0x40311d
+
+--- round 7 ---
+count at stop: 1000032
+skid: 32
+instruction pointer: 0x40311d
+
+--- round 8 ---
+count at stop: 1000032
+skid: 32
+instruction pointer: 0x40311d
+
+--- round 9 ---
+count at stop: 1000032
+skid: 32
+instruction pointer: 0x40311d
+
+--- round 10 ---
+count at stop: 1000032
+skid: 32
+instruction pointer: 0x40311d
+
+result: Potentially deterministic
+successful rounds: 10/10

@@ -1,0 +1,60 @@
+event: br_inst_retired.near_call:u
+cpu: 0
+round limit: 10
+
+--- preliminary count ---
+count: 200000
+period: 100000
+
+--- round 1 ---
+count at stop: 100000
+skid: 0
+instruction pointer: 0x400b60
+
+--- round 2 ---
+count at stop: 100000
+skid: 0
+instruction pointer: 0x400b60
+
+--- round 3 ---
+count at stop: 100000
+skid: 0
+instruction pointer: 0x400b60
+
+--- round 4 ---
+count at stop: 100000
+skid: 0
+instruction pointer: 0x400b60
+
+--- round 5 ---
+count at stop: 100000
+skid: 0
+instruction pointer: 0x400b60
+
+--- round 6 ---
+count at stop: 100000
+skid: 0
+instruction pointer: 0x400b60
+
+--- round 7 ---
+count at stop: 100000
+skid: 0
+instruction pointer: 0x400b60
+
+--- round 8 ---
+count at stop: 100000
+skid: 0
+instruction pointer: 0x400b60
+
+--- round 9 ---
+count at stop: 100000
+skid: 0
+instruction pointer: 0x400b60
+
+--- round 10 ---
+count at stop: 100000
+skid: 0
+instruction pointer: 0x400b60
+
+result: Potentially deterministic
+successful rounds: 10/10

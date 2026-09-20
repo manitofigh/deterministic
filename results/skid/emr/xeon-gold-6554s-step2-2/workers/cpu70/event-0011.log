@@ -1,0 +1,60 @@
+event: fp_arith_inst_retired.128b_packed_double:u
+cpu: 70
+round limit: 10
+
+--- preliminary count ---
+count: 3100000
+period: 1000000
+
+--- round 1 ---
+count at stop: 1000003
+skid: 3
+instruction pointer: 0x402716
+
+--- round 2 ---
+count at stop: 1000003
+skid: 3
+instruction pointer: 0x402716
+
+--- round 3 ---
+count at stop: 1000003
+skid: 3
+instruction pointer: 0x402716
+
+--- round 4 ---
+count at stop: 1000003
+skid: 3
+instruction pointer: 0x402716
+
+--- round 5 ---
+count at stop: 1000003
+skid: 3
+instruction pointer: 0x402716
+
+--- round 6 ---
+count at stop: 1000003
+skid: 3
+instruction pointer: 0x402716
+
+--- round 7 ---
+count at stop: 1000003
+skid: 3
+instruction pointer: 0x402716
+
+--- round 8 ---
+count at stop: 1000003
+skid: 3
+instruction pointer: 0x402716
+
+--- round 9 ---
+count at stop: 1000003
+skid: 3
+instruction pointer: 0x402716
+
+--- round 10 ---
+count at stop: 1000001
+skid: 1
+instruction pointer: 0x4026e1
+
+result: Non-deterministic
+successful rounds: 10/10

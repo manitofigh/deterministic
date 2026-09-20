@@ -20,6 +20,7 @@ sys.dont_write_bytecode = True
 from machine import identify, select_cores, smt_disabled
 from messages import Parser, message
 from permissions import user_owned_outputs
+import skid
 from worker import defer_interrupts, interrupt, run_worker, signal_group
 
 
@@ -28,17 +29,34 @@ BASE = Path(__file__).resolve().parents[1]
 
 def arguments():
     parser = Parser(description=__doc__)
+    parser.add_argument('--mode', choices=('count', 'skid'), default='count',
+                        help='count determinism or overflow skid (default: count)')
     parser.add_argument('--cores', type=int, help='worker cores (default: all minus one)')
     parser.add_argument('--start-core', type=int,
                         help='first worker CPU number (default: lowest available)')
-    parser.add_argument('--rounds', type=int, default=5, help='maximum rounds per event (default: 5)')
-    parser.add_argument('--events', type=Path, help='one plain event name per line')
+    parser.add_argument('--rounds', type=int, default=10, help='rounds per event (default: 10)')
+    selection = parser.add_mutually_exclusive_group()
+    selection.add_argument('--events', type=Path, help='one plain event name per line')
+    selection.add_argument('--event', help='one event name, optionally ending in :u')
+    selection.add_argument('--from-results', type=Path,
+                           help='count results whose potentially deterministic events to test for skid')
+    parser.add_argument('--period', type=int, help='skid overflow period (default: select from a preliminary count)')
     parser.add_argument('--output', type=Path, help='custom output directory; never overwritten')
     parser.add_argument('--benchmark', type=Path,
                         default=BASE.parent / 'deterministic/static/binaries/retired_instr.all.x86_64')
     parser.add_argument('--timeout', type=float, default=120,
                         help='seconds allowed per measurement (default: 120)')
     args = parser.parse_args()
+    if args.event:
+        args.event = args.event.removesuffix(':u')
+        if not re.fullmatch(r'[A-Za-z][A-Za-z0-9_.-]*', args.event):
+            parser.error('--event requires one plain event name, optionally ending in :u')
+    if args.mode == 'skid' and not (args.events or args.event or args.from_results):
+        parser.error('skid mode requires --from-results, --events, or --event')
+    if args.mode != 'skid' and (args.from_results or args.period is not None):
+        parser.error('--from-results and --period require --mode skid')
+    if args.period is not None and not 2 <= args.period <= 2147483647:
+        parser.error('--period must be between 2 and 2147483647')
     if args.start_core is not None and args.start_core < 0:
         parser.error('--start-core must be nonnegative')
     if args.rounds < 2:
@@ -98,7 +116,7 @@ def collect(output):
     return rows
 
 
-def report(output, total, started, state):
+def report(output, total, started, state, mode='count'):
     rows = collect(output)
     counts = Counter(row['status'] for row in rows)
     elapsed = time.monotonic() - started
@@ -106,11 +124,17 @@ def report(output, total, started, state):
                 f'remaining: {total - len(rows)}; elapsed: {elapsed:.0f}s\n')
     progress += '; '.join(f'{name}: {number}' for name, number in sorted(counts.items())) + '\n'
     atomic_write(output / 'progress.txt', progress)
-    text = ['# Event results', '', f'* {state}: {len(rows)}/{total}',
+    last_status = 'Inconclusive' if mode == 'skid' else 'Zero-only'
+    text = ['# Skid results' if mode == 'skid' else '# Event results', '',
+            f'* {state}: {len(rows)}/{total}',
             f'* Potentially deterministic: {counts["Potentially deterministic"]}',
             f'* Non-deterministic: {counts["Non-deterministic"]}',
-            f'* Zero-only: {counts["Zero-only"]}', '',
+            f'* {last_status}: {counts[last_status]}', '',
             '[Processor and settings](profile.md) · [Input events](events.txt)', '']
+    if mode == 'skid':
+        text.extend(skid.report_rows(rows))
+        atomic_write(output / 'results.md', '\n'.join(text))
+        return rows
     sections = [('Determinism', ['Potentially deterministic', 'Non-deterministic']),
                 ('Zero-only (inconclusive)', ['Zero-only']), ('Measurement errors', ['Error'])]
     for title, statuses in sections:
@@ -127,23 +151,37 @@ def report(output, total, started, state):
 
 
 def experiment(args, info, events, cpus, reserve):
-    requested = args.output or (BASE / 'results' / info['microarch'] /
+    results_root = BASE / 'results'
+    if args.mode == 'skid':
+        results_root /= 'skid'
+    requested = args.output or (results_root / info['microarch'] /
                                 f'{info["slug"]}-step{info["stepping"]}')
     output = output_directory(requested)
     with user_owned_outputs([output]):
         (output / 'events.txt').write_text('\n'.join(events) + '\n')
+        helper, configs = None, None
+        if args.mode == 'skid':
+            helper, configs = skid.prepare(events, output)
         profile = (f'# Processor profile\n\n'
                    f'- Processor: {info["model"]}\n'
                    f'- Microarchitecture/event family: `{info["microarch"]}`\n'
                    f'- CPU family/model: {info["family"]}/0x{info["model_id"]:02x}\n'
                    f'- Stepping: {info["stepping"]}\n'
+                   f'- Mode: {args.mode}\n'
                    f'- Worker CPUs: {cpus}\n- Reserved coordinator CPU: {reserve}\n'
                    f'- SMT: verified disabled or not supported\n'
-                   f'- Maximum rounds: {args.rounds}\n- Events: {len(events)}\n'
+                   f'- Rounds: {args.rounds}\n- Events: {len(events)}\n'
                    f'- Per-round timeout: {args.timeout:g} seconds\n'
                    f'- Benchmark: `{args.benchmark}`\n'
-                   f'- Input: `{args.events}`\n\n'
+                   f'- Input: `{args.from_results or args.event or args.events}`\n\n'
                    'Results describe this run, not all processors with the same name.\n')
+        if args.mode == 'skid':
+            profile += ('\nSkid is measured from counter enable at the exec stop to the overflow '
+                        'signal-delivery stop, before a user signal handler runs. '
+                        'Only benchmark user-space events are counted. '
+                        'This includes the Linux delivery path; it is not hardware interrupt latency alone.\n'
+                        f'\nPeriod: {args.period or "half the preliminary count, capped at 1000000"}. '
+                        'The selected period and counter encoding are saved for each event.\n')
         (output / 'profile.md').write_text(profile)
         print(f'Results: {output}\nWorkers: {cpus}; coordinator: {reserve}', flush=True)
         workers = []
@@ -157,14 +195,17 @@ def experiment(args, info, events, cpus, reserve):
                 folder = output / 'workers' / f'cpu{cpu}'
                 folder.mkdir(parents=True)
                 (folder / 'events.txt').write_text(''.join(event + '\n' for _, event in assigned))
-                worker = multiprocessing.get_context('fork').Process(
-                    target=run_worker,
-                    args=(cpu, assigned, folder, args.benchmark, args.rounds, args.timeout))
+                target = run_worker
+                worker_args = (cpu, assigned, folder, args.benchmark, args.rounds, args.timeout)
+                if args.mode == 'skid':
+                    target = skid.run_worker
+                    worker_args += (helper, configs, args.period)
+                worker = multiprocessing.get_context('fork').Process(target=target, args=worker_args)
                 with defer_interrupts():
                     worker.start()
                     workers.append(worker)
             while any(worker.is_alive() for worker in workers):
-                report(output, len(events), started, state)
+                report(output, len(events), started, state, args.mode)
                 if any(worker.exitcode not in (None, 0) for worker in workers):
                     raise RuntimeError('a worker failed; inspect its event logs')
                 time.sleep(1)
@@ -187,10 +228,10 @@ def experiment(args, info, events, cpus, reserve):
             for pid_path in output.glob('workers/cpu*/perf.pid'):
                 signal_group(int(pid_path.read_text()), signal.SIGKILL)
                 pid_path.unlink()
-            rows = report(output, len(events), started, state)
+            rows = report(output, len(events), started, state, args.mode)
             print((output / 'progress.txt').read_text(), end='', flush=True)
     failed = (state != 'Complete' or len(rows) != len(events)
-              or any(row['status'] == 'Error' for row in rows))
+              or any(row['status'] == 'Error' or row.get('errors', 0) for row in rows))
     message('-' if failed else '+',
             f'run finished with errors; see {output / "results.md"}' if failed else
             f'run complete; see {output / "results.md"}')
@@ -199,7 +240,7 @@ def experiment(args, info, events, cpus, reserve):
 
 def main():
     args = arguments()
-    if os.geteuid() != 0:
+    if os.geteuid() != 0 and args.mode != 'skid':
         raise ValueError('run with sudo python3 src/run.py')
     if shutil.which('perf') is None:
         raise ValueError('perf is missing; install it using your distribution package manager')
@@ -207,23 +248,32 @@ def main():
     if not args.benchmark.is_file() or not os.access(args.benchmark, os.X_OK):
         raise ValueError(f'benchmark is not executable: {args.benchmark}')
     info = identify()
-    args.events = (args.events or BASE / 'events/intel' / info['microarch'] / 'events.txt').resolve()
+    if args.from_results:
+        args.from_results = args.from_results.resolve()
+    elif not args.event:
+        args.events = (args.events or BASE / 'events/intel' / info['microarch'] / 'events.txt').resolve()
     signal.signal(signal.SIGTERM, interrupt)
     signal.signal(signal.SIGINT, interrupt)
     allowed = os.sched_getaffinity(0)
     # otherwise, another run could turn SMT back on while this one is still running.
-    with open('/run/lock/deterministic-events.lock', 'w') as lock:
+    lock_fd = os.open('/run/lock/deterministic-events.lock', os.O_RDONLY | os.O_CREAT, 0o644)
+    with os.fdopen(lock_fd, 'r') as lock:
         try:
             fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
         except BlockingIOError as error:
             raise ValueError('another deterministic event experiment is running') from error
-        if not args.events.exists():
+        if args.events and not args.events.exists():
             message('~', f'event list missing; capturing it to {args.events}')
             result = subprocess.run([sys.executable, str(BASE / 'src/perf-list-events.py'),
                                      '--output', str(args.events)])
             if result.returncode:
                 raise RuntimeError('could not generate the event list; no workers started')
-        events = read_events(args.events)
+        if args.from_results:
+            events = skid.candidates(args.from_results)
+        elif args.event:
+            events = [args.event]
+        else:
+            events = read_events(args.events)
         with smt_disabled():
             cpus, reserve = select_cores(allowed, args.cores, args.start_core)
             try:
@@ -239,6 +289,6 @@ if __name__ == '__main__':
     except KeyboardInterrupt:
         message('~', 'interrupted; partial results retained')
         sys.exit(130)
-    except (OSError, ValueError, RuntimeError) as error:
+    except (OSError, ValueError, RuntimeError, subprocess.SubprocessError) as error:
         message('-', str(error))
         sys.exit(1)

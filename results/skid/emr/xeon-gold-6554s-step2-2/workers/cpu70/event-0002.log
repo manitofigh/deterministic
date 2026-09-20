@@ -1,0 +1,60 @@
+event: br_inst_retired.cond_ntaken:u
+cpu: 70
+round limit: 10
+
+--- preliminary count ---
+count: 2400016
+period: 1000000
+
+--- round 1 ---
+count at stop: 1000011
+skid: 11
+instruction pointer: 0x400c40
+
+--- round 2 ---
+count at stop: 1000013
+skid: 13
+instruction pointer: 0x400c4b
+
+--- round 3 ---
+count at stop: 1000012
+skid: 12
+instruction pointer: 0x400c42
+
+--- round 4 ---
+count at stop: 1000012
+skid: 12
+instruction pointer: 0x400c42
+
+--- round 5 ---
+count at stop: 1000012
+skid: 12
+instruction pointer: 0x400c42
+
+--- round 6 ---
+count at stop: 1000012
+skid: 12
+instruction pointer: 0x400c42
+
+--- round 7 ---
+count at stop: 1000012
+skid: 12
+instruction pointer: 0x400c42
+
+--- round 8 ---
+count at stop: 1000012
+skid: 12
+instruction pointer: 0x400c42
+
+--- round 9 ---
+count at stop: 1000013
+skid: 13
+instruction pointer: 0x400c59
+
+--- round 10 ---
+count at stop: 1000013
+skid: 13
+instruction pointer: 0x400c59
+
+result: Non-deterministic
+successful rounds: 10/10

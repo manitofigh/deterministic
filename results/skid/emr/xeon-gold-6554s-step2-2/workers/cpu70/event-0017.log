@@ -1,0 +1,60 @@
+event: fp_arith_inst_retired.vector:u
+cpu: 70
+round limit: 10
+
+--- preliminary count ---
+count: 6000000
+period: 1000000
+
+--- round 1 ---
+count at stop: 1000010
+skid: 10
+instruction pointer: 0x401f38
+
+--- round 2 ---
+count at stop: 1000010
+skid: 10
+instruction pointer: 0x401f38
+
+--- round 3 ---
+count at stop: 1000010
+skid: 10
+instruction pointer: 0x401f38
+
+--- round 4 ---
+count at stop: 1000010
+skid: 10
+instruction pointer: 0x401f3c
+
+--- round 5 ---
+count at stop: 1000010
+skid: 10
+instruction pointer: 0x401f38
+
+--- round 6 ---
+count at stop: 1000010
+skid: 10
+instruction pointer: 0x401f38
+
+--- round 7 ---
+count at stop: 1000010
+skid: 10
+instruction pointer: 0x401f38
+
+--- round 8 ---
+count at stop: 1000010
+skid: 10
+instruction pointer: 0x401f2f
+
+--- round 9 ---
+count at stop: 1000010
+skid: 10
+instruction pointer: 0x401f38
+
+--- round 10 ---
+count at stop: 1000010
+skid: 10
+instruction pointer: 0x401f38
+
+result: Potentially deterministic
+successful rounds: 10/10

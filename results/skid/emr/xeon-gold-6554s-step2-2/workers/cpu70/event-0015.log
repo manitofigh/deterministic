@@ -1,0 +1,60 @@
+event: fp_arith_inst_retired.scalar_double:u
+cpu: 70
+round limit: 10
+
+--- preliminary count ---
+count: 1900000
+period: 950000
+
+--- round 1 ---
+count at stop: 950000
+skid: 0
+instruction pointer: 0x40291e
+
+--- round 2 ---
+count at stop: 950000
+skid: 0
+instruction pointer: 0x40291e
+
+--- round 3 ---
+count at stop: 950000
+skid: 0
+instruction pointer: 0x40291e
+
+--- round 4 ---
+count at stop: 950000
+skid: 0
+instruction pointer: 0x40291e
+
+--- round 5 ---
+count at stop: 950000
+skid: 0
+instruction pointer: 0x402905
+
+--- round 6 ---
+count at stop: 950000
+skid: 0
+instruction pointer: 0x402905
+
+--- round 7 ---
+count at stop: 950000
+skid: 0
+instruction pointer: 0x40291e
+
+--- round 8 ---
+count at stop: 950000
+skid: 0
+instruction pointer: 0x402905
+
+--- round 9 ---
+count at stop: 950000
+skid: 0
+instruction pointer: 0x402905
+
+--- round 10 ---
+count at stop: 950000
+skid: 0
+instruction pointer: 0x40291e
+
+result: Potentially deterministic
+successful rounds: 10/10

@@ -1,0 +1,15 @@
+event: cpu_clk_unhalted.pause:u
+cpu: 0
+round limit: 10
+
+--- preliminary count ---
+count: 3300000
+period: 1000000
+
+--- round 1 ---
+count at stop: 1000032
+skid: 32
+instruction pointer: 0x40311d
+
+--- round 2 ---
+could not wait for benchmark: Interrupted system call
