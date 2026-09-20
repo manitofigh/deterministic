@@ -4,24 +4,13 @@
 #define MAX_WHICH 4
 #define MAX_EVENTS 13
 
-char which_names[MAX_WHICH][100]={"all","fp","int","sse"};
+char which_names[MAX_WHICH][100] = {"all", "fp", "int", "sse"};
 
-char event_names[MAX_EVENTS][100]={
-  "branches_retired",
-  "cond_branches",
-  "divs_retired",
-  "fp_retired",
-  "inst_retired",
-  "loads_retired",
-  "muls_retired",
-  "sse_retired",
-  "stores_retired",
-  "swprfl1_retired",
-  "swprfl2_retired",
-  "swprfnta_retired",
-  "uops_retired",
+char event_names[MAX_EVENTS][100] = {
+    "branches_retired", "cond_branches",    "divs_retired", "fp_retired",     "inst_retired",
+    "loads_retired",    "muls_retired",     "sse_retired",  "stores_retired", "swprfl1_retired",
+    "swprfl2_retired",  "swprfnta_retired", "uops_retired",
 };
-
 
 #if 0
 char dir_in[BUFSIZ]="domori/5";
@@ -33,41 +22,43 @@ char dir_in[BUFSIZ]="toad4/5";
 char dir_out[BUFSIZ]="toad4.new";
 #endif
 
-char dir_in[BUFSIZ]="venchi/5";
-char dir_out[BUFSIZ]="venchi.new";
+char dir_in[BUFSIZ] = "venchi/5";
+char dir_out[BUFSIZ] = "venchi.new";
 
-int main(int argc, char **argv) {
+int main(int argc, char **argv)
+{
+    int i, e, w;
+    FILE *fff, *ggg;
+    char filename[BUFSIZ];
+    char temp_string[BUFSIZ];
+    char *result;
 
-  int i,e,w;
-  FILE *fff,*ggg;
-  char filename[BUFSIZ];
-  char temp_string[BUFSIZ];
-  char *result;
+    for (w = 0; w < MAX_WHICH; w++) {
+        for (e = 0; e < MAX_EVENTS; e++) {
+            sprintf(filename, "%s/%s.%s", dir_out, event_names[e], which_names[w]);
+            ggg = fopen(filename, "w");
 
-  for(w=0;w<MAX_WHICH;w++) {
-     for(e=0;e<MAX_EVENTS;e++) {
+            if (ggg == NULL)
+                continue;
 
-        sprintf(filename,"%s/%s.%s",
-                   dir_out,event_names[e],which_names[w]);
-        ggg=fopen(filename,"w");
-	if (ggg==NULL) continue;
-
-        fprintf(ggg,"### System info\n");
-        fprintf(ggg,"Kernel:    Linux 2.6.29\n");
-	fprintf(ggg,"Interface: perfmon2\n");
-	fprintf(ggg,"Hostname:  venchi.csl.cornell.edu\n");
-        fprintf(ggg,"Family:    16\n");
-	fprintf(ggg,"Model:     2\n");
-	fprintf(ggg,"Stepping:  2\n");
-	fprintf(ggg,"Modelname: AMD Phenom(tm) 9500 Quad-Core Processor\n");
-	fprintf(ggg,"Generic:   fam10h\n");
+            fprintf(ggg, "### System info\n");
+            fprintf(ggg, "Kernel:    Linux 2.6.29\n");
+            fprintf(ggg, "Interface: perfmon2\n");
+            fprintf(ggg, "Hostname:  venchi.csl.cornell.edu\n");
+            fprintf(ggg, "Family:    16\n");
+            fprintf(ggg, "Model:     2\n");
+            fprintf(ggg, "Stepping:  2\n");
+            fprintf(ggg, "Modelname: AMD Phenom(tm) 9500 Quad-Core Processor\n");
+            fprintf(ggg, "Generic:   fam10h\n");
 
 #if 0
         fprintf(ggg,"### System info\n");
         fprintf(ggg,"Kernel:    Linux 2.6.28\n");
+
 	fprintf(ggg,"Interface: perfmon2\n");
 	fprintf(ggg,"Hostname:  domori.csl.cornell.edu\n");
         fprintf(ggg,"Family:    15\n");
+
 	fprintf(ggg,"Model:     6\n");
 	fprintf(ggg,"Stepping:  4\n");
 	fprintf(ggg,"Modelname: Intel(R) Xeon(TM) CPU 3.46GHz\n");
@@ -77,73 +68,91 @@ int main(int argc, char **argv) {
 #if 0
         fprintf(ggg,"### System info\n");
         fprintf(ggg,"Kernel:    Linux 2.6.32-RHEL6\n");
+
 	fprintf(ggg,"Interface: perf_event\n");
 	fprintf(ggg,"Hostname:  toad4\n");
         fprintf(ggg,"Family:    6\n");
+
 	fprintf(ggg,"Model:     45\n");
 	fprintf(ggg,"Stepping:  5\n");
 	fprintf(ggg,"Modelname: Intel(R) Xeon(R) CPU 2.6GHz\n");
 	fprintf(ggg,"Generic:   sandybridge-ep\n");
 #endif
 
-        for(i=0;i<10;i++) {
+            for (i = 0; i < 10; i++) {
+                /* before interrupts */
+                sprintf(filename, "%s/run.%d.%s.%s.before", dir_in, i, event_names[e],
+                        which_names[w]);
 
-	  /* before interrupts */
-           sprintf(filename,"%s/run.%d.%s.%s.before",
-                   dir_in,i,event_names[e],which_names[w]);
-           fff=fopen(filename,"r");
-	   if (fff==NULL) continue;
+                fff = fopen(filename, "r");
 
-	   fprintf(ggg,"### Interrupts %d before\n",i);
+                if (fff == NULL)
+                    continue;
 
-	   while(1) {
-	     result=fgets(temp_string,BUFSIZ,fff);
-	     if (result==NULL) break;
-             fprintf(ggg,"%s",temp_string);
-	   }
+                fprintf(ggg, "### Interrupts %d before\n", i);
 
-	   fclose(fff);
+                while (1) {
+                    result = fgets(temp_string, BUFSIZ, fff);
 
-	   /* counts */
+                    if (result == NULL)
+                        break;
 
-           sprintf(filename,"%s/run.%d.%s.%s.counts",
-                   dir_in,i,event_names[e],which_names[w]);
-           fff=fopen(filename,"r");
-	   if (fff==NULL) continue;
+                    fprintf(ggg, "%s", temp_string);
+                }
 
+                fclose(fff);
 
-	   fprintf(ggg,"### Perf Resutls %d\n",i);
+                /* counts */
 
-	   while(1) {
-	     result=fgets(temp_string,BUFSIZ,fff);
-	     if (result==NULL) break;
-	     if (!strstr(temp_string,"Testing syscall")) {
-                fprintf(ggg,"%s",temp_string);
-	     }
-	   }
+                sprintf(filename, "%s/run.%d.%s.%s.counts", dir_in, i, event_names[e],
+                        which_names[w]);
 
-	   fclose(fff);
+                fff = fopen(filename, "r");
 
-	  /* after interrupts */
-           sprintf(filename,"%s/run.%d.%s.%s.after",
-                   dir_in,i,event_names[e],which_names[w]);
-           fff=fopen(filename,"r");
-	   if (fff==NULL) continue;
+                if (fff == NULL)
+                    continue;
 
-	   fprintf(ggg,"### Interrupts %d after\n",i);
+                fprintf(ggg, "### Perf Resutls %d\n", i);
 
-	   while(1) {
-	     result=fgets(temp_string,BUFSIZ,fff);
-	     if (result==NULL) break;
-             fprintf(ggg,"%s",temp_string);
-	   }
+                while (1) {
+                    result = fgets(temp_string, BUFSIZ, fff);
 
-	   fclose(fff);
-	}
+                    if (result == NULL)
+                        break;
 
-        fclose(ggg);
-     }
-  }
+                    if (!strstr(temp_string, "Testing syscall")) {
+                        fprintf(ggg, "%s", temp_string);
+                    }
+                }
 
-  return 0;
+                fclose(fff);
+
+                /* after interrupts */
+                sprintf(filename, "%s/run.%d.%s.%s.after", dir_in, i, event_names[e],
+                        which_names[w]);
+
+                fff = fopen(filename, "r");
+
+                if (fff == NULL)
+                    continue;
+
+                fprintf(ggg, "### Interrupts %d after\n", i);
+
+                while (1) {
+                    result = fgets(temp_string, BUFSIZ, fff);
+
+                    if (result == NULL)
+                        break;
+
+                    fprintf(ggg, "%s", temp_string);
+                }
+
+                fclose(fff);
+            }
+
+            fclose(ggg);
+        }
+    }
+
+    return 0;
 }

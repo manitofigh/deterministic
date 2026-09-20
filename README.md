@@ -35,7 +35,7 @@ All of these are optional.
 | `--events PATH` | Would be generated if non-existent; one can however provide their own list of events by putting each event on a separate line. |
 | `--event NAME` | Test one event, optionally ending in `:u`. |
 | `--from-results PATH` | In skid mode, select potentially deterministic events from a previous count run. Default: detect count results for this CPU. |
-| `--period N` | In skid mode, request overflow after N events. Default: half a preliminary count, capped at 1,000,000. Allowed range: 2 through 2,147,483,647. |
+| `--overflow N` | In skid mode, request overflow after N events. Default: half a preliminary count, capped at 1,000,000. Allowed range: 2 through 2,147,483,647. |
 | `--benchmark PATH` | Uses the executable by Weaver et al. by default. |
 | `--timeout SECONDS` | Stops a measurement that takes too long. Default is 120s / round. |
 
@@ -104,8 +104,8 @@ sudo python3 src/run.py --mode skid --from-results results/emr/xeon-gold-6554s-s
 # a custom list, regardless of any previous classification
 sudo python3 src/run.py --mode skid --events my-events.txt
 
-# one event with an explicit overflow period
-sudo python3 src/run.py --mode skid --event br_inst_retired.near_taken --period 1000000
+# one event with an explicit overflow threshold
+sudo python3 src/run.py --mode skid --event br_inst_retired.near_taken --overflow 1000000
 ```
 
 Skid mode needs `cc` and Linux C development headers in addition to Python and
@@ -114,14 +114,14 @@ the helper automatically. There are no additional Python packages to install.
 On a machine where simultaneous multithreading (SMT) is already disabled and
 performance-counter access is permitted, skid mode can also run without sudo.
 
-By default, a preliminary run chooses a period separately for each event. If the
+By default, a preliminary run chooses an overflow threshold separately for each event. If the
 benchmark produces fewer than four events, the automatic selection reports an
-error. Use `--period` to select a threshold explicitly; a benchmark that finishes
+error. Use `--overflow` to select a threshold explicitly; a benchmark that finishes
 before its overflow notification is reported as a failed measurement.
 
 Each round starts a fresh benchmark. Counting begins at the executable's entry,
 and the process stops at the overflow signal before a user-space signal handler
-runs. The saved count minus the requested period is the skid. Only user-space
+runs. The saved count minus the requested overflow threshold is the skid. Only user-space
 events in that process are counted. All 10 rounds run even when their skids differ.
 
 Results go under `results/skid/<microarch>/<processor-model>-step<stepping>/`.
@@ -135,7 +135,7 @@ The report shows:
 |---|---:|---:|---:|---|
 | example event | 10 | 10 | 10.00 | Potentially deterministic |
 
-Each event links to its rounds, including the period, count at stop, skid, and
+Each event links to its rounds, including the overflow threshold, count at stop, skid, and
 stopped instruction address. Matching skid values, including zero, are potentially
 deterministic only when every requested round succeeds. Differing values are
 non-deterministic. Incomplete measurements with no observed difference are

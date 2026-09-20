@@ -2245,7 +2245,7 @@ floating_point:
 	finit                           # i103/i104 (fwait)  (105 if AMD, as PE is set)
 	fninit                          # i105  TOP=0
 
-	# fist / fistp -- fp integer store.  Convert to integer and save
+	# fist / fistp -- fp integer store; Convert to integer and save
 
 	fld1                            # i106  TOP=7
 
@@ -2418,7 +2418,7 @@ floating_point:
 	fcompp                   # i202  TOP=3
 	fcompp                   # i203  TOP=5
 
-	# fprem1 -- fp partial rmainder.  rounds
+	# fprem1 -- fp partial rmainder; rounds
 	fldpi                    # i204  TOP=4
 	fld1                     # i205  TOP=3
 	fprem1                   # i206
