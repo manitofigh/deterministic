@@ -1,14 +1,15 @@
 # Finding Deterministic PMU Events
 
-The core asm tests are from [Vince Weaver's original deterministic repo](https://github.com/deater/deterministic), kept here under `static/`.
+The goal is to find PMU events that, given by executing the same program, always provide the same 
+output count; i.e., finding events that potentially behave deterministically.
+This script runs the same core asm program repeatedly and checks whether each event returns the 
+same count. Five matching counts (the default number of `--rounds` to test) typically 
+filter out 99% of the non-deterministic events in the first 2/3 rounds. Some events however, 
+only prove non-deterministic when testing 100+ rounds.
 
-We want to find events worth investigating as a clock for deterministic execution. this runs the same asm program repeatedly and checks whether each event returns the same count. five matching counts make an event worth looking at, but don't prove that it is deterministic for every program or that its interrupts arrive at an exact point.
+The core asm tests are from [Vince Weaver's original deterministic repo](https://github.com/deater/deterministic).
 
-The goal is to probe the (non-)determinism of PMU events on Intel processors (extending to other processors)
-This "scriptized" version of Weaver et al.'s work runs their asm program repeatedly and checks 
-whether each event returns the same count. Those that match in value all `x` runs
-(5 is the default, but you can change it using `--rounds x`), are perhaps worth investigating 
-with more rounds of tests.
+**Support**: Currently for Intel processors only.
 
 ## Running
 
