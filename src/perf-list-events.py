@@ -10,8 +10,12 @@ import subprocess
 import sys
 import tempfile
 
+# avoid root-owned bytecode files when running with sudo.
+sys.dont_write_bytecode = True
+
 from machine import identify
 from messages import Parser, message
+from permissions import user_owned_outputs
 
 
 SPECIAL = {
@@ -105,43 +109,47 @@ def main():
     args.output = args.output.resolve()
     if args.output.exists():
         raise ValueError(f'event list already exists: {args.output}')
-    args.output.parent.mkdir(parents=True, exist_ok=True)
-    raw_path = args.output.with_suffix('.perf-list.json')
-    stderr_path = args.output.with_suffix('.perf-list.stderr')
-    if args.input:
-        raw = args.input.read_text()
-        raw_path.write_text(raw)
-    else:
-        result = subprocess.run(['perf', 'list', '--json'], capture_output=True, text=True,
-                                env={**os.environ, 'LC_ALL': 'C', 'PERF_PAGER': 'cat'},
-                                timeout=60)
-        raw = result.stdout
-        stderr_path.write_text(result.stderr)
-        raw_path.write_text(raw)
-        if result.returncode or result.stderr.strip():
-            raise ValueError(f'perf list failed or reported a problem; see '
-                             f'{stderr_path}; '
-                             'use sudo and a perf version that supports --json')
-    rows = select(json.loads(raw))
-    args.output.with_suffix('.deferred.txt').write_text(
-        ''.join(name + '\n' for name, choice, _ in rows if choice == 'deferred'))
-    with args.output.with_suffix('.exclusions.tsv').open('w') as file:
-        writer = csv.writer(file, delimiter='\t', lineterminator='\n')
-        writer.writerow(['name', 'status', 'reason'])
-        writer.writerows(row for row in rows if row[1] != 'included')
-    counts = Counter(row[1] for row in rows)
-    summary = f'{len(rows)} unique entries: ' + ', '.join(
-        f'{counts[status]} {status}' for status in ('included', 'excluded', 'deferred'))
-    args.output.with_suffix('.summary.txt').write_text(summary + '\n')
-    # don't let the runner read a list that is only partly written.
-    with tempfile.NamedTemporaryFile(mode='w', dir=args.output.parent, delete=False) as file:
-        temporary = Path(file.name)
-        try:
-            file.write(''.join(name + '\n' for name, choice, _ in rows if choice == 'included'))
-            file.close()
-            os.link(temporary, args.output)
-        finally:
-            temporary.unlink()
+    outputs = [args.output] + [args.output.with_suffix(suffix) for suffix in (
+        '.perf-list.json', '.perf-list.stderr', '.deferred.txt',
+        '.exclusions.tsv', '.summary.txt')]
+    with user_owned_outputs(outputs):
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        raw_path = args.output.with_suffix('.perf-list.json')
+        stderr_path = args.output.with_suffix('.perf-list.stderr')
+        if args.input:
+            raw = args.input.read_text()
+            raw_path.write_text(raw)
+        else:
+            result = subprocess.run(['perf', 'list', '--json'], capture_output=True, text=True,
+                                    env={**os.environ, 'LC_ALL': 'C', 'PERF_PAGER': 'cat'},
+                                    timeout=60)
+            raw = result.stdout
+            stderr_path.write_text(result.stderr)
+            raw_path.write_text(raw)
+            if result.returncode or result.stderr.strip():
+                raise ValueError(f'perf list failed or reported a problem; see '
+                                 f'{stderr_path}; '
+                                 'use sudo and a perf version that supports --json')
+        rows = select(json.loads(raw))
+        args.output.with_suffix('.deferred.txt').write_text(
+            ''.join(name + '\n' for name, choice, _ in rows if choice == 'deferred'))
+        with args.output.with_suffix('.exclusions.tsv').open('w') as file:
+            writer = csv.writer(file, delimiter='\t', lineterminator='\n')
+            writer.writerow(['name', 'status', 'reason'])
+            writer.writerows(row for row in rows if row[1] != 'included')
+        counts = Counter(row[1] for row in rows)
+        summary = f'{len(rows)} unique entries: ' + ', '.join(
+            f'{counts[status]} {status}' for status in ('included', 'excluded', 'deferred'))
+        args.output.with_suffix('.summary.txt').write_text(summary + '\n')
+        # don't let the runner read a list that is only partly written.
+        with tempfile.NamedTemporaryFile(mode='w', dir=args.output.parent, delete=False) as file:
+            temporary = Path(file.name)
+            try:
+                file.write(''.join(name + '\n' for name, choice, _ in rows if choice == 'included'))
+                file.close()
+                os.link(temporary, args.output)
+            finally:
+                temporary.unlink()
     message('+', f'{summary}; saved to {args.output}')
 
 

@@ -14,8 +14,12 @@ import subprocess
 import sys
 import time
 
+# avoid root-owned bytecode files when running with sudo.
+sys.dont_write_bytecode = True
+
 from machine import identify, select_cores, smt_disabled
 from messages import Parser, message
+from permissions import user_owned_outputs
 from worker import defer_interrupts, interrupt, run_worker, signal_group
 
 
@@ -58,7 +62,13 @@ def read_events(path):
 
 def output_directory(requested):
     requested = requested.absolute()
-    requested.parent.mkdir(parents=True, exist_ok=True)
+    parents = []
+    for parent in requested.parents:
+        if parent.exists():
+            break
+        parents.append(parent)
+    with user_owned_outputs(parents):
+        requested.parent.mkdir(parents=True, exist_ok=True)
     candidate = requested
     suffix = 1
     while True:
@@ -120,64 +130,65 @@ def experiment(args, info, events, cpus, reserve):
     requested = args.output or (BASE / 'results' / info['microarch'] /
                                 f'{info["slug"]}-step{info["stepping"]}')
     output = output_directory(requested)
-    (output / 'events.txt').write_text('\n'.join(events) + '\n')
-    profile = (f'# Processor profile\n\n'
-               f'- Processor: {info["model"]}\n'
-               f'- Microarchitecture/event family: `{info["microarch"]}`\n'
-               f'- CPU family/model: {info["family"]}/0x{info["model_id"]:02x}\n'
-               f'- Stepping: {info["stepping"]}\n'
-               f'- Worker CPUs: {cpus}\n- Reserved coordinator CPU: {reserve}\n'
-               f'- SMT: verified disabled or not supported\n'
-               f'- Maximum rounds: {args.rounds}\n- Events: {len(events)}\n'
-               f'- Per-round timeout: {args.timeout:g} seconds\n'
-               f'- Benchmark: `{args.benchmark}`\n'
-               f'- Input: `{args.events}`\n\n'
-               'Results describe this run, not all processors with the same name.\n')
-    (output / 'profile.md').write_text(profile)
-    print(f'Results: {output}\nWorkers: {cpus}; coordinator: {reserve}', flush=True)
-    workers = []
-    started, state = time.monotonic(), 'Running'
-    try:
-        indexed = list(enumerate(events, 1))
-        for position, cpu in enumerate(cpus):
-            assigned = indexed[position::len(cpus)]
-            if not assigned:
-                continue
-            folder = output / 'workers' / f'cpu{cpu}'
-            folder.mkdir(parents=True)
-            (folder / 'events.txt').write_text(''.join(event + '\n' for _, event in assigned))
-            worker = multiprocessing.get_context('fork').Process(
-                target=run_worker,
-                args=(cpu, assigned, folder, args.benchmark, args.rounds, args.timeout))
-            with defer_interrupts():
-                worker.start()
-                workers.append(worker)
-        while any(worker.is_alive() for worker in workers):
-            report(output, len(events), started, state)
-            if any(worker.exitcode not in (None, 0) for worker in workers):
-                raise RuntimeError('a worker failed; inspect its event logs')
-            time.sleep(1)
-        state = 'Complete' if all(worker.exitcode == 0 for worker in workers) else 'Failed'
-    except BaseException:
-        state = 'Interrupted or failed'
-        raise
-    finally:
-        # stop the workers and benchmarks before turning SMT back on.
-        signal.signal(signal.SIGINT, signal.SIG_IGN)
-        signal.signal(signal.SIGTERM, signal.SIG_IGN)
-        for worker in workers:
-            if worker.is_alive():
-                worker.terminate()
-        for worker in workers:
-            worker.join(timeout=10)
-            if worker.is_alive():
-                worker.kill()
-                worker.join()
-        for pid_path in output.glob('workers/cpu*/perf.pid'):
-            signal_group(int(pid_path.read_text()), signal.SIGKILL)
-            pid_path.unlink()
-        rows = report(output, len(events), started, state)
-        print((output / 'progress.txt').read_text(), end='', flush=True)
+    with user_owned_outputs([output]):
+        (output / 'events.txt').write_text('\n'.join(events) + '\n')
+        profile = (f'# Processor profile\n\n'
+                   f'- Processor: {info["model"]}\n'
+                   f'- Microarchitecture/event family: `{info["microarch"]}`\n'
+                   f'- CPU family/model: {info["family"]}/0x{info["model_id"]:02x}\n'
+                   f'- Stepping: {info["stepping"]}\n'
+                   f'- Worker CPUs: {cpus}\n- Reserved coordinator CPU: {reserve}\n'
+                   f'- SMT: verified disabled or not supported\n'
+                   f'- Maximum rounds: {args.rounds}\n- Events: {len(events)}\n'
+                   f'- Per-round timeout: {args.timeout:g} seconds\n'
+                   f'- Benchmark: `{args.benchmark}`\n'
+                   f'- Input: `{args.events}`\n\n'
+                   'Results describe this run, not all processors with the same name.\n')
+        (output / 'profile.md').write_text(profile)
+        print(f'Results: {output}\nWorkers: {cpus}; coordinator: {reserve}', flush=True)
+        workers = []
+        started, state = time.monotonic(), 'Running'
+        try:
+            indexed = list(enumerate(events, 1))
+            for position, cpu in enumerate(cpus):
+                assigned = indexed[position::len(cpus)]
+                if not assigned:
+                    continue
+                folder = output / 'workers' / f'cpu{cpu}'
+                folder.mkdir(parents=True)
+                (folder / 'events.txt').write_text(''.join(event + '\n' for _, event in assigned))
+                worker = multiprocessing.get_context('fork').Process(
+                    target=run_worker,
+                    args=(cpu, assigned, folder, args.benchmark, args.rounds, args.timeout))
+                with defer_interrupts():
+                    worker.start()
+                    workers.append(worker)
+            while any(worker.is_alive() for worker in workers):
+                report(output, len(events), started, state)
+                if any(worker.exitcode not in (None, 0) for worker in workers):
+                    raise RuntimeError('a worker failed; inspect its event logs')
+                time.sleep(1)
+            state = 'Complete' if all(worker.exitcode == 0 for worker in workers) else 'Failed'
+        except BaseException:
+            state = 'Interrupted or failed'
+            raise
+        finally:
+            # stop the workers and benchmarks before turning SMT back on.
+            signal.signal(signal.SIGINT, signal.SIG_IGN)
+            signal.signal(signal.SIGTERM, signal.SIG_IGN)
+            for worker in workers:
+                if worker.is_alive():
+                    worker.terminate()
+            for worker in workers:
+                worker.join(timeout=10)
+                if worker.is_alive():
+                    worker.kill()
+                    worker.join()
+            for pid_path in output.glob('workers/cpu*/perf.pid'):
+                signal_group(int(pid_path.read_text()), signal.SIGKILL)
+                pid_path.unlink()
+            rows = report(output, len(events), started, state)
+            print((output / 'progress.txt').read_text(), end='', flush=True)
     failed = (state != 'Complete' or len(rows) != len(events)
               or any(row['status'] == 'Error' for row in rows))
     message('-' if failed else '+',
