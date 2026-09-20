@@ -1,7 +1,9 @@
 # Finding Deterministic PMU Events
 
-The goal is to find PMU events that, given by executing the same program, always provide the same 
-output count; i.e., finding events that potentially behave deterministically.
+The goal is to find PMU events that behave deterministically. That is, if we run the same 
+program 1000x and record a hardware event `abc`, the final count on that event would always stay 
+the same, given the same program.
+
 This script runs the same core asm program repeatedly and checks whether each event returns the 
 same count. Five matching counts (the default number of `--rounds` to test) typically 
 filter out 99% of the non-deterministic events in the first 2/3 rounds. Some events however, 
