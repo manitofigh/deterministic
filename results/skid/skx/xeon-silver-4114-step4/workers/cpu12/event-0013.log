@@ -1,0 +1,8 @@
+event: fp_arith_inst_retired.scalar_double:u
+cpu: 12
+round limit: 10
+period: not selected
+error: expected one core counter encoding for fp_arith_inst_retired.scalar_double
+
+result: Inconclusive
+successful rounds: 0/10

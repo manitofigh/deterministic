@@ -1,0 +1,21 @@
+event	round	period	count	skid	ip	error
+fp_arith_inst_retired.vector:u	1	1000000	1000010	10	0x401f2f	
+fp_arith_inst_retired.vector:u	2	1000000	1000010	10	0x401f2f	
+fp_arith_inst_retired.vector:u	3	1000000	1000010	10	0x401f2f	
+fp_arith_inst_retired.vector:u	4	1000000	1000010	10	0x401f2f	
+fp_arith_inst_retired.vector:u	5	1000000	1000010	10	0x401f2f	
+fp_arith_inst_retired.vector:u	6	1000000	1000010	10	0x401f2f	
+fp_arith_inst_retired.vector:u	7	1000000	1000010	10	0x401f2f	
+fp_arith_inst_retired.vector:u	8	1000000	1000010	10	0x401f2f	
+fp_arith_inst_retired.vector:u	9	1000000	1000010	10	0x401f2f	
+fp_arith_inst_retired.vector:u	10	1000000	1000010	10	0x401f2f	
+fp_arith_inst_retired.vector:u	11	1000000	1000010	10	0x401f2f	
+fp_arith_inst_retired.vector:u	12	1000000	1000010	10	0x401f2f	
+fp_arith_inst_retired.vector:u	13	1000000	1000010	10	0x401f2f	
+fp_arith_inst_retired.vector:u	14	1000000	1000010	10	0x401f2f	
+fp_arith_inst_retired.vector:u	15	1000000	1000010	10	0x401f2f	
+fp_arith_inst_retired.vector:u	16	1000000	1000010	10	0x401f2f	
+fp_arith_inst_retired.vector:u	17	1000000	1000010	10	0x401f2f	
+fp_arith_inst_retired.vector:u	18	1000000	1000010	10	0x401f2f	
+fp_arith_inst_retired.vector:u	19	1000000	1000010	10	0x401f2f	
+fp_arith_inst_retired.vector:u	20	1000000	1000010	10	0x401f2f	

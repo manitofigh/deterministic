@@ -1,0 +1,8 @@
+event: fp_arith_inst_retired.4_flops:u
+cpu: 9
+round limit: 10
+period: not selected
+error: expected one core counter encoding for fp_arith_inst_retired.4_flops
+
+result: Inconclusive
+successful rounds: 0/10

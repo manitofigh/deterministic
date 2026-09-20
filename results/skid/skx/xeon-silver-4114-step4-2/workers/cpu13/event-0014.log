@@ -1,0 +1,110 @@
+event: fp_arith_inst_retired.scalar_single:u
+cpu: 13
+round limit: 20
+
+--- preliminary count ---
+count: 2300000
+period: 1000000
+
+--- round 1 ---
+count at stop: 1000009
+skid: 9
+instruction pointer: 0x401f38
+
+--- round 2 ---
+count at stop: 1000009
+skid: 9
+instruction pointer: 0x401f38
+
+--- round 3 ---
+count at stop: 1000009
+skid: 9
+instruction pointer: 0x401f38
+
+--- round 4 ---
+count at stop: 1000009
+skid: 9
+instruction pointer: 0x401f38
+
+--- round 5 ---
+count at stop: 1000009
+skid: 9
+instruction pointer: 0x401f38
+
+--- round 6 ---
+count at stop: 1000009
+skid: 9
+instruction pointer: 0x401f38
+
+--- round 7 ---
+count at stop: 1000009
+skid: 9
+instruction pointer: 0x401f38
+
+--- round 8 ---
+count at stop: 1000009
+skid: 9
+instruction pointer: 0x401f38
+
+--- round 9 ---
+count at stop: 1000009
+skid: 9
+instruction pointer: 0x401f38
+
+--- round 10 ---
+count at stop: 1000009
+skid: 9
+instruction pointer: 0x401f38
+
+--- round 11 ---
+count at stop: 1000009
+skid: 9
+instruction pointer: 0x401f38
+
+--- round 12 ---
+count at stop: 1000009
+skid: 9
+instruction pointer: 0x401f38
+
+--- round 13 ---
+count at stop: 1000009
+skid: 9
+instruction pointer: 0x401f38
+
+--- round 14 ---
+count at stop: 1000009
+skid: 9
+instruction pointer: 0x401f38
+
+--- round 15 ---
+count at stop: 1000009
+skid: 9
+instruction pointer: 0x401f38
+
+--- round 16 ---
+count at stop: 1000009
+skid: 9
+instruction pointer: 0x401f38
+
+--- round 17 ---
+count at stop: 1000009
+skid: 9
+instruction pointer: 0x401f38
+
+--- round 18 ---
+count at stop: 1000009
+skid: 9
+instruction pointer: 0x401f38
+
+--- round 19 ---
+count at stop: 1000009
+skid: 9
+instruction pointer: 0x401f38
+
+--- round 20 ---
+count at stop: 1000009
+skid: 9
+instruction pointer: 0x401f38
+
+result: Potentially deterministic
+successful rounds: 20/20

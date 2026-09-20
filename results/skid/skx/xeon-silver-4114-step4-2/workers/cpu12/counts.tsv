@@ -1,0 +1,21 @@
+event	round	period	count	skid	ip	error
+fp_arith_inst_retired.scalar_double:u	1	950000	950000	0	0x402905	
+fp_arith_inst_retired.scalar_double:u	2	950000	950000	0	0x402905	
+fp_arith_inst_retired.scalar_double:u	3	950000	950000	0	0x402905	
+fp_arith_inst_retired.scalar_double:u	4	950000	950000	0	0x402905	
+fp_arith_inst_retired.scalar_double:u	5	950000	950000	0	0x402905	
+fp_arith_inst_retired.scalar_double:u	6	950000	950000	0	0x402905	
+fp_arith_inst_retired.scalar_double:u	7	950000	950000	0	0x402905	
+fp_arith_inst_retired.scalar_double:u	8	950000	950000	0	0x402905	
+fp_arith_inst_retired.scalar_double:u	9	950000	950000	0	0x402905	
+fp_arith_inst_retired.scalar_double:u	10	950000	950000	0	0x402905	
+fp_arith_inst_retired.scalar_double:u	11	950000	950000	0	0x402905	
+fp_arith_inst_retired.scalar_double:u	12	950000	950000	0	0x402905	
+fp_arith_inst_retired.scalar_double:u	13	950000	950000	0	0x402905	
+fp_arith_inst_retired.scalar_double:u	14	950000	950000	0	0x402905	
+fp_arith_inst_retired.scalar_double:u	15	950000	950000	0	0x402905	
+fp_arith_inst_retired.scalar_double:u	16	950000	950000	0	0x402905	
+fp_arith_inst_retired.scalar_double:u	17	950000	950000	0	0x402905	
+fp_arith_inst_retired.scalar_double:u	18	950000	950000	0	0x402905	
+fp_arith_inst_retired.scalar_double:u	19	950000	950000	0	0x402905	
+fp_arith_inst_retired.scalar_double:u	20	950000	950000	0	0x402905	

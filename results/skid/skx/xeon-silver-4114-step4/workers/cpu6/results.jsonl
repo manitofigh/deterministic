@@ -1,0 +1,1 @@
+{"index": 7, "event": "br_inst_retired.not_taken:u", "cpu": 6, "runs": 0, "status": "Inconclusive", "period": null, "skids": [], "measurements": [], "baseline": null, "errors": 1, "note": "expected one core counter encoding for br_inst_retired.not_taken", "log": "workers/cpu6/event-0007.log"}

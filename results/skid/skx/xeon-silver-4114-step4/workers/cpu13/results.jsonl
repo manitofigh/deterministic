@@ -1,0 +1,1 @@
+{"index": 14, "event": "fp_arith_inst_retired.scalar_single:u", "cpu": 13, "runs": 0, "status": "Inconclusive", "period": null, "skids": [], "measurements": [], "baseline": null, "errors": 1, "note": "expected one core counter encoding for fp_arith_inst_retired.scalar_single", "log": "workers/cpu13/event-0014.log"}

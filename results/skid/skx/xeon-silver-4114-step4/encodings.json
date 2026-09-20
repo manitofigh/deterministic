@@ -1,0 +1,56 @@
+{
+  "br_inst_retired.cond": {
+    "error": "expected one core counter encoding for br_inst_retired.cond"
+  },
+  "br_inst_retired.cond_ntaken": {
+    "error": "expected one core counter encoding for br_inst_retired.cond_ntaken"
+  },
+  "br_inst_retired.conditional": {
+    "error": "expected one core counter encoding for br_inst_retired.conditional"
+  },
+  "br_inst_retired.near_call": {
+    "error": "expected one core counter encoding for br_inst_retired.near_call"
+  },
+  "br_inst_retired.near_return": {
+    "error": "expected one core counter encoding for br_inst_retired.near_return"
+  },
+  "br_inst_retired.near_taken": {
+    "error": "expected one core counter encoding for br_inst_retired.near_taken"
+  },
+  "br_inst_retired.not_taken": {
+    "error": "expected one core counter encoding for br_inst_retired.not_taken"
+  },
+  "fp_arith_inst_retired.128b_packed_double": {
+    "error": "expected one core counter encoding for fp_arith_inst_retired.128b_packed_double"
+  },
+  "fp_arith_inst_retired.128b_packed_single": {
+    "error": "expected one core counter encoding for fp_arith_inst_retired.128b_packed_single"
+  },
+  "fp_arith_inst_retired.4_flops": {
+    "error": "expected one core counter encoding for fp_arith_inst_retired.4_flops"
+  },
+  "fp_arith_inst_retired.8_flops": {
+    "error": "expected one core counter encoding for fp_arith_inst_retired.8_flops"
+  },
+  "fp_arith_inst_retired.scalar": {
+    "error": "expected one core counter encoding for fp_arith_inst_retired.scalar"
+  },
+  "fp_arith_inst_retired.scalar_double": {
+    "error": "expected one core counter encoding for fp_arith_inst_retired.scalar_double"
+  },
+  "fp_arith_inst_retired.scalar_single": {
+    "error": "expected one core counter encoding for fp_arith_inst_retired.scalar_single"
+  },
+  "fp_arith_inst_retired.vector": {
+    "error": "expected one core counter encoding for fp_arith_inst_retired.vector"
+  },
+  "fp_assist.any": {
+    "error": "expected one core counter encoding for fp_assist.any"
+  },
+  "inst_retired.nop": {
+    "error": "expected one core counter encoding for inst_retired.nop"
+  },
+  "mem_inst_retired.lock_loads": {
+    "error": "expected one core counter encoding for mem_inst_retired.lock_loads"
+  }
+}

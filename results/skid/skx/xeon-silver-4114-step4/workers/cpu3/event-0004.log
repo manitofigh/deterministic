@@ -1,0 +1,8 @@
+event: br_inst_retired.near_call:u
+cpu: 3
+round limit: 10
+period: not selected
+error: expected one core counter encoding for br_inst_retired.near_call
+
+result: Inconclusive
+successful rounds: 0/10

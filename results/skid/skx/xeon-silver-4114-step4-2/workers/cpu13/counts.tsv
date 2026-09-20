@@ -1,0 +1,21 @@
+event	round	period	count	skid	ip	error
+fp_arith_inst_retired.scalar_single:u	1	1000000	1000009	9	0x401f38	
+fp_arith_inst_retired.scalar_single:u	2	1000000	1000009	9	0x401f38	
+fp_arith_inst_retired.scalar_single:u	3	1000000	1000009	9	0x401f38	
+fp_arith_inst_retired.scalar_single:u	4	1000000	1000009	9	0x401f38	
+fp_arith_inst_retired.scalar_single:u	5	1000000	1000009	9	0x401f38	
+fp_arith_inst_retired.scalar_single:u	6	1000000	1000009	9	0x401f38	
+fp_arith_inst_retired.scalar_single:u	7	1000000	1000009	9	0x401f38	
+fp_arith_inst_retired.scalar_single:u	8	1000000	1000009	9	0x401f38	
+fp_arith_inst_retired.scalar_single:u	9	1000000	1000009	9	0x401f38	
+fp_arith_inst_retired.scalar_single:u	10	1000000	1000009	9	0x401f38	
+fp_arith_inst_retired.scalar_single:u	11	1000000	1000009	9	0x401f38	
+fp_arith_inst_retired.scalar_single:u	12	1000000	1000009	9	0x401f38	
+fp_arith_inst_retired.scalar_single:u	13	1000000	1000009	9	0x401f38	
+fp_arith_inst_retired.scalar_single:u	14	1000000	1000009	9	0x401f38	
+fp_arith_inst_retired.scalar_single:u	15	1000000	1000009	9	0x401f38	
+fp_arith_inst_retired.scalar_single:u	16	1000000	1000009	9	0x401f38	
+fp_arith_inst_retired.scalar_single:u	17	1000000	1000009	9	0x401f38	
+fp_arith_inst_retired.scalar_single:u	18	1000000	1000009	9	0x401f38	
+fp_arith_inst_retired.scalar_single:u	19	1000000	1000009	9	0x401f38	
+fp_arith_inst_retired.scalar_single:u	20	1000000	1000009	9	0x401f38	

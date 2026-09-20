@@ -1,0 +1,110 @@
+event: fp_arith_inst_retired.128b_packed_double:u
+cpu: 7
+round limit: 20
+
+--- preliminary count ---
+count: 3100000
+period: 1000000
+
+--- round 1 ---
+count at stop: 1000003
+skid: 3
+instruction pointer: 0x402716
+
+--- round 2 ---
+count at stop: 1000003
+skid: 3
+instruction pointer: 0x402716
+
+--- round 3 ---
+count at stop: 1000003
+skid: 3
+instruction pointer: 0x402716
+
+--- round 4 ---
+count at stop: 1000003
+skid: 3
+instruction pointer: 0x402716
+
+--- round 5 ---
+count at stop: 1000003
+skid: 3
+instruction pointer: 0x402716
+
+--- round 6 ---
+count at stop: 1000003
+skid: 3
+instruction pointer: 0x402716
+
+--- round 7 ---
+count at stop: 1000003
+skid: 3
+instruction pointer: 0x402716
+
+--- round 8 ---
+count at stop: 1000003
+skid: 3
+instruction pointer: 0x402716
+
+--- round 9 ---
+count at stop: 1000003
+skid: 3
+instruction pointer: 0x402716
+
+--- round 10 ---
+count at stop: 1000003
+skid: 3
+instruction pointer: 0x402716
+
+--- round 11 ---
+count at stop: 1000003
+skid: 3
+instruction pointer: 0x402716
+
+--- round 12 ---
+count at stop: 1000003
+skid: 3
+instruction pointer: 0x402716
+
+--- round 13 ---
+count at stop: 1000003
+skid: 3
+instruction pointer: 0x402716
+
+--- round 14 ---
+count at stop: 1000003
+skid: 3
+instruction pointer: 0x402716
+
+--- round 15 ---
+count at stop: 1000003
+skid: 3
+instruction pointer: 0x402716
+
+--- round 16 ---
+count at stop: 1000003
+skid: 3
+instruction pointer: 0x402716
+
+--- round 17 ---
+count at stop: 1000003
+skid: 3
+instruction pointer: 0x402716
+
+--- round 18 ---
+count at stop: 1000003
+skid: 3
+instruction pointer: 0x402716
+
+--- round 19 ---
+count at stop: 1000003
+skid: 3
+instruction pointer: 0x402716
+
+--- round 20 ---
+count at stop: 1000003
+skid: 3
+instruction pointer: 0x402716
+
+result: Potentially deterministic
+successful rounds: 20/20

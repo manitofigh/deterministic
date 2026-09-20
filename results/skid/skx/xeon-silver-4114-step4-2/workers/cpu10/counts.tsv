@@ -1,0 +1,21 @@
+event	round	period	count	skid	ip	error
+fp_arith_inst_retired.8_flops:u	1	1000000	1000000	0	0x4020db	
+fp_arith_inst_retired.8_flops:u	2	1000000	1000000	0	0x4020db	
+fp_arith_inst_retired.8_flops:u	3	1000000	1000000	0	0x4020db	
+fp_arith_inst_retired.8_flops:u	4	1000000	1000000	0	0x4020db	
+fp_arith_inst_retired.8_flops:u	5	1000000	1000000	0	0x4020db	
+fp_arith_inst_retired.8_flops:u	6	1000000	1000000	0	0x4020db	
+fp_arith_inst_retired.8_flops:u	7	1000000	1000000	0	0x4020db	
+fp_arith_inst_retired.8_flops:u	8	1000000	1000000	0	0x4020db	
+fp_arith_inst_retired.8_flops:u	9	1000000	1000000	0	0x4020db	
+fp_arith_inst_retired.8_flops:u	10	1000000	1000000	0	0x4020db	
+fp_arith_inst_retired.8_flops:u	11	1000000	1000000	0	0x4020db	
+fp_arith_inst_retired.8_flops:u	12	1000000	1000000	0	0x4020db	
+fp_arith_inst_retired.8_flops:u	13	1000000	1000000	0	0x4020db	
+fp_arith_inst_retired.8_flops:u	14	1000000	1000000	0	0x4020db	
+fp_arith_inst_retired.8_flops:u	15	1000000	1000000	0	0x4020db	
+fp_arith_inst_retired.8_flops:u	16	1000000	1000000	0	0x4020db	
+fp_arith_inst_retired.8_flops:u	17	1000000	1000000	0	0x4020db	
+fp_arith_inst_retired.8_flops:u	18	1000000	1000000	0	0x4020db	
+fp_arith_inst_retired.8_flops:u	19	1000000	1000000	0	0x4020db	
+fp_arith_inst_retired.8_flops:u	20	1000000	1000000	0	0x4020db	

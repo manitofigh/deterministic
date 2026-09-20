@@ -1,0 +1,1 @@
+{"index": 4, "event": "br_inst_retired.near_call:u", "cpu": 3, "runs": 0, "status": "Inconclusive", "period": null, "skids": [], "measurements": [], "baseline": null, "errors": 1, "note": "expected one core counter encoding for br_inst_retired.near_call", "log": "workers/cpu3/event-0004.log"}

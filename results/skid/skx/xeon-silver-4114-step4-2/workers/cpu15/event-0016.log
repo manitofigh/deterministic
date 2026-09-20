@@ -1,0 +1,11 @@
+event: fp_assist.any:u
+cpu: 15
+round limit: 20
+
+--- preliminary count ---
+count: 3
+period: not selected
+note: too few events to choose an overflow period (count: 3; need at least 4)
+
+result: Inconclusive
+successful rounds: 0/20

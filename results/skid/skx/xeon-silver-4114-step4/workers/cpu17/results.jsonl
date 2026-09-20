@@ -1,0 +1,1 @@
+{"index": 18, "event": "mem_inst_retired.lock_loads:u", "cpu": 17, "runs": 0, "status": "Inconclusive", "period": null, "skids": [], "measurements": [], "baseline": null, "errors": 1, "note": "expected one core counter encoding for mem_inst_retired.lock_loads", "log": "workers/cpu17/event-0018.log"}

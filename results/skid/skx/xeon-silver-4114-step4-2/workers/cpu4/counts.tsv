@@ -1,0 +1,21 @@
+event	round	period	count	skid	ip	error
+br_inst_retired.near_return:u	1	100000	100000	0	0x400b60	
+br_inst_retired.near_return:u	2	100000	100000	0	0x400b60	
+br_inst_retired.near_return:u	3	100000	100000	0	0x400b60	
+br_inst_retired.near_return:u	4	100000	100000	0	0x400b60	
+br_inst_retired.near_return:u	5	100000	100000	0	0x400b60	
+br_inst_retired.near_return:u	6	100000	100000	0	0x400b60	
+br_inst_retired.near_return:u	7	100000	100000	0	0x400b60	
+br_inst_retired.near_return:u	8	100000	100000	0	0x400b60	
+br_inst_retired.near_return:u	9	100000	100000	0	0x400b60	
+br_inst_retired.near_return:u	10	100000	100000	0	0x400b60	
+br_inst_retired.near_return:u	11	100000	100000	0	0x400b60	
+br_inst_retired.near_return:u	12	100000	100000	0	0x400b60	
+br_inst_retired.near_return:u	13	100000	100000	0	0x400b60	
+br_inst_retired.near_return:u	14	100000	100000	0	0x400b60	
+br_inst_retired.near_return:u	15	100000	100000	0	0x400b60	
+br_inst_retired.near_return:u	16	100000	100000	0	0x400b60	
+br_inst_retired.near_return:u	17	100000	100000	0	0x400b60	
+br_inst_retired.near_return:u	18	100000	100000	0	0x400b60	
+br_inst_retired.near_return:u	19	100000	100000	0	0x400b60	
+br_inst_retired.near_return:u	20	100000	100000	0	0x400b60	

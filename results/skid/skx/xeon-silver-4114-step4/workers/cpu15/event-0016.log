@@ -1,0 +1,8 @@
+event: fp_assist.any:u
+cpu: 15
+round limit: 10
+period: not selected
+error: expected one core counter encoding for fp_assist.any
+
+result: Inconclusive
+successful rounds: 0/10

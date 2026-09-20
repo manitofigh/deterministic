@@ -1,0 +1,1 @@
+{"index": 6, "event": "br_inst_retired.near_taken:u", "cpu": 5, "runs": 0, "status": "Inconclusive", "period": null, "skids": [], "measurements": [], "baseline": null, "errors": 1, "note": "expected one core counter encoding for br_inst_retired.near_taken", "log": "workers/cpu5/event-0006.log"}

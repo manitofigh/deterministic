@@ -1,0 +1,21 @@
+event	round	period	count	skid	ip	error
+mem_inst_retired.lock_loads:u	1	900000	900000	0	0x4008f0	
+mem_inst_retired.lock_loads:u	2	900000	900000	0	0x4008f0	
+mem_inst_retired.lock_loads:u	3	900000	900000	0	0x4008f0	
+mem_inst_retired.lock_loads:u	4	900000	900000	0	0x4008f0	
+mem_inst_retired.lock_loads:u	5	900000	900000	0	0x4008f0	
+mem_inst_retired.lock_loads:u	6	900000	900000	0	0x4008f0	
+mem_inst_retired.lock_loads:u	7	900000	900000	0	0x4008f0	
+mem_inst_retired.lock_loads:u	8	900000	900000	0	0x4008f0	
+mem_inst_retired.lock_loads:u	9	900000	900000	0	0x4008f0	
+mem_inst_retired.lock_loads:u	10	900000	900000	0	0x4008f0	
+mem_inst_retired.lock_loads:u	11	900000	900000	0	0x4008f0	
+mem_inst_retired.lock_loads:u	12	900000	900000	0	0x4008f0	
+mem_inst_retired.lock_loads:u	13	900000	900000	0	0x4008f0	
+mem_inst_retired.lock_loads:u	14	900000	900000	0	0x4008f0	
+mem_inst_retired.lock_loads:u	15	900000	900000	0	0x4008f0	
+mem_inst_retired.lock_loads:u	16	900000	900000	0	0x4008f0	
+mem_inst_retired.lock_loads:u	17	900000	900000	0	0x4008f0	
+mem_inst_retired.lock_loads:u	18	900000	900000	0	0x4008f0	
+mem_inst_retired.lock_loads:u	19	900000	900000	0	0x4008f0	
+mem_inst_retired.lock_loads:u	20	900000	900000	0	0x4008f0	

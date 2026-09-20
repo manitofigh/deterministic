@@ -1,0 +1,8 @@
+event: mem_inst_retired.lock_loads:u
+cpu: 17
+round limit: 10
+period: not selected
+error: expected one core counter encoding for mem_inst_retired.lock_loads
+
+result: Inconclusive
+successful rounds: 0/10

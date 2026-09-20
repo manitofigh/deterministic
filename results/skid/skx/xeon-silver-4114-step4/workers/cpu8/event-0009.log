@@ -1,0 +1,8 @@
+event: fp_arith_inst_retired.128b_packed_single:u
+cpu: 8
+round limit: 10
+period: not selected
+error: expected one core counter encoding for fp_arith_inst_retired.128b_packed_single
+
+result: Inconclusive
+successful rounds: 0/10

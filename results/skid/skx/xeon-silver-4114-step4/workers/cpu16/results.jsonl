@@ -1,0 +1,1 @@
+{"index": 17, "event": "inst_retired.nop:u", "cpu": 16, "runs": 0, "status": "Inconclusive", "period": null, "skids": [], "measurements": [], "baseline": null, "errors": 1, "note": "expected one core counter encoding for inst_retired.nop", "log": "workers/cpu16/event-0017.log"}

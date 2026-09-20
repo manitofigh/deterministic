@@ -1,0 +1,8 @@
+event: br_inst_retired.not_taken:u
+cpu: 6
+round limit: 10
+period: not selected
+error: expected one core counter encoding for br_inst_retired.not_taken
+
+result: Inconclusive
+successful rounds: 0/10

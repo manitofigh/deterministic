@@ -1,0 +1,110 @@
+event: fp_arith_inst_retired.8_flops:u
+cpu: 10
+round limit: 20
+
+--- preliminary count ---
+count: 2900000
+period: 1000000
+
+--- round 1 ---
+count at stop: 1000000
+skid: 0
+instruction pointer: 0x4020db
+
+--- round 2 ---
+count at stop: 1000000
+skid: 0
+instruction pointer: 0x4020db
+
+--- round 3 ---
+count at stop: 1000000
+skid: 0
+instruction pointer: 0x4020db
+
+--- round 4 ---
+count at stop: 1000000
+skid: 0
+instruction pointer: 0x4020db
+
+--- round 5 ---
+count at stop: 1000000
+skid: 0
+instruction pointer: 0x4020db
+
+--- round 6 ---
+count at stop: 1000000
+skid: 0
+instruction pointer: 0x4020db
+
+--- round 7 ---
+count at stop: 1000000
+skid: 0
+instruction pointer: 0x4020db
+
+--- round 8 ---
+count at stop: 1000000
+skid: 0
+instruction pointer: 0x4020db
+
+--- round 9 ---
+count at stop: 1000000
+skid: 0
+instruction pointer: 0x4020db
+
+--- round 10 ---
+count at stop: 1000000
+skid: 0
+instruction pointer: 0x4020db
+
+--- round 11 ---
+count at stop: 1000000
+skid: 0
+instruction pointer: 0x4020db
+
+--- round 12 ---
+count at stop: 1000000
+skid: 0
+instruction pointer: 0x4020db
+
+--- round 13 ---
+count at stop: 1000000
+skid: 0
+instruction pointer: 0x4020db
+
+--- round 14 ---
+count at stop: 1000000
+skid: 0
+instruction pointer: 0x4020db
+
+--- round 15 ---
+count at stop: 1000000
+skid: 0
+instruction pointer: 0x4020db
+
+--- round 16 ---
+count at stop: 1000000
+skid: 0
+instruction pointer: 0x4020db
+
+--- round 17 ---
+count at stop: 1000000
+skid: 0
+instruction pointer: 0x4020db
+
+--- round 18 ---
+count at stop: 1000000
+skid: 0
+instruction pointer: 0x4020db
+
+--- round 19 ---
+count at stop: 1000000
+skid: 0
+instruction pointer: 0x4020db
+
+--- round 20 ---
+count at stop: 1000000
+skid: 0
+instruction pointer: 0x4020db
+
+result: Potentially deterministic
+successful rounds: 20/20

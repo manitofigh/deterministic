@@ -1,0 +1,110 @@
+event: br_inst_retired.not_taken:u
+cpu: 6
+round limit: 20
+
+--- preliminary count ---
+count: 2400016
+period: 1000000
+
+--- round 1 ---
+count at stop: 1000009
+skid: 9
+instruction pointer: 0x400c20
+
+--- round 2 ---
+count at stop: 1000009
+skid: 9
+instruction pointer: 0x400c20
+
+--- round 3 ---
+count at stop: 1000009
+skid: 9
+instruction pointer: 0x400c20
+
+--- round 4 ---
+count at stop: 1000011
+skid: 11
+instruction pointer: 0x400c37
+
+--- round 5 ---
+count at stop: 1000009
+skid: 9
+instruction pointer: 0x400c18
+
+--- round 6 ---
+count at stop: 1000009
+skid: 9
+instruction pointer: 0x400c11
+
+--- round 7 ---
+count at stop: 1000009
+skid: 9
+instruction pointer: 0x400c20
+
+--- round 8 ---
+count at stop: 1000011
+skid: 11
+instruction pointer: 0x400c32
+
+--- round 9 ---
+count at stop: 1000009
+skid: 9
+instruction pointer: 0x400c18
+
+--- round 10 ---
+count at stop: 1000009
+skid: 9
+instruction pointer: 0x400c20
+
+--- round 11 ---
+count at stop: 1000011
+skid: 11
+instruction pointer: 0x400c37
+
+--- round 12 ---
+count at stop: 1000011
+skid: 11
+instruction pointer: 0x400c37
+
+--- round 13 ---
+count at stop: 1000009
+skid: 9
+instruction pointer: 0x400c18
+
+--- round 14 ---
+count at stop: 1000010
+skid: 10
+instruction pointer: 0x400c26
+
+--- round 15 ---
+count at stop: 1000009
+skid: 9
+instruction pointer: 0x400c20
+
+--- round 16 ---
+count at stop: 1000010
+skid: 10
+instruction pointer: 0x400c2c
+
+--- round 17 ---
+count at stop: 1000011
+skid: 11
+instruction pointer: 0x400c32
+
+--- round 18 ---
+count at stop: 1000009
+skid: 9
+instruction pointer: 0x400c20
+
+--- round 19 ---
+count at stop: 1000011
+skid: 11
+instruction pointer: 0x400c32
+
+--- round 20 ---
+count at stop: 1000009
+skid: 9
+instruction pointer: 0x400c20
+
+result: Non-deterministic
+successful rounds: 20/20

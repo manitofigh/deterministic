@@ -137,6 +137,7 @@ def test_event(index, event, cpu, folder, benchmark, rounds, timeout,
     skids, measurements = [], []
     period = requested_period
     error = config.get('error')
+    note = ''
     baseline = None
     with log_path.open('w', buffering=1) as log:
         log.write(f'event: {event}:u\ncpu: {cpu}\nround limit: {rounds}\n')
@@ -148,12 +149,14 @@ def test_event(index, event, cpu, folder, benchmark, rounds, timeout,
                 total = baseline['count']
                 log.write(f'count: {total}\n')
                 if total < 4:
-                    error = 'too few events to choose an overflow period (need at least 4)'
+                    note = f'too few events to choose an overflow period (count: {total}; need at least 4)'
                 else:
                     period = min(1000000, total // 2)
         log.write(f'period: {period if period is not None else "not selected"}\n')
         if error:
             log.write(f'error: {error}\n')
+        elif note:
+            log.write(f'note: {note}\n')
         else:
             for number in range(1, rounds + 1):
                 log.write(f'\n--- round {number} ---\n')
@@ -181,7 +184,7 @@ def test_event(index, event, cpu, folder, benchmark, rounds, timeout,
         log.write(f'\nresult: {status}\nsuccessful rounds: {len(skids)}/{rounds}\n')
     return dict(index=index, event=event + ':u', cpu=cpu, runs=len(measurements),
                 status=status, period=period, skids=skids, measurements=measurements,
-                baseline=baseline, errors=failures + bool(error), note=error or '',
+                baseline=baseline, errors=failures + bool(error), note=error or note,
                 log=f'workers/cpu{cpu}/{log_path.name}')
 
 
@@ -216,6 +219,11 @@ def report_rows(rows):
         average = f'{sum(skids) / len(skids):.2f}' if skids else '—'
         text.append(f'| [`{row["event"]}`]({row["log"]}) | {low} | {high} | '
                     f'{average} | {row["status"]} |')
+    notes = [row for row in rows if row.get('note') and not row['errors']]
+    if notes:
+        text += ['', '## Measurement notes', '', '| Event | Note |', '|---|---|']
+        for row in notes:
+            text.append(f'| [`{row["event"]}`]({row["log"]}) | {row["note"]} |')
     errors = [row for row in rows if row['errors']]
     if errors:
         text += ['', '## Measurement errors', '',

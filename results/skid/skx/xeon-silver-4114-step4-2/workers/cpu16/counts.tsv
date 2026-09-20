@@ -1,0 +1,21 @@
+event	round	period	count	skid	ip	error
+inst_retired.nop:u	1	790000	790048	48	0x400a69	
+inst_retired.nop:u	2	790000	790048	48	0x400a69	
+inst_retired.nop:u	3	790000	790048	48	0x400a69	
+inst_retired.nop:u	4	790000	790048	48	0x400a69	
+inst_retired.nop:u	5	790000	790048	48	0x400a62	
+inst_retired.nop:u	6	790000	790048	48	0x400a69	
+inst_retired.nop:u	7	790000	790048	48	0x400a69	
+inst_retired.nop:u	8	790000	790048	48	0x400a69	
+inst_retired.nop:u	9	790000	790048	48	0x400a69	
+inst_retired.nop:u	10	790000	790048	48	0x400a62	
+inst_retired.nop:u	11	790000	790048	48	0x400a69	
+inst_retired.nop:u	12	790000	790048	48	0x400a69	
+inst_retired.nop:u	13	790000	790048	48	0x400a62	
+inst_retired.nop:u	14	790000	790048	48	0x400a69	
+inst_retired.nop:u	15	790000	790048	48	0x400a69	
+inst_retired.nop:u	16	790000	790048	48	0x400a62	
+inst_retired.nop:u	17	790000	790048	48	0x400a69	
+inst_retired.nop:u	18	790000	790048	48	0x400a69	
+inst_retired.nop:u	19	790000	790048	48	0x400a69	
+inst_retired.nop:u	20	790000	790048	48	0x400a69	
