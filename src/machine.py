@@ -68,7 +68,7 @@ def smt_disabled():
             control.write_text('on\n')
 
 
-def select_cores(allowed, requested):
+def select_cores(allowed, requested, start=None):
     online = cpu_list((CPU_ROOT / 'online').read_text())
     cores = {}
     for cpu in sorted(online & allowed):
@@ -82,8 +82,16 @@ def select_cores(allowed, requested):
     cpus = sorted(cores.values())
     if len(cpus) < 2:
         raise ValueError('need two physical cores: a worker and a reserved core')
-    reserve = cpus.pop()
-    count = requested if requested is not None else len(cpus)
-    if not 1 <= count <= len(cpus):
-        raise ValueError(f'--cores must be between 1 and {len(cpus)}')
-    return cpus[:count], reserve
+    available = cpus if start is None else [cpu for cpu in cpus if cpu >= start]
+    maximum = min(len(available), len(cpus) - 1)
+    if maximum == 0:
+        raise ValueError(f'no available worker CPUs starting at {start}')
+    count = requested if requested is not None else maximum
+    if not 1 <= count <= maximum:
+        raise ValueError(f'--cores must be between 1 and {maximum} for this selection')
+    workers = available[:count] if start is None else list(range(start, start + count))
+    missing = sorted(set(workers) - set(cpus))
+    if missing:
+        raise ValueError(f'requested worker CPUs are unavailable: {missing}')
+    reserve = max(cpu for cpu in cpus if cpu not in workers)
+    return workers, reserve

@@ -25,6 +25,8 @@ BASE = Path(__file__).resolve().parents[1]
 def arguments():
     parser = Parser(description=__doc__)
     parser.add_argument('--cores', type=int, help='worker cores (default: all minus one)')
+    parser.add_argument('--start-core', type=int,
+                        help='first worker CPU number (default: lowest available)')
     parser.add_argument('--rounds', type=int, default=5, help='maximum rounds per event (default: 5)')
     parser.add_argument('--events', type=Path, help='one plain event name per line')
     parser.add_argument('--output', type=Path, help='custom output directory; never overwritten')
@@ -33,6 +35,8 @@ def arguments():
     parser.add_argument('--timeout', type=float, default=120,
                         help='seconds allowed per measurement (default: 120)')
     args = parser.parse_args()
+    if args.start_core is not None and args.start_core < 0:
+        parser.error('--start-core must be nonnegative')
     if args.rounds < 2:
         parser.error('--rounds must be at least 2')
     if not 0 < args.timeout < float('inf'):
@@ -210,7 +214,7 @@ def main():
                 raise RuntimeError('could not generate the event list; no workers started')
         events = read_events(args.events)
         with smt_disabled():
-            cpus, reserve = select_cores(allowed, args.cores)
+            cpus, reserve = select_cores(allowed, args.cores, args.start_core)
             try:
                 os.sched_setaffinity(0, {reserve})
                 return experiment(args, info, events, cpus, reserve)
