@@ -3,52 +3,22 @@ cpu: 1
 round limit: 5
 
 --- round 1 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu1/perf.tmp -e mem_inst_retired.split_loads:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:01:12 2026
-
-100000;;mem_inst_retired.split_loads:u;3130109772;100.00;;
-
 parsed count: 100000
 exit: 0
 
 --- round 2 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu1/perf.tmp -e mem_inst_retired.split_loads:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:01:15 2026
-
-100000;;mem_inst_retired.split_loads:u;3139452070;100.00;;
-
 parsed count: 100000
 exit: 0
 
 --- round 3 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu1/perf.tmp -e mem_inst_retired.split_loads:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:01:18 2026
-
-100000;;mem_inst_retired.split_loads:u;3138538458;100.00;;
-
 parsed count: 100000
 exit: 0
 
 --- round 4 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu1/perf.tmp -e mem_inst_retired.split_loads:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:01:22 2026
-
-100000;;mem_inst_retired.split_loads:u;3128934165;100.00;;
-
 parsed count: 100000
 exit: 0
 
 --- round 5 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu1/perf.tmp -e mem_inst_retired.split_loads:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:01:25 2026
-
-100000;;mem_inst_retired.split_loads:u;3131569914;100.00;;
-
 parsed count: 100000
 exit: 0
 

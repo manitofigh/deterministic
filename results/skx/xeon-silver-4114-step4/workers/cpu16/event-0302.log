@@ -3,12 +3,6 @@ cpu: 16
 round limit: 5
 
 --- round 1 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu16/perf.tmp -e branch-loads:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:03:16 2026
-
-9253162;;branch-loads;3121087091;100.00;;
-
 parsed count: None
 exit: 0
 

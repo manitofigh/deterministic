@@ -3,52 +3,22 @@ cpu: 13
 round limit: 5
 
 --- round 1 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu13/perf.tmp -e dtlb_store_misses.walk_completed_1g:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:08:01 2026
-
-0;;dtlb_store_misses.walk_completed_1g:u;3129318055;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 2 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu13/perf.tmp -e dtlb_store_misses.walk_completed_1g:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:08:04 2026
-
-0;;dtlb_store_misses.walk_completed_1g:u;3124531926;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 3 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu13/perf.tmp -e dtlb_store_misses.walk_completed_1g:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:08:07 2026
-
-0;;dtlb_store_misses.walk_completed_1g:u;3124927571;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 4 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu13/perf.tmp -e dtlb_store_misses.walk_completed_1g:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:08:10 2026
-
-0;;dtlb_store_misses.walk_completed_1g:u;3140311642;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 5 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu13/perf.tmp -e dtlb_store_misses.walk_completed_1g:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:08:13 2026
-
-0;;dtlb_store_misses.walk_completed_1g:u;3125095261;100.00;;
-
 parsed count: 0
 exit: 0
 

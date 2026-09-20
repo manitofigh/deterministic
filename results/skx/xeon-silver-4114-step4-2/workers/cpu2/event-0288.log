@@ -3,52 +3,22 @@ cpu: 2
 round limit: 5
 
 --- round 1 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu2/perf.tmp -e itlb_misses.walk_completed_1g:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:08:37 2026
-
-0;;itlb_misses.walk_completed_1g:u;3122013670;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 2 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu2/perf.tmp -e itlb_misses.walk_completed_1g:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:08:40 2026
-
-0;;itlb_misses.walk_completed_1g:u;3120131762;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 3 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu2/perf.tmp -e itlb_misses.walk_completed_1g:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:08:43 2026
-
-0;;itlb_misses.walk_completed_1g:u;3121734701;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 4 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu2/perf.tmp -e itlb_misses.walk_completed_1g:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:08:46 2026
-
-0;;itlb_misses.walk_completed_1g:u;3118777477;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 5 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu2/perf.tmp -e itlb_misses.walk_completed_1g:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:08:49 2026
-
-0;;itlb_misses.walk_completed_1g:u;3131939051;100.00;;
-
 parsed count: 0
 exit: 0
 

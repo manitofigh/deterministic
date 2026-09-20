@@ -3,52 +3,22 @@ cpu: 13
 round limit: 5
 
 --- round 1 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu13/perf.tmp -e fp_arith_inst_retired.512b_packed_single:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:01:28 2026
-
-0;;fp_arith_inst_retired.512b_packed_single:u;3133412134;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 2 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu13/perf.tmp -e fp_arith_inst_retired.512b_packed_single:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:01:31 2026
-
-0;;fp_arith_inst_retired.512b_packed_single:u;3132544845;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 3 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu13/perf.tmp -e fp_arith_inst_retired.512b_packed_single:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:01:34 2026
-
-0;;fp_arith_inst_retired.512b_packed_single:u;3134306017;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 4 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu13/perf.tmp -e fp_arith_inst_retired.512b_packed_single:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:01:37 2026
-
-0;;fp_arith_inst_retired.512b_packed_single:u;3131674008;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 5 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu13/perf.tmp -e fp_arith_inst_retired.512b_packed_single:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:01:40 2026
-
-0;;fp_arith_inst_retired.512b_packed_single:u;3128084065;100.00;;
-
 parsed count: 0
 exit: 0
 

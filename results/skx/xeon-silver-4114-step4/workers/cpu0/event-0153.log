@@ -3,52 +3,22 @@ cpu: 0
 round limit: 5
 
 --- round 1 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu0/perf.tmp -e tx_mem.abort_hle_elision_buffer_mismatch:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:02:13 2026
-
-0;;tx_mem.abort_hle_elision_buffer_mismatch:u;3132663931;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 2 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu0/perf.tmp -e tx_mem.abort_hle_elision_buffer_mismatch:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:02:16 2026
-
-0;;tx_mem.abort_hle_elision_buffer_mismatch:u;3127352864;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 3 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu0/perf.tmp -e tx_mem.abort_hle_elision_buffer_mismatch:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:02:19 2026
-
-0;;tx_mem.abort_hle_elision_buffer_mismatch:u;3140587812;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 4 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu0/perf.tmp -e tx_mem.abort_hle_elision_buffer_mismatch:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:02:23 2026
-
-0;;tx_mem.abort_hle_elision_buffer_mismatch:u;3130601749;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 5 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu0/perf.tmp -e tx_mem.abort_hle_elision_buffer_mismatch:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:02:26 2026
-
-0;;tx_mem.abort_hle_elision_buffer_mismatch:u;3146055384;100.00;;
-
 parsed count: 0
 exit: 0
 

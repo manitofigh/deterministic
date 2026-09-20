@@ -3,52 +3,22 @@ cpu: 3
 round limit: 5
 
 --- round 1 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu3/perf.tmp -e tx_mem.abort_hle_store_to_elided_lock:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:01:56 2026
-
-0;;tx_mem.abort_hle_store_to_elided_lock:u;3120839916;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 2 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu3/perf.tmp -e tx_mem.abort_hle_store_to_elided_lock:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:01:59 2026
-
-0;;tx_mem.abort_hle_store_to_elided_lock:u;3123901728;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 3 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu3/perf.tmp -e tx_mem.abort_hle_store_to_elided_lock:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:02:03 2026
-
-0;;tx_mem.abort_hle_store_to_elided_lock:u;3123658850;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 4 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu3/perf.tmp -e tx_mem.abort_hle_store_to_elided_lock:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:02:06 2026
-
-0;;tx_mem.abort_hle_store_to_elided_lock:u;3125615099;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 5 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu3/perf.tmp -e tx_mem.abort_hle_store_to_elided_lock:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:02:09 2026
-
-0;;tx_mem.abort_hle_store_to_elided_lock:u;3124283890;100.00;;
-
 parsed count: 0
 exit: 0
 

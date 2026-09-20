@@ -3,22 +3,10 @@ cpu: 4
 round limit: 5
 
 --- round 1 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu4/perf.tmp -e partial_rat_stalls.scoreboard:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:02:57 2026
-
-259491699;;partial_rat_stalls.scoreboard:u;3132482224;100.00;;
-
 parsed count: 259491699
 exit: 0
 
 --- round 2 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu4/perf.tmp -e partial_rat_stalls.scoreboard:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:03:00 2026
-
-259168902;;partial_rat_stalls.scoreboard:u;3131113007;100.00;;
-
 parsed count: 259168902
 exit: 0
 

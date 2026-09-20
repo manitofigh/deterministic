@@ -3,52 +3,22 @@ cpu: 6
 round limit: 5
 
 --- round 1 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu6/perf.tmp -e br_inst_retired.near_call:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:02:29 2026
-
-200000;;br_inst_retired.near_call:u;3146436603;100.00;;
-
 parsed count: 200000
 exit: 0
 
 --- round 2 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu6/perf.tmp -e br_inst_retired.near_call:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:02:32 2026
-
-200000;;br_inst_retired.near_call:u;3132103747;100.00;;
-
 parsed count: 200000
 exit: 0
 
 --- round 3 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu6/perf.tmp -e br_inst_retired.near_call:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:02:35 2026
-
-200000;;br_inst_retired.near_call:u;3128682863;100.00;;
-
 parsed count: 200000
 exit: 0
 
 --- round 4 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu6/perf.tmp -e br_inst_retired.near_call:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:02:39 2026
-
-200000;;br_inst_retired.near_call:u;3136322341;100.00;;
-
 parsed count: 200000
 exit: 0
 
 --- round 5 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu6/perf.tmp -e br_inst_retired.near_call:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:02:42 2026
-
-200000;;br_inst_retired.near_call:u;3130006332;100.00;;
-
 parsed count: 200000
 exit: 0
 

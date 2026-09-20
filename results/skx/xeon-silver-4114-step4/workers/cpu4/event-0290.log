@@ -3,52 +3,22 @@ cpu: 4
 round limit: 5
 
 --- round 1 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu4/perf.tmp -e itlb_misses.walk_completed_4k:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:03:16 2026
-
-5;;itlb_misses.walk_completed_4k:u;3127366353;100.00;;
-
 parsed count: 5
 exit: 0
 
 --- round 2 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu4/perf.tmp -e itlb_misses.walk_completed_4k:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:03:19 2026
-
-5;;itlb_misses.walk_completed_4k:u;3121800522;100.00;;
-
 parsed count: 5
 exit: 0
 
 --- round 3 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu4/perf.tmp -e itlb_misses.walk_completed_4k:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:03:23 2026
-
-5;;itlb_misses.walk_completed_4k:u;3121471372;100.00;;
-
 parsed count: 5
 exit: 0
 
 --- round 4 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu4/perf.tmp -e itlb_misses.walk_completed_4k:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:03:26 2026
-
-5;;itlb_misses.walk_completed_4k:u;3120972953;100.00;;
-
 parsed count: 5
 exit: 0
 
 --- round 5 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu4/perf.tmp -e itlb_misses.walk_completed_4k:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:03:29 2026
-
-5;;itlb_misses.walk_completed_4k:u;3121367976;100.00;;
-
 parsed count: 5
 exit: 0
 

@@ -3,52 +3,22 @@ cpu: 3
 round limit: 5
 
 --- round 1 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu3/perf.tmp -e itlb_misses.walk_completed_2m_4m:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:03:09 2026
-
-0;;itlb_misses.walk_completed_2m_4m:u;3130969993;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 2 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu3/perf.tmp -e itlb_misses.walk_completed_2m_4m:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:03:12 2026
-
-0;;itlb_misses.walk_completed_2m_4m:u;3122850835;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 3 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu3/perf.tmp -e itlb_misses.walk_completed_2m_4m:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:03:16 2026
-
-0;;itlb_misses.walk_completed_2m_4m:u;3122532684;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 4 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu3/perf.tmp -e itlb_misses.walk_completed_2m_4m:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:03:19 2026
-
-0;;itlb_misses.walk_completed_2m_4m:u;3122192856;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 5 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu3/perf.tmp -e itlb_misses.walk_completed_2m_4m:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:03:22 2026
-
-0;;itlb_misses.walk_completed_2m_4m:u;3118661839;100.00;;
-
 parsed count: 0
 exit: 0
 

@@ -3,52 +3,22 @@ cpu: 11
 round limit: 5
 
 --- round 1 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu11/perf.tmp -e mem_load_l3_miss_retired.remote_fwd:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:01:22 2026
-
-0;;mem_load_l3_miss_retired.remote_fwd:u;3127085301;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 2 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu11/perf.tmp -e mem_load_l3_miss_retired.remote_fwd:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:01:25 2026
-
-0;;mem_load_l3_miss_retired.remote_fwd:u;3128633870;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 3 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu11/perf.tmp -e mem_load_l3_miss_retired.remote_fwd:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:01:28 2026
-
-0;;mem_load_l3_miss_retired.remote_fwd:u;3131065981;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 4 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu11/perf.tmp -e mem_load_l3_miss_retired.remote_fwd:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:01:31 2026
-
-0;;mem_load_l3_miss_retired.remote_fwd:u;3129597541;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 5 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu11/perf.tmp -e mem_load_l3_miss_retired.remote_fwd:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:01:34 2026
-
-0;;mem_load_l3_miss_retired.remote_fwd:u;3131540799;100.00;;
-
 parsed count: 0
 exit: 0
 

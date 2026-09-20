@@ -3,52 +3,22 @@ cpu: 0
 round limit: 5
 
 --- round 1 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu0/perf.tmp -e fp_assist.any:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:01:35 2026
-
-3;;fp_assist.any:u;3152640420;100.00;;
-
 parsed count: 3
 exit: 0
 
 --- round 2 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu0/perf.tmp -e fp_assist.any:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:01:38 2026
-
-3;;fp_assist.any:u;3138964671;100.00;;
-
 parsed count: 3
 exit: 0
 
 --- round 3 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu0/perf.tmp -e fp_assist.any:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:01:41 2026
-
-3;;fp_assist.any:u;3133057353;100.00;;
-
 parsed count: 3
 exit: 0
 
 --- round 4 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu0/perf.tmp -e fp_assist.any:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:01:44 2026
-
-3;;fp_assist.any:u;3148176248;100.00;;
-
 parsed count: 3
 exit: 0
 
 --- round 5 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu0/perf.tmp -e fp_assist.any:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:01:48 2026
-
-3;;fp_assist.any:u;3132176558;100.00;;
-
 parsed count: 3
 exit: 0
 

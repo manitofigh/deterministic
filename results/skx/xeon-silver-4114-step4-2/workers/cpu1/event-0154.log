@@ -3,52 +3,22 @@ cpu: 1
 round limit: 5
 
 --- round 1 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu1/perf.tmp -e tx_mem.abort_hle_elision_buffer_not_empty:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:07:14 2026
-
-0;;tx_mem.abort_hle_elision_buffer_not_empty:u;3125204493;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 2 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu1/perf.tmp -e tx_mem.abort_hle_elision_buffer_not_empty:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:07:17 2026
-
-0;;tx_mem.abort_hle_elision_buffer_not_empty:u;3136774793;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 3 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu1/perf.tmp -e tx_mem.abort_hle_elision_buffer_not_empty:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:07:20 2026
-
-0;;tx_mem.abort_hle_elision_buffer_not_empty:u;3137305711;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 4 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu1/perf.tmp -e tx_mem.abort_hle_elision_buffer_not_empty:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:07:23 2026
-
-0;;tx_mem.abort_hle_elision_buffer_not_empty:u;3124140169;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 5 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu1/perf.tmp -e tx_mem.abort_hle_elision_buffer_not_empty:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:07:26 2026
-
-0;;tx_mem.abort_hle_elision_buffer_not_empty:u;3123725087;100.00;;
-
 parsed count: 0
 exit: 0
 

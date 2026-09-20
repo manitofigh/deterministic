@@ -3,52 +3,22 @@ cpu: 5
 round limit: 5
 
 --- round 1 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu5/perf.tmp -e mem_load_l3_hit_retired.xsnp_hit:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:06:32 2026
-
-0;;mem_load_l3_hit_retired.xsnp_hit:u;3131304255;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 2 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu5/perf.tmp -e mem_load_l3_hit_retired.xsnp_hit:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:06:35 2026
-
-0;;mem_load_l3_hit_retired.xsnp_hit:u;3151079585;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 3 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu5/perf.tmp -e mem_load_l3_hit_retired.xsnp_hit:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:06:39 2026
-
-0;;mem_load_l3_hit_retired.xsnp_hit:u;3128777393;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 4 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu5/perf.tmp -e mem_load_l3_hit_retired.xsnp_hit:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:06:42 2026
-
-0;;mem_load_l3_hit_retired.xsnp_hit:u;3132603775;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 5 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu5/perf.tmp -e mem_load_l3_hit_retired.xsnp_hit:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:06:45 2026
-
-0;;mem_load_l3_hit_retired.xsnp_hit:u;3127435026;100.00;;
-
 parsed count: 0
 exit: 0
 

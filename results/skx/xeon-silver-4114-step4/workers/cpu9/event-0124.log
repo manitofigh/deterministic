@@ -3,22 +3,10 @@ cpu: 9
 round limit: 5
 
 --- round 1 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu9/perf.tmp -e idq_uops_not_delivered.cycles_le_1_uop_deliv.core:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:01:50 2026
-
-3134064889;;idq_uops_not_delivered.cycles_le_1_uop_deliv.core:u;3125583694;100.00;;
-
 parsed count: 3134064889
 exit: 0
 
 --- round 2 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu9/perf.tmp -e idq_uops_not_delivered.cycles_le_1_uop_deliv.core:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:01:53 2026
-
-3134157295;;idq_uops_not_delivered.cycles_le_1_uop_deliv.core:u;3123730585;100.00;;
-
 parsed count: 3134157295
 exit: 0
 

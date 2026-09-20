@@ -1,12 +1,11 @@
 # Event results
 
-Complete: 303/303 (100.0%); remaining: 0; elapsed: 179s
-Non-deterministic: 209; Potentially deterministic: 24; Zero-only: 70
+* Complete: 303/303
+* Potentially deterministic: 24
+* Non-deterministic: 209
+* Zero-only: 70
 
 [Processor and settings](profile.md) · [Input events](events.txt)
-
-Equal nonzero counts are only potentially deterministic for this benchmark.
-Zero-only results and errors are not determinism verdicts.
 
 ## Determinism
 

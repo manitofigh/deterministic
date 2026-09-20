@@ -3,22 +3,10 @@ cpu: 13
 round limit: 5
 
 --- round 1 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu13/perf.tmp -e core_snoop_response.rsp_sfwdfe:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:02:12 2026
-
-8582;;core_snoop_response.rsp_sfwdfe:u;3128335821;100.00;;
-
 parsed count: 8582
 exit: 0
 
 --- round 2 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu13/perf.tmp -e core_snoop_response.rsp_sfwdfe:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:02:15 2026
-
-6670;;core_snoop_response.rsp_sfwdfe:u;3125106862;100.00;;
-
 parsed count: 6670
 exit: 0
 

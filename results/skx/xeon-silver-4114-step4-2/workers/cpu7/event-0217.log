@@ -3,52 +3,22 @@ cpu: 7
 round limit: 5
 
 --- round 1 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu7/perf.tmp -e inst_retired.nop:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:08:10 2026
-
-1580000;;inst_retired.nop:u;3123457555;100.00;;
-
 parsed count: 1580000
 exit: 0
 
 --- round 2 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu7/perf.tmp -e inst_retired.nop:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:08:14 2026
-
-1580000;;inst_retired.nop:u;3122946248;100.00;;
-
 parsed count: 1580000
 exit: 0
 
 --- round 3 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu7/perf.tmp -e inst_retired.nop:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:08:17 2026
-
-1580000;;inst_retired.nop:u;3138260953;100.00;;
-
 parsed count: 1580000
 exit: 0
 
 --- round 4 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu7/perf.tmp -e inst_retired.nop:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:08:20 2026
-
-1580000;;inst_retired.nop:u;3131889332;100.00;;
-
 parsed count: 1580000
 exit: 0
 
 --- round 5 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu7/perf.tmp -e inst_retired.nop:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:08:23 2026
-
-1580000;;inst_retired.nop:u;3130671756;100.00;;
-
 parsed count: 1580000
 exit: 0
 

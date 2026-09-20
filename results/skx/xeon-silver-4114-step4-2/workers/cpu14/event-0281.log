@@ -3,52 +3,22 @@ cpu: 14
 round limit: 5
 
 --- round 1 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu14/perf.tmp -e dtlb_store_misses.walk_completed_2m_4m:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:08:10 2026
-
-0;;dtlb_store_misses.walk_completed_2m_4m:u;3131062260;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 2 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu14/perf.tmp -e dtlb_store_misses.walk_completed_2m_4m:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:08:13 2026
-
-0;;dtlb_store_misses.walk_completed_2m_4m:u;3134033957;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 3 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu14/perf.tmp -e dtlb_store_misses.walk_completed_2m_4m:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:08:17 2026
-
-0;;dtlb_store_misses.walk_completed_2m_4m:u;3129325423;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 4 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu14/perf.tmp -e dtlb_store_misses.walk_completed_2m_4m:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:08:20 2026
-
-0;;dtlb_store_misses.walk_completed_2m_4m:u;3128824575;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 5 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu14/perf.tmp -e dtlb_store_misses.walk_completed_2m_4m:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:08:23 2026
-
-0;;dtlb_store_misses.walk_completed_2m_4m:u;3125306826;100.00;;
-
 parsed count: 0
 exit: 0
 

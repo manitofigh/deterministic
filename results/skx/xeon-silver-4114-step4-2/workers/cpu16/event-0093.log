@@ -3,52 +3,22 @@ cpu: 16
 round limit: 5
 
 --- round 1 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu16/perf.tmp -e fp_arith_inst_retired.scalar_double:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:06:29 2026
-
-1900000;;fp_arith_inst_retired.scalar_double:u;3120527158;100.00;;
-
 parsed count: 1900000
 exit: 0
 
 --- round 2 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu16/perf.tmp -e fp_arith_inst_retired.scalar_double:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:06:32 2026
-
-1900000;;fp_arith_inst_retired.scalar_double:u;3117530104;100.00;;
-
 parsed count: 1900000
 exit: 0
 
 --- round 3 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu16/perf.tmp -e fp_arith_inst_retired.scalar_double:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:06:35 2026
-
-1900000;;fp_arith_inst_retired.scalar_double:u;3121790367;100.00;;
-
 parsed count: 1900000
 exit: 0
 
 --- round 4 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu16/perf.tmp -e fp_arith_inst_retired.scalar_double:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:06:38 2026
-
-1900000;;fp_arith_inst_retired.scalar_double:u;3118339144;100.00;;
-
 parsed count: 1900000
 exit: 0
 
 --- round 5 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4-2/workers/cpu16/perf.tmp -e fp_arith_inst_retired.scalar_double:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:06:41 2026
-
-1900000;;fp_arith_inst_retired.scalar_double:u;3132382927;100.00;;
-
 parsed count: 1900000
 exit: 0
 

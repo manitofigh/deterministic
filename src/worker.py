@@ -4,7 +4,6 @@ from decimal import Decimal, InvalidOperation
 import json
 import os
 from pathlib import Path
-import shlex
 import signal
 import subprocess
 import traceback
@@ -65,8 +64,6 @@ def signal_group(pid, signum):
 
 def measure(command, raw_path, log, timeout):
     raw_path.unlink(missing_ok=True)
-    log.write('$ ' + shlex.join(command) + '\n')
-    log.flush()
     process = None
     pid_path = raw_path.with_suffix('.pid')
     try:
@@ -93,8 +90,6 @@ def measure(command, raw_path, log, timeout):
             signal_group(process.pid, signal.SIGKILL)
         pid_path.unlink(missing_ok=True)
         raw = raw_path.read_text(errors='replace') if raw_path.exists() else ''
-        log.write('\n' + raw + '\n')
-        log.flush()
     return returncode, raw, error
 
 

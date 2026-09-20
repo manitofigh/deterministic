@@ -92,10 +92,11 @@ def report(output, total, started, state):
                 f'remaining: {total - len(rows)}; elapsed: {elapsed:.0f}s\n')
     progress += '; '.join(f'{name}: {number}' for name, number in sorted(counts.items())) + '\n'
     atomic_write(output / 'progress.txt', progress)
-    text = ['# Event results', '', progress.strip(), '',
-            '[Processor and settings](profile.md) · [Input events](events.txt)', '',
-            'Equal nonzero counts are only potentially deterministic for this benchmark.',
-            'Zero-only results and errors are not determinism verdicts.', '']
+    text = ['# Event results', '', f'* {state}: {len(rows)}/{total}',
+            f'* Potentially deterministic: {counts["Potentially deterministic"]}',
+            f'* Non-deterministic: {counts["Non-deterministic"]}',
+            f'* Zero-only: {counts["Zero-only"]}', '',
+            '[Processor and settings](profile.md) · [Input events](events.txt)', '']
     sections = [('Determinism', ['Potentially deterministic', 'Non-deterministic']),
                 ('Zero-only (inconclusive)', ['Zero-only']), ('Measurement errors', ['Error'])]
     for title, statuses in sections:

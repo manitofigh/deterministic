@@ -3,52 +3,22 @@ cpu: 13
 round limit: 5
 
 --- round 1 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu13/perf.tmp -e dtlb_store_misses.walk_completed_1g:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:02:50 2026
-
-0;;dtlb_store_misses.walk_completed_1g:u;3133244000;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 2 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu13/perf.tmp -e dtlb_store_misses.walk_completed_1g:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:02:54 2026
-
-0;;dtlb_store_misses.walk_completed_1g:u;3126483121;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 3 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu13/perf.tmp -e dtlb_store_misses.walk_completed_1g:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:02:57 2026
-
-0;;dtlb_store_misses.walk_completed_1g:u;3126864508;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 4 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu13/perf.tmp -e dtlb_store_misses.walk_completed_1g:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:03:00 2026
-
-0;;dtlb_store_misses.walk_completed_1g:u;3125004965;100.00;;
-
 parsed count: 0
 exit: 0
 
 --- round 5 ---
-$ perf stat --no-big-num --no-scale -x ';' -o /users/moneytea/dev/deterministic-test/results/skx/xeon-silver-4114-step4/workers/cpu13/perf.tmp -e dtlb_store_misses.walk_completed_1g:u -- /users/moneytea/dev/deterministic/static/binaries/retired_instr.all.x86_64
-
-# started on Sat Sep 19 18:03:03 2026
-
-0;;dtlb_store_misses.walk_completed_1g:u;3133072978;100.00;;
-
 parsed count: 0
 exit: 0
 
