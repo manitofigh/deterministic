@@ -54,14 +54,16 @@ def encode_event(event, records):
         encoding = alias.read_text().strip()
     else:
         encodings = {row['Encoding'] for row in records
-                     if row.get('EventName') == event and row.get('Unit') == 'cpu'
+                     if row.get('EventName') == event
+                     and row.get('Unit') in ('cpu', 'default_core')
                      and row.get('Encoding')}
         if len(encodings) != 1:
             raise ValueError(f'expected one core counter encoding for {event}')
         full = encodings.pop()
-        if not full.startswith('cpu/') or not full.endswith('/'):
+        unit, separator, fields = full.partition('/')
+        if unit not in ('cpu', 'default_core') or not separator or not fields.endswith('/'):
             raise ValueError(f'unsupported encoding for {event}: {full}')
-        encoding = full[4:-1]
+        encoding = fields[:-1]
     config = {'config': 0, 'config1': 0, 'config2': 0}
     for field in encoding.split(','):
         key, separator, value = field.partition('=')
