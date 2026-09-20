@@ -24,20 +24,16 @@ Run on a Linux machine. Also, python 3.9+ and `perf` are needed; install them us
 build the benchmark with `make -C static binaries/retired_instr.all.x86_64`. that needs `make` and the GNU assembler/linker. 
 If you place the binary elsewhere, you can provide its path using `--benchmark static/binaries/retired_instr.all.x86_64`.
 
-Here are some other useful options:
-```bash
-sudo python3 src/run.py --cores 8 --rounds 10
-sudo python3 src/run.py --output results/my-run
-```
-
+### Options
+All of these are optional.
 | option | what it does |
 |---|---|
-| `--cores N` | use N physical cores for workers. default: all available physical cores **minus one**. |
-| `--rounds N` | at most N runs per event. default: 5; minimum: 2. stop as soon as counts differ. |
-| `--output PATH` | choose the output directory. existing directories are never overwritten. |
-| `--events PATH` | read one event name per line from this file. |
-| `--benchmark PATH` | choose the executable to count events for. |
-| `--timeout SECONDS` | stop a measurement that takes too long. default: 120 seconds per round. |
+| `--cores N` | Number of physical cores used by workers. Deafult: all pcores - 1. The workers are pinned sequentially and the last pcore is not used.|
+| `--rounds N` | Maximum N runs per event. Default: 5, Min: 2. The run stops as soon as an event value is not the same as before. |
+| `--output PATH` | By default, the name is chosen based on the arch/uarch running on. Don't worry, existing dirs are not overwritten due to multiple runs on the same machine. |
+| `--events PATH` | Would be generated if non-existent; one can however provide their own list of events by putting each event on a separate line. |
+| `--benchmark PATH` | Uses the executable by Weaver et al by default. |
+| `--timeout SECONDS` | Stops a measurement that takes too long. Default is 120s / round. |
 
 Also, relative paths you provide are relative to where you run the command. 
 The default event list, benchmark and results directory are located relative to this project, so the python script also works when called from another directory.
@@ -62,9 +58,9 @@ the runner captures its list if missing. you can also provide an explicit `--eve
 on the running machine. If you have a specific list of events, just place them in a `events.txt` file 
 and the script would automatically use that instead.
 
-## reading the results
+## Reading the results
 
-by default, output goes under `results/<microarch>/<processor-model>-step<stepping>/`. 
+By default, output goes under `results/<microarch>/<processor-model>-step<stepping>/`. 
 Your existing directories would not be overwritten; more runs on the same machine appends `-2`, then `-3`, etc to the dir name.
 
 Based on the arch/uarch that the script is ran on, the results are written under its relevant dir name. 
