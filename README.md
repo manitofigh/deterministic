@@ -32,7 +32,7 @@ All of these are optional.
 | `--rounds N` | Maximum N runs per event. Default: 5, Min: 2. The run stops as soon as an event value is not the same as before. |
 | `--output PATH` | By default, the name is chosen based on the arch/uarch running on. Don't worry, existing dirs are not overwritten due to multiple runs on the same machine. |
 | `--events PATH` | Would be generated if non-existent; one can however provide their own list of events by putting each event on a separate line. |
-| `--benchmark PATH` | Uses the executable by Weaver et al by default. |
+| `--benchmark PATH` | Uses the executable by Weaver et al. by default. |
 | `--timeout SECONDS` | Stops a measurement that takes too long. Default is 120s / round. |
 
 Also, relative paths you provide are relative to where you run the command. 
