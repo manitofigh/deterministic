@@ -26,6 +26,7 @@ SPECIAL = {
 EXCLUDED_TYPES = {
     'Software event', 'Tracepoint event', 'Tool event',
     'Raw hardware event descriptor', 'Hardware breakpoint',
+    'Raw event descriptor', 'Hwmon event',
 }
 CORE_TYPES = {'Hardware event', 'Hardware cache event', 'Kernel PMU event'}
 
@@ -55,6 +56,8 @@ def classify(event):
         return 'excluded', 'offcore event'
     if str(event.get('Deprecated', '0')).lower() in ('1', 'true'):
         return 'excluded', 'deprecated event'
+    if name.startswith('topdown-'):
+        return 'deferred', 'requires an event group led by slots'
     if name.startswith(('LLC-', 'node-')):
         return 'deferred', 'check whether this alias maps to offcore activity'
     if 'must be precise' in description:
