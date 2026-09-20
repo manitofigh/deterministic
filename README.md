@@ -1,6 +1,6 @@
 # Finding Deterministic PMU Events
 
-The goal is to find PMU events that behave deterministically. That is, if we run the same 
+The goal is to find PMU events that behave deterministically. That is, if we run a 
 program 1000x and record a hardware event `abc`, the final count on that event would always stay 
 the same, given the same program.
 
