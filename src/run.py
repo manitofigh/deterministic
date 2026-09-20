@@ -39,7 +39,7 @@ def arguments():
     selection.add_argument('--events', type=Path, help='one plain event name per line')
     selection.add_argument('--event', help='one event name, optionally ending in :u')
     selection.add_argument('--from-results', type=Path,
-                           help='count results whose potentially deterministic events to test for skid')
+                           help='count results for skid (default: latest matching CPU run)')
     parser.add_argument('--period', type=int, help='skid overflow period (default: select from a preliminary count)')
     parser.add_argument('--output', type=Path, help='custom output directory; never overwritten')
     parser.add_argument('--benchmark', type=Path,
@@ -51,8 +51,6 @@ def arguments():
         args.event = args.event.removesuffix(':u')
         if not re.fullmatch(r'[A-Za-z][A-Za-z0-9_.-]*', args.event):
             parser.error('--event requires one plain event name, optionally ending in :u')
-    if args.mode == 'skid' and not (args.events or args.event or args.from_results):
-        parser.error('skid mode requires --from-results, --events, or --event')
     if args.mode != 'skid' and (args.from_results or args.period is not None):
         parser.error('--from-results and --period require --mode skid')
     if args.period is not None and not 2 <= args.period <= 2147483647:
@@ -64,6 +62,20 @@ def arguments():
     if not 0 < args.timeout < float('inf'):
         parser.error('--timeout must be finite and positive')
     return args
+
+
+def find_count_results(info):
+    directory = BASE / 'results' / info['microarch']
+    name = f'{info["slug"]}-step{info["stepping"]}'
+    matches = []
+    for path in directory.glob(f'{name}*'):
+        match = re.fullmatch(re.escape(name) + r'(?:-([2-9]|[1-9][0-9]+))?', path.name)
+        if match and path.is_dir() and any(path.glob('workers/cpu*/results.jsonl')):
+            matches.append((int(match.group(1) or 1), path))
+    if not matches:
+        raise ValueError(f'no count results found for {name} in {directory}; '
+                         'pass --from-results PATH, --events PATH, or --event NAME')
+    return max(matches)[1]
 
 
 def read_events(path):
@@ -248,6 +260,9 @@ def main():
     if not args.benchmark.is_file() or not os.access(args.benchmark, os.X_OK):
         raise ValueError(f'benchmark is not executable: {args.benchmark}')
     info = identify()
+    if args.mode == 'skid' and not (args.from_results or args.events or args.event):
+        args.from_results = find_count_results(info)
+        message('~', f'using detected count results: {args.from_results}')
     if args.from_results:
         args.from_results = args.from_results.resolve()
     elif not args.event:

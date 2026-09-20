@@ -34,7 +34,7 @@ All of these are optional.
 | `--output PATH` | By default, the name is chosen based on the arch/uarch running on. Don't worry, existing dirs are not overwritten due to multiple runs on the same machine. |
 | `--events PATH` | Would be generated if non-existent; one can however provide their own list of events by putting each event on a separate line. |
 | `--event NAME` | Test one event, optionally ending in `:u`. |
-| `--from-results PATH` | In skid mode, select potentially deterministic events from a previous count run. |
+| `--from-results PATH` | In skid mode, select potentially deterministic events from a previous count run. Default: detect count results for this CPU. |
 | `--period N` | In skid mode, request overflow after N events. Default: half a preliminary count, capped at 1,000,000. Allowed range: 2 through 2,147,483,647. |
 | `--benchmark PATH` | Uses the executable by Weaver et al. by default. |
 | `--timeout SECONDS` | Stops a measurement that takes too long. Default is 120s / round. |
@@ -88,9 +88,16 @@ counts, not necessarily instructions or CPU cycles. The measurement includes
 Linux's signal-delivery path. It uses ordinary overflow interrupts, not Precise
 Event-Based Sampling (PEBS).
 
-Choose exactly one event source:
+With no event source, skid mode looks under `results/<microarch>/` for this
+processor model and stepping. It uses the matching count run with the highest
+numbered suffix (`-2`, `-3`, etc.) that contains worker results, and prints the
+selected directory. If none exists, provide an event source explicitly.
+If the selected run has no potentially deterministic events, it reports an error.
 
 ```bash
+# automatically find count results for this CPU
+sudo python3 src/run.py --mode skid
+
 # potentially deterministic events from a previous count run
 sudo python3 src/run.py --mode skid --from-results results/emr/xeon-gold-6554s-step2
 
