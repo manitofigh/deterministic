@@ -1,0 +1,15 @@
+event: dsb2mite_switches.penalty_cycles:u
+cpu: 4
+round limit: 1000
+
+--- round 1 ---
+parsed count: 11511940
+exit: 0
+
+--- round 2 ---
+parsed count: 12311386
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

@@ -1,0 +1,15 @@
+event: core_snoop_response.rsp_ihitfse:u
+cpu: 11
+round limit: 1000
+
+--- round 1 ---
+parsed count: 239590
+exit: 0
+
+--- round 2 ---
+parsed count: 238696
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

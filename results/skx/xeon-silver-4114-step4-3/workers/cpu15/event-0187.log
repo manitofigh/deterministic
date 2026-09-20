@@ -1,0 +1,15 @@
+event: br_misp_retired.near_taken:u
+cpu: 15
+round limit: 1000
+
+--- round 1 ---
+parsed count: 51
+exit: 0
+
+--- round 2 ---
+parsed count: 50
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

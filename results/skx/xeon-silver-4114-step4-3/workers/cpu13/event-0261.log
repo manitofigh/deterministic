@@ -1,0 +1,15 @@
+event: uops_issued.slow_lea:u
+cpu: 13
+round limit: 1000
+
+--- round 1 ---
+parsed count: 8339293
+exit: 0
+
+--- round 2 ---
+parsed count: 8481109
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

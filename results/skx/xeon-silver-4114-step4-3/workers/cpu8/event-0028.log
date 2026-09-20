@@ -1,0 +1,15 @@
+event: l1d_pend_miss.fb_full:u
+cpu: 8
+round limit: 1000
+
+--- round 1 ---
+parsed count: 26147
+exit: 0
+
+--- round 2 ---
+parsed count: 27704
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

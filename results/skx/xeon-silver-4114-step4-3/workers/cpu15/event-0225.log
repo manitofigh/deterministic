@@ -1,0 +1,15 @@
+event: load_hit_pre.sw_pf:u
+cpu: 15
+round limit: 1000
+
+--- round 1 ---
+parsed count: 283
+exit: 0
+
+--- round 2 ---
+parsed count: 98
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

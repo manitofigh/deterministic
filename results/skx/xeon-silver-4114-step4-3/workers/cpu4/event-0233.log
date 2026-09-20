@@ -1,0 +1,15 @@
+event: partial_rat_stalls.scoreboard:u
+cpu: 4
+round limit: 1000
+
+--- round 1 ---
+parsed count: 261450070
+exit: 0
+
+--- round 2 ---
+parsed count: 255201147
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

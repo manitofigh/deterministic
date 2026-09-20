@@ -1,0 +1,16 @@
+instructions
+l2_lines_out.non_silent
+l2_trans.l2_wb
+mem_load_misc_retired.uc
+fp_arith_inst_retired.512b_packed_single
+idq.all_mite_cycles_any_uops
+cycle_activity.stalls_l3_miss
+tx_exec.misc2
+core_snoop_response.rsp_sfwdfe
+br_misp_retired.conditional
+cycle_activity.stalls_l2_miss
+ld_blocks.store_forward
+uops_dispatched_port.port_3
+uops_issued.slow_lea
+dtlb_store_misses.walk_completed_1g
+dTLB-store-misses

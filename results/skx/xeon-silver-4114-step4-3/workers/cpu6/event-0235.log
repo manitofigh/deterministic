@@ -1,0 +1,15 @@
+event: resource_stalls.sb:u
+cpu: 6
+round limit: 1000
+
+--- round 1 ---
+parsed count: 6901208
+exit: 0
+
+--- round 2 ---
+parsed count: 6917698
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

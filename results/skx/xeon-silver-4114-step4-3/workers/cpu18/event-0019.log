@@ -1,0 +1,15 @@
+event: topdown-slots-issued:u
+cpu: 18
+round limit: 1000
+
+--- round 1 ---
+parsed count: 13194998277
+exit: 0
+
+--- round 2 ---
+parsed count: 13193790145
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

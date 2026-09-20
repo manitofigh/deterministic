@@ -1,0 +1,15 @@
+event: idi_misc.wb_downgrade:u
+cpu: 16
+round limit: 1000
+
+--- round 1 ---
+parsed count: 540
+exit: 0
+
+--- round 2 ---
+parsed count: 708
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

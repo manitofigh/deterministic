@@ -1,0 +1,15 @@
+event: uops_dispatched_port.port_0:u
+cpu: 10
+round limit: 1000
+
+--- round 1 ---
+parsed count: 1986799125
+exit: 0
+
+--- round 2 ---
+parsed count: 1992410269
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

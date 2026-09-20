@@ -1,0 +1,15 @@
+event: ld_blocks.no_sr:u
+cpu: 12
+round limit: 1000
+
+--- round 1 ---
+parsed count: 574
+exit: 0
+
+--- round 2 ---
+parsed count: 670
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+
