@@ -1,0 +1,5 @@
+instructions
+mem_load_retired.l2_miss
+rtm_retired.aborted_unfriendly
+int_vec_retired.256bit
+itlb_misses.walk_pending

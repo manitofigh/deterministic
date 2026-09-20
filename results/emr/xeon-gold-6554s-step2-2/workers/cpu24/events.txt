@@ -1,0 +1,4 @@
+l1d_pend_miss.fb_full
+fp_arith_dispatched.v1
+br_inst_retired.cond_taken
+resource_stalls.sb

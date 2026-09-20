@@ -1,0 +1,15 @@
+event: mem_inst_retired.stlb_miss_stores:u
+cpu: 62
+round limit: 1000
+
+--- round 1 ---
+parsed count: 10003
+exit: 0
+
+--- round 2 ---
+parsed count: 10004
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

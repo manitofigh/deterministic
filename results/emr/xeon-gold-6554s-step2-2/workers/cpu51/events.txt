@@ -1,0 +1,4 @@
+l2_rqsts.swpf_miss
+icache_tag.stalls
+cycle_activity.cycles_l2_miss
+uops_executed.x87

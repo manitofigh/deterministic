@@ -1,0 +1,4 @@
+mem_inst_retired.lock_loads
+idq.ms_cycles_any
+exe_activity.2_ports_util
+dtlb_load_misses.stlb_hit

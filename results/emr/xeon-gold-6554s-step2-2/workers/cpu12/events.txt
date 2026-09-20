@@ -1,0 +1,4 @@
+dTLB-loads
+sw_prefetch_access.any
+assists.page_fault
+int_vec_retired.vnni_256

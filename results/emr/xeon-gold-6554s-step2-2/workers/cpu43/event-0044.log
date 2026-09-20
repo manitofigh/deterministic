@@ -1,0 +1,15 @@
+event: l2_rqsts.demand_data_rd_hit:u
+cpu: 43
+round limit: 1000
+
+--- round 1 ---
+parsed count: 16151
+exit: 0
+
+--- round 2 ---
+parsed count: 13102
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

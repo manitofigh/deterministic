@@ -1,0 +1,15 @@
+event: decode.lcp:u
+cpu: 46
+round limit: 1000
+
+--- round 1 ---
+parsed count: 27691295
+exit: 0
+
+--- round 2 ---
+parsed count: 27677733
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

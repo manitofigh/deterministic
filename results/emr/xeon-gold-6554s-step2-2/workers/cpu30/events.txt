@@ -1,0 +1,4 @@
+l2_lines_out.non_silent
+fp_arith_inst_retired.4_flops
+br_misp_retired.all_branches
+topdown.slots

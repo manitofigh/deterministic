@@ -1,0 +1,4 @@
+mem_inst_retired.stlb_miss_stores
+idq_bubbles.cycles_0_uops_deliv.core
+exe_activity.bound_on_stores
+dtlb_load_misses.walk_completed_2m_4m

@@ -1,0 +1,4 @@
+l2_rqsts.miss
+decode.lcp
+cpu_clk_unhalted.ref_tsc
+uops_executed.cycles_ge_2

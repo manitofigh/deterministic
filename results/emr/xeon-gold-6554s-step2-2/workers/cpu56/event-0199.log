@@ -1,0 +1,15 @@
+event: exe_activity.1_ports_util:u
+cpu: 56
+round limit: 1000
+
+--- round 1 ---
+parsed count: 196453784
+exit: 0
+
+--- round 2 ---
+parsed count: 196550986
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

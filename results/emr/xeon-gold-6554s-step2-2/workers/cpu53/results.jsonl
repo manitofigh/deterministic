@@ -1,0 +1,4 @@
+{"index": 54, "event": "longest_lat_cache.miss:u", "cpu": 53, "runs": 2, "status": "Non-deterministic", "counts": [600415, 599923], "note": "", "log": "workers/cpu53/event-0054.log"}
+{"index": 125, "event": "idq.dsb_cycles_ok:u", "cpu": 53, "runs": 2, "status": "Non-deterministic", "counts": [23614010, 23423648], "note": "", "log": "workers/cpu53/event-0125.log"}
+{"index": 196, "event": "cycle_activity.stalls_l1d_miss:u", "cpu": 53, "runs": 2, "status": "Non-deterministic", "counts": [264169105, 268161226], "note": "", "log": "workers/cpu53/event-0196.log"}
+{"index": 267, "event": "uops_issued.cycles:u", "cpu": 53, "runs": 2, "status": "Non-deterministic", "counts": [2598037191, 2598727834], "note": "", "log": "workers/cpu53/event-0267.log"}

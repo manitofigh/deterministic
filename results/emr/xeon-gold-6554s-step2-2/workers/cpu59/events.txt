@@ -1,0 +1,4 @@
+mem_inst_retired.split_loads
+idq.ms_switches
+exe_activity.3_ports_util
+dtlb_load_misses.walk_active

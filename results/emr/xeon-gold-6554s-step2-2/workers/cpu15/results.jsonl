@@ -1,0 +1,4 @@
+{"index": 16, "event": "dTLB-store-misses:u", "cpu": 15, "runs": 2, "status": "Non-deterministic", "counts": [30042, 30038], "note": "", "log": "workers/cpu15/event-0016.log"}
+{"index": 87, "event": "sw_prefetch_access.t0:u", "cpu": 15, "runs": 2, "status": "Non-deterministic", "counts": [105088, 105118], "note": "", "log": "workers/cpu15/event-0087.log"}
+{"index": 158, "event": "rs.empty_count:u", "cpu": 15, "runs": 2, "status": "Non-deterministic", "counts": [25443478, 25461438], "note": "", "log": "workers/cpu15/event-0158.log"}
+{"index": 229, "event": "ld_blocks.store_forward:u", "cpu": 15, "runs": 2, "status": "Non-deterministic", "counts": [2398903, 2399800], "note": "", "log": "workers/cpu15/event-0229.log"}

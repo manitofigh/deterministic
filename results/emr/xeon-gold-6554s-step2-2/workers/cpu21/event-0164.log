@@ -1,0 +1,15 @@
+event: br_inst_retired.all_branches:u
+cpu: 21
+round limit: 1000
+
+--- round 1 ---
+parsed count: 9251303
+exit: 0
+
+--- round 2 ---
+parsed count: 9251321
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

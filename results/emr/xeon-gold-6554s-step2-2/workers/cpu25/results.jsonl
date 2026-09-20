@@ -1,0 +1,4 @@
+{"index": 26, "event": "l1d_pend_miss.fb_full_periods:u", "cpu": 25, "runs": 2, "status": "Non-deterministic", "counts": [39, 106], "note": "", "log": "workers/cpu25/event-0026.log"}
+{"index": 97, "event": "fp_arith_dispatched.v2:u", "cpu": 25, "runs": 2, "status": "Non-deterministic", "counts": [2812077, 2754193], "note": "", "log": "workers/cpu25/event-0097.log"}
+{"index": 168, "event": "br_inst_retired.far_branch:u", "cpu": 25, "runs": 2, "status": "Non-deterministic", "counts": [31311, 31314], "note": "", "log": "workers/cpu25/event-0168.log"}
+{"index": 239, "event": "resource_stalls.scoreboard:u", "cpu": 25, "runs": 2, "status": "Non-deterministic", "counts": [316502954, 315547974], "note": "", "log": "workers/cpu25/event-0239.log"}

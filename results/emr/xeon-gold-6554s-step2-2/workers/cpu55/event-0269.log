@@ -1,0 +1,15 @@
+event: uops_retired.heavy:u
+cpu: 55
+round limit: 1000
+
+--- round 1 ---
+parsed count: 7104467755
+exit: 0
+
+--- round 2 ---
+parsed count: 7104471410
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

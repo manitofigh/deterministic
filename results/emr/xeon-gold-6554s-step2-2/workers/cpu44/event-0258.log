@@ -1,0 +1,15 @@
+event: uops_executed.core_cycles_ge_4:u
+cpu: 44
+round limit: 1000
+
+--- round 1 ---
+parsed count: 576681162
+exit: 0
+
+--- round 2 ---
+parsed count: 577156899
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

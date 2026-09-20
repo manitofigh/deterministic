@@ -1,0 +1,4 @@
+l2_rqsts.rfo_miss
+icache_data.stall_periods
+cpu_clk_unhalted.thread_p
+uops_executed.stalls

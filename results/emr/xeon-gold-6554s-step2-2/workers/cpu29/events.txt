@@ -1,0 +1,4 @@
+l2_lines_in.all
+fp_arith_inst_retired.256b_packed_single
+br_inst_retired.near_taken
+topdown.memory_bound_slots

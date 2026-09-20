@@ -1,0 +1,19 @@
+event: mem_inst_retired.split_loads:u
+cpu: 59
+round limit: 1000
+
+--- round 1 ---
+parsed count: 179996
+exit: 0
+
+--- round 2 ---
+parsed count: 179996
+exit: 0
+
+--- round 3 ---
+parsed count: 179998
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 3
+

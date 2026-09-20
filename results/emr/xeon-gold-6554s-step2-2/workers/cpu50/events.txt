@@ -1,0 +1,4 @@
+l2_rqsts.swpf_hit
+icache_data.stalls
+cycle_activity.cycles_l1d_miss
+uops_executed.thread

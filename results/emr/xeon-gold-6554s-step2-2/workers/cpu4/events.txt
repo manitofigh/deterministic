@@ -1,0 +1,5 @@
+cache-references
+mem_load_retired.l1_miss
+rtm_retired.aborted_mem
+int_misc.uop_dropping
+itlb_misses.walk_completed_2m_4m

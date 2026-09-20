@@ -1,0 +1,2 @@
+Complete: 291/291 (100.0%); remaining: 0; elapsed: 3243s
+Non-deterministic: 217; Potentially deterministic: 22; Zero-only: 52

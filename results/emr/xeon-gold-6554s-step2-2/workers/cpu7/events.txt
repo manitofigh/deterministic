@@ -1,0 +1,4 @@
+ref-cycles
+mem_load_retired.l3_hit
+rtm_retired.commit
+int_vec_retired.add_128

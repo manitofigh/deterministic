@@ -1,0 +1,15 @@
+event: l2_rqsts.code_rd_miss:u
+cpu: 42
+round limit: 1000
+
+--- round 1 ---
+parsed count: 304
+exit: 0
+
+--- round 2 ---
+parsed count: 280
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

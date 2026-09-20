@@ -1,0 +1,15 @@
+event: memory_activity.stalls_l1d_miss:u
+cpu: 70
+round limit: 1000
+
+--- round 1 ---
+parsed count: 291471227
+exit: 0
+
+--- round 2 ---
+parsed count: 305018655
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+
