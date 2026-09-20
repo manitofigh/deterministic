@@ -1,13 +1,13 @@
 event: uops_executed.cycles_ge_4:u
 cpu: 48
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 577009197
+parsed count: 577626904
 exit: 0
 
 --- round 2 ---
-parsed count: 577717090
+parsed count: 577092317
 exit: 0
 
 result: Non-deterministic

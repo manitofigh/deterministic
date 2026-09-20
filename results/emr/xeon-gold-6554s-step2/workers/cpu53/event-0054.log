@@ -1,13 +1,13 @@
 event: longest_lat_cache.miss:u
 cpu: 53
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 600298
+parsed count: 600303
 exit: 0
 
 --- round 2 ---
-parsed count: 600275
+parsed count: 599692
 exit: 0
 
 result: Non-deterministic

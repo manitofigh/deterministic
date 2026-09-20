@@ -1,13 +1,13 @@
 event: idq.mite_uops:u
 cpu: 57
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 216665382
+parsed count: 215630100
 exit: 0
 
 --- round 2 ---
-parsed count: 217938878
+parsed count: 221720276
 exit: 0
 
 result: Non-deterministic

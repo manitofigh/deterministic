@@ -1,13 +1,13 @@
 event: cpu-cycles:u
 cpu: 5
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 3746350249
+parsed count: 3802982890
 exit: 0
 
 --- round 2 ---
-parsed count: 3727649913
+parsed count: 3741249323
 exit: 0
 
 result: Non-deterministic

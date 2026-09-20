@@ -1,4 +1,4 @@
-{"index": 58, "event": "mem_inst_retired.any:u", "cpu": 57, "runs": 2, "status": "Non-deterministic", "counts": [95521311, 95521403], "note": "", "log": "workers/cpu57/event-0058.log"}
-{"index": 129, "event": "idq.mite_uops:u", "cpu": 57, "runs": 2, "status": "Non-deterministic", "counts": [216665382, 217938878], "note": "", "log": "workers/cpu57/event-0129.log"}
-{"index": 200, "event": "exe_activity.2_3_ports_util:u", "cpu": 57, "runs": 2, "status": "Non-deterministic", "counts": [1950879981, 1950856435], "note": "", "log": "workers/cpu57/event-0200.log"}
-{"index": 271, "event": "uops_retired.stalls:u", "cpu": 57, "runs": 2, "status": "Non-deterministic", "counts": [1272783803, 1273345288], "note": "", "log": "workers/cpu57/event-0271.log"}
+{"index": 58, "event": "mem_inst_retired.any:u", "cpu": 57, "runs": 2, "status": "Non-deterministic", "counts": [95521290, 95521341], "note": "", "log": "workers/cpu57/event-0058.log"}
+{"index": 129, "event": "idq.mite_uops:u", "cpu": 57, "runs": 2, "status": "Non-deterministic", "counts": [215630100, 221720276], "note": "", "log": "workers/cpu57/event-0129.log"}
+{"index": 200, "event": "exe_activity.2_3_ports_util:u", "cpu": 57, "runs": 2, "status": "Non-deterministic", "counts": [1950801740, 1950716895], "note": "", "log": "workers/cpu57/event-0200.log"}
+{"index": 271, "event": "uops_retired.stalls:u", "cpu": 57, "runs": 2, "status": "Non-deterministic", "counts": [1261704512, 1254073361], "note": "", "log": "workers/cpu57/event-0271.log"}

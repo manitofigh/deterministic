@@ -1,13 +1,13 @@
 event: cpu_clk_unhalted.ref_tsc:u
 cpu: 46
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 2746531832
+parsed count: 2742091616
 exit: 0
 
 --- round 2 ---
-parsed count: 2754381784
+parsed count: 2773425248
 exit: 0
 
 result: Non-deterministic

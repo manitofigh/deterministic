@@ -1,13 +1,13 @@
 event: int_misc.clears_count:u
 cpu: 1
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 6949516
+parsed count: 6947731
 exit: 0
 
 --- round 2 ---
-parsed count: 6945790
+parsed count: 6942718
 exit: 0
 
 result: Non-deterministic

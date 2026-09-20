@@ -1,13 +1,13 @@
 event: cycle_activity.stalls_l2_miss:u
 cpu: 54
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 264400232
+parsed count: 266986268
 exit: 0
 
 --- round 2 ---
-parsed count: 245007673
+parsed count: 233498576
 exit: 0
 
 result: Non-deterministic

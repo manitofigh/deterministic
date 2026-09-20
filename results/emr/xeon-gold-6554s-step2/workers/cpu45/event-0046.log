@@ -1,13 +1,13 @@
 event: l2_rqsts.hwpf_miss:u
 cpu: 45
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 317
+parsed count: 368
 exit: 0
 
 --- round 2 ---
-parsed count: 411
+parsed count: 504
 exit: 0
 
 result: Non-deterministic

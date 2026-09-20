@@ -1,13 +1,13 @@
 event: dtlb_load_misses.walk_pending:u
 cpu: 64
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 924
+parsed count: 1085
 exit: 0
 
 --- round 2 ---
-parsed count: 2210
+parsed count: 1100
 exit: 0
 
 result: Non-deterministic

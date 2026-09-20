@@ -1,13 +1,13 @@
 event: mem_uop_retired.any:u
 cpu: 10
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 1590572888
+parsed count: 1590571614
 exit: 0
 
 --- round 2 ---
-parsed count: 1590572953
+parsed count: 1590571530
 exit: 0
 
 result: Non-deterministic

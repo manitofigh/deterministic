@@ -1,13 +1,13 @@
 event: dtlb_store_misses.stlb_hit:u
 cpu: 65
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 21431
+parsed count: 27882
 exit: 0
 
 --- round 2 ---
-parsed count: 27270
+parsed count: 31418
 exit: 0
 
 result: Non-deterministic

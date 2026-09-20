@@ -1,15 +1,23 @@
 event: br_misp_retired.cond:u
 cpu: 31
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 102
+parsed count: 96
 exit: 0
 
 --- round 2 ---
-parsed count: 89
+parsed count: 96
+exit: 0
+
+--- round 3 ---
+parsed count: 96
+exit: 0
+
+--- round 4 ---
+parsed count: 99
 exit: 0
 
 result: Non-deterministic
-rounds attempted: 2
+rounds attempted: 4
 

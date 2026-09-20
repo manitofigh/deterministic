@@ -1,13 +1,13 @@
 event: itlb_misses.walk_pending:u
 cpu: 6
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 377598
+parsed count: 379807
 exit: 0
 
 --- round 2 ---
-parsed count: 383085
+parsed count: 379334
 exit: 0
 
 result: Non-deterministic

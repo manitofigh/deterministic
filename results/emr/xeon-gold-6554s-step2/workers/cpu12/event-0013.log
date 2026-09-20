@@ -1,13 +1,13 @@
 event: dTLB-loads:u
 cpu: 12
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 79501296
+parsed count: 79501289
 exit: 0
 
 --- round 2 ---
-parsed count: 79501283
+parsed count: 79501290
 exit: 0
 
 result: Non-deterministic

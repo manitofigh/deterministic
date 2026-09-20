@@ -1,13 +1,13 @@
 event: cpu_clk_unhalted.distributed:u
 cpu: 41
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 3775014699
+parsed count: 3839219574
 exit: 0
 
 --- round 2 ---
-parsed count: 3789894448
+parsed count: 3817569618
 exit: 0
 
 result: Non-deterministic

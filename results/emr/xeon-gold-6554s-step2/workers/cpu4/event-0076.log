@@ -1,13 +1,13 @@
 event: mem_load_retired.l1_miss:u
 cpu: 4
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 499439
+parsed count: 492578
 exit: 0
 
 --- round 2 ---
-parsed count: 494056
+parsed count: 497445
 exit: 0
 
 result: Non-deterministic

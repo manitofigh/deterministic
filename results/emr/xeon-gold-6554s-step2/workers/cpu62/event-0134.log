@@ -1,13 +1,13 @@
 event: idq_bubbles.cycles_0_uops_deliv.core:u
 cpu: 62
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 262470227
+parsed count: 262517267
 exit: 0
 
 --- round 2 ---
-parsed count: 262508861
+parsed count: 262546783
 exit: 0
 
 result: Non-deterministic

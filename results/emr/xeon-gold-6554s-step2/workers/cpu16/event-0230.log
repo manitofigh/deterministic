@@ -1,6 +1,6 @@
 event: load_hit_prefetch.swpf:u
 cpu: 16
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
 parsed count: 0
@@ -22,6 +22,174 @@ exit: 0
 parsed count: 0
 exit: 0
 
-result: Zero-only
-rounds attempted: 5
-all rounds returned zero; inconclusive
+--- round 6 ---
+parsed count: 0
+exit: 0
+
+--- round 7 ---
+parsed count: 0
+exit: 0
+
+--- round 8 ---
+parsed count: 0
+exit: 0
+
+--- round 9 ---
+parsed count: 0
+exit: 0
+
+--- round 10 ---
+parsed count: 0
+exit: 0
+
+--- round 11 ---
+parsed count: 0
+exit: 0
+
+--- round 12 ---
+parsed count: 0
+exit: 0
+
+--- round 13 ---
+parsed count: 0
+exit: 0
+
+--- round 14 ---
+parsed count: 0
+exit: 0
+
+--- round 15 ---
+parsed count: 0
+exit: 0
+
+--- round 16 ---
+parsed count: 0
+exit: 0
+
+--- round 17 ---
+parsed count: 0
+exit: 0
+
+--- round 18 ---
+parsed count: 0
+exit: 0
+
+--- round 19 ---
+parsed count: 0
+exit: 0
+
+--- round 20 ---
+parsed count: 0
+exit: 0
+
+--- round 21 ---
+parsed count: 0
+exit: 0
+
+--- round 22 ---
+parsed count: 0
+exit: 0
+
+--- round 23 ---
+parsed count: 0
+exit: 0
+
+--- round 24 ---
+parsed count: 0
+exit: 0
+
+--- round 25 ---
+parsed count: 0
+exit: 0
+
+--- round 26 ---
+parsed count: 0
+exit: 0
+
+--- round 27 ---
+parsed count: 0
+exit: 0
+
+--- round 28 ---
+parsed count: 0
+exit: 0
+
+--- round 29 ---
+parsed count: 0
+exit: 0
+
+--- round 30 ---
+parsed count: 0
+exit: 0
+
+--- round 31 ---
+parsed count: 0
+exit: 0
+
+--- round 32 ---
+parsed count: 0
+exit: 0
+
+--- round 33 ---
+parsed count: 0
+exit: 0
+
+--- round 34 ---
+parsed count: 0
+exit: 0
+
+--- round 35 ---
+parsed count: 0
+exit: 0
+
+--- round 36 ---
+parsed count: 0
+exit: 0
+
+--- round 37 ---
+parsed count: 0
+exit: 0
+
+--- round 38 ---
+parsed count: 0
+exit: 0
+
+--- round 39 ---
+parsed count: 0
+exit: 0
+
+--- round 40 ---
+parsed count: 0
+exit: 0
+
+--- round 41 ---
+parsed count: 0
+exit: 0
+
+--- round 42 ---
+parsed count: 0
+exit: 0
+
+--- round 43 ---
+parsed count: 0
+exit: 0
+
+--- round 44 ---
+parsed count: 0
+exit: 0
+
+--- round 45 ---
+parsed count: 0
+exit: 0
+
+--- round 46 ---
+parsed count: 0
+exit: 0
+
+--- round 47 ---
+parsed count: 10
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 47
+

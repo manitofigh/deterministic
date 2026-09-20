@@ -1,4 +1,4 @@
-{"index": 65, "event": "mem_load_l3_hit_retired.xsnp_fwd:u", "cpu": 64, "runs": 5, "status": "Zero-only", "counts": [0, 0, 0, 0, 0], "note": "all rounds returned zero; inconclusive", "log": "workers/cpu64/event-0065.log"}
-{"index": 136, "event": "idq_uops_not_delivered.core:u", "cpu": 64, "runs": 2, "status": "Non-deterministic", "counts": [9090330116, 9088631888], "note": "", "log": "workers/cpu64/event-0136.log"}
-{"index": 207, "event": "inst_decoded.decoders:u", "cpu": 64, "runs": 2, "status": "Non-deterministic", "counts": [76081598, 75713052], "note": "", "log": "workers/cpu64/event-0207.log"}
-{"index": 278, "event": "dtlb_load_misses.walk_pending:u", "cpu": 64, "runs": 2, "status": "Non-deterministic", "counts": [924, 2210], "note": "", "log": "workers/cpu64/event-0278.log"}
+{"index": 65, "event": "mem_load_l3_hit_retired.xsnp_fwd:u", "cpu": 64, "runs": 18, "status": "Non-deterministic", "counts": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1], "note": "", "log": "workers/cpu64/event-0065.log"}
+{"index": 136, "event": "idq_uops_not_delivered.core:u", "cpu": 64, "runs": 2, "status": "Non-deterministic", "counts": [9090660109, 9086428712], "note": "", "log": "workers/cpu64/event-0136.log"}
+{"index": 207, "event": "inst_decoded.decoders:u", "cpu": 64, "runs": 2, "status": "Non-deterministic", "counts": [75882376, 75619748], "note": "", "log": "workers/cpu64/event-0207.log"}
+{"index": 278, "event": "dtlb_load_misses.walk_pending:u", "cpu": 64, "runs": 2, "status": "Non-deterministic", "counts": [1085, 1100], "note": "", "log": "workers/cpu64/event-0278.log"}

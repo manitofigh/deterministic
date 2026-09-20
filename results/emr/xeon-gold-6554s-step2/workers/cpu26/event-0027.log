@@ -1,13 +1,13 @@
 event: l1d_pend_miss.l2_stalls:u
 cpu: 26
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 215
+parsed count: 201
 exit: 0
 
 --- round 2 ---
-parsed count: 171
+parsed count: 230
 exit: 0
 
 result: Non-deterministic

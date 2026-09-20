@@ -1,4 +1,4 @@
-{"index": 60, "event": "mem_inst_retired.split_loads:u", "cpu": 59, "runs": 2, "status": "Non-deterministic", "counts": [179995, 179996], "note": "", "log": "workers/cpu59/event-0060.log"}
-{"index": 131, "event": "idq.ms_switches:u", "cpu": 59, "runs": 2, "status": "Non-deterministic", "counts": [56029504, 56015667], "note": "", "log": "workers/cpu59/event-0131.log"}
-{"index": 202, "event": "exe_activity.3_ports_util:u", "cpu": 59, "runs": 2, "status": "Non-deterministic", "counts": [1214350333, 1213844293], "note": "", "log": "workers/cpu59/event-0202.log"}
-{"index": 273, "event": "dtlb_load_misses.walk_active:u", "cpu": 59, "runs": 2, "status": "Non-deterministic", "counts": [1279, 987], "note": "", "log": "workers/cpu59/event-0273.log"}
+{"index": 60, "event": "mem_inst_retired.split_loads:u", "cpu": 59, "runs": 2, "status": "Non-deterministic", "counts": [179994, 179995], "note": "", "log": "workers/cpu59/event-0060.log"}
+{"index": 131, "event": "idq.ms_switches:u", "cpu": 59, "runs": 2, "status": "Non-deterministic", "counts": [56019008, 56048986], "note": "", "log": "workers/cpu59/event-0131.log"}
+{"index": 202, "event": "exe_activity.3_ports_util:u", "cpu": 59, "runs": 2, "status": "Non-deterministic", "counts": [1213897098, 1213628790], "note": "", "log": "workers/cpu59/event-0202.log"}
+{"index": 273, "event": "dtlb_load_misses.walk_active:u", "cpu": 59, "runs": 2, "status": "Non-deterministic", "counts": [1104, 10977], "note": "", "log": "workers/cpu59/event-0273.log"}

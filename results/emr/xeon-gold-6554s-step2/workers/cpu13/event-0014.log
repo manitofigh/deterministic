@@ -1,6 +1,6 @@
 event: dTLB-load-misses:u
 cpu: 13
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
 parsed count: 27

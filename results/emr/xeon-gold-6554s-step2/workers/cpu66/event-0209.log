@@ -1,13 +1,13 @@
 event: inst_retired.any_p:u
 cpu: 66
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 227001322
+parsed count: 227001208
 exit: 0
 
 --- round 2 ---
-parsed count: 227001233
+parsed count: 227001202
 exit: 0
 
 result: Non-deterministic

@@ -1,13 +1,13 @@
 event: sw_prefetch_access.any:u
 cpu: 12
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 405192
+parsed count: 405064
 exit: 0
 
 --- round 2 ---
-parsed count: 405160
+parsed count: 405096
 exit: 0
 
 result: Non-deterministic

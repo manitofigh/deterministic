@@ -1,13 +1,13 @@
 event: idq_uops_not_delivered.core:u
 cpu: 64
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 9090330116
+parsed count: 9090660109
 exit: 0
 
 --- round 2 ---
-parsed count: 9088631888
+parsed count: 9086428712
 exit: 0
 
 result: Non-deterministic

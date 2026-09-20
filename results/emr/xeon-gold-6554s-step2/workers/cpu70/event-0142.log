@@ -1,13 +1,13 @@
 event: memory_activity.stalls_l1d_miss:u
 cpu: 70
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 266169571
+parsed count: 325011964
 exit: 0
 
 --- round 2 ---
-parsed count: 276855201
+parsed count: 316558317
 exit: 0
 
 result: Non-deterministic

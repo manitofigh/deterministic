@@ -1,13 +1,13 @@
 event: icache_tag.stalls:u
 cpu: 51
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 3362966
+parsed count: 658411
 exit: 0
 
 --- round 2 ---
-parsed count: 677006
+parsed count: 658597
 exit: 0
 
 result: Non-deterministic

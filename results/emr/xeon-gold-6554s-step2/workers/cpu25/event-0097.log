@@ -1,13 +1,13 @@
 event: fp_arith_dispatched.v2:u
 cpu: 25
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 2777935
+parsed count: 2962543
 exit: 0
 
 --- round 2 ---
-parsed count: 2826499
+parsed count: 2800903
 exit: 0
 
 result: Non-deterministic

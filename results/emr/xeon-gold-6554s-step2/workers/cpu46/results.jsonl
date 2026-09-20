@@ -1,4 +1,4 @@
-{"index": 47, "event": "l2_rqsts.miss:u", "cpu": 46, "runs": 2, "status": "Non-deterministic", "counts": [599667, 600579], "note": "", "log": "workers/cpu46/event-0047.log"}
-{"index": 118, "event": "decode.lcp:u", "cpu": 46, "runs": 2, "status": "Non-deterministic", "counts": [27702945, 27684637], "note": "", "log": "workers/cpu46/event-0118.log"}
-{"index": 189, "event": "cpu_clk_unhalted.ref_tsc:u", "cpu": 46, "runs": 2, "status": "Non-deterministic", "counts": [2746531832, 2754381784], "note": "", "log": "workers/cpu46/event-0189.log"}
-{"index": 260, "event": "uops_executed.cycles_ge_2:u", "cpu": 46, "runs": 2, "status": "Non-deterministic", "counts": [2528826983, 2528412055], "note": "", "log": "workers/cpu46/event-0260.log"}
+{"index": 47, "event": "l2_rqsts.miss:u", "cpu": 46, "runs": 2, "status": "Non-deterministic", "counts": [600453, 600042], "note": "", "log": "workers/cpu46/event-0047.log"}
+{"index": 118, "event": "decode.lcp:u", "cpu": 46, "runs": 2, "status": "Non-deterministic", "counts": [27675522, 27661345], "note": "", "log": "workers/cpu46/event-0118.log"}
+{"index": 189, "event": "cpu_clk_unhalted.ref_tsc:u", "cpu": 46, "runs": 2, "status": "Non-deterministic", "counts": [2742091616, 2773425248], "note": "", "log": "workers/cpu46/event-0189.log"}
+{"index": 260, "event": "uops_executed.cycles_ge_2:u", "cpu": 46, "runs": 2, "status": "Non-deterministic", "counts": [2528281601, 2528576656], "note": "", "log": "workers/cpu46/event-0260.log"}

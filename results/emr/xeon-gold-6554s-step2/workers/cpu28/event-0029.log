@@ -1,13 +1,13 @@
 event: l1d_pend_miss.pending_cycles:u
 cpu: 28
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 267674627
+parsed count: 266915602
 exit: 0
 
 --- round 2 ---
-parsed count: 261912071
+parsed count: 276732734
 exit: 0
 
 result: Non-deterministic

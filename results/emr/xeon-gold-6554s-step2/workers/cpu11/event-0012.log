@@ -1,13 +1,13 @@
 event: L1-icache-load-misses:u
 cpu: 11
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 114639
+parsed count: 115978
 exit: 0
 
 --- round 2 ---
-parsed count: 107473
+parsed count: 116984
 exit: 0
 
 result: Non-deterministic

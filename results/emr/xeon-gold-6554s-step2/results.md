@@ -1,9 +1,9 @@
 # Event results
 
 * Complete: 291/291
-* Potentially deterministic: 28
-* Non-deterministic: 208
-* Zero-only: 55
+* Potentially deterministic: 22
+* Non-deterministic: 219
+* Zero-only: 50
 
 [Processor and settings](profile.md) · [Input events](events.txt)
 
@@ -11,50 +11,48 @@
 
 | Event | Runs | Determinism |
 |---|---:|---|
-| [`L1-dcache-stores:u`](workers/cpu10/event-0011.log) | 5 | Potentially deterministic |
-| [`assists.any:u`](workers/cpu20/event-0163.log) | 5 | Potentially deterministic |
-| [`assists.page_fault:u`](workers/cpu12/event-0155.log) | 5 | Potentially deterministic |
-| [`br_inst_retired.cond:u`](workers/cpu22/event-0165.log) | 5 | Potentially deterministic |
-| [`br_inst_retired.cond_ntaken:u`](workers/cpu23/event-0166.log) | 5 | Potentially deterministic |
-| [`br_inst_retired.cond_taken:u`](workers/cpu24/event-0167.log) | 5 | Potentially deterministic |
-| [`br_inst_retired.indirect:u`](workers/cpu26/event-0169.log) | 5 | Potentially deterministic |
-| [`br_inst_retired.near_call:u`](workers/cpu27/event-0170.log) | 5 | Potentially deterministic |
-| [`br_inst_retired.near_return:u`](workers/cpu28/event-0171.log) | 5 | Potentially deterministic |
-| [`br_inst_retired.near_taken:u`](workers/cpu29/event-0172.log) | 5 | Potentially deterministic |
-| [`cpu_clk_unhalted.c0_wait:u`](workers/cpu40/event-0183.log) | 5 | Potentially deterministic |
-| [`cpu_clk_unhalted.pause:u`](workers/cpu43/event-0186.log) | 5 | Potentially deterministic |
-| [`cpu_clk_unhalted.pause_inst:u`](workers/cpu44/event-0187.log) | 5 | Potentially deterministic |
-| [`dTLB-stores:u`](workers/cpu14/event-0015.log) | 5 | Potentially deterministic |
-| [`fp_arith_inst_retired.128b_packed_double:u`](workers/cpu26/event-0098.log) | 5 | Potentially deterministic |
-| [`fp_arith_inst_retired.128b_packed_single:u`](workers/cpu27/event-0099.log) | 5 | Potentially deterministic |
-| [`fp_arith_inst_retired.4_flops:u`](workers/cpu30/event-0102.log) | 5 | Potentially deterministic |
-| [`fp_arith_inst_retired.scalar:u`](workers/cpu34/event-0106.log) | 5 | Potentially deterministic |
-| [`fp_arith_inst_retired.scalar_double:u`](workers/cpu35/event-0107.log) | 5 | Potentially deterministic |
-| [`fp_arith_inst_retired.scalar_single:u`](workers/cpu36/event-0108.log) | 5 | Potentially deterministic |
-| [`fp_arith_inst_retired.vector:u`](workers/cpu37/event-0109.log) | 5 | Potentially deterministic |
-| [`inst_retired.nop:u`](workers/cpu68/event-0211.log) | 5 | Potentially deterministic |
-| [`int_vec_retired.128bit:u`](workers/cpu5/event-0219.log) | 5 | Potentially deterministic |
-| [`int_vec_retired.add_128:u`](workers/cpu7/event-0221.log) | 5 | Potentially deterministic |
-| [`mem-stores:u`](workers/cpu20/event-0021.log) | 5 | Potentially deterministic |
-| [`mem_inst_retired.all_stores:u`](workers/cpu56/event-0057.log) | 5 | Potentially deterministic |
-| [`mem_inst_retired.lock_loads:u`](workers/cpu58/event-0059.log) | 5 | Potentially deterministic |
-| [`misc2_retired.lfence:u`](workers/cpu22/event-0236.log) | 5 | Potentially deterministic |
+| [`br_inst_retired.cond:u`](workers/cpu22/event-0165.log) | 1000 | Potentially deterministic |
+| [`br_inst_retired.cond_ntaken:u`](workers/cpu23/event-0166.log) | 1000 | Potentially deterministic |
+| [`br_inst_retired.cond_taken:u`](workers/cpu24/event-0167.log) | 1000 | Potentially deterministic |
+| [`br_inst_retired.indirect:u`](workers/cpu26/event-0169.log) | 1000 | Potentially deterministic |
+| [`br_inst_retired.near_call:u`](workers/cpu27/event-0170.log) | 1000 | Potentially deterministic |
+| [`br_inst_retired.near_return:u`](workers/cpu28/event-0171.log) | 1000 | Potentially deterministic |
+| [`br_inst_retired.near_taken:u`](workers/cpu29/event-0172.log) | 1000 | Potentially deterministic |
+| [`cpu_clk_unhalted.c0_wait:u`](workers/cpu40/event-0183.log) | 1000 | Potentially deterministic |
+| [`cpu_clk_unhalted.pause:u`](workers/cpu43/event-0186.log) | 1000 | Potentially deterministic |
+| [`cpu_clk_unhalted.pause_inst:u`](workers/cpu44/event-0187.log) | 1000 | Potentially deterministic |
+| [`fp_arith_inst_retired.128b_packed_double:u`](workers/cpu26/event-0098.log) | 1000 | Potentially deterministic |
+| [`fp_arith_inst_retired.128b_packed_single:u`](workers/cpu27/event-0099.log) | 1000 | Potentially deterministic |
+| [`fp_arith_inst_retired.4_flops:u`](workers/cpu30/event-0102.log) | 1000 | Potentially deterministic |
+| [`fp_arith_inst_retired.scalar:u`](workers/cpu34/event-0106.log) | 1000 | Potentially deterministic |
+| [`fp_arith_inst_retired.scalar_double:u`](workers/cpu35/event-0107.log) | 1000 | Potentially deterministic |
+| [`fp_arith_inst_retired.scalar_single:u`](workers/cpu36/event-0108.log) | 1000 | Potentially deterministic |
+| [`fp_arith_inst_retired.vector:u`](workers/cpu37/event-0109.log) | 1000 | Potentially deterministic |
+| [`inst_retired.nop:u`](workers/cpu68/event-0211.log) | 1000 | Potentially deterministic |
+| [`int_vec_retired.128bit:u`](workers/cpu5/event-0219.log) | 1000 | Potentially deterministic |
+| [`int_vec_retired.add_128:u`](workers/cpu7/event-0221.log) | 1000 | Potentially deterministic |
+| [`mem_inst_retired.lock_loads:u`](workers/cpu58/event-0059.log) | 1000 | Potentially deterministic |
+| [`misc2_retired.lfence:u`](workers/cpu22/event-0236.log) | 1000 | Potentially deterministic |
 | [`L1-dcache-load-misses:u`](workers/cpu9/event-0010.log) | 2 | Non-deterministic |
 | [`L1-dcache-loads:u`](workers/cpu8/event-0009.log) | 2 | Non-deterministic |
+| [`L1-dcache-stores:u`](workers/cpu10/event-0011.log) | 920 | Non-deterministic |
 | [`L1-icache-load-misses:u`](workers/cpu11/event-0012.log) | 2 | Non-deterministic |
 | [`arith.div_active:u`](workers/cpu18/event-0161.log) | 2 | Non-deterministic |
 | [`arith.fpdiv_active:u`](workers/cpu17/event-0089.log) | 2 | Non-deterministic |
 | [`arith.idiv_active:u`](workers/cpu19/event-0162.log) | 2 | Non-deterministic |
+| [`assists.any:u`](workers/cpu20/event-0163.log) | 27 | Non-deterministic |
+| [`assists.page_fault:u`](workers/cpu12/event-0155.log) | 8 | Non-deterministic |
 | [`baclears.any:u`](workers/cpu45/event-0117.log) | 2 | Non-deterministic |
 | [`br_inst_retired.all_branches:u`](workers/cpu21/event-0164.log) | 2 | Non-deterministic |
 | [`br_inst_retired.far_branch:u`](workers/cpu25/event-0168.log) | 2 | Non-deterministic |
 | [`br_misp_retired.all_branches:u`](workers/cpu30/event-0173.log) | 2 | Non-deterministic |
-| [`br_misp_retired.cond:u`](workers/cpu31/event-0174.log) | 2 | Non-deterministic |
+| [`br_misp_retired.cond:u`](workers/cpu31/event-0174.log) | 4 | Non-deterministic |
 | [`br_misp_retired.cond_ntaken:u`](workers/cpu32/event-0175.log) | 2 | Non-deterministic |
 | [`br_misp_retired.cond_taken:u`](workers/cpu33/event-0176.log) | 2 | Non-deterministic |
 | [`br_misp_retired.indirect:u`](workers/cpu34/event-0177.log) | 2 | Non-deterministic |
 | [`br_misp_retired.indirect_call:u`](workers/cpu35/event-0178.log) | 2 | Non-deterministic |
 | [`br_misp_retired.near_taken:u`](workers/cpu36/event-0179.log) | 2 | Non-deterministic |
+| [`br_misp_retired.ret:u`](workers/cpu37/event-0180.log) | 311 | Non-deterministic |
 | [`branch-instructions:u`](workers/cpu0/event-0001.log) | 2 | Non-deterministic |
 | [`branch-load-misses:u`](workers/cpu18/event-0019.log) | 2 | Non-deterministic |
 | [`branch-loads:u`](workers/cpu17/event-0018.log) | 2 | Non-deterministic |
@@ -80,6 +78,7 @@
 | [`dTLB-load-misses:u`](workers/cpu13/event-0014.log) | 2 | Non-deterministic |
 | [`dTLB-loads:u`](workers/cpu12/event-0013.log) | 2 | Non-deterministic |
 | [`dTLB-store-misses:u`](workers/cpu15/event-0016.log) | 2 | Non-deterministic |
+| [`dTLB-stores:u`](workers/cpu14/event-0015.log) | 106 | Non-deterministic |
 | [`decode.lcp:u`](workers/cpu46/event-0118.log) | 2 | Non-deterministic |
 | [`decode.ms_busy:u`](workers/cpu47/event-0119.log) | 2 | Non-deterministic |
 | [`dsb2mite_switches.penalty_cycles:u`](workers/cpu48/event-0120.log) | 2 | Non-deterministic |
@@ -132,7 +131,7 @@
 | [`inst_retired.macro_fused:u`](workers/cpu67/event-0210.log) | 2 | Non-deterministic |
 | [`inst_retired.prec_dist:u`](workers/cpu69/event-0212.log) | 2 | Non-deterministic |
 | [`inst_retired.rep_iteration:u`](workers/cpu70/event-0213.log) | 2 | Non-deterministic |
-| [`instructions:u`](workers/cpu6/event-0007.log) | 3 | Non-deterministic |
+| [`instructions:u`](workers/cpu6/event-0007.log) | 2 | Non-deterministic |
 | [`int_misc.clear_resteer_cycles:u`](workers/cpu0/event-0214.log) | 2 | Non-deterministic |
 | [`int_misc.clears_count:u`](workers/cpu1/event-0215.log) | 2 | Non-deterministic |
 | [`int_misc.recovery_cycles:u`](workers/cpu3/event-0217.log) | 2 | Non-deterministic |
@@ -171,31 +170,37 @@
 | [`l2_rqsts.rfo_hit:u`](workers/cpu48/event-0049.log) | 2 | Non-deterministic |
 | [`l2_rqsts.rfo_miss:u`](workers/cpu49/event-0050.log) | 2 | Non-deterministic |
 | [`l2_rqsts.swpf_hit:u`](workers/cpu50/event-0051.log) | 2 | Non-deterministic |
-| [`l2_rqsts.swpf_miss:u`](workers/cpu51/event-0052.log) | 2 | Non-deterministic |
+| [`l2_rqsts.swpf_miss:u`](workers/cpu51/event-0052.log) | 29 | Non-deterministic |
 | [`l2_trans.l2_wb:u`](workers/cpu52/event-0053.log) | 2 | Non-deterministic |
 | [`ld_blocks.address_alias:u`](workers/cpu13/event-0227.log) | 2 | Non-deterministic |
 | [`ld_blocks.store_forward:u`](workers/cpu15/event-0229.log) | 2 | Non-deterministic |
+| [`load_hit_prefetch.swpf:u`](workers/cpu16/event-0230.log) | 47 | Non-deterministic |
 | [`longest_lat_cache.miss:u`](workers/cpu53/event-0054.log) | 2 | Non-deterministic |
 | [`longest_lat_cache.reference:u`](workers/cpu54/event-0055.log) | 2 | Non-deterministic |
 | [`machine_clears.count:u`](workers/cpu20/event-0234.log) | 2 | Non-deterministic |
 | [`machine_clears.memory_ordering:u`](workers/cpu68/event-0140.log) | 2 | Non-deterministic |
 | [`machine_clears.smc:u`](workers/cpu21/event-0235.log) | 3 | Non-deterministic |
 | [`mem-loads-aux:u`](workers/cpu19/event-0020.log) | 2 | Non-deterministic |
+| [`mem-stores:u`](workers/cpu20/event-0021.log) | 133 | Non-deterministic |
 | [`mem_inst_retired.all_loads:u`](workers/cpu55/event-0056.log) | 2 | Non-deterministic |
+| [`mem_inst_retired.all_stores:u`](workers/cpu56/event-0057.log) | 156 | Non-deterministic |
 | [`mem_inst_retired.any:u`](workers/cpu57/event-0058.log) | 2 | Non-deterministic |
 | [`mem_inst_retired.split_loads:u`](workers/cpu59/event-0060.log) | 2 | Non-deterministic |
 | [`mem_inst_retired.split_stores:u`](workers/cpu60/event-0061.log) | 2 | Non-deterministic |
 | [`mem_inst_retired.stlb_miss_loads:u`](workers/cpu61/event-0062.log) | 2 | Non-deterministic |
-| [`mem_inst_retired.stlb_miss_stores:u`](workers/cpu62/event-0063.log) | 3 | Non-deterministic |
+| [`mem_inst_retired.stlb_miss_stores:u`](workers/cpu62/event-0063.log) | 2 | Non-deterministic |
 | [`mem_load_completed.l1_miss_any:u`](workers/cpu63/event-0064.log) | 2 | Non-deterministic |
+| [`mem_load_l3_hit_retired.xsnp_fwd:u`](workers/cpu64/event-0065.log) | 18 | Non-deterministic |
+| [`mem_load_l3_hit_retired.xsnp_no_fwd:u`](workers/cpu66/event-0067.log) | 112 | Non-deterministic |
 | [`mem_load_l3_hit_retired.xsnp_none:u`](workers/cpu67/event-0068.log) | 2 | Non-deterministic |
 | [`mem_load_l3_miss_retired.local_dram:u`](workers/cpu68/event-0069.log) | 2 | Non-deterministic |
+| [`mem_load_l3_miss_retired.remote_hitm:u`](workers/cpu0/event-0072.log) | 246 | Non-deterministic |
 | [`mem_load_retired.fb_hit:u`](workers/cpu2/event-0074.log) | 2 | Non-deterministic |
 | [`mem_load_retired.l1_hit:u`](workers/cpu3/event-0075.log) | 2 | Non-deterministic |
 | [`mem_load_retired.l1_miss:u`](workers/cpu4/event-0076.log) | 2 | Non-deterministic |
 | [`mem_load_retired.l2_hit:u`](workers/cpu5/event-0077.log) | 2 | Non-deterministic |
 | [`mem_load_retired.l2_miss:u`](workers/cpu6/event-0078.log) | 2 | Non-deterministic |
-| [`mem_load_retired.l3_hit:u`](workers/cpu7/event-0079.log) | 3 | Non-deterministic |
+| [`mem_load_retired.l3_hit:u`](workers/cpu7/event-0079.log) | 2 | Non-deterministic |
 | [`mem_load_retired.l3_miss:u`](workers/cpu8/event-0080.log) | 2 | Non-deterministic |
 | [`mem_store_retired.l2_hit:u`](workers/cpu9/event-0081.log) | 2 | Non-deterministic |
 | [`mem_uop_retired.any:u`](workers/cpu10/event-0082.log) | 2 | Non-deterministic |
@@ -211,7 +216,7 @@
 | [`rs.empty_resource:u`](workers/cpu16/event-0159.log) | 2 | Non-deterministic |
 | [`slots:u`](workers/cpu21/event-0022.log) | 2 | Non-deterministic |
 | [`sw_prefetch_access.any:u`](workers/cpu12/event-0084.log) | 2 | Non-deterministic |
-| [`sw_prefetch_access.nta:u`](workers/cpu13/event-0085.log) | 3 | Non-deterministic |
+| [`sw_prefetch_access.nta:u`](workers/cpu13/event-0085.log) | 2 | Non-deterministic |
 | [`sw_prefetch_access.t0:u`](workers/cpu15/event-0087.log) | 2 | Non-deterministic |
 | [`sw_prefetch_access.t1_t2:u`](workers/cpu16/event-0088.log) | 2 | Non-deterministic |
 | [`topdown.backend_bound_slots:u`](workers/cpu26/event-0240.log) | 2 | Non-deterministic |
@@ -252,58 +257,53 @@
 
 | Event | Runs | Determinism |
 |---|---:|---|
-| [`assists.fp:u`](workers/cpu18/event-0090.log) | 5 | Zero-only |
-| [`assists.sse_avx_mix:u`](workers/cpu19/event-0091.log) | 5 | Zero-only |
-| [`br_misp_retired.ret:u`](workers/cpu37/event-0180.log) | 5 | Zero-only |
-| [`cpu_clk_unhalted.c01:u`](workers/cpu38/event-0181.log) | 5 | Zero-only |
-| [`cpu_clk_unhalted.c02:u`](workers/cpu39/event-0182.log) | 5 | Zero-only |
-| [`dtlb_load_misses.walk_completed_1g:u`](workers/cpu61/event-0275.log) | 5 | Zero-only |
-| [`dtlb_load_misses.walk_completed_2m_4m:u`](workers/cpu62/event-0276.log) | 5 | Zero-only |
-| [`dtlb_store_misses.walk_completed_1g:u`](workers/cpu68/event-0282.log) | 5 | Zero-only |
-| [`dtlb_store_misses.walk_completed_2m_4m:u`](workers/cpu69/event-0283.log) | 5 | Zero-only |
-| [`exe.amx_busy:u`](workers/cpu13/event-0156.log) | 5 | Zero-only |
-| [`fp_arith_inst_retired.256b_packed_double:u`](workers/cpu28/event-0100.log) | 5 | Zero-only |
-| [`fp_arith_inst_retired.256b_packed_single:u`](workers/cpu29/event-0101.log) | 5 | Zero-only |
-| [`fp_arith_inst_retired.512b_packed_double:u`](workers/cpu31/event-0103.log) | 5 | Zero-only |
-| [`fp_arith_inst_retired.512b_packed_single:u`](workers/cpu32/event-0104.log) | 5 | Zero-only |
-| [`fp_arith_inst_retired.8_flops:u`](workers/cpu33/event-0105.log) | 5 | Zero-only |
-| [`fp_arith_inst_retired2.128b_packed_half:u`](workers/cpu38/event-0110.log) | 5 | Zero-only |
-| [`fp_arith_inst_retired2.256b_packed_half:u`](workers/cpu39/event-0111.log) | 5 | Zero-only |
-| [`fp_arith_inst_retired2.512b_packed_half:u`](workers/cpu40/event-0112.log) | 5 | Zero-only |
-| [`fp_arith_inst_retired2.complex_scalar_half:u`](workers/cpu41/event-0113.log) | 5 | Zero-only |
-| [`fp_arith_inst_retired2.scalar:u`](workers/cpu42/event-0114.log) | 5 | Zero-only |
-| [`fp_arith_inst_retired2.scalar_half:u`](workers/cpu43/event-0115.log) | 5 | Zero-only |
-| [`fp_arith_inst_retired2.vector:u`](workers/cpu44/event-0116.log) | 5 | Zero-only |
-| [`int_misc.mba_stalls:u`](workers/cpu2/event-0216.log) | 5 | Zero-only |
-| [`int_vec_retired.256bit:u`](workers/cpu6/event-0220.log) | 5 | Zero-only |
-| [`int_vec_retired.add_256:u`](workers/cpu8/event-0222.log) | 5 | Zero-only |
-| [`int_vec_retired.mul_256:u`](workers/cpu9/event-0223.log) | 5 | Zero-only |
-| [`int_vec_retired.shuffles:u`](workers/cpu10/event-0224.log) | 5 | Zero-only |
-| [`int_vec_retired.vnni_128:u`](workers/cpu11/event-0225.log) | 5 | Zero-only |
-| [`int_vec_retired.vnni_256:u`](workers/cpu12/event-0226.log) | 5 | Zero-only |
-| [`itlb_misses.walk_completed_2m_4m:u`](workers/cpu4/event-0289.log) | 5 | Zero-only |
-| [`ld_blocks.no_sr:u`](workers/cpu14/event-0228.log) | 5 | Zero-only |
-| [`load_hit_prefetch.swpf:u`](workers/cpu16/event-0230.log) | 5 | Zero-only |
-| [`lsd.cycles_active:u`](workers/cpu17/event-0231.log) | 5 | Zero-only |
-| [`lsd.cycles_ok:u`](workers/cpu18/event-0232.log) | 5 | Zero-only |
-| [`lsd.uops:u`](workers/cpu19/event-0233.log) | 5 | Zero-only |
-| [`mem_load_l3_hit_retired.xsnp_fwd:u`](workers/cpu64/event-0065.log) | 5 | Zero-only |
-| [`mem_load_l3_hit_retired.xsnp_miss:u`](workers/cpu65/event-0066.log) | 5 | Zero-only |
-| [`mem_load_l3_hit_retired.xsnp_no_fwd:u`](workers/cpu66/event-0067.log) | 5 | Zero-only |
-| [`mem_load_l3_miss_retired.remote_dram:u`](workers/cpu69/event-0070.log) | 5 | Zero-only |
-| [`mem_load_l3_miss_retired.remote_fwd:u`](workers/cpu70/event-0071.log) | 5 | Zero-only |
-| [`mem_load_l3_miss_retired.remote_hitm:u`](workers/cpu0/event-0072.log) | 5 | Zero-only |
-| [`mem_load_misc_retired.uc:u`](workers/cpu1/event-0073.log) | 5 | Zero-only |
-| [`misc_retired.lbr_inserts:u`](workers/cpu23/event-0237.log) | 5 | Zero-only |
-| [`rtm_retired.aborted:u`](workers/cpu2/event-0145.log) | 5 | Zero-only |
-| [`rtm_retired.aborted_events:u`](workers/cpu3/event-0146.log) | 5 | Zero-only |
-| [`rtm_retired.aborted_mem:u`](workers/cpu4/event-0147.log) | 5 | Zero-only |
-| [`rtm_retired.aborted_memtype:u`](workers/cpu5/event-0148.log) | 5 | Zero-only |
-| [`rtm_retired.aborted_unfriendly:u`](workers/cpu6/event-0149.log) | 5 | Zero-only |
-| [`rtm_retired.commit:u`](workers/cpu7/event-0150.log) | 5 | Zero-only |
-| [`rtm_retired.start:u`](workers/cpu8/event-0151.log) | 5 | Zero-only |
-| [`sq_misc.bus_lock:u`](workers/cpu11/event-0083.log) | 5 | Zero-only |
-| [`sw_prefetch_access.prefetchw:u`](workers/cpu14/event-0086.log) | 5 | Zero-only |
-| [`tx_mem.abort_capacity_read:u`](workers/cpu9/event-0152.log) | 5 | Zero-only |
-| [`tx_mem.abort_capacity_write:u`](workers/cpu10/event-0153.log) | 5 | Zero-only |
-| [`tx_mem.abort_conflict:u`](workers/cpu11/event-0154.log) | 5 | Zero-only |
+| [`assists.fp:u`](workers/cpu18/event-0090.log) | 1000 | Zero-only |
+| [`assists.sse_avx_mix:u`](workers/cpu19/event-0091.log) | 1000 | Zero-only |
+| [`cpu_clk_unhalted.c01:u`](workers/cpu38/event-0181.log) | 1000 | Zero-only |
+| [`cpu_clk_unhalted.c02:u`](workers/cpu39/event-0182.log) | 1000 | Zero-only |
+| [`dtlb_load_misses.walk_completed_1g:u`](workers/cpu61/event-0275.log) | 1000 | Zero-only |
+| [`dtlb_load_misses.walk_completed_2m_4m:u`](workers/cpu62/event-0276.log) | 1000 | Zero-only |
+| [`dtlb_store_misses.walk_completed_1g:u`](workers/cpu68/event-0282.log) | 1000 | Zero-only |
+| [`dtlb_store_misses.walk_completed_2m_4m:u`](workers/cpu69/event-0283.log) | 1000 | Zero-only |
+| [`exe.amx_busy:u`](workers/cpu13/event-0156.log) | 1000 | Zero-only |
+| [`fp_arith_inst_retired.256b_packed_double:u`](workers/cpu28/event-0100.log) | 1000 | Zero-only |
+| [`fp_arith_inst_retired.256b_packed_single:u`](workers/cpu29/event-0101.log) | 1000 | Zero-only |
+| [`fp_arith_inst_retired.512b_packed_double:u`](workers/cpu31/event-0103.log) | 1000 | Zero-only |
+| [`fp_arith_inst_retired.512b_packed_single:u`](workers/cpu32/event-0104.log) | 1000 | Zero-only |
+| [`fp_arith_inst_retired.8_flops:u`](workers/cpu33/event-0105.log) | 1000 | Zero-only |
+| [`fp_arith_inst_retired2.128b_packed_half:u`](workers/cpu38/event-0110.log) | 1000 | Zero-only |
+| [`fp_arith_inst_retired2.256b_packed_half:u`](workers/cpu39/event-0111.log) | 1000 | Zero-only |
+| [`fp_arith_inst_retired2.512b_packed_half:u`](workers/cpu40/event-0112.log) | 1000 | Zero-only |
+| [`fp_arith_inst_retired2.complex_scalar_half:u`](workers/cpu41/event-0113.log) | 1000 | Zero-only |
+| [`fp_arith_inst_retired2.scalar:u`](workers/cpu42/event-0114.log) | 1000 | Zero-only |
+| [`fp_arith_inst_retired2.scalar_half:u`](workers/cpu43/event-0115.log) | 1000 | Zero-only |
+| [`fp_arith_inst_retired2.vector:u`](workers/cpu44/event-0116.log) | 1000 | Zero-only |
+| [`int_misc.mba_stalls:u`](workers/cpu2/event-0216.log) | 1000 | Zero-only |
+| [`int_vec_retired.256bit:u`](workers/cpu6/event-0220.log) | 1000 | Zero-only |
+| [`int_vec_retired.add_256:u`](workers/cpu8/event-0222.log) | 1000 | Zero-only |
+| [`int_vec_retired.mul_256:u`](workers/cpu9/event-0223.log) | 1000 | Zero-only |
+| [`int_vec_retired.shuffles:u`](workers/cpu10/event-0224.log) | 1000 | Zero-only |
+| [`int_vec_retired.vnni_128:u`](workers/cpu11/event-0225.log) | 1000 | Zero-only |
+| [`int_vec_retired.vnni_256:u`](workers/cpu12/event-0226.log) | 1000 | Zero-only |
+| [`itlb_misses.walk_completed_2m_4m:u`](workers/cpu4/event-0289.log) | 1000 | Zero-only |
+| [`ld_blocks.no_sr:u`](workers/cpu14/event-0228.log) | 1000 | Zero-only |
+| [`lsd.cycles_active:u`](workers/cpu17/event-0231.log) | 1000 | Zero-only |
+| [`lsd.cycles_ok:u`](workers/cpu18/event-0232.log) | 1000 | Zero-only |
+| [`lsd.uops:u`](workers/cpu19/event-0233.log) | 1000 | Zero-only |
+| [`mem_load_l3_hit_retired.xsnp_miss:u`](workers/cpu65/event-0066.log) | 1000 | Zero-only |
+| [`mem_load_l3_miss_retired.remote_dram:u`](workers/cpu69/event-0070.log) | 1000 | Zero-only |
+| [`mem_load_l3_miss_retired.remote_fwd:u`](workers/cpu70/event-0071.log) | 1000 | Zero-only |
+| [`mem_load_misc_retired.uc:u`](workers/cpu1/event-0073.log) | 1000 | Zero-only |
+| [`misc_retired.lbr_inserts:u`](workers/cpu23/event-0237.log) | 1000 | Zero-only |
+| [`rtm_retired.aborted:u`](workers/cpu2/event-0145.log) | 1000 | Zero-only |
+| [`rtm_retired.aborted_events:u`](workers/cpu3/event-0146.log) | 1000 | Zero-only |
+| [`rtm_retired.aborted_mem:u`](workers/cpu4/event-0147.log) | 1000 | Zero-only |
+| [`rtm_retired.aborted_memtype:u`](workers/cpu5/event-0148.log) | 1000 | Zero-only |
+| [`rtm_retired.aborted_unfriendly:u`](workers/cpu6/event-0149.log) | 1000 | Zero-only |
+| [`rtm_retired.commit:u`](workers/cpu7/event-0150.log) | 1000 | Zero-only |
+| [`rtm_retired.start:u`](workers/cpu8/event-0151.log) | 1000 | Zero-only |
+| [`sq_misc.bus_lock:u`](workers/cpu11/event-0083.log) | 1000 | Zero-only |
+| [`sw_prefetch_access.prefetchw:u`](workers/cpu14/event-0086.log) | 1000 | Zero-only |
+| [`tx_mem.abort_capacity_read:u`](workers/cpu9/event-0152.log) | 1000 | Zero-only |
+| [`tx_mem.abort_capacity_write:u`](workers/cpu10/event-0153.log) | 1000 | Zero-only |
+| [`tx_mem.abort_conflict:u`](workers/cpu11/event-0154.log) | 1000 | Zero-only |

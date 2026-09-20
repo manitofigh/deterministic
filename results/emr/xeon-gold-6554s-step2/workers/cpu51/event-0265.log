@@ -1,13 +1,13 @@
 event: uops_executed.x87:u
 cpu: 51
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 36137876
+parsed count: 36153213
 exit: 0
 
 --- round 2 ---
-parsed count: 36131711
+parsed count: 36129039
 exit: 0
 
 result: Non-deterministic

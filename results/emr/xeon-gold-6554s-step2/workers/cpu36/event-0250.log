@@ -1,13 +1,13 @@
 event: uops_dispatched.port_4_9:u
 cpu: 36
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 162061762
+parsed count: 159159176
 exit: 0
 
 --- round 2 ---
-parsed count: 157166502
+parsed count: 155068979
 exit: 0
 
 result: Non-deterministic

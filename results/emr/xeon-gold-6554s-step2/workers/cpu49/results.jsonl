@@ -1,4 +1,4 @@
-{"index": 50, "event": "l2_rqsts.rfo_miss:u", "cpu": 49, "runs": 2, "status": "Non-deterministic", "counts": [99979, 99968], "note": "", "log": "workers/cpu49/event-0050.log"}
-{"index": 121, "event": "icache_data.stall_periods:u", "cpu": 49, "runs": 2, "status": "Non-deterministic", "counts": [20622, 20316], "note": "", "log": "workers/cpu49/event-0121.log"}
-{"index": 192, "event": "cpu_clk_unhalted.thread_p:u", "cpu": 49, "runs": 2, "status": "Non-deterministic", "counts": [3762517590, 3766966353], "note": "", "log": "workers/cpu49/event-0192.log"}
-{"index": 263, "event": "uops_executed.stalls:u", "cpu": 49, "runs": 2, "status": "Non-deterministic", "counts": [1011054282, 1037105768], "note": "", "log": "workers/cpu49/event-0263.log"}
+{"index": 50, "event": "l2_rqsts.rfo_miss:u", "cpu": 49, "runs": 2, "status": "Non-deterministic", "counts": [99997, 99971], "note": "", "log": "workers/cpu49/event-0050.log"}
+{"index": 121, "event": "icache_data.stall_periods:u", "cpu": 49, "runs": 2, "status": "Non-deterministic", "counts": [21285, 22035], "note": "", "log": "workers/cpu49/event-0121.log"}
+{"index": 192, "event": "cpu_clk_unhalted.thread_p:u", "cpu": 49, "runs": 2, "status": "Non-deterministic", "counts": [3797705076, 3803403627], "note": "", "log": "workers/cpu49/event-0192.log"}
+{"index": 263, "event": "uops_executed.stalls:u", "cpu": 49, "runs": 2, "status": "Non-deterministic", "counts": [1033411415, 1039526183], "note": "", "log": "workers/cpu49/event-0263.log"}

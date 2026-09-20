@@ -1,13 +1,13 @@
 event: l2_lines_out.silent:u
 cpu: 31
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 600221
+parsed count: 600177
 exit: 0
 
 --- round 2 ---
-parsed count: 599574
+parsed count: 600019
 exit: 0
 
 result: Non-deterministic

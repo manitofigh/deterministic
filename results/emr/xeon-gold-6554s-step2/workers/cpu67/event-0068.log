@@ -1,13 +1,13 @@
 event: mem_load_l3_hit_retired.xsnp_none:u
 cpu: 67
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 4
+parsed count: 5
 exit: 0
 
 --- round 2 ---
-parsed count: 1
+parsed count: 10
 exit: 0
 
 result: Non-deterministic

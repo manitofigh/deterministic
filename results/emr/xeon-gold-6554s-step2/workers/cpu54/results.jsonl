@@ -1,4 +1,4 @@
-{"index": 55, "event": "longest_lat_cache.reference:u", "cpu": 54, "runs": 2, "status": "Non-deterministic", "counts": [600635, 599922], "note": "", "log": "workers/cpu54/event-0055.log"}
-{"index": 126, "event": "idq.dsb_uops:u", "cpu": 54, "runs": 2, "status": "Non-deterministic", "counts": [203913492, 207319209], "note": "", "log": "workers/cpu54/event-0126.log"}
-{"index": 197, "event": "cycle_activity.stalls_l2_miss:u", "cpu": 54, "runs": 2, "status": "Non-deterministic", "counts": [264400232, 245007673], "note": "", "log": "workers/cpu54/event-0197.log"}
-{"index": 268, "event": "uops_retired.cycles:u", "cpu": 54, "runs": 2, "status": "Non-deterministic", "counts": [2497016004, 2496716303], "note": "", "log": "workers/cpu54/event-0268.log"}
+{"index": 55, "event": "longest_lat_cache.reference:u", "cpu": 54, "runs": 2, "status": "Non-deterministic", "counts": [597894, 599910], "note": "", "log": "workers/cpu54/event-0055.log"}
+{"index": 126, "event": "idq.dsb_uops:u", "cpu": 54, "runs": 2, "status": "Non-deterministic", "counts": [203801958, 208392510], "note": "", "log": "workers/cpu54/event-0126.log"}
+{"index": 197, "event": "cycle_activity.stalls_l2_miss:u", "cpu": 54, "runs": 2, "status": "Non-deterministic", "counts": [266986268, 233498576], "note": "", "log": "workers/cpu54/event-0197.log"}
+{"index": 268, "event": "uops_retired.cycles:u", "cpu": 54, "runs": 2, "status": "Non-deterministic", "counts": [2497349482, 2495846841], "note": "", "log": "workers/cpu54/event-0268.log"}

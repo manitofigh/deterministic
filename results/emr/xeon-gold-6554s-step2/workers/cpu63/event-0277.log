@@ -1,9 +1,9 @@
 event: dtlb_load_misses.walk_completed_4k:u
 cpu: 63
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 28
+parsed count: 26
 exit: 0
 
 --- round 2 ---

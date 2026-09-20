@@ -1,13 +1,13 @@
 event: dtlb_store_misses.walk_completed:u
 cpu: 67
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 30040
+parsed count: 30043
 exit: 0
 
 --- round 2 ---
-parsed count: 30036
+parsed count: 30038
 exit: 0
 
 result: Non-deterministic

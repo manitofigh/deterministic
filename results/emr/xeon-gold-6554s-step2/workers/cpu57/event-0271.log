@@ -1,13 +1,13 @@
 event: uops_retired.stalls:u
 cpu: 57
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 1272783803
+parsed count: 1261704512
 exit: 0
 
 --- round 2 ---
-parsed count: 1273345288
+parsed count: 1254073361
 exit: 0
 
 result: Non-deterministic

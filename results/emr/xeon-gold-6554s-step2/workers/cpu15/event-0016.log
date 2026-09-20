@@ -1,13 +1,13 @@
 event: dTLB-store-misses:u
 cpu: 15
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 30048
+parsed count: 30035
 exit: 0
 
 --- round 2 ---
-parsed count: 30038
+parsed count: 30043
 exit: 0
 
 result: Non-deterministic

@@ -1,13 +1,13 @@
 event: l2_lines_out.useless_hwpf:u
 cpu: 32
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 10
+parsed count: 19
 exit: 0
 
 --- round 2 ---
-parsed count: 2
+parsed count: 8
 exit: 0
 
 result: Non-deterministic

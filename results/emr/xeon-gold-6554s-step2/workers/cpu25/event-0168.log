@@ -1,13 +1,13 @@
 event: br_inst_retired.far_branch:u
 cpu: 25
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 31277
+parsed count: 31291
 exit: 0
 
 --- round 2 ---
-parsed count: 31303
+parsed count: 31279
 exit: 0
 
 result: Non-deterministic

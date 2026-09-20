@@ -1,13 +1,13 @@
 event: iTLB-load-misses:u
 cpu: 16
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 1260
+parsed count: 1258
 exit: 0
 
 --- round 2 ---
-parsed count: 1261
+parsed count: 1251
 exit: 0
 
 result: Non-deterministic

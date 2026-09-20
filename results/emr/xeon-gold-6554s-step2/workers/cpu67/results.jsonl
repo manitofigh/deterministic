@@ -1,4 +1,4 @@
-{"index": 68, "event": "mem_load_l3_hit_retired.xsnp_none:u", "cpu": 67, "runs": 2, "status": "Non-deterministic", "counts": [4, 1], "note": "", "log": "workers/cpu67/event-0068.log"}
-{"index": 139, "event": "cycle_activity.stalls_l3_miss:u", "cpu": 67, "runs": 2, "status": "Non-deterministic", "counts": [113944252, 112875725], "note": "", "log": "workers/cpu67/event-0139.log"}
-{"index": 210, "event": "inst_retired.macro_fused:u", "cpu": 67, "runs": 2, "status": "Non-deterministic", "counts": [1859997, 1859993], "note": "", "log": "workers/cpu67/event-0210.log"}
-{"index": 281, "event": "dtlb_store_misses.walk_completed:u", "cpu": 67, "runs": 2, "status": "Non-deterministic", "counts": [30040, 30036], "note": "", "log": "workers/cpu67/event-0281.log"}
+{"index": 68, "event": "mem_load_l3_hit_retired.xsnp_none:u", "cpu": 67, "runs": 2, "status": "Non-deterministic", "counts": [5, 10], "note": "", "log": "workers/cpu67/event-0068.log"}
+{"index": 139, "event": "cycle_activity.stalls_l3_miss:u", "cpu": 67, "runs": 2, "status": "Non-deterministic", "counts": [114544795, 118415095], "note": "", "log": "workers/cpu67/event-0139.log"}
+{"index": 210, "event": "inst_retired.macro_fused:u", "cpu": 67, "runs": 2, "status": "Non-deterministic", "counts": [1859994, 1859995], "note": "", "log": "workers/cpu67/event-0210.log"}
+{"index": 281, "event": "dtlb_store_misses.walk_completed:u", "cpu": 67, "runs": 2, "status": "Non-deterministic", "counts": [30043, 30038], "note": "", "log": "workers/cpu67/event-0281.log"}

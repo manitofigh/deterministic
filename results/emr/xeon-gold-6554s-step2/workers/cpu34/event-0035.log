@@ -1,13 +1,13 @@
 event: l2_request.miss:u
 cpu: 34
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 599026
+parsed count: 600616
 exit: 0
 
 --- round 2 ---
-parsed count: 600477
+parsed count: 600374
 exit: 0
 
 result: Non-deterministic

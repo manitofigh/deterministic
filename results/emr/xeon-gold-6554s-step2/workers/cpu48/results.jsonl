@@ -1,4 +1,4 @@
-{"index": 49, "event": "l2_rqsts.rfo_hit:u", "cpu": 48, "runs": 2, "status": "Non-deterministic", "counts": [15033, 14739], "note": "", "log": "workers/cpu48/event-0049.log"}
-{"index": 120, "event": "dsb2mite_switches.penalty_cycles:u", "cpu": 48, "runs": 2, "status": "Non-deterministic", "counts": [2458508, 2504951], "note": "", "log": "workers/cpu48/event-0120.log"}
-{"index": 191, "event": "cpu_clk_unhalted.thread:u", "cpu": 48, "runs": 2, "status": "Non-deterministic", "counts": [3740274545, 3790849981], "note": "", "log": "workers/cpu48/event-0191.log"}
-{"index": 262, "event": "uops_executed.cycles_ge_4:u", "cpu": 48, "runs": 2, "status": "Non-deterministic", "counts": [577009197, 577717090], "note": "", "log": "workers/cpu48/event-0262.log"}
+{"index": 49, "event": "l2_rqsts.rfo_hit:u", "cpu": 48, "runs": 2, "status": "Non-deterministic", "counts": [15802, 14049], "note": "", "log": "workers/cpu48/event-0049.log"}
+{"index": 120, "event": "dsb2mite_switches.penalty_cycles:u", "cpu": 48, "runs": 2, "status": "Non-deterministic", "counts": [2506815, 2526070], "note": "", "log": "workers/cpu48/event-0120.log"}
+{"index": 191, "event": "cpu_clk_unhalted.thread:u", "cpu": 48, "runs": 2, "status": "Non-deterministic", "counts": [3746256391, 3780157840], "note": "", "log": "workers/cpu48/event-0191.log"}
+{"index": 262, "event": "uops_executed.cycles_ge_4:u", "cpu": 48, "runs": 2, "status": "Non-deterministic", "counts": [577626904, 577092317], "note": "", "log": "workers/cpu48/event-0262.log"}

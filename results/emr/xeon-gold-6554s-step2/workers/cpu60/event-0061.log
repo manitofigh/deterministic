@@ -1,13 +1,13 @@
 event: mem_inst_retired.split_stores:u
 cpu: 60
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
 parsed count: 109992
 exit: 0
 
 --- round 2 ---
-parsed count: 109990
+parsed count: 109994
 exit: 0
 
 result: Non-deterministic

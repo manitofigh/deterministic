@@ -1,13 +1,13 @@
 event: idq.ms_switches:u
 cpu: 59
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 56029504
+parsed count: 56019008
 exit: 0
 
 --- round 2 ---
-parsed count: 56015667
+parsed count: 56048986
 exit: 0
 
 result: Non-deterministic

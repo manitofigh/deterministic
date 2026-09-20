@@ -1,13 +1,13 @@
 event: machine_clears.memory_ordering:u
 cpu: 68
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 189088
+parsed count: 217609
 exit: 0
 
 --- round 2 ---
-parsed count: 200669
+parsed count: 200002
 exit: 0
 
 result: Non-deterministic

@@ -1,4 +1,4 @@
-{"index": 64, "event": "mem_load_completed.l1_miss_any:u", "cpu": 63, "runs": 2, "status": "Non-deterministic", "counts": [2339287, 2343139], "note": "", "log": "workers/cpu63/event-0064.log"}
-{"index": 135, "event": "idq_bubbles.cycles_fe_was_ok:u", "cpu": 63, "runs": 2, "status": "Non-deterministic", "counts": [988500307, 952702926], "note": "", "log": "workers/cpu63/event-0135.log"}
-{"index": 206, "event": "exe_activity.exe_bound_0_ports:u", "cpu": 63, "runs": 2, "status": "Non-deterministic", "counts": [133131598, 132549246], "note": "", "log": "workers/cpu63/event-0206.log"}
-{"index": 277, "event": "dtlb_load_misses.walk_completed_4k:u", "cpu": 63, "runs": 2, "status": "Non-deterministic", "counts": [28, 27], "note": "", "log": "workers/cpu63/event-0277.log"}
+{"index": 64, "event": "mem_load_completed.l1_miss_any:u", "cpu": 63, "runs": 2, "status": "Non-deterministic", "counts": [2339334, 2341404], "note": "", "log": "workers/cpu63/event-0064.log"}
+{"index": 135, "event": "idq_bubbles.cycles_fe_was_ok:u", "cpu": 63, "runs": 2, "status": "Non-deterministic", "counts": [964761896, 997035077], "note": "", "log": "workers/cpu63/event-0135.log"}
+{"index": 206, "event": "exe_activity.exe_bound_0_ports:u", "cpu": 63, "runs": 2, "status": "Non-deterministic", "counts": [132421631, 133057249], "note": "", "log": "workers/cpu63/event-0206.log"}
+{"index": 277, "event": "dtlb_load_misses.walk_completed_4k:u", "cpu": 63, "runs": 2, "status": "Non-deterministic", "counts": [26, 27], "note": "", "log": "workers/cpu63/event-0277.log"}

@@ -1,4 +1,4 @@
-{"index": 46, "event": "l2_rqsts.hwpf_miss:u", "cpu": 45, "runs": 2, "status": "Non-deterministic", "counts": [317, 411], "note": "", "log": "workers/cpu45/event-0046.log"}
-{"index": 117, "event": "baclears.any:u", "cpu": 45, "runs": 2, "status": "Non-deterministic", "counts": [36358, 46523], "note": "", "log": "workers/cpu45/event-0117.log"}
-{"index": 188, "event": "cpu_clk_unhalted.ref_distributed:u", "cpu": 45, "runs": 2, "status": "Non-deterministic", "counts": [31098598, 31158017], "note": "", "log": "workers/cpu45/event-0188.log"}
-{"index": 259, "event": "uops_executed.cycles_ge_1:u", "cpu": 45, "runs": 2, "status": "Non-deterministic", "counts": [2736483835, 2734277494], "note": "", "log": "workers/cpu45/event-0259.log"}
+{"index": 46, "event": "l2_rqsts.hwpf_miss:u", "cpu": 45, "runs": 2, "status": "Non-deterministic", "counts": [368, 504], "note": "", "log": "workers/cpu45/event-0046.log"}
+{"index": 117, "event": "baclears.any:u", "cpu": 45, "runs": 2, "status": "Non-deterministic", "counts": [53165, 62615], "note": "", "log": "workers/cpu45/event-0117.log"}
+{"index": 188, "event": "cpu_clk_unhalted.ref_distributed:u", "cpu": 45, "runs": 2, "status": "Non-deterministic", "counts": [31298304, 31098780], "note": "", "log": "workers/cpu45/event-0188.log"}
+{"index": 259, "event": "uops_executed.cycles_ge_1:u", "cpu": 45, "runs": 2, "status": "Non-deterministic", "counts": [2734506305, 2735039927], "note": "", "log": "workers/cpu45/event-0259.log"}

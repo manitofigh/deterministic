@@ -1,13 +1,13 @@
 event: bus-cycles:u
 cpu: 2
-round limit: 5
+round limit: 1000
 
 --- round 1 ---
-parsed count: 2730930400
+parsed count: 2728988680
 exit: 0
 
 --- round 2 ---
-parsed count: 2716086560
+parsed count: 2715159480
 exit: 0
 
 result: Non-deterministic
