@@ -1,4 +1,0 @@
-{"index": 17, "event": "iTLB-load-misses:u", "cpu": 16, "runs": 2, "status": "Non-deterministic", "counts": [1246, 1259], "note": "", "log": "workers/cpu16/event-0017.log"}
-{"index": 88, "event": "sw_prefetch_access.t1_t2:u", "cpu": 16, "runs": 2, "status": "Non-deterministic", "counts": [200001, 200004], "note": "", "log": "workers/cpu16/event-0088.log"}
-{"index": 159, "event": "rs.empty_resource:u", "cpu": 16, "runs": 2, "status": "Non-deterministic", "counts": [644025, 642353], "note": "", "log": "workers/cpu16/event-0159.log"}
-{"index": 230, "event": "load_hit_prefetch.swpf:u", "cpu": 16, "runs": 26, "status": "Non-deterministic", "counts": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10], "note": "", "log": "workers/cpu16/event-0230.log"}

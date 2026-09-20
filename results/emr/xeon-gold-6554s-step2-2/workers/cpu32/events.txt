@@ -1,4 +1,0 @@
-l2_lines_out.useless_hwpf
-fp_arith_inst_retired.512b_packed_single
-br_misp_retired.cond_ntaken
-uops_decoded.dec0_uops

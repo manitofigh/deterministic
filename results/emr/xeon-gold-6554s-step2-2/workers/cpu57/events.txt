@@ -1,4 +1,0 @@
-mem_inst_retired.any
-idq.mite_uops
-exe_activity.2_3_ports_util
-uops_retired.stalls

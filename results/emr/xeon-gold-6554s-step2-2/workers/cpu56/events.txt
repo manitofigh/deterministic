@@ -1,4 +1,0 @@
-mem_inst_retired.all_stores
-idq.mite_cycles_ok
-exe_activity.1_ports_util
-uops_retired.slots

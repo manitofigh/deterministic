@@ -1,0 +1,15 @@
+event: idq.ms_uops:u
+cpu: 5
+round limit: 1000
+
+--- round 1 ---
+parsed count: 12874111662
+exit: 0
+
+--- round 2 ---
+parsed count: 12873117209
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

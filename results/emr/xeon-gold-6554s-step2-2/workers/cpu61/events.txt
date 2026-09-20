@@ -1,4 +1,0 @@
-mem_inst_retired.stlb_miss_loads
-idq_bubbles.core
-exe_activity.bound_on_loads
-dtlb_load_misses.walk_completed_1g

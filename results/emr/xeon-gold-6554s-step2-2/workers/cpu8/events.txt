@@ -1,4 +1,0 @@
-L1-dcache-loads
-mem_load_retired.l3_miss
-rtm_retired.start
-int_vec_retired.add_256

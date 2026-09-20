@@ -1,4 +1,0 @@
-mem_load_completed.l1_miss_any
-idq_bubbles.cycles_fe_was_ok
-exe_activity.exe_bound_0_ports
-dtlb_load_misses.walk_completed_4k

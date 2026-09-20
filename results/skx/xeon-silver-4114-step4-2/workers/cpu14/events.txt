@@ -1,0 +1,16 @@
+mem-stores
+l2_lines_out.silent
+longest_lat_cache.miss
+mem_load_retired.fb_hit
+fp_arith_inst_retired.8_flops
+idq.dsb_cycles
+hle_retired.aborted
+tx_exec.misc3
+core_snoop_response.rsp_sfwdm
+br_misp_retired.near_call
+cycle_activity.stalls_mem_any
+ld_blocks_partial.address_alias
+uops_dispatched_port.port_4
+uops_issued.stall_cycles
+dtlb_store_misses.walk_completed_2m_4m
+iTLB-loads

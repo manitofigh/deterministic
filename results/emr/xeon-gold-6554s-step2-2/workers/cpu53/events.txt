@@ -1,4 +1,0 @@
-longest_lat_cache.miss
-idq.dsb_cycles_ok
-cycle_activity.stalls_l1d_miss
-uops_issued.cycles

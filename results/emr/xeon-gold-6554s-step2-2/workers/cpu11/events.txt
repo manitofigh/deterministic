@@ -1,4 +1,0 @@
-L1-icache-load-misses
-sq_misc.bus_lock
-tx_mem.abort_conflict
-int_vec_retired.vnni_128

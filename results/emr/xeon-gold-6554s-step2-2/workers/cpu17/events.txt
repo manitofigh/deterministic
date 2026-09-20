@@ -1,4 +1,0 @@
-branch-loads
-arith.fpdiv_active
-xq.full_cycles
-lsd.cycles_active

@@ -1,4 +1,0 @@
-{"index": 46, "event": "l2_rqsts.hwpf_miss:u", "cpu": 45, "runs": 2, "status": "Non-deterministic", "counts": [289, 357], "note": "", "log": "workers/cpu45/event-0046.log"}
-{"index": 117, "event": "baclears.any:u", "cpu": 45, "runs": 2, "status": "Non-deterministic", "counts": [56913, 36127], "note": "", "log": "workers/cpu45/event-0117.log"}
-{"index": 188, "event": "cpu_clk_unhalted.ref_distributed:u", "cpu": 45, "runs": 2, "status": "Non-deterministic", "counts": [31451287, 31344900], "note": "", "log": "workers/cpu45/event-0188.log"}
-{"index": 259, "event": "uops_executed.cycles_ge_1:u", "cpu": 45, "runs": 2, "status": "Non-deterministic", "counts": [2733992671, 2734473425], "note": "", "log": "workers/cpu45/event-0259.log"}

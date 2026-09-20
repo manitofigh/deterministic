@@ -1,4 +1,0 @@
-l1d.hwpf_miss
-fp_arith_dispatched.port_5
-br_inst_retired.cond
-misc2_retired.lfence

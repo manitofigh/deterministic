@@ -1,4 +1,0 @@
-l2_trans.l2_wb
-idq.dsb_cycles_any
-cycle_activity.cycles_mem_any
-uops_issued.any

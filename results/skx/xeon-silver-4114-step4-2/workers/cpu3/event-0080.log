@@ -1,0 +1,19 @@
+event: sw_prefetch_access.nta:u
+cpu: 3
+round limit: 1000
+
+--- round 1 ---
+parsed count: 100016
+exit: 0
+
+--- round 2 ---
+parsed count: 100016
+exit: 0
+
+--- round 3 ---
+parsed count: 100026
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 3
+

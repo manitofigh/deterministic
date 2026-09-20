@@ -1,0 +1,16 @@
+cache-references
+tx-commit
+l2_rqsts.code_rd_miss
+mem_inst_retired.stlb_miss_stores
+sw_prefetch_access.prefetchw
+dsb2mite_switches.penalty_cycles
+idq.ms_switches
+rtm_retired.aborted
+tx_mem.hle_elision_buffer_full
+br_inst_retired.conditional
+cpu_clk_unhalted.ref_xclk_any
+inst_decoded.decoders
+partial_rat_stalls.scoreboard
+uops_executed.core_cycles_none
+dtlb_load_misses.walk_completed
+itlb_misses.walk_completed_4k

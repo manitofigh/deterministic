@@ -1,4 +1,0 @@
-dTLB-store-misses
-sw_prefetch_access.t0
-rs.empty_count
-ld_blocks.store_forward

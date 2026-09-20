@@ -1,4 +1,0 @@
-l1d_pend_miss.l2_stalls
-fp_arith_inst_retired.128b_packed_double
-br_inst_retired.indirect
-topdown.backend_bound_slots

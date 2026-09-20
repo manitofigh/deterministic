@@ -1,0 +1,15 @@
+event: idq.all_mite_cycles_any_uops:u
+cpu: 13
+round limit: 1000
+
+--- round 1 ---
+parsed count: 5558900429
+exit: 0
+
+--- round 2 ---
+parsed count: 5558578739
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

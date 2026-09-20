@@ -1,5 +1,0 @@
-cache-misses
-mem_load_retired.l1_hit
-rtm_retired.aborted_events
-int_misc.recovery_cycles
-itlb_misses.walk_completed

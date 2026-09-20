@@ -1,4 +1,0 @@
-l2_rqsts.all_demand_miss
-fp_arith_inst_retired.vector
-br_misp_retired.ret
-uops_dispatched.port_5_11

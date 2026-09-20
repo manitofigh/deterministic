@@ -1,0 +1,16 @@
+cache-misses
+tx-capacity
+l2_rqsts.code_rd_hit
+mem_inst_retired.stlb_miss_loads
+sw_prefetch_access.nta
+dsb2mite_switches.count
+idq.ms_mite_uops
+machine_clears.memory_ordering
+tx_mem.abort_hle_store_to_elided_lock
+br_inst_retired.cond_ntaken
+cpu_clk_unhalted.ref_xclk
+ild_stall.lcp
+other_assists.any
+uops_executed.core_cycles_ge_4
+dtlb_load_misses.walk_active
+itlb_misses.walk_completed_2m_4m

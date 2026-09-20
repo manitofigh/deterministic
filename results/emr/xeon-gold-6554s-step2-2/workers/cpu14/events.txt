@@ -1,4 +1,0 @@
-dTLB-stores
-sw_prefetch_access.prefetchw
-rs.empty
-ld_blocks.no_sr

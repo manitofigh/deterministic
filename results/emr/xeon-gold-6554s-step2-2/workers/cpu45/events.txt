@@ -1,4 +1,0 @@
-l2_rqsts.hwpf_miss
-baclears.any
-cpu_clk_unhalted.ref_distributed
-uops_executed.cycles_ge_1

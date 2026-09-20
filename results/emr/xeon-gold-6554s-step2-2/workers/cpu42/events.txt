@@ -1,4 +1,0 @@
-l2_rqsts.code_rd_miss
-fp_arith_inst_retired2.scalar
-cpu_clk_unhalted.one_thread_active
-uops_executed.core_cycles_ge_2

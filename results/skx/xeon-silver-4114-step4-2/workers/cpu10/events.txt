@@ -1,0 +1,16 @@
+el-commit
+l1d_pend_miss.pending_cycles
+l2_rqsts.references
+mem_load_l3_miss_retired.remote_dram
+fp_arith_inst_retired.256b_packed_single
+idq.all_dsb_cycles_4_uops
+idq_uops_not_delivered.cycles_le_2_uop_deliv.core
+rtm_retired.commit
+core_snoop_response.rsp_ifwdm
+br_misp_exec.all_branches
+cycle_activity.cycles_l2_miss
+int_misc.recovery_cycles
+uops_dispatched_port.port_0
+uops_executed.thread
+dtlb_store_misses.stlb_hit
+dTLB-loads

@@ -1,4 +1,0 @@
-l1d_pend_miss.fb_full_periods
-fp_arith_dispatched.v2
-br_inst_retired.far_branch
-resource_stalls.scoreboard

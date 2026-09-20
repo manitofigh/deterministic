@@ -1,5 +1,0 @@
-branch-misses
-mem_load_misc_retired.uc
-memory_activity.stalls_l3_miss
-int_misc.clears_count
-itlb_misses.stlb_hit

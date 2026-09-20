@@ -1,4 +1,0 @@
-longest_lat_cache.reference
-idq.dsb_uops
-cycle_activity.stalls_l2_miss
-uops_retired.cycles

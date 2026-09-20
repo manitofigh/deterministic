@@ -1,4 +1,0 @@
-l2_rqsts.all_rfo
-fp_arith_inst_retired2.512b_packed_half
-cpu_clk_unhalted.c0_wait
-uops_executed.core

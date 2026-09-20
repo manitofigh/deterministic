@@ -1,5 +1,0 @@
-cpu-cycles
-mem_load_retired.l2_hit
-rtm_retired.aborted_memtype
-int_vec_retired.128bit
-itlb_misses.walk_completed_4k

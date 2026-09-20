@@ -1,0 +1,15 @@
+event: l2_rqsts.pf_miss:u
+cpu: 9
+round limit: 1000
+
+--- round 1 ---
+parsed count: 24811
+exit: 0
+
+--- round 2 ---
+parsed count: 22164
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

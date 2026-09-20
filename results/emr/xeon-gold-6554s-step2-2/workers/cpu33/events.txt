@@ -1,4 +1,0 @@
-l2_request.all
-fp_arith_inst_retired.8_flops
-br_misp_retired.cond_taken
-uops_dispatched.port_0

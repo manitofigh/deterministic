@@ -1,4 +1,0 @@
-iTLB-load-misses
-sw_prefetch_access.t1_t2
-rs.empty_resource
-load_hit_prefetch.swpf

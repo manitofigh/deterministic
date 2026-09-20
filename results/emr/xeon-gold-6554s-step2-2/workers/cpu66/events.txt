@@ -1,4 +1,0 @@
-mem_load_l3_hit_retired.xsnp_no_fwd
-idq_uops_not_delivered.cycles_fe_was_ok
-inst_retired.any_p
-dtlb_store_misses.walk_active

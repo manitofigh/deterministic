@@ -1,4 +1,0 @@
-{"index": 53, "event": "l2_trans.l2_wb:u", "cpu": 52, "runs": 2, "status": "Non-deterministic", "counts": [480, 548], "note": "", "log": "workers/cpu52/event-0053.log"}
-{"index": 124, "event": "idq.dsb_cycles_any:u", "cpu": 52, "runs": 2, "status": "Non-deterministic", "counts": [30061245, 30018197], "note": "", "log": "workers/cpu52/event-0124.log"}
-{"index": 195, "event": "cycle_activity.cycles_mem_any:u", "cpu": 52, "runs": 2, "status": "Non-deterministic", "counts": [3078660192, 3053980917], "note": "", "log": "workers/cpu52/event-0195.log"}
-{"index": 266, "event": "uops_issued.any:u", "cpu": 52, "runs": 2, "status": "Non-deterministic", "counts": [8045315037, 8045398601], "note": "", "log": "workers/cpu52/event-0266.log"}

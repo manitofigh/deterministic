@@ -1,4 +1,0 @@
-l2_rqsts.code_rd_hit
-fp_arith_inst_retired2.complex_scalar_half
-cpu_clk_unhalted.distributed
-uops_executed.core_cycles_ge_1

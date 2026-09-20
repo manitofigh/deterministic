@@ -1,0 +1,16 @@
+el-conflict
+l1d_pend_miss.pending_cycles_any
+l2_rqsts.rfo_hit
+mem_load_l3_miss_retired.remote_fwd
+fp_arith_inst_retired.4_flops
+idq.all_dsb_cycles_any_uops
+idq_uops_not_delivered.cycles_le_3_uop_deliv.core
+rtm_retired.start
+core_snoop_response.rsp_ihitfse
+br_misp_exec.indirect
+cycle_activity.cycles_mem_any
+int_misc.recovery_cycles_any
+uops_dispatched_port.port_1
+uops_executed.x87
+dtlb_store_misses.walk_active
+dTLB-load-misses

@@ -1,4 +1,0 @@
-l2_rqsts.all_demand_references
-fp_arith_inst_retired2.128b_packed_half
-cpu_clk_unhalted.c01
-uops_dispatched.port_6

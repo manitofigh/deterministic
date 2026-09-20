@@ -1,0 +1,15 @@
+event: icache_64b.iftag_hit:u
+cpu: 6
+round limit: 1000
+
+--- round 1 ---
+parsed count: 57427140
+exit: 0
+
+--- round 2 ---
+parsed count: 56705325
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

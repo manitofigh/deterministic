@@ -1,0 +1,16 @@
+branch-misses
+topdown-total-slots
+l2_rqsts.all_pf
+mem_inst_retired.split_loads
+mem_load_retired.l3_miss
+baclears.any
+idq.ms_cycles
+hle_retired.commit
+tx_mem.abort_hle_elision_buffer_not_empty
+br_inst_retired.all_branches
+cpu_clk_unhalted.one_thread_active
+exe_activity.bound_on_stores
+machine_clears.count
+uops_executed.core_cycles_ge_2
+dtlb_load_misses.miss_causes_a_walk
+itlb_misses.walk_completed

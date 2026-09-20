@@ -1,4 +1,0 @@
-{"index": 58, "event": "mem_inst_retired.any:u", "cpu": 57, "runs": 2, "status": "Non-deterministic", "counts": [95521488, 95521407], "note": "", "log": "workers/cpu57/event-0058.log"}
-{"index": 129, "event": "idq.mite_uops:u", "cpu": 57, "runs": 2, "status": "Non-deterministic", "counts": [215922377, 217081292], "note": "", "log": "workers/cpu57/event-0129.log"}
-{"index": 200, "event": "exe_activity.2_3_ports_util:u", "cpu": 57, "runs": 2, "status": "Non-deterministic", "counts": [1950902697, 1950577602], "note": "", "log": "workers/cpu57/event-0200.log"}
-{"index": 271, "event": "uops_retired.stalls:u", "cpu": 57, "runs": 2, "status": "Non-deterministic", "counts": [1251528454, 1257160009], "note": "", "log": "workers/cpu57/event-0271.log"}

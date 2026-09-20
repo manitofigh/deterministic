@@ -1,4 +1,0 @@
-mem_load_l3_hit_retired.xsnp_fwd
-idq_uops_not_delivered.core
-inst_decoded.decoders
-dtlb_load_misses.walk_pending

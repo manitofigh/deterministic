@@ -1,0 +1,2 @@
+Running: 132/303 (43.6%); remaining: 171; elapsed: 8884s
+Non-deterministic: 94; Potentially deterministic: 8; Zero-only: 30

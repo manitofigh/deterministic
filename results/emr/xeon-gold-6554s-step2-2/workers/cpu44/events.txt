@@ -1,4 +1,0 @@
-l2_rqsts.demand_data_rd_miss
-fp_arith_inst_retired2.vector
-cpu_clk_unhalted.pause_inst
-uops_executed.core_cycles_ge_4

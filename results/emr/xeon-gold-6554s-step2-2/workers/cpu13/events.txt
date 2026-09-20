@@ -1,4 +1,0 @@
-dTLB-load-misses
-sw_prefetch_access.nta
-exe.amx_busy
-ld_blocks.address_alias
