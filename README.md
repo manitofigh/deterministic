@@ -68,7 +68,7 @@ By default, output goes under `results/<microarch>/<processor-model>-step<steppi
 Your existing directories would not be overwritten; more runs on the same machine appends `-2`, then `-3`, etc to the dir name.
 
 Based on the arch/uarch that the script is ran on, the results are written under its relevant dir name. 
-There, you can see a beautifully-put-together results.md` containing the table of results. 
+There, you can see a beautifully-put-together `results.md` file containing the table of results. 
 The event names link to logs containing the assigned CPU, benchmark stderr, parsed counts and the final result. Benchmark stdout is discarded. The runs column says how many rounds we actually attempted, including the round that first differed or failed.
 
 | result | meaning |
