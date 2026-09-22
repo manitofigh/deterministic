@@ -1,0 +1,15 @@
+event: llc-store-misses:u
+cpu: 51
+round limit: 10
+
+--- round 1 ---
+parsed count: 42905
+exit: 0
+
+--- round 2 ---
+parsed count: 58554
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

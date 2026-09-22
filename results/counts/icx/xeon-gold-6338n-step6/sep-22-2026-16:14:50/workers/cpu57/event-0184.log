@@ -1,0 +1,15 @@
+event: inst_decoded.decoders:u
+cpu: 57
+round limit: 10
+
+--- round 1 ---
+parsed count: 87087179
+exit: 0
+
+--- round 2 ---
+parsed count: 86964846
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

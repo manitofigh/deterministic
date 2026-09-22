@@ -1,0 +1,4 @@
+longest_lat_cache.reference
+idq.ms_switches
+br_misp_retired.indirect
+uops_executed.core_cycles_ge_4

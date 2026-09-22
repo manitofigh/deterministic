@@ -1,0 +1,15 @@
+event: l1d_pend_miss.pending:u
+cpu: 13
+round limit: 10
+
+--- round 1 ---
+parsed count: 46901374
+exit: 0
+
+--- round 2 ---
+parsed count: 42601799
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

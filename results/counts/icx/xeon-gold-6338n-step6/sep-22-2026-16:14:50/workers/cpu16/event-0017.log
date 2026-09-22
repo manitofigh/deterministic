@@ -1,0 +1,15 @@
+event: l2_lines_out.non_silent:u
+cpu: 16
+round limit: 10
+
+--- round 1 ---
+parsed count: 462
+exit: 0
+
+--- round 2 ---
+parsed count: 470
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

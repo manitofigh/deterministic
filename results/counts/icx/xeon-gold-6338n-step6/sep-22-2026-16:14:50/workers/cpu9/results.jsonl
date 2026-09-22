@@ -1,0 +1,4 @@
+{"index": 10, "event": "l1d.replacement:u", "cpu": 9, "runs": 2, "status": "Non-deterministic", "counts": [777821, 793724], "note": "", "log": "workers/cpu9/event-0010.log"}
+{"index": 73, "event": "fp_arith_inst_retired.4_flops:u", "cpu": 9, "runs": 10, "status": "Potentially deterministic", "counts": [2900000, 2900000, 2900000, 2900000, 2900000, 2900000, 2900000, 2900000, 2900000, 2900000], "note": "", "log": "workers/cpu9/event-0073.log"}
+{"index": 136, "event": "tx_exec.misc2:u", "cpu": 9, "runs": 10, "status": "Zero-only", "counts": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "note": "all rounds returned zero; inconclusive", "log": "workers/cpu9/event-0136.log"}
+{"index": 199, "event": "lsd.cycles_ok:u", "cpu": 9, "runs": 10, "status": "Zero-only", "counts": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "note": "all rounds returned zero; inconclusive", "log": "workers/cpu9/event-0199.log"}

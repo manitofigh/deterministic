@@ -1,0 +1,4 @@
+l2_rqsts.demand_data_rd_hit
+icache_data.stalls
+br_inst_retired.indirect
+uops_dispatched.port_2_3

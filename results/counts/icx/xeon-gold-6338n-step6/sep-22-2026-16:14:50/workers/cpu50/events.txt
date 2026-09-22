@@ -1,0 +1,4 @@
+mem_load_l3_miss_retired.remote_pmm
+llc-loads
+cycle_activity.stalls_total
+dtlb_load_misses.walk_completed_1g

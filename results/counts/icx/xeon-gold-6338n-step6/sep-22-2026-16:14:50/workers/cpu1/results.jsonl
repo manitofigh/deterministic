@@ -1,0 +1,5 @@
+{"index": 2, "event": "slots:u", "cpu": 1, "runs": 2, "status": "Non-deterministic", "counts": [22094120895, 22062472965], "note": "", "log": "workers/cpu1/event-0002.log"}
+{"index": 65, "event": "sw_prefetch_access.prefetchw:u", "cpu": 1, "runs": 10, "status": "Zero-only", "counts": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "note": "all rounds returned zero; inconclusive", "log": "workers/cpu1/event-0065.log"}
+{"index": 128, "event": "machine_clears.memory_ordering:u", "cpu": 1, "runs": 2, "status": "Non-deterministic", "counts": [100036, 100044], "note": "", "log": "workers/cpu1/event-0128.log"}
+{"index": 191, "event": "int_misc.clears_count:u", "cpu": 1, "runs": 2, "status": "Non-deterministic", "counts": [1870663, 1870370], "note": "", "log": "workers/cpu1/event-0191.log"}
+{"index": 254, "event": "itlb_misses.walk_completed_2m_4m:u", "cpu": 1, "runs": 10, "status": "Zero-only", "counts": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "note": "all rounds returned zero; inconclusive", "log": "workers/cpu1/event-0254.log"}

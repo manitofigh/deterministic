@@ -1,0 +1,4 @@
+{"index": 26, "event": "l2_rqsts.demand_data_rd_hit:u", "cpu": 25, "runs": 2, "status": "Non-deterministic", "counts": [34011, 32905], "note": "", "log": "workers/cpu25/event-0026.log"}
+{"index": 89, "event": "icache_data.stalls:u", "cpu": 25, "runs": 2, "status": "Non-deterministic", "counts": [63511, 63975], "note": "", "log": "workers/cpu25/event-0089.log"}
+{"index": 152, "event": "br_inst_retired.indirect:u", "cpu": 25, "runs": 10, "status": "Potentially deterministic", "counts": [100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000], "note": "", "log": "workers/cpu25/event-0152.log"}
+{"index": 215, "event": "uops_dispatched.port_2_3:u", "cpu": 25, "runs": 2, "status": "Non-deterministic", "counts": [2460833263, 2460417514], "note": "", "log": "workers/cpu25/event-0215.log"}

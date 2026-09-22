@@ -1,0 +1,4 @@
+mem_inst_retired.stlb_miss_loads
+dtlb-load-misses
+cpu_clk_unhalted.ref_tsc
+uops_executed.x87

@@ -1,0 +1,5 @@
+event: sq_misc.bus_lock:u
+cpu: 60
+round limit: 10
+
+--- round 1 ---

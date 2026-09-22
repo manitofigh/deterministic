@@ -1,0 +1,15 @@
+event: idq.dsb_cycles_ok:u
+cpu: 28
+round limit: 10
+
+--- round 1 ---
+parsed count: 27886425
+exit: 0
+
+--- round 2 ---
+parsed count: 27172855
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

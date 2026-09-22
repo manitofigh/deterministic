@@ -1,0 +1,5 @@
+event: l1d.replacement:u
+cpu: 9
+round limit: 10
+
+--- round 1 ---

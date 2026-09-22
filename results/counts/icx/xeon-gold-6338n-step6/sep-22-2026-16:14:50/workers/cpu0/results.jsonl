@@ -1,0 +1,5 @@
+{"index": 1, "event": "mem-stores:u", "cpu": 0, "runs": 10, "status": "Potentially deterministic", "counts": [24060000, 24060000, 24060000, 24060000, 24060000, 24060000, 24060000, 24060000, 24060000, 24060000], "note": "", "log": "workers/cpu0/event-0001.log"}
+{"index": 64, "event": "sw_prefetch_access.nta:u", "cpu": 0, "runs": 2, "status": "Non-deterministic", "counts": [100005, 100007], "note": "", "log": "workers/cpu0/event-0064.log"}
+{"index": 127, "event": "cycle_activity.stalls_l3_miss:u", "cpu": 0, "runs": 2, "status": "Non-deterministic", "counts": [50986739, 46829483], "note": "", "log": "workers/cpu0/event-0127.log"}
+{"index": 190, "event": "int_misc.clear_resteer_cycles:u", "cpu": 0, "runs": 2, "status": "Non-deterministic", "counts": [8022491, 8037773], "note": "", "log": "workers/cpu0/event-0190.log"}
+{"index": 253, "event": "itlb_misses.walk_completed:u", "cpu": 0, "runs": 2, "status": "Non-deterministic", "counts": [14, 17], "note": "", "log": "workers/cpu0/event-0253.log"}

@@ -1,0 +1,4 @@
+{"index": 60, "event": "mem_load_retired.local_pmm:u", "cpu": 59, "runs": 10, "status": "Zero-only", "counts": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "note": "all rounds returned zero; inconclusive", "log": "workers/cpu59/event-0060.log"}
+{"index": 123, "event": "cpu-cycles:u", "cpu": 59, "runs": 2, "status": "Non-deterministic", "counts": [4300235053, 4301531928], "note": "", "log": "workers/cpu59/event-0123.log"}
+{"index": 186, "event": "inst_retired.any_p:u", "cpu": 59, "runs": 2, "status": "Non-deterministic", "counts": [227004948, 227004944], "note": "", "log": "workers/cpu59/event-0186.log"}
+{"index": 249, "event": "dtlb_store_misses.walk_completed_4k:u", "cpu": 59, "runs": 2, "status": "Non-deterministic", "counts": [30043, 30039], "note": "", "log": "workers/cpu59/event-0249.log"}

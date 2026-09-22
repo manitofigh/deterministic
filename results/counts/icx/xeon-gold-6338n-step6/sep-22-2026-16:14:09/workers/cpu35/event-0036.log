@@ -1,0 +1,5 @@
+event: mem_inst_retired.all_stores:u
+cpu: 35
+round limit: 10
+
+--- round 1 ---

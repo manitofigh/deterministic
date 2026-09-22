@@ -1,0 +1,15 @@
+event: itlb_misses.walk_active:u
+cpu: 62
+round limit: 10
+
+--- round 1 ---
+parsed count: 309896
+exit: 0
+
+--- round 2 ---
+parsed count: 308112
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

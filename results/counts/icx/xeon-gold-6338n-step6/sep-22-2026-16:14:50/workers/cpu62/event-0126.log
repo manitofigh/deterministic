@@ -1,0 +1,15 @@
+event: ref-cycles:u
+cpu: 62
+round limit: 10
+
+--- round 1 ---
+parsed count: 10565133040
+exit: 0
+
+--- round 2 ---
+parsed count: 10553494512
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

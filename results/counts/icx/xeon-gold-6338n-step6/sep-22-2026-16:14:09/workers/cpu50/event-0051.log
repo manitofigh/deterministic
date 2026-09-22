@@ -1,0 +1,5 @@
+event: mem_load_l3_miss_retired.remote_pmm:u
+cpu: 50
+round limit: 10
+
+--- round 1 ---

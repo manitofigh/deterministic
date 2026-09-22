@@ -1,0 +1,4 @@
+{"index": 31, "event": "l2_rqsts.swpf_miss:u", "cpu": 30, "runs": 2, "status": "Non-deterministic", "counts": [0, 1], "note": "", "log": "workers/cpu30/event-0031.log"}
+{"index": 94, "event": "idq.mite_cycles_any:u", "cpu": 30, "runs": 2, "status": "Non-deterministic", "counts": [55930930, 55733784], "note": "", "log": "workers/cpu30/event-0094.log"}
+{"index": 157, "event": "br_misp_retired.cond:u", "cpu": 30, "runs": 2, "status": "Non-deterministic", "counts": [118, 88], "note": "", "log": "workers/cpu30/event-0157.log"}
+{"index": 220, "event": "uops_executed.core_cycles_ge_1:u", "cpu": 30, "runs": 2, "status": "Non-deterministic", "counts": [3885701452, 3885670376], "note": "", "log": "workers/cpu30/event-0220.log"}

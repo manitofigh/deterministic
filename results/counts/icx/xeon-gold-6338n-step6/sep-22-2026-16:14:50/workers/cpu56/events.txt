@@ -1,0 +1,4 @@
+mem_load_retired.l2_miss
+bus-cycles
+ild_stall.lcp
+dtlb_store_misses.walk_completed

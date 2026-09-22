@@ -1,0 +1,15 @@
+event: uops_executed.thread:u
+cpu: 39
+round limit: 10
+
+--- round 1 ---
+parsed count: 11980895152
+exit: 0
+
+--- round 2 ---
+parsed count: 11981149645
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

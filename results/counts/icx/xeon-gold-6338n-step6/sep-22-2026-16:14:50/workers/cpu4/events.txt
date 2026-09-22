@@ -1,0 +1,4 @@
+core_snoop_response.i_hit_fse
+assists.fp
+rtm_retired.aborted_mem
+ld_blocks.no_sr

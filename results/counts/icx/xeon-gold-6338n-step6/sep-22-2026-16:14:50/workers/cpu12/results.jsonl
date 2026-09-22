@@ -1,0 +1,4 @@
+{"index": 13, "event": "l1d_pend_miss.l2_stall:u", "cpu": 12, "runs": 2, "status": "Non-deterministic", "counts": [2452, 2316], "note": "", "log": "workers/cpu12/event-0013.log"}
+{"index": 76, "event": "fp_arith_inst_retired.8_flops:u", "cpu": 12, "runs": 10, "status": "Zero-only", "counts": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "note": "all rounds returned zero; inconclusive", "log": "workers/cpu12/event-0076.log"}
+{"index": 139, "event": "tx_mem.abort_capacity_write:u", "cpu": 12, "runs": 10, "status": "Zero-only", "counts": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "note": "all rounds returned zero; inconclusive", "log": "workers/cpu12/event-0139.log"}
+{"index": 202, "event": "machine_clears.smc:u", "cpu": 12, "runs": 2, "status": "Non-deterministic", "counts": [6, 10], "note": "", "log": "workers/cpu12/event-0202.log"}

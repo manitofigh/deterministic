@@ -1,0 +1,4 @@
+{"index": 39, "event": "mem_inst_retired.split_loads:u", "cpu": 38, "runs": 3, "status": "Non-deterministic", "counts": [139987, 139987, 139982], "note": "", "log": "workers/cpu38/event-0039.log"}
+{"index": 102, "event": "branch-load-misses:u", "cpu": 38, "runs": 2, "status": "Non-deterministic", "counts": [115, 111], "note": "", "log": "workers/cpu38/event-0102.log"}
+{"index": 165, "event": "cpu_clk_unhalted.one_thread_active:u", "cpu": 38, "runs": 2, "status": "Non-deterministic", "counts": [119851460, 119598082], "note": "", "log": "workers/cpu38/event-0165.log"}
+{"index": 228, "event": "uops_executed.stall_cycles:u", "cpu": 38, "runs": 2, "status": "Non-deterministic", "counts": [405610487, 415726147], "note": "", "log": "workers/cpu38/event-0228.log"}

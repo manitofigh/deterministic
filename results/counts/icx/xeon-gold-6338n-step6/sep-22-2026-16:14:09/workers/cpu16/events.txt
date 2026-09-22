@@ -1,0 +1,4 @@
+l2_lines_out.non_silent
+fp_arith_inst_retired.vector
+core_power.lvl2_turbo_license
+resource_stalls.scoreboard

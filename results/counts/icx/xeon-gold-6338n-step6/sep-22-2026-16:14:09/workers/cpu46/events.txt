@@ -1,0 +1,4 @@
+mem_load_l3_miss_retired.local_dram
+l1-dcache-loads
+cycle_activity.cycles_mem_any
+uops_retired.total_cycles

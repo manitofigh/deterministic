@@ -1,0 +1,4 @@
+{"index": 59, "event": "mem_load_retired.l3_miss:u", "cpu": 58, "runs": 2, "status": "Non-deterministic", "counts": [399960, 399975], "note": "", "log": "workers/cpu58/event-0059.log"}
+{"index": 122, "event": "cache-references:u", "cpu": 58, "runs": 2, "status": "Non-deterministic", "counts": [601224, 601234], "note": "", "log": "workers/cpu58/event-0122.log"}
+{"index": 185, "event": "inst_retired.any:u", "cpu": 58, "runs": 2, "status": "Non-deterministic", "counts": [227005003, 227005056], "note": "", "log": "workers/cpu58/event-0185.log"}
+{"index": 248, "event": "dtlb_store_misses.walk_completed_2m_4m:u", "cpu": 58, "runs": 10, "status": "Zero-only", "counts": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "note": "all rounds returned zero; inconclusive", "log": "workers/cpu58/event-0248.log"}

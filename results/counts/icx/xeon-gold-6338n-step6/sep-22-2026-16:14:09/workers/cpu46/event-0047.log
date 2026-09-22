@@ -1,0 +1,5 @@
+event: mem_load_l3_miss_retired.local_dram:u
+cpu: 46
+round limit: 10
+
+--- round 1 ---

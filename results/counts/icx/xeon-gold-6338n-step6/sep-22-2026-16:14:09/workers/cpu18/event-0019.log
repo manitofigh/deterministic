@@ -1,0 +1,5 @@
+event: l2_lines_out.useless_hwpf:u
+cpu: 18
+round limit: 10
+
+--- round 1 ---

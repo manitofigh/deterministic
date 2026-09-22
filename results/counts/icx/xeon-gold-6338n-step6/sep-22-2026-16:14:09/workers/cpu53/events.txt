@@ -1,0 +1,4 @@
+mem_load_retired.l1_hit
+branch-instructions
+exe_activity.3_ports_util
+dtlb_load_misses.walk_pending

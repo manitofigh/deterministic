@@ -1,0 +1,5 @@
+event: l2_lines_out.silent:u
+cpu: 17
+round limit: 10
+
+--- round 1 ---

@@ -1,0 +1,4 @@
+{"index": 35, "event": "mem_inst_retired.all_loads:u", "cpu": 34, "runs": 2, "status": "Non-deterministic", "counts": [79504951, 79504957], "note": "", "log": "workers/cpu34/event-0035.log"}
+{"index": 98, "event": "idq.ms_uops:u", "cpu": 34, "runs": 2, "status": "Non-deterministic", "counts": [11589829156, 11589803404], "note": "", "log": "workers/cpu34/event-0098.log"}
+{"index": 161, "event": "br_misp_retired.indirect_call:u", "cpu": 34, "runs": 3, "status": "Non-deterministic", "counts": [1, 1, 2], "note": "", "log": "workers/cpu34/event-0161.log"}
+{"index": 224, "event": "uops_executed.cycles_ge_1:u", "cpu": 34, "runs": 2, "status": "Non-deterministic", "counts": [3885964208, 3885582117], "note": "", "log": "workers/cpu34/event-0224.log"}

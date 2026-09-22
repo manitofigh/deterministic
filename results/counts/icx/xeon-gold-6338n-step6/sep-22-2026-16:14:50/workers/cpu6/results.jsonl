@@ -1,0 +1,4 @@
+{"index": 7, "event": "core_snoop_response.s_fwd_fe:u", "cpu": 6, "runs": 2, "status": "Non-deterministic", "counts": [2591, 4761], "note": "", "log": "workers/cpu6/event-0007.log"}
+{"index": 70, "event": "fp_arith_inst_retired.128b_packed_single:u", "cpu": 6, "runs": 10, "status": "Potentially deterministic", "counts": [2900000, 2900000, 2900000, 2900000, 2900000, 2900000, 2900000, 2900000, 2900000, 2900000], "note": "", "log": "workers/cpu6/event-0070.log"}
+{"index": 133, "event": "rtm_retired.aborted_unfriendly:u", "cpu": 6, "runs": 10, "status": "Zero-only", "counts": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "note": "all rounds returned zero; inconclusive", "log": "workers/cpu6/event-0133.log"}
+{"index": 196, "event": "ld_blocks_partial.address_alias:u", "cpu": 6, "runs": 2, "status": "Non-deterministic", "counts": [1536586, 1536050], "note": "", "log": "workers/cpu6/event-0196.log"}

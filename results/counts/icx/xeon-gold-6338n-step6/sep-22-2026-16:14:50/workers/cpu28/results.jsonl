@@ -1,0 +1,4 @@
+{"index": 29, "event": "l2_rqsts.rfo_miss:u", "cpu": 28, "runs": 2, "status": "Non-deterministic", "counts": [48844, 29369], "note": "", "log": "workers/cpu28/event-0029.log"}
+{"index": 92, "event": "idq.dsb_cycles_ok:u", "cpu": 28, "runs": 2, "status": "Non-deterministic", "counts": [27886425, 27172855], "note": "", "log": "workers/cpu28/event-0092.log"}
+{"index": 155, "event": "br_inst_retired.near_taken:u", "cpu": 28, "runs": 10, "status": "Potentially deterministic", "counts": [6819984, 6819984, 6819984, 6819984, 6819984, 6819984, 6819984, 6819984, 6819984, 6819984], "note": "", "log": "workers/cpu28/event-0155.log"}
+{"index": 218, "event": "uops_dispatched.port_6:u", "cpu": 28, "runs": 2, "status": "Non-deterministic", "counts": [3553658236, 3553975401], "note": "", "log": "workers/cpu28/event-0218.log"}

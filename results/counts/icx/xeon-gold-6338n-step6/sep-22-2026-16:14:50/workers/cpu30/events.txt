@@ -1,0 +1,4 @@
+l2_rqsts.swpf_miss
+idq.mite_cycles_any
+br_misp_retired.cond
+uops_executed.core_cycles_ge_1

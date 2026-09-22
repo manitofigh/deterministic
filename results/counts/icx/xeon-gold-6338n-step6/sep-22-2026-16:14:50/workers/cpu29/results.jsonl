@@ -1,0 +1,4 @@
+{"index": 30, "event": "l2_rqsts.swpf_hit:u", "cpu": 29, "runs": 10, "status": "Zero-only", "counts": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "note": "all rounds returned zero; inconclusive", "log": "workers/cpu29/event-0030.log"}
+{"index": 93, "event": "idq.dsb_uops:u", "cpu": 29, "runs": 2, "status": "Non-deterministic", "counts": [189432906, 189758219], "note": "", "log": "workers/cpu29/event-0093.log"}
+{"index": 156, "event": "br_misp_retired.all_branches:u", "cpu": 29, "runs": 2, "status": "Non-deterministic", "counts": [119, 95], "note": "", "log": "workers/cpu29/event-0156.log"}
+{"index": 219, "event": "uops_dispatched.port_7_8:u", "cpu": 29, "runs": 2, "status": "Non-deterministic", "counts": [105425985, 105246408], "note": "", "log": "workers/cpu29/event-0219.log"}

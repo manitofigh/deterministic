@@ -1,0 +1,4 @@
+{"index": 25, "event": "l2_rqsts.code_rd_miss:u", "cpu": 24, "runs": 2, "status": "Non-deterministic", "counts": [234, 288], "note": "", "log": "workers/cpu24/event-0025.log"}
+{"index": 88, "event": "icache_64b.iftag_stall:u", "cpu": 24, "runs": 2, "status": "Non-deterministic", "counts": [403264, 410322], "note": "", "log": "workers/cpu24/event-0088.log"}
+{"index": 151, "event": "br_inst_retired.far_branch:u", "cpu": 24, "runs": 2, "status": "Non-deterministic", "counts": [34922, 34926], "note": "", "log": "workers/cpu24/event-0151.log"}
+{"index": 214, "event": "uops_dispatched.port_1:u", "cpu": 24, "runs": 2, "status": "Non-deterministic", "counts": [2097512003, 2097426028], "note": "", "log": "workers/cpu24/event-0214.log"}

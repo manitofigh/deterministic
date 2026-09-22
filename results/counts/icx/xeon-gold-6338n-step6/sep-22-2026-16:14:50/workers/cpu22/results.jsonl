@@ -1,0 +1,4 @@
+{"index": 23, "event": "l2_rqsts.all_rfo:u", "cpu": 22, "runs": 2, "status": "Non-deterministic", "counts": [87550, 111984], "note": "", "log": "workers/cpu22/event-0023.log"}
+{"index": 86, "event": "icache_64b.iftag_hit:u", "cpu": 22, "runs": 2, "status": "Non-deterministic", "counts": [58311891, 58302910], "note": "", "log": "workers/cpu22/event-0086.log"}
+{"index": 149, "event": "br_inst_retired.cond_ntaken:u", "cpu": 22, "runs": 10, "status": "Potentially deterministic", "counts": [2400016, 2400016, 2400016, 2400016, 2400016, 2400016, 2400016, 2400016, 2400016, 2400016], "note": "", "log": "workers/cpu22/event-0149.log"}
+{"index": 212, "event": "uops_decoded.dec0:u", "cpu": 22, "runs": 2, "status": "Non-deterministic", "counts": [118458975, 118642318], "note": "", "log": "workers/cpu22/event-0212.log"}

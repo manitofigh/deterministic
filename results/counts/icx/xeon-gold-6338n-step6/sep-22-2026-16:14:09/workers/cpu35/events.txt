@@ -1,0 +1,4 @@
+mem_inst_retired.all_stores
+idq_uops_not_delivered.core
+br_misp_retired.near_taken
+uops_executed.cycles_ge_2

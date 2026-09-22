@@ -1,0 +1,5 @@
+event: mem_load_l3_hit_retired.xsnp_no_fwd:u
+cpu: 44
+round limit: 10
+
+--- round 1 ---

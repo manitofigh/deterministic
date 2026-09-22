@@ -1,0 +1,15 @@
+event: mem_inst_retired.any:u
+cpu: 36
+round limit: 10
+
+--- round 1 ---
+parsed count: 95524945
+exit: 0
+
+--- round 2 ---
+parsed count: 95524943
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

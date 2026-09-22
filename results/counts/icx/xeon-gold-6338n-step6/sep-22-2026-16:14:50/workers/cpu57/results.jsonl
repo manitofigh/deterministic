@@ -1,0 +1,4 @@
+{"index": 58, "event": "mem_load_retired.l3_hit:u", "cpu": 57, "runs": 2, "status": "Non-deterministic", "counts": [10, 5], "note": "", "log": "workers/cpu57/event-0058.log"}
+{"index": 121, "event": "cache-misses:u", "cpu": 57, "runs": 2, "status": "Non-deterministic", "counts": [600355, 600298], "note": "", "log": "workers/cpu57/event-0121.log"}
+{"index": 184, "event": "inst_decoded.decoders:u", "cpu": 57, "runs": 2, "status": "Non-deterministic", "counts": [87087179, 86964846], "note": "", "log": "workers/cpu57/event-0184.log"}
+{"index": 247, "event": "dtlb_store_misses.walk_completed_1g:u", "cpu": 57, "runs": 10, "status": "Zero-only", "counts": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "note": "all rounds returned zero; inconclusive", "log": "workers/cpu57/event-0247.log"}

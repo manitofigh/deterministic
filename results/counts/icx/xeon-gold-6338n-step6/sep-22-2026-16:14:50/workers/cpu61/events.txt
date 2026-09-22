@@ -1,0 +1,4 @@
+sq_misc.sq_full
+instructions
+inst_retired.prec_dist
+itlb_misses.stlb_hit

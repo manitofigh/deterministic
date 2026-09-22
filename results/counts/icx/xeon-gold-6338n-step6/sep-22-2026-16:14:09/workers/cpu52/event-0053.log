@@ -1,0 +1,5 @@
+event: mem_load_retired.fb_hit:u
+cpu: 52
+round limit: 10
+
+--- round 1 ---

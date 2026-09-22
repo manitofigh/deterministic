@@ -1,0 +1,4 @@
+l2_trans.l2_wb
+idq.mite_cycles_ok
+br_misp_retired.cond_ntaken
+uops_executed.core_cycles_ge_2

@@ -1,0 +1,4 @@
+mem_inst_retired.any
+idq_uops_not_delivered.cycles_0_uops_deliv.core
+br_misp_retired.ret
+uops_executed.cycles_ge_3

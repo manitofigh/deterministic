@@ -1,0 +1,19 @@
+event: br_misp_retired.cond_ntaken:u
+cpu: 31
+round limit: 10
+
+--- round 1 ---
+parsed count: 40
+exit: 0
+
+--- round 2 ---
+parsed count: 40
+exit: 0
+
+--- round 3 ---
+parsed count: 44
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 3
+

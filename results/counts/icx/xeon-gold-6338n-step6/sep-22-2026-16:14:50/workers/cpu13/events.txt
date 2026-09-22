@@ -1,0 +1,4 @@
+l1d_pend_miss.pending
+fp_arith_inst_retired.scalar
+tx_mem.abort_conflict
+misc_retired.lbr_inserts

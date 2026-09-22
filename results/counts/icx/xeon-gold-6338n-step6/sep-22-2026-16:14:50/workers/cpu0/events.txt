@@ -1,0 +1,5 @@
+mem-stores
+sw_prefetch_access.nta
+cycle_activity.stalls_l3_miss
+int_misc.clear_resteer_cycles
+itlb_misses.walk_completed

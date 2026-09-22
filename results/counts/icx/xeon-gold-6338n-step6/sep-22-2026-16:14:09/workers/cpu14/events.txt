@@ -1,0 +1,4 @@
+l1d_pend_miss.pending_cycles
+fp_arith_inst_retired.scalar_double
+core_power.lvl0_turbo_license
+misc_retired.pause_inst

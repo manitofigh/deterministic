@@ -1,0 +1,15 @@
+event: core_power.lvl0_turbo_license:u
+cpu: 14
+round limit: 10
+
+--- round 1 ---
+parsed count: 4293924667
+exit: 0
+
+--- round 2 ---
+parsed count: 4295357899
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

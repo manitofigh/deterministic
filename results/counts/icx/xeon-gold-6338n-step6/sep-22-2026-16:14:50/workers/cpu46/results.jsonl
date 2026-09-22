@@ -1,0 +1,4 @@
+{"index": 47, "event": "mem_load_l3_miss_retired.local_dram:u", "cpu": 46, "runs": 2, "status": "Non-deterministic", "counts": [399967, 399962], "note": "", "log": "workers/cpu46/event-0047.log"}
+{"index": 110, "event": "l1-dcache-loads:u", "cpu": 46, "runs": 2, "status": "Non-deterministic", "counts": [79504919, 79504950], "note": "", "log": "workers/cpu46/event-0110.log"}
+{"index": 173, "event": "cycle_activity.cycles_mem_any:u", "cpu": 46, "runs": 2, "status": "Non-deterministic", "counts": [3895000088, 3886750160], "note": "", "log": "workers/cpu46/event-0173.log"}
+{"index": 236, "event": "uops_retired.total_cycles:u", "cpu": 46, "runs": 2, "status": "Non-deterministic", "counts": [4322974725, 4311829963], "note": "", "log": "workers/cpu46/event-0236.log"}

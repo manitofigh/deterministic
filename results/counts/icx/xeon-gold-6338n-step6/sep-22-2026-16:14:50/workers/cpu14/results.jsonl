@@ -1,0 +1,4 @@
+{"index": 15, "event": "l1d_pend_miss.pending_cycles:u", "cpu": 14, "runs": 2, "status": "Non-deterministic", "counts": [56863974, 67000977], "note": "", "log": "workers/cpu14/event-0015.log"}
+{"index": 78, "event": "fp_arith_inst_retired.scalar_double:u", "cpu": 14, "runs": 10, "status": "Potentially deterministic", "counts": [1900000, 1900000, 1900000, 1900000, 1900000, 1900000, 1900000, 1900000, 1900000, 1900000], "note": "", "log": "workers/cpu14/event-0078.log"}
+{"index": 141, "event": "core_power.lvl0_turbo_license:u", "cpu": 14, "runs": 2, "status": "Non-deterministic", "counts": [4293924667, 4295357899], "note": "", "log": "workers/cpu14/event-0141.log"}
+{"index": 204, "event": "misc_retired.pause_inst:u", "cpu": 14, "runs": 10, "status": "Potentially deterministic", "counts": [100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000], "note": "", "log": "workers/cpu14/event-0204.log"}

@@ -1,0 +1,4 @@
+{"index": 27, "event": "l2_rqsts.demand_data_rd_miss:u", "cpu": 26, "runs": 2, "status": "Non-deterministic", "counts": [454851, 463953], "note": "", "log": "workers/cpu26/event-0027.log"}
+{"index": 90, "event": "icache_tag.stalls:u", "cpu": 26, "runs": 2, "status": "Non-deterministic", "counts": [402271, 406796], "note": "", "log": "workers/cpu26/event-0090.log"}
+{"index": 153, "event": "br_inst_retired.near_call:u", "cpu": 26, "runs": 10, "status": "Potentially deterministic", "counts": [200000, 200000, 200000, 200000, 200000, 200000, 200000, 200000, 200000, 200000], "note": "", "log": "workers/cpu26/event-0153.log"}
+{"index": 216, "event": "uops_dispatched.port_4_9:u", "cpu": 26, "runs": 2, "status": "Non-deterministic", "counts": [128591512, 128563486], "note": "", "log": "workers/cpu26/event-0216.log"}

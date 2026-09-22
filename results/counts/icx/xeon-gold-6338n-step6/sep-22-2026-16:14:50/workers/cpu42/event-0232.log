@@ -1,0 +1,15 @@
+event: uops_issued.stall_cycles:u
+cpu: 42
+round limit: 10
+
+--- round 1 ---
+parsed count: 588370119
+exit: 0
+
+--- round 2 ---
+parsed count: 586007239
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

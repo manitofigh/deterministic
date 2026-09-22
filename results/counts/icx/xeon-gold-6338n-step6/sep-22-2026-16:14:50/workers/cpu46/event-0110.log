@@ -1,0 +1,15 @@
+event: l1-dcache-loads:u
+cpu: 46
+round limit: 10
+
+--- round 1 ---
+parsed count: 79504919
+exit: 0
+
+--- round 2 ---
+parsed count: 79504950
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

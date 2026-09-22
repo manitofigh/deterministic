@@ -1,0 +1,15 @@
+event: llc-loads:u
+cpu: 50
+round limit: 10
+
+--- round 1 ---
+parsed count: 435542
+exit: 0
+
+--- round 2 ---
+parsed count: 459761
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

@@ -1,0 +1,4 @@
+{"index": 17, "event": "l2_lines_out.non_silent:u", "cpu": 16, "runs": 2, "status": "Non-deterministic", "counts": [462, 470], "note": "", "log": "workers/cpu16/event-0017.log"}
+{"index": 80, "event": "fp_arith_inst_retired.vector:u", "cpu": 16, "runs": 10, "status": "Potentially deterministic", "counts": [6000000, 6000000, 6000000, 6000000, 6000000, 6000000, 6000000, 6000000, 6000000, 6000000], "note": "", "log": "workers/cpu16/event-0080.log"}
+{"index": 143, "event": "core_power.lvl2_turbo_license:u", "cpu": 16, "runs": 10, "status": "Zero-only", "counts": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "note": "all rounds returned zero; inconclusive", "log": "workers/cpu16/event-0143.log"}
+{"index": 206, "event": "resource_stalls.scoreboard:u", "cpu": 16, "runs": 2, "status": "Non-deterministic", "counts": [201435002, 203063656], "note": "", "log": "workers/cpu16/event-0206.log"}

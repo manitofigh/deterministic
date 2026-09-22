@@ -1,0 +1,4 @@
+longest_lat_cache.miss
+idq.mite_uops
+br_misp_retired.cond_taken
+uops_executed.core_cycles_ge_3

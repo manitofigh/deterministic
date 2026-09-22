@@ -1,0 +1,5 @@
+{"index": 3, "event": "core_snoop_response.i_fwd_fe:u", "cpu": 2, "runs": 2, "status": "Non-deterministic", "counts": [2148, 451], "note": "", "log": "workers/cpu2/event-0003.log"}
+{"index": 66, "event": "sw_prefetch_access.t0:u", "cpu": 2, "runs": 4, "status": "Non-deterministic", "counts": [100004, 100004, 100004, 100003], "note": "", "log": "workers/cpu2/event-0066.log"}
+{"index": 129, "event": "rtm_retired.aborted:u", "cpu": 2, "runs": 10, "status": "Zero-only", "counts": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "note": "all rounds returned zero; inconclusive", "log": "workers/cpu2/event-0129.log"}
+{"index": 192, "event": "int_misc.recovery_cycles:u", "cpu": 2, "runs": 2, "status": "Non-deterministic", "counts": [9192850, 9177370], "note": "", "log": "workers/cpu2/event-0192.log"}
+{"index": 255, "event": "itlb_misses.walk_completed_4k:u", "cpu": 2, "runs": 2, "status": "Non-deterministic", "counts": [117, 94], "note": "", "log": "workers/cpu2/event-0255.log"}

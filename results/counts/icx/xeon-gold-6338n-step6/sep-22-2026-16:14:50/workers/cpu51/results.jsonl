@@ -1,0 +1,4 @@
+{"index": 52, "event": "mem_load_misc_retired.uc:u", "cpu": 51, "runs": 10, "status": "Zero-only", "counts": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "note": "all rounds returned zero; inconclusive", "log": "workers/cpu51/event-0052.log"}
+{"index": 115, "event": "llc-store-misses:u", "cpu": 51, "runs": 2, "status": "Non-deterministic", "counts": [42905, 58554], "note": "", "log": "workers/cpu51/event-0115.log"}
+{"index": 178, "event": "exe_activity.1_ports_util:u", "cpu": 51, "runs": 2, "status": "Non-deterministic", "counts": [202442911, 202174179], "note": "", "log": "workers/cpu51/event-0178.log"}
+{"index": 241, "event": "dtlb_load_misses.walk_completed_2m_4m:u", "cpu": 51, "runs": 10, "status": "Zero-only", "counts": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "note": "all rounds returned zero; inconclusive", "log": "workers/cpu51/event-0241.log"}

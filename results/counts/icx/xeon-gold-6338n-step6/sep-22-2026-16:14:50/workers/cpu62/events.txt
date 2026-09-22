@@ -1,0 +1,4 @@
+sw_prefetch_access.any
+ref-cycles
+int_misc.all_recovery_cycles
+itlb_misses.walk_active

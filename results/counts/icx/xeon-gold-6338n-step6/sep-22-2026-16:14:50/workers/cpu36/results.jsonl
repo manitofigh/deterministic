@@ -1,0 +1,4 @@
+{"index": 37, "event": "mem_inst_retired.any:u", "cpu": 36, "runs": 2, "status": "Non-deterministic", "counts": [95524945, 95524943], "note": "", "log": "workers/cpu36/event-0037.log"}
+{"index": 100, "event": "idq_uops_not_delivered.cycles_0_uops_deliv.core:u", "cpu": 36, "runs": 2, "status": "Non-deterministic", "counts": [117296091, 117222778], "note": "", "log": "workers/cpu36/event-0100.log"}
+{"index": 163, "event": "br_misp_retired.ret:u", "cpu": 36, "runs": 10, "status": "Zero-only", "counts": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "note": "all rounds returned zero; inconclusive", "log": "workers/cpu36/event-0163.log"}
+{"index": 226, "event": "uops_executed.cycles_ge_3:u", "cpu": 36, "runs": 2, "status": "Non-deterministic", "counts": [2452686030, 2452728197], "note": "", "log": "workers/cpu36/event-0226.log"}

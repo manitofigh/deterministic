@@ -1,0 +1,4 @@
+sq_misc.bus_lock
+cycles
+inst_retired.nop
+dtlb_store_misses.walk_pending

@@ -1,0 +1,4 @@
+mem_load_l3_hit_retired.xsnp_none
+l1-dcache-load-misses
+cycle_activity.cycles_l2_miss
+uops_retired.stall_cycles

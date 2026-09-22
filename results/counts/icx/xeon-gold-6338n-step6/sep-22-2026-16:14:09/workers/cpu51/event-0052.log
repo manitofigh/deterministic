@@ -1,0 +1,5 @@
+event: mem_load_misc_retired.uc:u
+cpu: 51
+round limit: 10
+
+--- round 1 ---

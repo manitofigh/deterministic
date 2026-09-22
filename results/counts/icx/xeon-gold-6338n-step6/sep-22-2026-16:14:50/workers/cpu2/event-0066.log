@@ -1,0 +1,23 @@
+event: sw_prefetch_access.t0:u
+cpu: 2
+round limit: 10
+
+--- round 1 ---
+parsed count: 100004
+exit: 0
+
+--- round 2 ---
+parsed count: 100004
+exit: 0
+
+--- round 3 ---
+parsed count: 100004
+exit: 0
+
+--- round 4 ---
+parsed count: 100003
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 4
+

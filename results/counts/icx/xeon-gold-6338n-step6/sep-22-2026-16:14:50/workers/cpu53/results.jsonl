@@ -1,0 +1,4 @@
+{"index": 54, "event": "mem_load_retired.l1_hit:u", "cpu": 53, "runs": 2, "status": "Non-deterministic", "counts": [78710085, 78819034], "note": "", "log": "workers/cpu53/event-0054.log"}
+{"index": 117, "event": "branch-instructions:u", "cpu": 53, "runs": 2, "status": "Non-deterministic", "counts": [9254922, 9254924], "note": "", "log": "workers/cpu53/event-0117.log"}
+{"index": 180, "event": "exe_activity.3_ports_util:u", "cpu": 53, "runs": 2, "status": "Non-deterministic", "counts": [1739278360, 1739245626], "note": "", "log": "workers/cpu53/event-0180.log"}
+{"index": 243, "event": "dtlb_load_misses.walk_pending:u", "cpu": 53, "runs": 2, "status": "Non-deterministic", "counts": [1108, 1050], "note": "", "log": "workers/cpu53/event-0243.log"}

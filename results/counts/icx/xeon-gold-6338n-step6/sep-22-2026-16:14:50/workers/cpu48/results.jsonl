@@ -1,0 +1,4 @@
+{"index": 49, "event": "mem_load_l3_miss_retired.remote_fwd:u", "cpu": 48, "runs": 10, "status": "Zero-only", "counts": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "note": "all rounds returned zero; inconclusive", "log": "workers/cpu48/event-0049.log"}
+{"index": 112, "event": "l1-icache-load-misses:u", "cpu": 48, "runs": 2, "status": "Non-deterministic", "counts": [78128, 76065], "note": "", "log": "workers/cpu48/event-0112.log"}
+{"index": 175, "event": "cycle_activity.stalls_l2_miss:u", "cpu": 48, "runs": 2, "status": "Non-deterministic", "counts": [44955069, 43800558], "note": "", "log": "workers/cpu48/event-0175.log"}
+{"index": 238, "event": "dtlb_load_misses.walk_active:u", "cpu": 48, "runs": 2, "status": "Non-deterministic", "counts": [2031, 1151], "note": "", "log": "workers/cpu48/event-0238.log"}
