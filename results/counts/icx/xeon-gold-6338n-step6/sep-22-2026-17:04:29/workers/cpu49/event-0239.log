@@ -1,0 +1,23 @@
+event: dtlb_load_misses.walk_completed:u
+cpu: 49
+round limit: 100
+
+--- round 1 ---
+parsed count: 28
+exit: 0
+
+--- round 2 ---
+parsed count: 28
+exit: 0
+
+--- round 3 ---
+parsed count: 28
+exit: 0
+
+--- round 4 ---
+parsed count: 27
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 4
+

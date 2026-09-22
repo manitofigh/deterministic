@@ -1,0 +1,4 @@
+mem_load_retired.l3_hit
+cache-misses
+inst_decoded.decoders
+dtlb_store_misses.walk_completed_1g

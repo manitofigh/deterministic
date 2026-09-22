@@ -1,0 +1,4 @@
+l2_rqsts.code_rd_miss
+icache_64b.iftag_stall
+br_inst_retired.far_branch
+uops_dispatched.port_1

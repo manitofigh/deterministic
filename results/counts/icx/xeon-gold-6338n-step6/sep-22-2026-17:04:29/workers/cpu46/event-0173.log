@@ -1,0 +1,15 @@
+event: cycle_activity.cycles_mem_any:u
+cpu: 46
+round limit: 100
+
+--- round 1 ---
+parsed count: 3896673998
+exit: 0
+
+--- round 2 ---
+parsed count: 3883709047
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

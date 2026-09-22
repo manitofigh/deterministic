@@ -1,0 +1,4 @@
+{"index": 32, "event": "l2_trans.l2_wb:u", "cpu": 31, "runs": 2, "status": "Non-deterministic", "counts": [587, 383], "note": "", "log": "workers/cpu31/event-0032.log"}
+{"index": 95, "event": "idq.mite_cycles_ok:u", "cpu": 31, "runs": 2, "status": "Non-deterministic", "counts": [3203185, 3209633], "note": "", "log": "workers/cpu31/event-0095.log"}
+{"index": 158, "event": "br_misp_retired.cond_ntaken:u", "cpu": 31, "runs": 2, "status": "Non-deterministic", "counts": [40, 48], "note": "", "log": "workers/cpu31/event-0158.log"}
+{"index": 221, "event": "uops_executed.core_cycles_ge_2:u", "cpu": 31, "runs": 2, "status": "Non-deterministic", "counts": [3677261184, 3676731634], "note": "", "log": "workers/cpu31/event-0221.log"}

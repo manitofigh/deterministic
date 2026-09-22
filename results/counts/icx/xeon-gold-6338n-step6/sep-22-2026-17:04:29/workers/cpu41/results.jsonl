@@ -1,0 +1,4 @@
+{"index": 42, "event": "mem_inst_retired.stlb_miss_stores:u", "cpu": 41, "runs": 6, "status": "Non-deterministic", "counts": [10000, 10000, 10000, 10000, 10000, 10001], "note": "", "log": "workers/cpu41/event-0042.log"}
+{"index": 105, "event": "dtlb-loads:u", "cpu": 41, "runs": 2, "status": "Non-deterministic", "counts": [79504922, 79504924], "note": "", "log": "workers/cpu41/event-0105.log"}
+{"index": 168, "event": "cpu_clk_unhalted.ref_xclk:u", "cpu": 41, "runs": 2, "status": "Non-deterministic", "counts": [119844149, 119545846], "note": "", "log": "workers/cpu41/event-0168.log"}
+{"index": 231, "event": "uops_issued.any:u", "cpu": 41, "runs": 2, "status": "Non-deterministic", "counts": [11930649518, 11928933802], "note": "", "log": "workers/cpu41/event-0231.log"}

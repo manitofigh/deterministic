@@ -1,0 +1,4 @@
+l2_rqsts.all_rfo
+icache_64b.iftag_hit
+br_inst_retired.cond_ntaken
+uops_decoded.dec0

@@ -110,8 +110,11 @@ def encode_event(event, records):
             and row.get('Encoding')
         }
 
+        if not encodings:
+            raise ValueError(f'no core counter encoding for {event}; check the event name in perf list')
+
         if len(encodings) != 1:
-            raise ValueError(f'expected one core counter encoding for {event}')
+            raise ValueError(f'multiple core counter encodings for {event}')
 
         full = encodings.pop()
         unit, separator, fields = full.partition('/')

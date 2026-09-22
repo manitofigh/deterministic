@@ -1,0 +1,4 @@
+mem_inst_retired.lock_loads
+idq_uops_not_delivered.cycles_fe_was_ok
+cpu_clk_unhalted.distributed
+uops_executed.cycles_ge_4

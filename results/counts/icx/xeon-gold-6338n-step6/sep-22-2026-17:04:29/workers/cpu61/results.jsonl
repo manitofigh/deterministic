@@ -1,0 +1,4 @@
+{"index": 62, "event": "sq_misc.sq_full:u", "cpu": 61, "runs": 37, "status": "Non-deterministic", "counts": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1], "note": "", "log": "workers/cpu61/event-0062.log"}
+{"index": 125, "event": "instructions:u", "cpu": 61, "runs": 2, "status": "Non-deterministic", "counts": [227004941, 227004939], "note": "", "log": "workers/cpu61/event-0125.log"}
+{"index": 188, "event": "inst_retired.prec_dist:u", "cpu": 61, "runs": 2, "status": "Non-deterministic", "counts": [227004956, 227004942], "note": "", "log": "workers/cpu61/event-0188.log"}
+{"index": 251, "event": "itlb_misses.stlb_hit:u", "cpu": 61, "runs": 2, "status": "Non-deterministic", "counts": [90, 89], "note": "", "log": "workers/cpu61/event-0251.log"}

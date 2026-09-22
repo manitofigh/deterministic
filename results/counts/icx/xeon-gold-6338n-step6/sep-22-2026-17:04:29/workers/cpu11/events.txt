@@ -1,0 +1,4 @@
+l1d_pend_miss.fb_full_periods
+fp_arith_inst_retired.512b_packed_single
+tx_mem.abort_capacity_read
+machine_clears.count

@@ -1,0 +1,15 @@
+event: ild_stall.lcp:u
+cpu: 56
+round limit: 100
+
+--- round 1 ---
+parsed count: 705669
+exit: 0
+
+--- round 2 ---
+parsed count: 703939
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

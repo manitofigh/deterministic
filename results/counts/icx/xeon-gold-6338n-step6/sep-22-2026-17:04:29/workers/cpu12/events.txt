@@ -1,0 +1,4 @@
+l1d_pend_miss.l2_stall
+fp_arith_inst_retired.8_flops
+tx_mem.abort_capacity_write
+machine_clears.smc

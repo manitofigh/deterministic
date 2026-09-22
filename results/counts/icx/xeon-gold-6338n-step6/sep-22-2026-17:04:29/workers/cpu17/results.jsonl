@@ -1,0 +1,4 @@
+{"index": 18, "event": "l2_lines_out.silent:u", "cpu": 17, "runs": 2, "status": "Non-deterministic", "counts": [600467, 600625], "note": "", "log": "workers/cpu17/event-0018.log"}
+{"index": 81, "event": "baclears.any:u", "cpu": 17, "runs": 2, "status": "Non-deterministic", "counts": [19706, 19704], "note": "", "log": "workers/cpu17/event-0081.log"}
+{"index": 144, "event": "arith.divider_active:u", "cpu": 17, "runs": 2, "status": "Non-deterministic", "counts": [39147537, 39145644], "note": "", "log": "workers/cpu17/event-0144.log"}
+{"index": 207, "event": "rs_events.empty_cycles:u", "cpu": 17, "runs": 2, "status": "Non-deterministic", "counts": [146232366, 149871952], "note": "", "log": "workers/cpu17/event-0207.log"}

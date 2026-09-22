@@ -1,0 +1,15 @@
+event: cache-references:u
+cpu: 58
+round limit: 100
+
+--- round 1 ---
+parsed count: 602767
+exit: 0
+
+--- round 2 ---
+parsed count: 601420
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

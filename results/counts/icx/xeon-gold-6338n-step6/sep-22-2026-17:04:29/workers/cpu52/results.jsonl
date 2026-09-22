@@ -1,0 +1,4 @@
+{"index": 53, "event": "mem_load_retired.fb_hit:u", "cpu": 52, "runs": 2, "status": "Non-deterministic", "counts": [338712, 261819], "note": "", "log": "workers/cpu52/event-0053.log"}
+{"index": 116, "event": "llc-stores:u", "cpu": 52, "runs": 2, "status": "Non-deterministic", "counts": [66513, 70234], "note": "", "log": "workers/cpu52/event-0116.log"}
+{"index": 179, "event": "exe_activity.2_ports_util:u", "cpu": 52, "runs": 2, "status": "Non-deterministic", "counts": [1224408055, 1224402167], "note": "", "log": "workers/cpu52/event-0179.log"}
+{"index": 242, "event": "dtlb_load_misses.walk_completed_4k:u", "cpu": 52, "runs": 3, "status": "Non-deterministic", "counts": [27, 27, 29], "note": "", "log": "workers/cpu52/event-0242.log"}

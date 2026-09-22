@@ -1,0 +1,4 @@
+mem_load_retired.fb_hit
+llc-stores
+exe_activity.2_ports_util
+dtlb_load_misses.walk_completed_4k

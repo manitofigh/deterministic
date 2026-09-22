@@ -1,0 +1,15 @@
+event: core_snoop_response.miss:u
+cpu: 5
+round limit: 100
+
+--- round 1 ---
+parsed count: 325879
+exit: 0
+
+--- round 2 ---
+parsed count: 334590
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

@@ -1,0 +1,15 @@
+event: longest_lat_cache.reference:u
+cpu: 33
+round limit: 100
+
+--- round 1 ---
+parsed count: 601047
+exit: 0
+
+--- round 2 ---
+parsed count: 601065
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

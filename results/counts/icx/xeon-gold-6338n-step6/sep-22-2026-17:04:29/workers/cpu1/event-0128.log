@@ -1,0 +1,15 @@
+event: machine_clears.memory_ordering:u
+cpu: 1
+round limit: 100
+
+--- round 1 ---
+parsed count: 100037
+exit: 0
+
+--- round 2 ---
+parsed count: 100041
+exit: 0
+
+result: Non-deterministic
+rounds attempted: 2
+

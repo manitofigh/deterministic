@@ -1,0 +1,4 @@
+{"index": 63, "event": "sw_prefetch_access.any:u", "cpu": 62, "runs": 2, "status": "Non-deterministic", "counts": [400046, 400048], "note": "", "log": "workers/cpu62/event-0063.log"}
+{"index": 126, "event": "ref-cycles:u", "cpu": 62, "runs": 2, "status": "Non-deterministic", "counts": [10514043408, 10529075392], "note": "", "log": "workers/cpu62/event-0126.log"}
+{"index": 189, "event": "int_misc.all_recovery_cycles:u", "cpu": 62, "runs": 2, "status": "Non-deterministic", "counts": [9348984, 9364464], "note": "", "log": "workers/cpu62/event-0189.log"}
+{"index": 252, "event": "itlb_misses.walk_active:u", "cpu": 62, "runs": 2, "status": "Non-deterministic", "counts": [310031, 307506], "note": "", "log": "workers/cpu62/event-0252.log"}

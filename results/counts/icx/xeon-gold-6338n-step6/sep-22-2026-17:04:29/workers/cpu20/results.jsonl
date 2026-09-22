@@ -1,0 +1,4 @@
+{"index": 21, "event": "l2_rqsts.all_demand_data_rd:u", "cpu": 20, "runs": 2, "status": "Non-deterministic", "counts": [494961, 501369], "note": "", "log": "workers/cpu20/event-0021.log"}
+{"index": 84, "event": "dsb2mite_switches.penalty_cycles:u", "cpu": 20, "runs": 2, "status": "Non-deterministic", "counts": [1619199, 1587280], "note": "", "log": "workers/cpu20/event-0084.log"}
+{"index": 147, "event": "br_inst_retired.all_branches:u", "cpu": 20, "runs": 2, "status": "Non-deterministic", "counts": [9254939, 9254922], "note": "", "log": "workers/cpu20/event-0147.log"}
+{"index": 210, "event": "topdown.slots:u", "cpu": 20, "runs": 2, "status": "Non-deterministic", "counts": [21459974115, 21437686670], "note": "", "log": "workers/cpu20/event-0210.log"}
