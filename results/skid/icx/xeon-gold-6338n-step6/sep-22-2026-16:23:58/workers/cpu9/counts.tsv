@@ -1,0 +1,21 @@
+event	round	overflow_threshold	count	skid	ip	error
+fp_arith_inst_retired.128b_packed_double:u	1	1000000	1000003	3	0x402716	
+fp_arith_inst_retired.128b_packed_double:u	2	1000000	1000003	3	0x402716	
+fp_arith_inst_retired.128b_packed_double:u	3	1000000	1000003	3	0x402716	
+fp_arith_inst_retired.128b_packed_double:u	4	1000000	1000003	3	0x402716	
+fp_arith_inst_retired.128b_packed_double:u	5	1000000	1000003	3	0x402716	
+fp_arith_inst_retired.128b_packed_double:u	6	1000000	1000003	3	0x402716	
+fp_arith_inst_retired.128b_packed_double:u	7	1000000	1000003	3	0x402716	
+fp_arith_inst_retired.128b_packed_double:u	8	1000000	1000003	3	0x402716	
+fp_arith_inst_retired.128b_packed_double:u	9	1000000	1000003	3	0x402716	
+fp_arith_inst_retired.128b_packed_double:u	10	1000000	1000003	3	0x402716	
+fp_arith_inst_retired.128b_packed_double:u	11	1000000	1000003	3	0x402716	
+fp_arith_inst_retired.128b_packed_double:u	12	1000000	1000003	3	0x402716	
+fp_arith_inst_retired.128b_packed_double:u	13	1000000	1000003	3	0x402716	
+fp_arith_inst_retired.128b_packed_double:u	14	1000000	1000003	3	0x402716	
+fp_arith_inst_retired.128b_packed_double:u	15	1000000	1000003	3	0x402716	
+fp_arith_inst_retired.128b_packed_double:u	16	1000000	1000003	3	0x402716	
+fp_arith_inst_retired.128b_packed_double:u	17	1000000	1000003	3	0x402716	
+fp_arith_inst_retired.128b_packed_double:u	18	1000000	1000003	3	0x402716	
+fp_arith_inst_retired.128b_packed_double:u	19	1000000	1000003	3	0x402716	
+fp_arith_inst_retired.128b_packed_double:u	20	1000000	1000003	3	0x402716	

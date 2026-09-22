@@ -1,0 +1,2 @@
+Complete: 23/23 (100.0%); remaining: 0; elapsed: 103s
+Inconclusive: 3; Non-deterministic: 6; Potentially deterministic: 14

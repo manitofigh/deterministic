@@ -1,0 +1,110 @@
+event: misc_retired.pause_inst:u
+cpu: 22
+round limit: 20
+
+--- preliminary count ---
+count: 100000
+overflow threshold: 50000
+
+--- round 1 ---
+count at stop: 50000
+skid: 0
+instruction pointer: 0x4025d7
+
+--- round 2 ---
+count at stop: 50000
+skid: 0
+instruction pointer: 0x4025d7
+
+--- round 3 ---
+count at stop: 50000
+skid: 0
+instruction pointer: 0x4025d7
+
+--- round 4 ---
+count at stop: 50000
+skid: 0
+instruction pointer: 0x4025d7
+
+--- round 5 ---
+count at stop: 50000
+skid: 0
+instruction pointer: 0x4025d7
+
+--- round 6 ---
+count at stop: 50000
+skid: 0
+instruction pointer: 0x4025d7
+
+--- round 7 ---
+count at stop: 50000
+skid: 0
+instruction pointer: 0x4025d7
+
+--- round 8 ---
+count at stop: 50000
+skid: 0
+instruction pointer: 0x4025d7
+
+--- round 9 ---
+count at stop: 50000
+skid: 0
+instruction pointer: 0x4025d7
+
+--- round 10 ---
+count at stop: 50000
+skid: 0
+instruction pointer: 0x4025d7
+
+--- round 11 ---
+count at stop: 50000
+skid: 0
+instruction pointer: 0x4025d7
+
+--- round 12 ---
+count at stop: 50000
+skid: 0
+instruction pointer: 0x4025d7
+
+--- round 13 ---
+count at stop: 50000
+skid: 0
+instruction pointer: 0x4025d7
+
+--- round 14 ---
+count at stop: 50000
+skid: 0
+instruction pointer: 0x4025d7
+
+--- round 15 ---
+count at stop: 50000
+skid: 0
+instruction pointer: 0x4025d7
+
+--- round 16 ---
+count at stop: 50000
+skid: 0
+instruction pointer: 0x4025d7
+
+--- round 17 ---
+count at stop: 50000
+skid: 0
+instruction pointer: 0x4025d7
+
+--- round 18 ---
+count at stop: 50000
+skid: 0
+instruction pointer: 0x4025d7
+
+--- round 19 ---
+count at stop: 50000
+skid: 0
+instruction pointer: 0x4025d7
+
+--- round 20 ---
+count at stop: 50000
+skid: 0
+instruction pointer: 0x4025d7
+
+result: Potentially deterministic
+successful rounds: 20/20

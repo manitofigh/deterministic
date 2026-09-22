@@ -1,0 +1,21 @@
+event	round	overflow_threshold	count	skid	ip	error
+br_inst_retired.indirect:u	1	50000	50000	0	0x400b60	
+br_inst_retired.indirect:u	2	50000	50000	0	0x400b60	
+br_inst_retired.indirect:u	3	50000	50000	0	0x400b60	
+br_inst_retired.indirect:u	4	50000	50000	0	0x400b60	
+br_inst_retired.indirect:u	5	50000	50000	0	0x400b60	
+br_inst_retired.indirect:u	6	50000	50000	0	0x400b60	
+br_inst_retired.indirect:u	7	50000	50000	0	0x400b60	
+br_inst_retired.indirect:u	8	50000	50000	0	0x400b60	
+br_inst_retired.indirect:u	9	50000	50000	0	0x400b60	
+br_inst_retired.indirect:u	10	50000	50000	0	0x400b60	
+br_inst_retired.indirect:u	11	50000	50000	0	0x400b60	
+br_inst_retired.indirect:u	12	50000	50000	0	0x400b60	
+br_inst_retired.indirect:u	13	50000	50000	0	0x400b60	
+br_inst_retired.indirect:u	14	50000	50000	0	0x400b60	
+br_inst_retired.indirect:u	15	50000	50000	0	0x400b60	
+br_inst_retired.indirect:u	16	50000	50000	0	0x400b60	
+br_inst_retired.indirect:u	17	50000	50000	0	0x400b60	
+br_inst_retired.indirect:u	18	50000	50000	0	0x400b60	
+br_inst_retired.indirect:u	19	50000	50000	0	0x400b60	
+br_inst_retired.indirect:u	20	50000	50000	0	0x400b60	

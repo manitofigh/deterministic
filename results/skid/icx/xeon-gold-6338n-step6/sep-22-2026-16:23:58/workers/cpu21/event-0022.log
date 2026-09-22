@@ -1,0 +1,110 @@
+event: mem_inst_retired.stlb_miss_stores:u
+cpu: 21
+round limit: 20
+
+--- preliminary count ---
+count: 10000
+overflow threshold: 5000
+
+--- round 1 ---
+count at stop: 5000
+skid: 0
+instruction pointer: 0x40323c
+
+--- round 2 ---
+count at stop: 5000
+skid: 0
+instruction pointer: 0x40323c
+
+--- round 3 ---
+count at stop: 5000
+skid: 0
+instruction pointer: 0x40323c
+
+--- round 4 ---
+count at stop: 5000
+skid: 0
+instruction pointer: 0x40323c
+
+--- round 5 ---
+count at stop: 5000
+skid: 0
+instruction pointer: 0x40323c
+
+--- round 6 ---
+count at stop: 5000
+skid: 0
+instruction pointer: 0x40323c
+
+--- round 7 ---
+count at stop: 5000
+skid: 0
+instruction pointer: 0x40323c
+
+--- round 8 ---
+count at stop: 5000
+skid: 0
+instruction pointer: 0x40323c
+
+--- round 9 ---
+count at stop: 5000
+skid: 0
+instruction pointer: 0x40323c
+
+--- round 10 ---
+count at stop: 5000
+skid: 0
+instruction pointer: 0x40323c
+
+--- round 11 ---
+count at stop: 5000
+skid: 0
+instruction pointer: 0x40323c
+
+--- round 12 ---
+count at stop: 5000
+skid: 0
+instruction pointer: 0x40323c
+
+--- round 13 ---
+count at stop: 5000
+skid: 0
+instruction pointer: 0x40323c
+
+--- round 14 ---
+count at stop: 5000
+skid: 0
+instruction pointer: 0x40323c
+
+--- round 15 ---
+count at stop: 5000
+skid: 0
+instruction pointer: 0x40323c
+
+--- round 16 ---
+count at stop: 5000
+skid: 0
+instruction pointer: 0x40323c
+
+--- round 17 ---
+count at stop: 5000
+skid: 0
+instruction pointer: 0x40323c
+
+--- round 18 ---
+count at stop: 5000
+skid: 0
+instruction pointer: 0x40323c
+
+--- round 19 ---
+count at stop: 5000
+skid: 0
+instruction pointer: 0x40323c
+
+--- round 20 ---
+count at stop: 5000
+skid: 0
+instruction pointer: 0x40323c
+
+result: Potentially deterministic
+successful rounds: 20/20

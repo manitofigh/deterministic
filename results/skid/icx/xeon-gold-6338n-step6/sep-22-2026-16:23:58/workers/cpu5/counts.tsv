@@ -1,0 +1,21 @@
+event	round	overflow_threshold	count	skid	ip	error
+br_inst_retired.near_call:u	1	100000	100000	0	0x400b60	
+br_inst_retired.near_call:u	2	100000	100000	0	0x400b60	
+br_inst_retired.near_call:u	3	100000	100000	0	0x400b60	
+br_inst_retired.near_call:u	4	100000	100000	0	0x400b60	
+br_inst_retired.near_call:u	5	100000	100000	0	0x400b60	
+br_inst_retired.near_call:u	6	100000	100000	0	0x400b60	
+br_inst_retired.near_call:u	7	100000	100000	0	0x400b60	
+br_inst_retired.near_call:u	8	100000	100000	0	0x400b60	
+br_inst_retired.near_call:u	9	100000	100000	0	0x400b60	
+br_inst_retired.near_call:u	10	100000	100000	0	0x400b60	
+br_inst_retired.near_call:u	11	100000	100000	0	0x400b60	
+br_inst_retired.near_call:u	12	100000	100000	0	0x400b60	
+br_inst_retired.near_call:u	13	100000	100000	0	0x400b60	
+br_inst_retired.near_call:u	14	100000	100000	0	0x400b60	
+br_inst_retired.near_call:u	15	100000	100000	0	0x400b60	
+br_inst_retired.near_call:u	16	100000	100000	0	0x400b60	
+br_inst_retired.near_call:u	17	100000	100000	0	0x400b60	
+br_inst_retired.near_call:u	18	100000	100000	0	0x400b60	
+br_inst_retired.near_call:u	19	100000	100000	0	0x400b60	
+br_inst_retired.near_call:u	20	100000	100000	0	0x400b60	

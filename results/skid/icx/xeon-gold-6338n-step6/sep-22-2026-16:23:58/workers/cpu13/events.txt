@@ -1,0 +1,1 @@
+fp_arith_inst_retired.scalar_double

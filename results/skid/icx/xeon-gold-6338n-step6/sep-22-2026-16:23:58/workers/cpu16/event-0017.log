@@ -1,0 +1,110 @@
+event: inst_retired.nop:u
+cpu: 16
+round limit: 20
+
+--- preliminary count ---
+count: 1580000
+overflow threshold: 790000
+
+--- round 1 ---
+count at stop: 790069
+skid: 69
+instruction pointer: 0x400a29
+
+--- round 2 ---
+count at stop: 790062
+skid: 62
+instruction pointer: 0x400a62
+
+--- round 3 ---
+count at stop: 790062
+skid: 62
+instruction pointer: 0x400a62
+
+--- round 4 ---
+count at stop: 790062
+skid: 62
+instruction pointer: 0x400a58
+
+--- round 5 ---
+count at stop: 790062
+skid: 62
+instruction pointer: 0x400a62
+
+--- round 6 ---
+count at stop: 790062
+skid: 62
+instruction pointer: 0x400a5c
+
+--- round 7 ---
+count at stop: 790062
+skid: 62
+instruction pointer: 0x400a62
+
+--- round 8 ---
+count at stop: 790062
+skid: 62
+instruction pointer: 0x400a62
+
+--- round 9 ---
+count at stop: 790057
+skid: 57
+instruction pointer: 0x400a48
+
+--- round 10 ---
+count at stop: 790069
+skid: 69
+instruction pointer: 0x400a29
+
+--- round 11 ---
+count at stop: 790062
+skid: 62
+instruction pointer: 0x400a69
+
+--- round 12 ---
+count at stop: 790069
+skid: 69
+instruction pointer: 0x400a29
+
+--- round 13 ---
+count at stop: 790062
+skid: 62
+instruction pointer: 0x400a62
+
+--- round 14 ---
+count at stop: 790062
+skid: 62
+instruction pointer: 0x400a62
+
+--- round 15 ---
+count at stop: 790069
+skid: 69
+instruction pointer: 0x400a29
+
+--- round 16 ---
+count at stop: 790057
+skid: 57
+instruction pointer: 0x400a48
+
+--- round 17 ---
+count at stop: 790069
+skid: 69
+instruction pointer: 0x400a29
+
+--- round 18 ---
+count at stop: 790062
+skid: 62
+instruction pointer: 0x400a5c
+
+--- round 19 ---
+count at stop: 790062
+skid: 62
+instruction pointer: 0x400a5c
+
+--- round 20 ---
+count at stop: 790062
+skid: 62
+instruction pointer: 0x400a62
+
+result: Non-deterministic
+successful rounds: 20/20

@@ -1,0 +1,110 @@
+event: mem_inst_retired.lock_loads:u
+cpu: 20
+round limit: 20
+
+--- preliminary count ---
+count: 1800000
+overflow threshold: 900000
+
+--- round 1 ---
+count at stop: 900001
+skid: 1
+instruction pointer: 0x400959
+
+--- round 2 ---
+count at stop: 900001
+skid: 1
+instruction pointer: 0x400959
+
+--- round 3 ---
+count at stop: 900001
+skid: 1
+instruction pointer: 0x400959
+
+--- round 4 ---
+count at stop: 900001
+skid: 1
+instruction pointer: 0x400959
+
+--- round 5 ---
+count at stop: 900000
+skid: 0
+instruction pointer: 0x4007e2
+
+--- round 6 ---
+count at stop: 900001
+skid: 1
+instruction pointer: 0x400959
+
+--- round 7 ---
+count at stop: 900000
+skid: 0
+instruction pointer: 0x4007eb
+
+--- round 8 ---
+count at stop: 900001
+skid: 1
+instruction pointer: 0x400959
+
+--- round 9 ---
+count at stop: 900000
+skid: 0
+instruction pointer: 0x4007e2
+
+--- round 10 ---
+count at stop: 900001
+skid: 1
+instruction pointer: 0x400959
+
+--- round 11 ---
+count at stop: 900001
+skid: 1
+instruction pointer: 0x400959
+
+--- round 12 ---
+count at stop: 900000
+skid: 0
+instruction pointer: 0x400838
+
+--- round 13 ---
+count at stop: 900001
+skid: 1
+instruction pointer: 0x400959
+
+--- round 14 ---
+count at stop: 900001
+skid: 1
+instruction pointer: 0x400959
+
+--- round 15 ---
+count at stop: 900001
+skid: 1
+instruction pointer: 0x400959
+
+--- round 16 ---
+count at stop: 900001
+skid: 1
+instruction pointer: 0x400959
+
+--- round 17 ---
+count at stop: 900001
+skid: 1
+instruction pointer: 0x400959
+
+--- round 18 ---
+count at stop: 900001
+skid: 1
+instruction pointer: 0x400959
+
+--- round 19 ---
+count at stop: 900001
+skid: 1
+instruction pointer: 0x400959
+
+--- round 20 ---
+count at stop: 900001
+skid: 1
+instruction pointer: 0x400959
+
+result: Non-deterministic
+successful rounds: 20/20

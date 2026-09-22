@@ -1,0 +1,21 @@
+event	round	overflow_threshold	count	skid	ip	error
+mem_inst_retired.stlb_miss_stores:u	1	5000	5000	0	0x40323c	
+mem_inst_retired.stlb_miss_stores:u	2	5000	5000	0	0x40323c	
+mem_inst_retired.stlb_miss_stores:u	3	5000	5000	0	0x40323c	
+mem_inst_retired.stlb_miss_stores:u	4	5000	5000	0	0x40323c	
+mem_inst_retired.stlb_miss_stores:u	5	5000	5000	0	0x40323c	
+mem_inst_retired.stlb_miss_stores:u	6	5000	5000	0	0x40323c	
+mem_inst_retired.stlb_miss_stores:u	7	5000	5000	0	0x40323c	
+mem_inst_retired.stlb_miss_stores:u	8	5000	5000	0	0x40323c	
+mem_inst_retired.stlb_miss_stores:u	9	5000	5000	0	0x40323c	
+mem_inst_retired.stlb_miss_stores:u	10	5000	5000	0	0x40323c	
+mem_inst_retired.stlb_miss_stores:u	11	5000	5000	0	0x40323c	
+mem_inst_retired.stlb_miss_stores:u	12	5000	5000	0	0x40323c	
+mem_inst_retired.stlb_miss_stores:u	13	5000	5000	0	0x40323c	
+mem_inst_retired.stlb_miss_stores:u	14	5000	5000	0	0x40323c	
+mem_inst_retired.stlb_miss_stores:u	15	5000	5000	0	0x40323c	
+mem_inst_retired.stlb_miss_stores:u	16	5000	5000	0	0x40323c	
+mem_inst_retired.stlb_miss_stores:u	17	5000	5000	0	0x40323c	
+mem_inst_retired.stlb_miss_stores:u	18	5000	5000	0	0x40323c	
+mem_inst_retired.stlb_miss_stores:u	19	5000	5000	0	0x40323c	
+mem_inst_retired.stlb_miss_stores:u	20	5000	5000	0	0x40323c	

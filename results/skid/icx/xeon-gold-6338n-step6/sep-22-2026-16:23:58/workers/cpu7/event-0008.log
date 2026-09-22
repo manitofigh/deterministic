@@ -1,0 +1,110 @@
+event: br_inst_retired.near_taken:u
+cpu: 7
+round limit: 20
+
+--- preliminary count ---
+count: 6819984
+overflow threshold: 1000000
+
+--- round 1 ---
+count at stop: 1000011
+skid: 11
+instruction pointer: 0x400b60
+
+--- round 2 ---
+count at stop: 1000012
+skid: 12
+instruction pointer: 0x400b60
+
+--- round 3 ---
+count at stop: 1000012
+skid: 12
+instruction pointer: 0x400b60
+
+--- round 4 ---
+count at stop: 1000011
+skid: 11
+instruction pointer: 0x400b60
+
+--- round 5 ---
+count at stop: 1000011
+skid: 11
+instruction pointer: 0x400b60
+
+--- round 6 ---
+count at stop: 1000012
+skid: 12
+instruction pointer: 0x400b60
+
+--- round 7 ---
+count at stop: 1000012
+skid: 12
+instruction pointer: 0x400b60
+
+--- round 8 ---
+count at stop: 1000011
+skid: 11
+instruction pointer: 0x400b60
+
+--- round 9 ---
+count at stop: 1000011
+skid: 11
+instruction pointer: 0x400b60
+
+--- round 10 ---
+count at stop: 1000012
+skid: 12
+instruction pointer: 0x400b60
+
+--- round 11 ---
+count at stop: 1000012
+skid: 12
+instruction pointer: 0x400b60
+
+--- round 12 ---
+count at stop: 1000011
+skid: 11
+instruction pointer: 0x400b60
+
+--- round 13 ---
+count at stop: 1000012
+skid: 12
+instruction pointer: 0x400b60
+
+--- round 14 ---
+count at stop: 1000010
+skid: 10
+instruction pointer: 0x400b59
+
+--- round 15 ---
+count at stop: 1000011
+skid: 11
+instruction pointer: 0x400b60
+
+--- round 16 ---
+count at stop: 1000012
+skid: 12
+instruction pointer: 0x400b60
+
+--- round 17 ---
+count at stop: 1000011
+skid: 11
+instruction pointer: 0x400b60
+
+--- round 18 ---
+count at stop: 1000012
+skid: 12
+instruction pointer: 0x400b60
+
+--- round 19 ---
+count at stop: 1000012
+skid: 12
+instruction pointer: 0x400b60
+
+--- round 20 ---
+count at stop: 1000011
+skid: 11
+instruction pointer: 0x400b60
+
+result: Non-deterministic
+successful rounds: 20/20

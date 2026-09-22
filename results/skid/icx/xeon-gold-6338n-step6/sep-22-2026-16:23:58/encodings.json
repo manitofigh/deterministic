@@ -1,0 +1,176 @@
+{
+  "assists.fp": {
+    "encoding": [
+      4,
+      705,
+      0,
+      0
+    ]
+  },
+  "br_inst_retired.cond": {
+    "encoding": [
+      4,
+      4548,
+      0,
+      0
+    ]
+  },
+  "br_inst_retired.cond_ntaken": {
+    "encoding": [
+      4,
+      4292,
+      0,
+      0
+    ]
+  },
+  "br_inst_retired.cond_taken": {
+    "encoding": [
+      4,
+      452,
+      0,
+      0
+    ]
+  },
+  "br_inst_retired.indirect": {
+    "encoding": [
+      4,
+      32964,
+      0,
+      0
+    ]
+  },
+  "br_inst_retired.near_call": {
+    "encoding": [
+      4,
+      708,
+      0,
+      0
+    ]
+  },
+  "br_inst_retired.near_return": {
+    "encoding": [
+      4,
+      2244,
+      0,
+      0
+    ]
+  },
+  "br_inst_retired.near_taken": {
+    "encoding": [
+      4,
+      8388,
+      0,
+      0
+    ]
+  },
+  "dtlb-stores": {
+    "error": "unsupported counter field legacy-cache-config for dtlb-stores"
+  },
+  "fp_arith_inst_retired.128b_packed_double": {
+    "encoding": [
+      4,
+      1223,
+      0,
+      0
+    ]
+  },
+  "fp_arith_inst_retired.128b_packed_single": {
+    "encoding": [
+      4,
+      2247,
+      0,
+      0
+    ]
+  },
+  "fp_arith_inst_retired.4_flops": {
+    "encoding": [
+      4,
+      6343,
+      0,
+      0
+    ]
+  },
+  "fp_arith_inst_retired.scalar": {
+    "encoding": [
+      4,
+      967,
+      0,
+      0
+    ]
+  },
+  "fp_arith_inst_retired.scalar_double": {
+    "encoding": [
+      4,
+      455,
+      0,
+      0
+    ]
+  },
+  "fp_arith_inst_retired.scalar_single": {
+    "encoding": [
+      4,
+      711,
+      0,
+      0
+    ]
+  },
+  "fp_arith_inst_retired.vector": {
+    "encoding": [
+      4,
+      64711,
+      0,
+      0
+    ]
+  },
+  "inst_retired.nop": {
+    "encoding": [
+      4,
+      704,
+      0,
+      0
+    ]
+  },
+  "l1-dcache-stores": {
+    "error": "unsupported counter field legacy-cache-config for l1-dcache-stores"
+  },
+  "mem-stores": {
+    "encoding": [
+      4,
+      33488,
+      0,
+      0
+    ]
+  },
+  "mem_inst_retired.all_stores": {
+    "encoding": [
+      4,
+      33488,
+      0,
+      0
+    ]
+  },
+  "mem_inst_retired.lock_loads": {
+    "encoding": [
+      4,
+      8656,
+      0,
+      0
+    ]
+  },
+  "mem_inst_retired.stlb_miss_stores": {
+    "encoding": [
+      4,
+      4816,
+      0,
+      0
+    ]
+  },
+  "misc_retired.pause_inst": {
+    "encoding": [
+      4,
+      16588,
+      0,
+      0
+    ]
+  }
+}
