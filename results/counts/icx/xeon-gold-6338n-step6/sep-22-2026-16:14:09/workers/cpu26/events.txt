@@ -1,4 +1,0 @@
-l2_rqsts.demand_data_rd_miss
-icache_tag.stalls
-br_inst_retired.near_call
-uops_dispatched.port_4_9

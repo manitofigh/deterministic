@@ -1,5 +1,0 @@
-event: mem_inst_retired.all_loads:u
-cpu: 34
-round limit: 10
-
---- round 1 ---

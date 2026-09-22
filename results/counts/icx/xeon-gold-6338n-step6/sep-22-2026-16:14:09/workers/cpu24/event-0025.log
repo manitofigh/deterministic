@@ -1,5 +1,0 @@
-event: l2_rqsts.code_rd_miss:u
-cpu: 24
-round limit: 10
-
---- round 1 ---

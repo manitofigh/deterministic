@@ -1,4 +1,0 @@
-l2_rqsts.rfo_hit
-idq.dsb_cycles_any
-br_inst_retired.near_return
-uops_dispatched.port_5

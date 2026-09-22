@@ -1,5 +1,0 @@
-event: mem_inst_retired.stlb_miss_stores:u
-cpu: 41
-round limit: 10
-
---- round 1 ---

@@ -1,4 +1,0 @@
-mem_load_l3_miss_retired.remote_fwd
-l1-icache-load-misses
-cycle_activity.stalls_l2_miss
-dtlb_load_misses.walk_active

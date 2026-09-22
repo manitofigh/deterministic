@@ -1,2 +1,0 @@
-Interrupted or failed: 0/256 (0.0%); remaining: 256; elapsed: 4s
-

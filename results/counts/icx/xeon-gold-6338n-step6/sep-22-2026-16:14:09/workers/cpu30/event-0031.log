@@ -1,5 +1,0 @@
-event: l2_rqsts.swpf_miss:u
-cpu: 30
-round limit: 10
-
---- round 1 ---

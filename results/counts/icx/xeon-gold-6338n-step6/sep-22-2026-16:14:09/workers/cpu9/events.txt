@@ -1,4 +1,0 @@
-l1d.replacement
-fp_arith_inst_retired.4_flops
-tx_exec.misc2
-lsd.cycles_ok

@@ -1,4 +1,0 @@
-l2_rqsts.all_demand_data_rd
-dsb2mite_switches.penalty_cycles
-br_inst_retired.all_branches
-topdown.slots

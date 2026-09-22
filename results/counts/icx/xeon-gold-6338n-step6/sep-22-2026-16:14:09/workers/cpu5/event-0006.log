@@ -1,5 +1,0 @@
-event: core_snoop_response.miss:u
-cpu: 5
-round limit: 10
-
---- round 1 ---

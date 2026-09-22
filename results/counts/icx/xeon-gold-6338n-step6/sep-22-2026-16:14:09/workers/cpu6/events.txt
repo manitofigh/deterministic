@@ -1,4 +1,0 @@
-core_snoop_response.s_fwd_fe
-fp_arith_inst_retired.128b_packed_single
-rtm_retired.aborted_unfriendly
-ld_blocks_partial.address_alias

@@ -1,5 +1,0 @@
-core_snoop_response.i_fwd_fe
-sw_prefetch_access.t0
-rtm_retired.aborted
-int_misc.recovery_cycles
-itlb_misses.walk_completed_4k

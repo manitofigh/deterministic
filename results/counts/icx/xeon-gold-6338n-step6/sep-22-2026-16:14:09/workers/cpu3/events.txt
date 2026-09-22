@@ -1,5 +1,0 @@
-core_snoop_response.i_fwd_m
-sw_prefetch_access.t1_t2
-rtm_retired.aborted_events
-int_misc.uop_dropping
-itlb_misses.walk_pending

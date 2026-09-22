@@ -1,9 +1,0 @@
-event: mem-stores:u
-cpu: 0
-round limit: 10
-
---- round 1 ---
-parsed count: 24060000
-exit: 0
-
---- round 2 ---

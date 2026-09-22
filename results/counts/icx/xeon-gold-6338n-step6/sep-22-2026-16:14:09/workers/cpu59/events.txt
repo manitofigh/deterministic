@@ -1,4 +1,0 @@
-mem_load_retired.local_pmm
-cpu-cycles
-inst_retired.any_p
-dtlb_store_misses.walk_completed_4k

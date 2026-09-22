@@ -1,5 +1,0 @@
-event: l2_rqsts.all_rfo:u
-cpu: 22
-round limit: 10
-
---- round 1 ---

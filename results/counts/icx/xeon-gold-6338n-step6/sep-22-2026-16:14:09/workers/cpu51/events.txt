@@ -1,4 +1,0 @@
-mem_load_misc_retired.uc
-llc-store-misses
-exe_activity.1_ports_util
-dtlb_load_misses.walk_completed_2m_4m

@@ -1,5 +1,0 @@
-event: core_snoop_response.s_fwd_fe:u
-cpu: 6
-round limit: 10
-
---- round 1 ---

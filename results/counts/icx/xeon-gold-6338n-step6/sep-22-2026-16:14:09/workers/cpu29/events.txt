@@ -1,4 +1,0 @@
-l2_rqsts.swpf_hit
-idq.dsb_uops
-br_misp_retired.all_branches
-uops_dispatched.port_7_8

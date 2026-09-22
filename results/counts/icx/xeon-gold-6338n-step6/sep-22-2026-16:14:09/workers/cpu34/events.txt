@@ -1,4 +1,0 @@
-mem_inst_retired.all_loads
-idq.ms_uops
-br_misp_retired.indirect_call
-uops_executed.cycles_ge_1

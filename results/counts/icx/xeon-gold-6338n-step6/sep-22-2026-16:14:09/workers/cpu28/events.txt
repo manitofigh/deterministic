@@ -1,4 +1,0 @@
-l2_rqsts.rfo_miss
-idq.dsb_cycles_ok
-br_inst_retired.near_taken
-uops_dispatched.port_6

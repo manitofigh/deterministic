@@ -1,4 +1,0 @@
-mem_load_l3_miss_retired.remote_dram
-l1-dcache-stores
-cycle_activity.stalls_l1d_miss
-dtlb_load_misses.stlb_hit

@@ -1,4 +1,0 @@
-mem_inst_retired.split_stores
-branch-loads
-cpu_clk_unhalted.ref_distributed
-uops_executed.thread

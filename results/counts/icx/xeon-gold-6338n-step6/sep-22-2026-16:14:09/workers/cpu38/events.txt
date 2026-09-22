@@ -1,4 +1,0 @@
-mem_inst_retired.split_loads
-branch-load-misses
-cpu_clk_unhalted.one_thread_active
-uops_executed.stall_cycles

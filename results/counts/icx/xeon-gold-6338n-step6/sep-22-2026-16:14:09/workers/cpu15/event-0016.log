@@ -1,5 +1,0 @@
-event: l2_lines_in.all:u
-cpu: 15
-round limit: 10
-
---- round 1 ---

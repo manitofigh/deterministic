@@ -1,4 +1,0 @@
-core_snoop_response.s_fwd_m
-fp_arith_inst_retired.256b_packed_double
-rtm_retired.commit
-load_hit_prefetch.swpf

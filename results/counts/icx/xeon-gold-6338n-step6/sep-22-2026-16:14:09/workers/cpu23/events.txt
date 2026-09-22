@@ -1,4 +1,0 @@
-l2_rqsts.code_rd_hit
-icache_64b.iftag_miss
-br_inst_retired.cond_taken
-uops_dispatched.port_0

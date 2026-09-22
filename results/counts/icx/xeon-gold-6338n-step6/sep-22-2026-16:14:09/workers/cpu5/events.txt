@@ -1,4 +1,0 @@
-core_snoop_response.miss
-fp_arith_inst_retired.128b_packed_double
-rtm_retired.aborted_memtype
-ld_blocks.store_forward

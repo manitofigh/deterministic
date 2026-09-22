@@ -1,4 +1,0 @@
-mem_load_l3_hit_retired.xsnp_fwd
-dtlb-store-misses
-cpu_clk_unhalted.thread
-uops_issued.stall_cycles

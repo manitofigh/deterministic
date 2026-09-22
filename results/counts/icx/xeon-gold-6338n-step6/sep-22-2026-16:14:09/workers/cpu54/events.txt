@@ -1,4 +1,0 @@
-mem_load_retired.l1_miss
-branch-misses
-exe_activity.4_ports_util
-dtlb_store_misses.stlb_hit

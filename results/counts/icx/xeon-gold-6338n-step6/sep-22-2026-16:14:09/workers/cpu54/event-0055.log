@@ -1,5 +1,0 @@
-event: mem_load_retired.l1_miss:u
-cpu: 54
-round limit: 10
-
---- round 1 ---

@@ -1,5 +1,0 @@
-event: longest_lat_cache.miss:u
-cpu: 32
-round limit: 10
-
---- round 1 ---

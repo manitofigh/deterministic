@@ -1,9 +1,0 @@
-event: slots:u
-cpu: 1
-round limit: 10
-
---- round 1 ---
-parsed count: 22155445745
-exit: 0
-
---- round 2 ---

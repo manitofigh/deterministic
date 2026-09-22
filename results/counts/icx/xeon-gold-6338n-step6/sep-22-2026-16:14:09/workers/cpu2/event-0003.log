@@ -1,9 +1,0 @@
-event: core_snoop_response.i_fwd_fe:u
-cpu: 2
-round limit: 10
-
---- round 1 ---
-parsed count: 3940
-exit: 0
-
---- round 2 ---

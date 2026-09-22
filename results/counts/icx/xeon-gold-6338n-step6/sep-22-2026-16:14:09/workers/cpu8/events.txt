@@ -1,4 +1,0 @@
-core_snoop_response.s_hit_fse
-fp_arith_inst_retired.256b_packed_single
-rtm_retired.start
-lsd.cycles_active

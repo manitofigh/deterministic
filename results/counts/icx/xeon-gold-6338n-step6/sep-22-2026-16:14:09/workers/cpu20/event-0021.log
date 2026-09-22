@@ -1,5 +1,0 @@
-event: l2_rqsts.all_demand_data_rd:u
-cpu: 20
-round limit: 10
-
---- round 1 ---

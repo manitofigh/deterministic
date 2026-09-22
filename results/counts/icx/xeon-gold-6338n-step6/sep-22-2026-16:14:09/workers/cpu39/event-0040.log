@@ -1,5 +1,0 @@
-event: mem_inst_retired.split_stores:u
-cpu: 39
-round limit: 10
-
---- round 1 ---
