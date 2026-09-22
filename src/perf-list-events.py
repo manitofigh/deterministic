@@ -29,6 +29,7 @@ SPECIAL = {
 EXCLUDED_TYPES = {
     'Software event',
     'Tracepoint event',
+    'SDT event',
     'Tool event',
     'Raw hardware event descriptor',
     'Hardware breakpoint',
