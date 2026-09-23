@@ -9,22 +9,24 @@
 .text
 .globl _start
 _start:
-    # eax stays zero so test sets zf=1 on each pass.
+    # eax stays zero so test sets zf=1 on each pass
     xor %eax, %eax
     mov $ITERATIONS, %ecx
 
 counted_setup_loop:
+    # test checks eax without changing it; the nop keeps test and jnz separate
+    # https://stackoverflow.com/questions/33721204/test-whether-a-register-is-zero-with-cmp-reg-0-vs-or-reg-reg
     test %eax, %eax
-    nop                         # keep test separate from the first branch.
-    .rept 31                    # emit 31 conditional branches per pass.
-        jnz 1f                  # zf=1, so this branch is not taken.
+    nop
+    .rept 31                    # emit 31 conditional branches per pass
+        jnz 1f                  # zf=1, so this branch is not taken
         nop
-1:                              # 1f above means the next 1: label.
+1:                              # 1f above means the next 1: label
     .endr
     dec %ecx
-    jnz counted_setup_loop      # the 32nd branch repeats the loop when ecx is nonzero.
+    jnz counted_setup_loop      # the 32nd branch repeats the loop when ecx is nonzero
 
-    # exit directly so no other user-space conditional branches are counted.
+    # exit directly so no other user-space conditional branches are counted
     xor %edi, %edi
     mov $60, %eax
     syscall
