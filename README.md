@@ -127,3 +127,19 @@ report links to each round's threshold, count, skid, and stopped instruction
 address. A zero skid means no further events of that type were counted; the
 benchmark may still have run for more cycles. The maximum records the largest
 skid seen in that run. Further runs may exceed it.
+
+## Max skid experiment
+
+The branch sled places the overflow at known conditional branches, then gives
+the CPU more branches to retire before the process stops. The sweep tests
+three sled widths, taken and untaken branches, and seven overflow thresholds.
+
+```bash
+bash max-skid-experiment/run-sweep.sh --rounds 100
+```
+
+The worker uses CPU 0 by default. Use `--pin-core N` to select another CPU.
+Each run saves a summary at `max-skid-experiment/results/<date>/results.md`,
+with links to the individual tests. See the
+[experiment README](max-skid-experiment/README.md) for the assembly and the
+small branch-count check.
