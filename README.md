@@ -96,74 +96,34 @@ Zero-only events and errors have their own separate sections in the very bottom 
 
 ## Measuring skid
 
-Skid mode requests an interrupt partway through the benchmark, then measures how
-many extra events occurred before Linux stopped the process. These are event
-counts, not necessarily instructions or CPU cycles. The measurement includes
-Linux's signal-delivery path. It uses ordinary overflow interrupts, not Precise
-Event-Based Sampling (PEBS).
-
-With no event source, skid mode looks under `results/counts/<microarch>/` for this
-processor model and stepping. It uses the newest dated count run containing
-complete event results, skips empty runs, and prints the
-selected directory. If none exists, provide an event source explicitly.
-If the selected run has no potentially deterministic events, it reports an error.
-`--from-results` accepts either a dated run or a processor directory, in which
-case it selects the newest dated count run there.
+Give `--overflow N` to request a counter overflow after N events. The helper
+starts counting when the benchmark begins, waits for the overflow signal to
+stop it, then reads the counter. **Skid = count at stop - N.** The counter
+tracks the benchmark's user-space events. With `br_inst_retired.cond`, skid
+counts extra retired conditional branches.
 
 ```bash
-# automatically find count results for this CPU
-sudo python3 src/run.py --mode skid
-
-# potentially deterministic events from a previous count run
-sudo python3 src/run.py --mode skid --from-results results/counts/emr/xeon-gold-6554s-step2
-
-# a custom list, regardless of any previous classification
-sudo python3 src/run.py --mode skid --events my-events.txt
-
-# one event with an explicit overflow threshold
-sudo python3 src/run.py --mode skid --event br_inst_retired.near_taken --overflow 1000000
-
-# also save this check under a dated folder
-sudo python3 src/run.py --mode skid --event br_inst_retired.cond --overflow 1000000 --output results/skid/emr/xeon-gold-6554s-step2
+sudo python3 src/run.py --mode skid --event br_inst_retired.cond --overflow 100000 --rounds 100
 ```
 
-With `--mode skid --event NAME`, each round prints its count and skid as it finishes.
-Without `--output`, it finishes with minimum, maximum, average, and whether the
-skid values matched. No results or logs are saved unless you provide `--output`. The compiled helper
-uses a temporary directory that is removed afterward; measurements stay in memory.
+Skid mode also needs `cc` and Linux C headers to build its counter helper.
 
-Skid mode needs `cc` and Linux C development headers in addition to Python and
-`perf`; install them using your distribution's package manager. The runner builds
-the helper automatically. There are no additional Python packages to install.
-On a machine where simultaneous multithreading (SMT) is already disabled and
-performance-counter access is permitted, skid mode can also run without sudo.
+By default, the script finds the newest count run for this CPU and tests its
+potentially deterministic events. It counts the whole benchmark once to
+choose a threshold for each event. Use `--event NAME`, `--events PATH`, or
+`--from-results PATH` to choose the events yourself. Use `--overflow N` to
+choose the threshold.
 
-By default, a preliminary run chooses an overflow threshold separately for each event. If the
-benchmark produces fewer than four events, the automatic selection reports it as
-inconclusive. Use `--overflow` to select a threshold explicitly; a benchmark that finishes
-before its overflow notification is reported as a failed measurement.
+Each round starts a new benchmark. Skid mode runs every requested round. It
+reports the minimum, maximum, and average skid. Two different skids make the
+result "Non-deterministic". If every requested round succeeds with the same
+skid, the result is "Potentially deterministic". The remaining cases are
+"Inconclusive".
 
-Each round starts a fresh benchmark. Counting begins at the executable's entry,
-and the process stops at the overflow signal before a user-space signal handler
-runs. The saved count minus the requested overflow threshold is the skid. Only user-space
-events in that process are counted. All 10 rounds run even when their skids differ.
-
-Saved skid results go under `results/skid/<microarch>/<processor-model>-step<stepping>/<date>/`.
-`--output PATH` saves to `PATH/<date>/`. Files created by sudo are assigned to the invoking user during cleanup,
-including partial results from interrupted runs.
-
-The report shows:
-
-| Event | Min skid | Max skid | Average skid | Skid determinism |
-|---|---:|---:|---:|---|
-| example event | 10 | 10 | 10.00 | Potentially deterministic |
-
-Each event links to its rounds, including the overflow threshold, count at stop, skid, and
-stopped instruction address. Matching skid values, including zero, are potentially
-deterministic only when every requested round succeeds. Differing values are
-non-deterministic. Incomplete measurements with no observed difference are
-inconclusive. Errors are listed separately, and statistics use successful rounds
-only. The maximum is the largest observed value, not a guaranteed upper bound.
-
-A zero skid means no additional occurrences of that event were counted. The
-process may still have executed instructions that do not contribute to it.
+A single `--event` check prints to the terminal. Add `--output PATH` to save it
+under `PATH/<date>/`. Other skid runs use
+`results/skid/<microarch>/<processor-model>-step<stepping>/<date>/`. The saved
+report links to each round's threshold, count, skid, and stopped instruction
+address. A zero skid means no further events of that type were counted; the
+benchmark may still have run for more cycles. The maximum records the largest
+skid seen in that run. Further runs may exceed it.
