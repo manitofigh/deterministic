@@ -138,6 +138,11 @@ three sled widths, taken and untaken branches, and seven overflow thresholds.
 bash max-skid-experiment/run-sweep.sh --rounds 100
 ```
 
+In `b64-t0-n100001`, `b64` means 64 repeated branches per sled pass, `t0`
+means those branches are untaken, and `n100001` is the requested overflow
+threshold of 100,001 retired conditional branches. `t1` means taken branches.
+Each sled pass also retires one loop branch.
+
 The worker uses CPU 0 by default. Use `--pin-core N` to select another CPU.
 Each run saves a summary at `max-skid-experiment/results/<date>/results.md`,
 with links to the individual tests. See the

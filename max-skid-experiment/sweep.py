@@ -157,12 +157,12 @@ def main():
                             f'REPEATED_BRANCHES_TAKEN={taken}',
                         ],
                         check=True,
+                        stdout=subprocess.DEVNULL,
                     )
                     binary = HERE / 'build' / f'branch-sled-setup{SETUP_ITERATIONS}-passes{SLED_PASSES}-branches{width}-taken{taken}'
 
                     for threshold in thresholds(width):
                         case = f'b{width}-t{taken}-n{threshold}'
-                        print(f'Running {case}', flush=True)
                         command = [
                             sys.executable, str(REPO / 'src/run.py'),
                             '--mode', 'skid', '--event', 'br_inst_retired.cond',
@@ -193,11 +193,7 @@ def main():
                         (directory / 'runner.log').write_text(output)
                         row = result_row(case, directory, result.returncode if result else 130)
                         rows.append(row)
-                        print(
-                            f'{case}: {row["successes"]}/{args.rounds} rounds; '
-                            f'max skid {row["max"] if row["max"] is not None else "—"}',
-                            flush=True,
-                        )
+                        print(f'{case} max skid: {row["max"] if row["max"] is not None else "n/a"}', flush=True)
                         write_report(root, started, args.rounds, args.pin_core, rows)
                         if result is None:
                             raise KeyboardInterrupt

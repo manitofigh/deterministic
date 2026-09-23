@@ -1,0 +1,507 @@
+event: br_inst_retired.cond:u
+cpu: 0
+round limit: 100
+overflow threshold: 100001
+
+--- round 1 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 2 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 3 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 4 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 5 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 6 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 7 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 8 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 9 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 10 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 11 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 12 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 13 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 14 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 15 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 16 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 17 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 18 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 19 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 20 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 21 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 22 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 23 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 24 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 25 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 26 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 27 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 28 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 29 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 30 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 31 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 32 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 33 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 34 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 35 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 36 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 37 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 38 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 39 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 40 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 41 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 42 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 43 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 44 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 45 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 46 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 47 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 48 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 49 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 50 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 51 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 52 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 53 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 54 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 55 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 56 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 57 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 58 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 59 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 60 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 61 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 62 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 63 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 64 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 65 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 66 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 67 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 68 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 69 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 70 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 71 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 72 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 73 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 74 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 75 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 76 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 77 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 78 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 79 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 80 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 81 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 82 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 83 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 84 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 85 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 86 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 87 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 88 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 89 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 90 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 91 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 92 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 93 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 94 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 95 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 96 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 97 ---
+count at stop: 100003
+skid: 2
+instruction pointer: 0x40107c
+
+--- round 98 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 99 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+--- round 100 ---
+count at stop: 100002
+skid: 1
+instruction pointer: 0x401079
+
+result: Non-deterministic
+successful rounds: 100/100
